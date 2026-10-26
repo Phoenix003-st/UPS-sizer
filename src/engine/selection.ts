@@ -10,7 +10,12 @@
  *    installée) → Recommandée. Économique = puissance installée minimale. Performance = meilleur
  *    rendement, plus grande marge et technologie la plus robuste.
  */
-import type { Technology, UpsCatalog, UpsModel } from '../catalog/schemas';
+import {
+  displayReference,
+  type Technology,
+  type UpsCatalog,
+  type UpsModel,
+} from '../catalog/schemas';
 import type { Settings } from '../settings/schema';
 import { ceilSafe, interpLinear } from './math';
 import { framesForModules, modulesNeeded } from './modular';
@@ -65,7 +70,7 @@ export function configureModel(model: UpsModel, inputs: NormalizedInputs): UpsCo
   const systems: 1 | 2 = red === '2N' ? 2 : 1;
   const base = {
     modelId: model.id,
-    reference: model.reference,
+    reference: displayReference(model),
     technology: model.technology,
     systems,
     redundancy: red,

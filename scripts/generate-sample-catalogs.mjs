@@ -188,6 +188,8 @@ const lfp = (id, ah, maxC, dims, kg) => ({
 const blocks = [
   vrla('EX-VRLA-12V7', 7, 27, { w: 151, d: 65, h: 100 }, 2.5, 5, SRC.csbHr),
   vrla('EX-VRLA-12V9', 9, 34.3, { w: 151, d: 65, h: 100 }, 2.7, 5, SRC.csbHr1234),
+  vrla('EX-VRLA-12V12', 12, 44, { w: 151, d: 98, h: 94 }, 3.9, 5, SRC.csbHr),
+  vrla('EX-VRLA-12V17', 17, 59, { w: 181, d: 76, h: 167 }, 5.6, 5, SRC.csbHr),
   vrla('EX-VRLA-12V18', 18, 62, { w: 181, d: 77, h: 167 }, 5.9, 5, SRC.csbHr),
   vrla('EX-VRLA-12V28', 28, 95, { w: 166, d: 175, h: 125 }, 9, 10, SRC.csbHr),
   vrla('EX-VRLA-12V40', 40, 135, { w: 197, d: 165, h: 170 }, 14, 10, SRC.yuasaSwl),

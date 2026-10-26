@@ -3,9 +3,10 @@
     "name": "UPS Sizer",
     "tagline": "Indoor UPS pre-sizing",
     "disclaimer": "Indicative pre-sizing – to be validated by a design office before installation",
-    "sample": "SAMPLE – to be replaced",
+    "sample": "Generic data – to be confirmed",
     "skip": "Skip to content",
-    "localOnly": "Your projects stay in this browser. Nothing is sent to a server."
+    "localOnly": "Your projects stay in this browser. Nothing is sent to a server.",
+    "edition": "InfoSec edition"
   },
   "nav": {
     "home": "Home",
@@ -205,7 +206,9 @@
       "ok": "OK",
       "warn": "To check",
       "block": "Blocking"
-    }
+    },
+    "estimated": "Not published in the catalogue, estimated: {{fields}}",
+    "partNumber": "Part number"
   },
   "tech": {
     "line_interactive": "Line interactive",
@@ -307,7 +310,7 @@
       "feeder": "Outgoing feeder breaker (UPS board)",
       "ats": "Automatic transfer switch (ATS)"
     },
-    "sampleNote": "Lines marked * come from sample datasheets."
+    "sampleNote": "Lines marked * rely on generic or estimated data (typical batteries, values not published in the catalogue): confirm with the manufacturer."
   },
   "settings": {
     "title": "Settings and assumptions",
@@ -607,7 +610,7 @@
     "date": "Date",
     "installation": "Installation",
     "summary": "Summary",
-    "sampleNotice": "The products listed come from SAMPLE datasheets inspired by public data: replace them with the chosen manufacturer's references.",
+    "sampleNotice": "UPS references come from the manufacturer's catalogue. Batteries are generic and some unpublished values (weight, efficiency, battery make-up) are estimated: confirm before ordering.",
     "intro": "The report includes the summary, the selected solution, the layout, the single-line diagram, the bill of materials and the calculation note.",
     "download": "Download the PDF report",
     "generating": "Generating…",
@@ -654,5 +657,12 @@
       "ebm": "Battery pack"
     },
     "snapshot": "3D room view"
+  },
+  "estimatedField": {
+    "weight": "weight",
+    "efficiency": "efficiency",
+    "internalBattery": "internal batteries",
+    "batteryVoltage": "battery voltage",
+    "chargeCurrent": "charge current"
   }
 }

@@ -2,7 +2,7 @@
  * Nomenclature (BOM) : UPS ou châssis et modules, blocs batteries, armoires, protections, bypass de
  * maintenance, inverseur de source, câbles indicatifs. Colonne prix laissée vide.
  */
-import type { UpsModel } from '../catalog/schemas';
+import { displayReference, type UpsModel } from '../catalog/schemas';
 import type { BatterySolution, BomLine, ElectricalResult, UpsConfig } from './types';
 
 export interface BomInput {
@@ -24,7 +24,7 @@ export function buildBom(i: BomInput): BomLine[] {
   if (model.modular && config.modulesPerSystem) {
     push({
       category: 'frame',
-      reference: model.reference,
+      reference: displayReference(model),
       labelKey: 'bom.frame',
       params: { maxModules: model.modular.maxModules },
       qty: config.units,
@@ -43,7 +43,7 @@ export function buildBom(i: BomInput): BomLine[] {
   } else {
     push({
       category: 'ups',
-      reference: model.reference,
+      reference: displayReference(model),
       labelKey: 'bom.ups',
       params: { kva: model.power.kVA, kw: model.power.kW },
       qty: config.units,

@@ -6,7 +6,7 @@
  * alertes → choix des trois options.
  */
 import type { BatteryBlock, Catalogs, Technology, UpsModel } from '../catalog/schemas';
-import { TECHNOLOGIES } from '../catalog/schemas';
+import { displayReference, TECHNOLOGIES } from '../catalog/schemas';
 import { mergeSettings, type Settings, type SettingsOverrides } from '../settings/schema';
 import { normalizeAlerts, worstLevel } from './alerts';
 import { sizeBattery, type BatteryCandidate, type ChemistryFamily } from './battery';
@@ -96,7 +96,7 @@ function toSolution(c: BatteryCandidate, sets: BatterySet[]): BatterySolution {
     internalStrings: c.internalStrings,
     location: c.cabinet ? 'cabinet' : 'internal',
     cabinets: c.cabinet
-      ? [{ id: c.cabinet.cab.id, reference: c.cabinet.cab.reference, qty: c.cabinet.qty }]
+      ? [{ id: c.cabinet.cab.id, reference: displayReference(c.cabinet.cab), qty: c.cabinet.qty }]
       : [],
     sets: n,
     setDetails: sets,

@@ -3,9 +3,10 @@
     "name": "UPS Sizer",
     "tagline": "Pré-dimensionnement d'onduleurs d'intérieur",
     "disclaimer": "Pré-dimensionnement indicatif – à valider par un bureau d'études avant installation",
-    "sample": "EXEMPLE – à remplacer",
+    "sample": "Données génériques – à confirmer",
     "skip": "Aller au contenu",
-    "localOnly": "Vos projets restent dans ce navigateur. Rien n'est envoyé à un serveur."
+    "localOnly": "Vos projets restent dans ce navigateur. Rien n'est envoyé à un serveur.",
+    "edition": "Édition InfoSec"
   },
   "nav": {
     "home": "Accueil",
@@ -205,7 +206,9 @@
       "block": "Bloquant"
     },
     "units_one": "{{count}} unité",
-    "modules_one": "{{count}} module de {{kw}} kW"
+    "modules_one": "{{count}} module de {{kw}} kW",
+    "estimated": "Non publié au catalogue, estimé : {{fields}}",
+    "partNumber": "Référence produit"
   },
   "tech": {
     "line_interactive": "Line Interactive",
@@ -307,7 +310,7 @@
       "feeder": "Disjoncteur de départ (tableau ondulé)",
       "ats": "Inverseur de source (ATS)"
     },
-    "sampleNote": "Les lignes marquées * proviennent de fiches d'exemple."
+    "sampleNote": "Les lignes marquées * reposent sur des données génériques ou estimées (batteries types, valeurs non publiées au catalogue) : à confirmer auprès du constructeur."
   },
   "settings": {
     "title": "Paramètres et hypothèses",
@@ -607,7 +610,7 @@
     "date": "Date",
     "installation": "Installation",
     "summary": "Récapitulatif",
-    "sampleNotice": "Les produits cités proviennent de fiches d'EXEMPLE, inspirées de données publiques : ils sont à remplacer par les références du fabricant retenu.",
+    "sampleNotice": "Les références UPS proviennent du catalogue du constructeur. Les batteries sont génériques et certaines valeurs non publiées (masse, rendement, composition des batteries) sont estimées : à confirmer avant commande.",
     "intro": "Le rapport reprend le récapitulatif, la solution retenue, le plan, le schéma unifilaire, la nomenclature et la note de calcul.",
     "download": "Télécharger le rapport PDF",
     "generating": "Génération en cours…",
@@ -654,5 +657,12 @@
       "ebm": "Module batteries"
     },
     "snapshot": "Vue 3D du local"
+  },
+  "estimatedField": {
+    "weight": "masse",
+    "efficiency": "rendement",
+    "internalBattery": "batteries internes",
+    "batteryVoltage": "tension batterie",
+    "chargeCurrent": "courant de charge"
   }
 }

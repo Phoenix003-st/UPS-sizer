@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_CATALOGS, defaultCatalogs } from '../../catalog';
+import { SAMPLE_CATALOGS } from '../../catalog/samples';
 import {
   batteryCatalogSchema,
   equipmentLibrarySchema,
@@ -12,6 +13,8 @@ import { createProject, projectSchema, runSizing } from '../index';
 import { project, settings } from './fixtures';
 
 const run = (p: ReturnType<typeof project>) => runSizing(p, DEFAULT_CATALOGS, settings);
+/** Gamme d'exemple complète (toutes puissances, bruit renseigné) pour les cas limites du moteur. */
+const runSample = (p: ReturnType<typeof project>) => runSizing(p, SAMPLE_CATALOGS, settings);
 
 describe('runSizing — scénarios par défaut', () => {
   for (const sc of SCENARIOS) {
@@ -105,7 +108,7 @@ describe('runSizing — cas particuliers', () => {
       widthMm: 10000,
       door: { ...p.room.door, widthMm: 2000, heightMm: 2500 },
     };
-    const r = run(p);
+    const r = runSample(p);
     expect(r.options.length).toBeGreaterThan(0);
     expect(r.options.every((o) => o.ups.capacityVA >= r.inputs.designVA / 0.8 - 1)).toBe(true);
   });
@@ -141,7 +144,7 @@ describe('runSizing — cas particuliers', () => {
   });
 
   it('bureau : niveau sonore affiché', () => {
-    const r = run(project('office'));
+    const r = runSample(project('office'));
     expect(
       r.options[0]!.alerts.some((a) => a.code === 'noise_level' || a.code === 'noise_high'),
     ).toBe(true);
@@ -213,7 +216,7 @@ describe('runSizing — cas particuliers', () => {
 
 describe('catalogues et paramètres', () => {
   it('les catalogues d’exemple sont valides et marqués EXEMPLE', () => {
-    const c = defaultCatalogs();
+    const c = structuredClone(SAMPLE_CATALOGS);
     expect(c.ups.models.length).toBeGreaterThanOrEqual(30);
     expect(
       c.ups.models.every((m) => m.sample && m.source && m.reference.startsWith('EXEMPLE')),
@@ -236,6 +239,31 @@ describe('catalogues et paramètres', () => {
       c.ups.models.every((m) => m.battery.compatibleCabinetIds.every((id) => cabs.has(id))),
     ).toBe(true);
     expect(equipmentLibrarySchema.safeParse(c.equipment).success).toBe(true);
+  });
+
+  it('le catalogue livré contient les UPS INFOSEC avec leurs références produit', () => {
+    const c = defaultCatalogs();
+    const models = c.ups.models;
+    expect(models.length).toBeGreaterThan(50);
+    expect(models.every((m) => m.brand === 'INFOSEC' && !m.sample && m.source)).toBe(true);
+    // Les références imprimées au catalogue sont reprises (quelques châssis n'en ont pas).
+    expect(models.filter((m) => m.partNumber).length).toBeGreaterThan(90);
+    expect(models.find((m) => m.partNumber === '67310')?.reference).toBe('INFOSEC E3 Pro 3000 RT');
+    // Tout ce qui n'est pas publié est signalé comme estimé.
+    expect(models.every((m) => m.estimated.length > 0)).toBe(true);
+    const cabs = new Set(c.batteries.cabinets.map((x) => x.id));
+    expect(models.every((m) => m.battery.compatibleCabinetIds.every((id) => cabs.has(id)))).toBe(
+      true,
+    );
+  });
+
+  it('les options affichent la référence produit du constructeur', () => {
+    const r = run(project('server'));
+    expect(r.options.length).toBeGreaterThan(0);
+    expect(r.options.every((o) => /— réf\. \d{5}/.test(o.ups.reference))).toBe(true);
+    expect(
+      r.options[0]!.bom.find((l) => l.category === 'ups' || l.category === 'frame')?.reference,
+    ).toMatch(/^INFOSEC /);
   });
 
   it('un catalogue invalide est refusé avec le chemin du champ fautif', () => {
