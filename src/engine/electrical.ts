@@ -152,7 +152,7 @@ export function sizeCircuit(
   spec: CircuitSpec,
   settings: Settings,
   t?: TraceBuilder,
-  labelKey = 'calc.elec.circuit',
+  labelKey = 'calc.circuit.generic',
 ): Calc<{ breakerA: number | null; cable: CableResult | null }> {
   const breakerA = breakerFor(spec.ib, settings.electrical.breakerSeriesA);
   const cable =
@@ -289,7 +289,7 @@ export function computeElectrical(i: ElectricalInput): Calc<ElectricalResult> {
       { kind, ib, lengthM, voltageV, cosPhi },
       settings,
       traced ? t : undefined,
-      `calc.elec.${id}`,
+      `calc.circuit.${id}`,
     );
     circuits.push({
       id,

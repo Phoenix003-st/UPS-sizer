@@ -129,7 +129,7 @@ describe('phases', () => {
     expect(resolvePhases(7000, adv, settings).value.phases).toBe(1); // 8,75 kVA
     const r = resolvePhases(9000, adv, settings).value; // 11,25 kVA
     expect(r.phases).toBe(3);
-    expect(r.voltageV).toBe(398);
+    expect(r.voltageV).toBe(400);
   });
   it('mono imposé au-delà du seuil : bascule forcée avec alerte', () => {
     const r = resolvePhases(20000, { ...adv, phases: 1 }, settings).value;
@@ -145,7 +145,8 @@ describe('phases', () => {
   });
   it('tension de calcul', () => {
     expect(systemVoltage(1, 230)).toBe(230);
-    expect(systemVoltage(1, 400)).toBe(231);
+    expect(systemVoltage(1, 400)).toBe(230);
+    expect(systemVoltage(3, 220)).toBe(380);
     expect(systemVoltage(3, 400)).toBe(400);
   });
 });

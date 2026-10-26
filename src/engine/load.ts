@@ -57,9 +57,9 @@ export function computeLoad(
     t.step({
       label: 'calc.load.sumItems',
       formula: 'P = Σ qté × W',
-      substituted: load.items.map((i) => `${i.qty} × ${fmt(i.unitW, 0)}`).join(' + ') || '0',
-      result: loadW,
-      unit: 'W',
+      substituted: load.items.map((i) => `${i.qty} × ${fmt(i.unitW, 0)} W`).join(' + ') || '0',
+      result: loadW / 1000,
+      unit: 'kW',
     });
   } else if (load.unit === 'kVA') {
     loadVA = load.value * 1000;
@@ -68,8 +68,8 @@ export function computeLoad(
       label: 'calc.load.fromKVA',
       formula: 'P = S × FP',
       substituted: `${fmt(load.value)} kVA × ${fmt(pf)}`,
-      result: loadW,
-      unit: 'W',
+      result: loadW / 1000,
+      unit: 'kW',
     });
   } else {
     loadW = load.value * 1000;
@@ -78,8 +78,8 @@ export function computeLoad(
       label: 'calc.load.direct',
       formula: 'P',
       substituted: `${fmt(load.value)} kW`,
-      result: loadW,
-      unit: 'W',
+      result: loadW / 1000,
+      unit: 'kW',
     });
   }
 

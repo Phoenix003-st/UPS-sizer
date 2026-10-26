@@ -120,7 +120,14 @@ describe('contrôles d’implantation', () => {
     // armoire : 700 kg ÷ 0,64 m² = 1 094 kg/m² concentrée ; ÷ (0,64 + 0,8) = 486 kg/m² répartie
     expect(r.value.floor.maxConcentratedKgM2).toBeCloseTo(1093.75, 2);
     expect(r.value.floor.maxDistributedKgM2).toBeCloseTo(700 / 1.44, 2);
-    expect(r.alerts.find((a) => a.code === 'floor_concentrated')?.level).toBe('warn');
+    // 1 094 kg/m² ≤ 2 × 1 000 : pas d'alerte ; > 2 × 500 : à vérifier
+    expect(r.alerts.find((a) => a.code === 'floor_concentrated')).toBeUndefined();
+    const soft = computeLayout(
+      items,
+      { room: room({ floorLoadKgM2: 500 }), layout: { positions: {} } },
+      settings,
+    );
+    expect(soft.alerts.find((a) => a.code === 'floor_concentrated')?.level).toBe('warn');
     expect(r.value.floor.totalWeightKg).toBe(400 + 4 * 700);
   });
   it('local trop étroit : manque en largeur, en mètres', () => {

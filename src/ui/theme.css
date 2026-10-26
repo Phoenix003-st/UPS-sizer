@@ -37,3 +37,28 @@ body {
   color: var(--color-text);
   font-family: var(--font-sans);
 }
+
+/* Impression (note de calcul) : uniquement le contenu, sans navigation. */
+@media print {
+  header,
+  nav,
+  footer,
+  .print\:hidden,
+  [role='tablist'],
+  button {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  body {
+    background: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

@@ -294,7 +294,8 @@ export function computeLayout(
         code: floorKnown ? 'floor_overload' : 'floor_overload_unknown',
         params: { load: Math.round(maxDist), admissible, item: ref(worstFloor) },
       });
-    } else if (maxConc > admissible) {
+    } else if (maxConc > 2 * admissible) {
+      // En dessous du double de la charge admissible, une simple répartition (plaques) suffit.
       alerts.push({
         level: 'warn',
         code: 'floor_concentrated',

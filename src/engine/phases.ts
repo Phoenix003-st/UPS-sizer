@@ -20,10 +20,18 @@ export interface PhaseResult {
   alerts: Alert[];
 }
 
-/** Tension de calcul : 230 V en mono, 400 V en tri, à partir de la tension saisie. */
+const MONO_V = [220, 230, 240];
+const TRI_V = [380, 400, 415];
+const nearest = (list: number[], v: number) =>
+  list.reduce((best, x) => (Math.abs(x - v) < Math.abs(best - v) ? x : best), list[0]!);
+
+/**
+ * Tension de calcul : phase-neutre en mono, entre phases en tri, à partir de la tension saisie
+ * (230 V ↔ 400 V, 220 V ↔ 380 V, 240 V ↔ 415 V).
+ */
 export function systemVoltage(phases: 1 | 3, voltage: number): number {
-  if (phases === 1) return voltage <= 260 ? voltage : Math.round(voltage / SQRT3);
-  return voltage >= 360 ? voltage : Math.round(voltage * SQRT3);
+  if (phases === 1) return voltage <= 260 ? voltage : nearest(MONO_V, voltage / SQRT3);
+  return voltage >= 360 ? voltage : nearest(TRI_V, voltage * SQRT3);
 }
 
 export function resolvePhases(
