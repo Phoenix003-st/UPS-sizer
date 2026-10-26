@@ -189,7 +189,7 @@ export const PlanSvg = forwardRef<SVGSVGElement, PlanSvgProps>(function PlanSvg(
       viewBox={`${-margin} ${-margin} ${L + 2 * margin} ${W + 2 * margin}`}
       role="group"
       aria-label={title}
-      className="h-auto w-full touch-none select-none rounded-lg border border-border bg-white"
+      className="h-auto w-full select-none rounded-lg border border-border bg-white"
       style={{ maxHeight: '70vh', direction: 'ltr' }}
       fontFamily="system-ui, sans-serif"
     >
@@ -322,7 +322,7 @@ export const PlanSvg = forwardRef<SVGSVGElement, PlanSvgProps>(function PlanSvg(
             }
             className={
               interactive
-                ? 'cursor-grab outline-none focus-visible:[&>rect:first-child]:stroke-[var(--color-accent)]'
+                ? 'cursor-grab touch-none outline-none focus-visible:[&>rect:first-child]:stroke-[var(--color-accent)]'
                 : undefined
             }
             onPointerDown={(e) => {

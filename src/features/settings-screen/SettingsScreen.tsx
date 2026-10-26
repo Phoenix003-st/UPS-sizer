@@ -118,7 +118,7 @@ function ListField({
         aria-invalid={bad}
         onChange={(e) => setText(e.target.value)}
         onBlur={() => setBad(!onCommit(text))}
-        className={`min-h-11 w-full rounded-lg border bg-surface px-3 font-mono text-sm ${bad ? 'border-block' : 'border-border'}`}
+        className={`min-h-11 w-full rounded-lg border bg-surface px-3 font-mono text-base sm:text-sm ${bad ? 'border-block' : 'border-border'}`}
       />
       <p className="mt-1 text-xs text-muted">{pairs ? '1000:1, 1500:0.95, …' : help}</p>
     </div>

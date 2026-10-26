@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CatalogScreen } from '../features/catalog-editor/CatalogScreen';
 import { DeliverablesScreen } from '../features/deliverables/DeliverablesScreen';
@@ -24,12 +24,15 @@ const STEP_KEYS: Record<(typeof FLOW)[number], string> = {
 
 function Header({ route }: { route: Route }) {
   const { t, i18n } = useTranslation();
+  // Sur téléphone, les liens et la langue sont repliés derrière un bouton « Menu ».
+  const [open, setOpen] = useState(false);
+  useEffect(() => setOpen(false), [route]);
   const link = (r: Route, label: string) => (
     <button
       type="button"
       onClick={() => navigate(r)}
       aria-current={route === r ? 'page' : undefined}
-      className="min-h-11 rounded-lg px-3 text-sm font-semibold text-on-primary hover:bg-white/10 focus-visible:outline-3 focus-visible:outline-white aria-[current=page]:bg-white/15"
+      className="min-h-11 rounded-lg px-3 text-start text-base font-semibold text-on-primary hover:bg-white/10 focus-visible:outline-3 focus-visible:outline-white aria-[current=page]:bg-white/15 md:text-sm"
     >
       {label}
     </button>
@@ -40,16 +43,32 @@ function Header({ route }: { route: Route }) {
         <button
           type="button"
           onClick={() => navigate('home')}
-          className="flex min-h-11 items-center gap-2 rounded-lg pe-2 focus-visible:outline-3 focus-visible:outline-white"
+          className="flex min-h-11 min-w-0 items-center gap-2 rounded-lg pe-2 focus-visible:outline-3 focus-visible:outline-white"
         >
-          <img src={logoUrl} alt="" className="h-8 w-8 rounded-md bg-white/10" />
-          <span className="text-lg font-bold">{t('app.name')}</span>
-          <span className="rounded bg-white/15 px-1.5 py-0.5 text-xs font-semibold">
+          <img src={logoUrl} alt="" className="h-8 w-8 shrink-0 rounded-md bg-white/10" />
+          <span className="text-lg font-bold whitespace-nowrap">{t('app.name')}</span>
+          <span className="truncate rounded bg-white/15 px-1.5 py-0.5 text-xs font-semibold">
             {t(EDITION.labelKey)}
           </span>
-          <span className="hidden text-sm opacity-85 md:inline">— {t('app.tagline')}</span>
+          <span className="hidden text-sm opacity-85 lg:inline">— {t('app.tagline')}</span>
         </button>
-        <nav aria-label={t('nav.menu')} className="flex flex-wrap items-center gap-1">
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          aria-expanded={open}
+          aria-controls="main-menu"
+          className="flex min-h-11 items-center gap-2 rounded-lg border border-white/40 px-3 text-sm font-semibold focus-visible:outline-3 focus-visible:outline-white md:hidden"
+        >
+          <span aria-hidden className="text-lg leading-none">
+            {open ? '✕' : '☰'}
+          </span>
+          {t('nav.menu')}
+        </button>
+        <nav
+          id="main-menu"
+          aria-label={t('nav.menu')}
+          className={`${open ? 'flex' : 'hidden'} w-full flex-col gap-1 border-t border-white/20 pt-2 md:flex md:w-auto md:flex-row md:flex-wrap md:items-center md:border-0 md:pt-0`}
+        >
           {link('projects', t('nav.projects'))}
           {link('settings', t('nav.settings'))}
           {link('catalogs', t('nav.catalogs'))}
@@ -60,7 +79,7 @@ function Header({ route }: { route: Route }) {
             id="lang"
             value={i18n.language}
             onChange={(e) => setLanguage(e.target.value as Lang)}
-            className="min-h-11 rounded-lg border border-white/40 bg-primary px-2 text-sm font-semibold text-on-primary focus-visible:outline-3 focus-visible:outline-white"
+            className="min-h-11 rounded-lg border border-white/40 bg-primary px-2 text-base font-semibold text-on-primary focus-visible:outline-3 focus-visible:outline-white md:text-sm"
           >
             {LANGUAGES.map((l) => (
               <option key={l.code} value={l.code}>
@@ -84,7 +103,10 @@ function Stepper({ route }: { route: (typeof FLOW)[number] }) {
           const done = i < idx;
           const current = i === idx;
           return (
-            <li key={r} className="flex min-w-0 flex-1 items-center">
+            <li
+              key={r}
+              className={`flex min-w-0 items-center ${current ? 'flex-1' : 'flex-none sm:flex-1'}`}
+            >
               <button
                 type="button"
                 onClick={() => navigate(r)}
@@ -106,7 +128,10 @@ function Stepper({ route }: { route: (typeof FLOW)[number] }) {
                 >
                   {done ? '✓' : i + 1}
                 </span>
-                <span className={current ? 'truncate' : 'hidden truncate sm:inline'}>
+                <span
+                  className={current ? 'truncate' : 'hidden truncate sm:inline'}
+                  title={t(STEP_KEYS[r])}
+                >
                   {t(STEP_KEYS[r])}
                 </span>
                 {current && <span className="sr-only">({t('steps.current')})</span>}

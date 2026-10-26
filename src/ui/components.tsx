@@ -402,6 +402,10 @@ export function Tabs<T extends string>({
   label: string;
 }) {
   const refs = useRef<Record<string, HTMLButtonElement | null>>({});
+  // Sur téléphone les onglets défilent horizontalement : garder l'onglet actif visible.
+  useEffect(() => {
+    refs.current[value]?.scrollIntoView?.({ block: 'nearest', inline: 'nearest' });
+  }, [value]);
   const move = (dir: 1 | -1) => {
     const i = tabs.findIndex((x) => x.id === value);
     const next = tabs[(i + dir + tabs.length) % tabs.length]!;
@@ -412,7 +416,7 @@ export function Tabs<T extends string>({
     <div
       role="tablist"
       aria-label={label}
-      className="mb-4 flex flex-wrap gap-1 border-b border-border"
+      className="-mx-1 mb-4 flex gap-1 overflow-x-auto px-1 shadow-[inset_0_-1px_0_var(--color-border)] [scrollbar-width:thin] md:flex-wrap"
     >
       {tabs.map((tab) => {
         const selected = tab.id === value;
@@ -434,7 +438,7 @@ export function Tabs<T extends string>({
               if (e.key === 'ArrowRight') move(rtl ? -1 : 1);
               if (e.key === 'ArrowLeft') move(rtl ? 1 : -1);
             }}
-            className={`-mb-px min-h-11 rounded-t-lg border-b-2 px-4 text-sm font-semibold ${focus} ${
+            className={`min-h-11 shrink-0 whitespace-nowrap rounded-t-lg border-b-2 px-3 text-sm font-semibold sm:px-4 ${focus} ${
               selected
                 ? 'border-primary text-primary'
                 : 'border-transparent text-muted hover:text-text'
