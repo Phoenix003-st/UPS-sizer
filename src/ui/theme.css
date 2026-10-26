@@ -39,6 +39,16 @@ body {
   font-family: var(--font-sans);
 }
 
+/*
+ * Les zones à défilement horizontal (tableaux, onglets) contiennent leurs descendants en position
+ * absolue (textes `sr-only` des cellules) : sinon ceux-ci élargissent la page sur téléphone.
+ */
+@layer components {
+  .overflow-x-auto {
+    position: relative;
+  }
+}
+
 /* Impression (note de calcul) : uniquement le contenu, sans navigation. */
 @media print {
   header,
