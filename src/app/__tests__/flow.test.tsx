@@ -54,6 +54,18 @@ describe('parcours utilisateur', () => {
     );
     await hashChange();
     expect(screen.getByRole('heading', { level: 1, name: 'Livrables' })).toBeTruthy();
+    fireEvent.click(screen.getByRole('tab', { name: 'Autonomie selon la charge' }));
+    expect(screen.getByRole('table', { name: 'Autonomie selon la charge' })).toBeTruthy();
+    expect(screen.getByRole('img', { name: /Courbe d'autonomie/ })).toBeTruthy();
+
+    // Retour aux solutions puis accès direct aux Livrables par le bouton du bas.
+    fireEvent.click(screen.getByRole('button', { name: /Retour/ }));
+    await hashChange();
+    expect(screen.getByRole('heading', { level: 1, name: 'Solutions proposées' })).toBeTruthy();
+    // Le dernier bouton « Livrables » est celui du bas de page (le premier est dans la frise d'étapes).
+    fireEvent.click(screen.getAllByRole('button', { name: /^Livrables/ }).at(-1)!);
+    await hashChange();
+    expect(screen.getByRole('heading', { level: 1, name: 'Livrables' })).toBeTruthy();
     fireEvent.click(screen.getByRole('tab', { name: 'Nomenclature' }));
     expect(screen.getByRole('table', { name: 'Nomenclature' })).toBeTruthy();
     expect(screen.getAllByText(/Pré-dimensionnement indicatif/).length).toBeGreaterThan(0);

@@ -230,6 +230,7 @@
       "plan": "Layout",
       "singleLine": "Single-line diagram",
       "calcNote": "Calculation note",
+      "autonomy": "Runtime vs load",
       "bom": "Bill of materials",
       "report": "PDF report",
       "view3d": "3D view"
@@ -237,6 +238,22 @@
     "print": "Print",
     "comingSoon": "Available in a later version.",
     "noOption": "Choose a solution first."
+  },
+  "autonomyLoad": {
+    "title": "Runtime vs load",
+    "intro": "Estimated runtime of the selected battery ({{battery}}) as a function of load, expressed in % of one system's usable power ({{kw}} kW).",
+    "loadPct": "Load (%)",
+    "loadKw": "Load (kW)",
+    "endOfLife": "End-of-life runtime (min)",
+    "new": "New-battery runtime (min)",
+    "minutes": "Runtime (min)",
+    "chart": "Runtime curve as a function of load",
+    "mark": {
+      "load": "Actual load",
+      "design": "Design load"
+    },
+    "note": "End of life: aging × temperature × margin factors = {{factors}}; new batteries: temperature correction only. End of discharge {{eod}} V/cell. “≥”: beyond the manufacturer's discharge table.",
+    "unavailable": "Battery data not found in the catalog."
   },
   "calcNote": {
     "title": "Calculation note",

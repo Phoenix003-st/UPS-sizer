@@ -77,7 +77,12 @@ export function SolutionsScreen({ project }: { project: Project }) {
       >
         {view3dFor && <Room3D option={view3dFor} project={project} height="62vh" />}
       </Modal>
-      <FlowNav back="room" />
+      <FlowNav
+        back="room"
+        next="deliverables"
+        nextLabel={t('steps.deliverables')}
+        nextDisabled={result.options.length === 0}
+      />
     </>
   );
 }

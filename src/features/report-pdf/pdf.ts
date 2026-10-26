@@ -20,6 +20,7 @@ import {
   TRACE_ORDER,
   alertMessage,
 } from '../../ui/format';
+import { autonomyData } from '../autonomy/autonomyData';
 import { bomDesignation } from '../bom/bomText';
 import type { Diagram } from '../single-line/diagram';
 import fontBoldUrl from 'dejavu-fonts-ttf/ttf/DejaVuSans-Bold.ttf?url';
@@ -393,6 +394,52 @@ export async function buildReportPdf(ctx: ReportContext): Promise<Blob> {
   });
   doc.setFontSize(8.5);
   doc.text(t('singleLine.legend'), rtl ? LW - MARGIN : MARGIN, LH - 22, { align });
+
+  // ── Autonomie selon la charge ──
+  const autonomy = ctx.catalogs ? autonomyData(option, result.inputs, ctx.catalogs) : null;
+  if (autonomy) {
+    newPage();
+    heading(t('autonomyLoad.title'));
+    const m = (v: number, lowerBound: boolean) =>
+      `${lowerBound ? '≥ ' : ''}${n(v, v < 10 ? 1 : 0)}`;
+    table(
+      [
+        t('autonomyLoad.loadPct'),
+        t('autonomyLoad.loadKw'),
+        t('autonomyLoad.endOfLife'),
+        t('autonomyLoad.new'),
+        '',
+      ],
+      autonomy.rows.map((r) => [
+        `${n(r.loadPct, 0)} %`,
+        n(r.loadW / 1000, 2),
+        m(r.endOfLifeMin, r.endOfLifeLowerBound),
+        m(r.newMin, r.newLowerBound),
+        r.mark ? t(`autonomyLoad.mark.${r.mark}`) : '',
+      ]),
+      {
+        columnStyles: {
+          0: { halign: 'right' },
+          1: { halign: 'right' },
+          2: { halign: 'right' },
+          3: { halign: 'right' },
+        },
+      },
+    );
+    doc.setFontSize(8);
+    doc.text(
+      doc.splitTextToSize(
+        t('autonomyLoad.note', {
+          factors: `${n(b.kAging, 2)} × ${n(b.kTemp, 3)} × ${n(b.kMargin, 2)}`,
+          eod: n(b.eodVpc, 2),
+        }),
+        usable,
+      ),
+      xText,
+      cursor + 1,
+      { align },
+    );
+  }
 
   // ── Nomenclature ──
   newPage();
