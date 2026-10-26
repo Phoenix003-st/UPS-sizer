@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+/*
+ * Thème neutre et rebrandable : changer uniquement ces variables et le logo (src/ui/logo.svg ;
+ * icônes PWA dans public/icons/).
+ * Contrastes vérifiés WCAG 2.1 AA sur fond --color-bg / --color-surface.
+ */
+:root {
+  --brand-primary: #1f4e79;
+  --brand-primary-hover: #163a5c;
+  --brand-on-primary: #ffffff;
+  --brand-accent: #0f766e;
+}
+
+@theme {
+  --color-primary: var(--brand-primary);
+  --color-primary-hover: var(--brand-primary-hover);
+  --color-on-primary: var(--brand-on-primary);
+  --color-accent: var(--brand-accent);
+  --color-bg: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-border: #c9d1db;
+  --color-text: #1b2430;
+  --color-muted: #4a5868;
+  --color-ok: #146c2e;
+  --color-ok-bg: #e5f4ea;
+  --color-warn: #8a4b00;
+  --color-warn-bg: #fff2dc;
+  --color-block: #a4161a;
+  --color-block-bg: #fde8e8;
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Noto Sans Arabic', sans-serif;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Impression (note de calcul) : uniquement le contenu, sans navigation. */
+@media print {
+  header,
+  nav,
+  footer,
+  .print\:hidden,
+  [role='tablist'],
+  button {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  body {
+    background: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

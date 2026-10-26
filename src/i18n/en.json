@@ -1,0 +1,604 @@
+{
+  "app": {
+    "name": "UPS Sizer",
+    "tagline": "Indoor UPS pre-sizing",
+    "disclaimer": "Indicative pre-sizing – to be validated by a design office before installation",
+    "sample": "SAMPLE – to be replaced",
+    "skip": "Skip to content",
+    "localOnly": "Your projects stay in this browser. Nothing is sent to a server."
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "My projects",
+    "settings": "Settings",
+    "catalogs": "Catalogues",
+    "language": "Language",
+    "back": "Back",
+    "next": "Continue",
+    "newProject": "New project",
+    "menu": "Menu"
+  },
+  "steps": {
+    "type": "Type",
+    "power": "Power",
+    "room": "Room",
+    "solution": "Solution",
+    "deliverables": "Deliverables",
+    "label": "Progress",
+    "current": "current step"
+  },
+  "scenario": {
+    "cctv": {
+      "title": "Video surveillance",
+      "desc": "IP cameras, recorders, PoE switches"
+    },
+    "office": {
+      "title": "Office",
+      "desc": "PCs, monitors, network printers"
+    },
+    "server": {
+      "title": "Servers",
+      "desc": "Server room, racks, storage"
+    },
+    "datacenter": {
+      "title": "Data centre",
+      "desc": "Several IT racks, redundancy"
+    },
+    "airport": {
+      "title": "Airport",
+      "desc": "Indoor technical rooms, long runtime"
+    },
+    "building": {
+      "title": "Building",
+      "desc": "Offices, hotels, schools, shops, clinics"
+    },
+    "custom": {
+      "title": "Custom",
+      "desc": "I set everything myself"
+    }
+  },
+  "home": {
+    "title": "What do you want to protect?",
+    "subtitle": "Pick an installation type: smart defaults are already filled in.",
+    "resume": "Resume “{{name}}”",
+    "myProjects": "My projects"
+  },
+  "power": {
+    "title": "Power and runtime",
+    "quick": "Quick entry",
+    "assisted": "My equipment",
+    "load": "Load power",
+    "unit": "Unit",
+    "autonomy": "Required runtime",
+    "other": "Other",
+    "minutes": "min",
+    "advanced": "Advanced options",
+    "outputPf": "Output power factor",
+    "growthMargin": "Growth margin",
+    "targetLoadRate": "Maximum UPS load",
+    "phases": "Supply",
+    "phasesAuto": "Automatic",
+    "phasesMono": "Single-phase",
+    "phasesTri": "Three-phase",
+    "voltage": "Voltage",
+    "frequency": "Frequency",
+    "redundancy": "Redundancy",
+    "redundancyHelp": {
+      "N": "A single system",
+      "N+1": "One spare unit or module",
+      "2N": "Two independent systems A and B"
+    },
+    "batteryChemistry": "Batteries",
+    "chemistry": {
+      "auto": "Automatic",
+      "VRLA": "Lead-acid (VRLA)",
+      "LI": "Lithium (LFP)"
+    },
+    "eod": "End-of-discharge voltage",
+    "eodAuto": "Automatic",
+    "summary": "Summary",
+    "loadReal": "Load",
+    "design": "Design value",
+    "library": {
+      "add": "Add",
+      "qty": "Quantity",
+      "unitW": "Unit power (W)",
+      "remove": "Remove {{name}}",
+      "total": "Total",
+      "empty": "Add your equipment from the list below.",
+      "category": {
+        "cctv": "Video surveillance",
+        "network": "Network",
+        "it": "IT",
+        "office": "Office",
+        "building": "Building",
+        "other": "Other"
+      }
+    }
+  },
+  "room": {
+    "title": "Installation room",
+    "keepDefaults": "Not sure? The defaults are kept and you can change them later.",
+    "dimensions": "Room dimensions",
+    "length": "Length",
+    "width": "Width",
+    "height": "Height",
+    "door": "Door",
+    "doorWidth": "Door width",
+    "doorHeight": "Door height",
+    "doorWall": "Door wall",
+    "wall": {
+      "top": "Top",
+      "bottom": "Bottom",
+      "left": "Left",
+      "right": "Right"
+    },
+    "floor": "Floor load capacity",
+    "floorUnknown": "Unknown (default: {{value}} kg/m²)",
+    "environment": "Environment",
+    "ambient": "Ambient temperature",
+    "humidity": "Relative humidity",
+    "altitude": "Altitude",
+    "hvac": "Existing air conditioning",
+    "hvacKW": "Cooling capacity",
+    "raisedFloor": "Raised floor",
+    "kind": "Room type",
+    "kinds": {
+      "dedicated": "Dedicated technical room",
+      "shared": "Shared room",
+      "office": "Office",
+      "rack": "Existing rack"
+    },
+    "installation": "Electrical installation",
+    "generator": "Generator with automatic transfer switch",
+    "maintenanceBypass": "External maintenance bypass",
+    "cableLengths": "Cable lengths",
+    "cable": {
+      "input": "Input",
+      "bypass": "Bypass",
+      "output": "Output",
+      "battery": "Battery"
+    },
+    "checks": "Checks",
+    "noAlert": "No room alert."
+  },
+  "solutions": {
+    "title": "Proposed solutions",
+    "subtitle": "Up to three options. The recommended one is highlighted.",
+    "tier": {
+      "economy": "Economy",
+      "recommended": "Recommended",
+      "performance": "Performance"
+    },
+    "tierHelp": {
+      "economy": "Just enough power",
+      "recommended": "The best trade-off",
+      "performance": "Best efficiency and largest margin"
+    },
+    "choose": "Choose this option",
+    "chosen": "Selected option",
+    "technology": "Technology",
+    "configuration": "Configuration",
+    "units_one": "{{count}} unit",
+    "units_other": "{{count}} units",
+    "modules_one": "{{count}} × {{kw}} kW module",
+    "modules_other": "{{count}} × {{kw}} kW modules",
+    "systems": "Systems A and B",
+    "loadRate": "Load",
+    "efficiency": "Efficiency",
+    "autonomy": "Runtime",
+    "autonomyDesign": "{{min}} min (end of life, all margins)",
+    "autonomyNew": "≈ {{min}} min with new batteries",
+    "battery": "Batteries",
+    "batteryLine": "{{chemistry}} {{v}} V {{ah}} Ah — {{bps}} blocks × {{strings}} string(s)",
+    "internal": "Internal batteries",
+    "cabinets": "{{qty}} × {{ref}}",
+    "perSet": "per set, {{sets}} set(s)",
+    "dimensions": "Dimensions (W × D × H)",
+    "weight": "Total weight",
+    "footprint": "Floor space incl. clearances",
+    "placeInRoom": "Space in the room",
+    "noise": "Noise level",
+    "seeCalc": "Show calculation",
+    "none": "No solution fits these inputs.",
+    "status": {
+      "ok": "OK",
+      "warn": "To check",
+      "block": "Blocking"
+    }
+  },
+  "tech": {
+    "line_interactive": "Line interactive",
+    "online_performance": "Online Performance",
+    "online_double_conversion": "Online double conversion",
+    "modular": "Modular"
+  },
+  "formFactor": {
+    "tower": "Tower",
+    "rack": "Rack",
+    "tower_rack": "Tower/rack",
+    "cabinet": "Cabinet"
+  },
+  "chemistry": {
+    "VRLA_AGM": "Lead-acid AGM",
+    "VRLA_GEL": "Lead-acid gel",
+    "LI_LFP": "Lithium LFP"
+  },
+  "deliverables": {
+    "title": "Deliverables",
+    "tabs": {
+      "plan": "Layout",
+      "singleLine": "Single-line diagram",
+      "calcNote": "Calculation note",
+      "bom": "Bill of materials",
+      "report": "PDF report"
+    },
+    "print": "Print",
+    "comingSoon": "Available in a later version.",
+    "noOption": "Choose a solution first."
+  },
+  "calcNote": {
+    "title": "Calculation note",
+    "project": "Project",
+    "inputs": "Inputs",
+    "solution": "Selected solution",
+    "currents": "Currents, protections and cables",
+    "thermal": "Heat dissipation",
+    "floor": "Floor load",
+    "ventilation": "Battery room ventilation",
+    "alerts": "Alerts",
+    "formula": "Formula",
+    "values": "Values",
+    "result": "Result",
+    "ref": "Reference",
+    "circuit": "Circuit",
+    "ib": "Ib (A)",
+    "in": "Rating (A)",
+    "section": "Cross-section",
+    "length": "Length",
+    "drop": "Voltage drop",
+    "qty": "Qty",
+    "notApplicable": "Not applicable (lithium batteries)."
+  },
+  "bom": {
+    "title": "Bill of materials",
+    "columns": {
+      "reference": "Reference",
+      "designation": "Description",
+      "qty": "Qty",
+      "unit": "Unit",
+      "unitPrice": "Unit price",
+      "total": "Total"
+    },
+    "unit": {
+      "pcs": "pcs",
+      "m": "m"
+    },
+    "ups": "UPS {{kva}} kVA / {{kw}} kW",
+    "frame": "Modular frame ({{maxModules}} slots)",
+    "module": "{{kw}} kW power module",
+    "battery": "{{v}} V {{ah}} Ah battery block",
+    "cabinet": "Battery cabinet or pack",
+    "cable": "{{cores}} × {{section}} mm² cable (indicative)",
+    "circuit": {
+      "rectifier": "Rectifier input breaker",
+      "bypass": "Bypass input breaker",
+      "output": "UPS output breaker",
+      "battery": "Battery breaker (DC)",
+      "maintenanceBypass": "External maintenance bypass",
+      "feeder": "Outgoing feeder breaker (UPS board)",
+      "ats": "Automatic transfer switch (ATS)"
+    },
+    "sampleNote": "Lines marked * come from sample datasheets."
+  },
+  "settings": {
+    "title": "Settings and assumptions",
+    "intro": "All calculation assumptions. They apply to every project in this browser.",
+    "reset": "Restore defaults",
+    "resetDone": "Defaults restored.",
+    "saved": "Saved",
+    "invalid": "Value rejected: {{error}}",
+    "groups": {
+      "power": "Power",
+      "battery": "Batteries",
+      "room": "Room",
+      "electrical": "Electrical",
+      "selection": "Option selection",
+      "scenarios": "Installation types"
+    },
+    "fields": {
+      "growthMargin": "Growth margin",
+      "targetLoadRate": "Target load",
+      "defaultPf": "Default power factor",
+      "monoToTriThresholdKVA": "Three-phase threshold (kVA)",
+      "altitudeDerating": "Altitude derating (m: factor)",
+      "agingFactor": "Ageing factor (lead-acid)",
+      "agingFactorLithium": "Ageing factor (lithium)",
+      "designMargin": "Design margin",
+      "defaultEodVpc": "Default end of discharge (V/cell)",
+      "shortAutonomyEodVpc": "End of discharge, short runtime (V/cell)",
+      "shortAutonomyThresholdMin": "Short runtime below (min)",
+      "allowedEodVpc": "Allowed end-of-discharge voltages",
+      "maxStrings": "Maximum number of strings",
+      "chargeEfficiency": "Charging efficiency",
+      "floatVpc": "Float voltage (V/cell)",
+      "gasCurrentMaPerAh": "Gas current (mA/Ah)",
+      "defaultFloorLoadKgM2": "Default floor load (kg/m²)",
+      "doorMarginMm": "Door clearance margin (mm)",
+      "recommendedTempC": "Recommended temperature (°C)",
+      "allowedTempC": "Allowed temperature (°C)",
+      "maxHumidityPct": "Maximum humidity (%)",
+      "defaultHeightMm": "Default room height (mm)",
+      "noHvacMaxW": "Maximum dissipation without cooling (W)",
+      "officeNoiseWarnDb": "Maximum office noise (dB)",
+      "floorCheckMinWeightKg": "Minimum weight for floor check (kg)",
+      "breakerSeriesA": "Breaker ratings (A)",
+      "groupingFactor": "Cable grouping factor",
+      "cableAmbientC": "Cable ambient temperature (°C)",
+      "maxParallel": "Maximum parallel cables",
+      "maxVoltageDropAc": "Maximum AC voltage drop (%)",
+      "maxVoltageDropDc": "Maximum DC voltage drop (%)",
+      "inputPf": "Input power factor",
+      "outputFeeders": "Number of UPS board feeders",
+      "generatorSizingFactor": "Generator sizing factor",
+      "defaultCableLengths": "Default cable lengths (m)",
+      "weightEfficiency": "Weight: efficiency",
+      "weightFootprint": "Weight: footprint",
+      "weightMargin": "Weight: margin",
+      "weightPrice": "Weight: price",
+      "maxOversizeFactor": "Maximum oversizing (×)",
+      "idealLoadRate": "Ideal load",
+      "autonomyMin": "Runtime (min)",
+      "technologies": "Technologies",
+      "redundancy": "Redundancy"
+    },
+    "listHelp": "Comma-separated values"
+  },
+  "catalogs": {
+    "title": "Catalogues",
+    "intro": "The bundled catalogues are SAMPLES. Replace them with your datasheets (JSON import or editing here): no code change is needed.",
+    "tabs": {
+      "ups": "UPS",
+      "blocks": "Battery blocks",
+      "cabinets": "Cabinets",
+      "equipment": "Equipment"
+    },
+    "import": "Import JSON",
+    "export": "Export JSON",
+    "reset": "Restore samples",
+    "edit": "Edit",
+    "add": "Add an entry",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "imported": "Catalogue imported.",
+    "invalid": "Catalogue rejected:",
+    "editHelp": "Entry in JSON format. It is checked when saved.",
+    "count_one": "{{count}} entry",
+    "count_other": "{{count}} entries",
+    "confirmReset": "Replace this catalogue with the samples?",
+    "confirmDelete": "Delete “{{name}}”?",
+    "columns": {
+      "reference": "Reference",
+      "technology": "Technology",
+      "power": "Power",
+      "dimensions": "W × D × H (mm)",
+      "weight": "Weight",
+      "chemistry": "Chemistry",
+      "capacity": "Capacity",
+      "category": "Category",
+      "defaultW": "Power",
+      "source": "Source",
+      "actions": "Actions"
+    }
+  },
+  "projects": {
+    "title": "My projects",
+    "empty": "No project yet.",
+    "open": "Open",
+    "duplicate": "Duplicate",
+    "delete": "Delete",
+    "export": "Export (.ups.json)",
+    "import": "Import a project",
+    "imported": "Project imported.",
+    "invalid": "File rejected:",
+    "confirmDelete": "Delete project “{{name}}”?",
+    "untitled": "Untitled project",
+    "copy": "{{name}} (copy)",
+    "updated": "Updated {{date}}",
+    "name": "Project name",
+    "client": "Customer",
+    "author": "Author"
+  },
+  "calcModal": {
+    "title": "Show calculation",
+    "close": "Close"
+  },
+  "axis": {
+    "length": "length",
+    "width": "width",
+    "height": "height"
+  },
+  "alert": {
+    "temp_out_of_range": "Temperature of {{t}} °C out of range: the UPS operates between {{min}} and {{max}} °C.",
+    "temp_not_recommended": "Temperature of {{t}} °C: {{min}} to {{max}} °C is recommended for battery life.",
+    "humidity_too_high": "Humidity of {{h}} % is too high (maximum {{max}} %, non-condensing).",
+    "altitude_derating": "Altitude of {{altitude}} m: UPS power is reduced by {{pct}} %.",
+    "phase_switched_to_three": "{{kva}} kVA exceeds {{threshold}} kVA: the installation switches to three-phase.",
+    "no_load": "Enter the power to protect.",
+    "no_ups": "No UPS in the catalogue fits {{kw}} kW with these options.",
+    "no_battery": "No battery in the catalogue reaches {{autonomy}} min at {{kw}} kW.",
+    "room_too_small": "The room is too small for this configuration. {{missing}} m is missing in {{axis}}.",
+    "items_overlap": "Some equipment overlaps on the layout.",
+    "floor_overload": "Floor not strong enough: {{load}} kg/m² under “{{item}}” for {{admissible}} kg/m² allowed.",
+    "floor_overload_unknown": "Floor load to check: {{load}} kg/m² under “{{item}}”; the default value is {{admissible}} kg/m².",
+    "floor_concentrated": "Concentrated load of {{load}} kg/m² under the equipment (floor: {{admissible}} kg/m²): plan load spreading.",
+    "raised_floor_support": "Raised floor: plan a support frame for {{weight}} kg of equipment.",
+    "door_blocked": "Some equipment blocks the door swing.",
+    "rack_units": "Installation in the existing rack: {{u}} U needed.",
+    "door_too_narrow": "The door is too narrow for “{{item}}”: {{missing}} m is missing.",
+    "door_too_low": "The door is too low for “{{item}}”: {{missing}} m is missing.",
+    "hvac_insufficient": "Cooling insufficient: {{required}} kW to remove for {{available}} kW available.",
+    "hvac_required": "Plan air conditioning of at least {{required}} kW.",
+    "noise_high": "Noise level of {{db}} dB: high for an office (guide value {{max}} dB).",
+    "noise_level": "Noise level: {{db}} dB.",
+    "breaker_out_of_range": "A current exceeds the breaker ratings: specific design needed.",
+    "cable_out_of_range": "A cable size could not be determined: specific design needed.",
+    "ventilation_required": "Battery room ventilation: {{flow}} m³/h (IEC 62485-2).",
+    "external_battery_packs": "{{qty}} external battery pack(s) next to the UPS.",
+    "lithium_unavailable": "No lithium battery for this model: lead-acid batteries proposed."
+  },
+  "calc": {
+    "load": {
+      "title": "Required power",
+      "sumItems": "Equipment total",
+      "fromKVA": "Active power",
+      "direct": "Entered power",
+      "kwReq": "Active design power",
+      "kvaReq": "Apparent design power"
+    },
+    "phases": {
+      "title": "Single- or three-phase",
+      "rule": "Switching rule",
+      "voltage": "Calculation voltage"
+    },
+    "env": {
+      "title": "Environment",
+      "altitude": "Altitude factor"
+    },
+    "selection": {
+      "title": "UPS selection",
+      "rule": "Models kept"
+    },
+    "modular": {
+      "title": "Modules",
+      "n": "Modules needed",
+      "redundancy": "With redundancy"
+    },
+    "battery": {
+      "title": "Batteries (constant power)",
+      "pdc": "Power drawn from batteries",
+      "cells": "Number of cells",
+      "factors": "Correction factors",
+      "pcell": "Power per cell",
+      "available": "Available power (table)",
+      "autonomy": "Calculated runtime",
+      "none": "No solution"
+    },
+    "elec": {
+      "title": "Currents and protections",
+      "output": "Unit output current",
+      "rectifier": "Rectifier input current",
+      "battery": "Maximum battery current",
+      "systemOutput": "System output current",
+      "generator": "Generator"
+    },
+    "circuit": {
+      "generic": {
+        "breaker": "Rating",
+        "cable": "Cable"
+      },
+      "rectifier": {
+        "breaker": "Rectifier input: rating",
+        "cable": "Rectifier input: cable"
+      },
+      "bypass": {
+        "breaker": "Bypass input: rating",
+        "cable": "Bypass input: cable"
+      },
+      "output": {
+        "breaker": "Output: rating",
+        "cable": "Output: cable"
+      },
+      "battery": {
+        "breaker": "Battery: rating",
+        "cable": "Battery: cable"
+      },
+      "maintenanceBypass": {
+        "breaker": "Maintenance bypass: rating",
+        "cable": "Maintenance bypass: cable"
+      },
+      "feeder": {
+        "breaker": "Feeder: rating",
+        "cable": "Feeder: cable"
+      },
+      "ats": {
+        "breaker": "Transfer switch: rating",
+        "cable": "Transfer switch: cable"
+      }
+    },
+    "thermal": {
+      "title": "Heat dissipation",
+      "ups": "UPS losses",
+      "catalog": "UPS losses (catalogue)",
+      "charge": "Charging losses",
+      "total": "Total dissipation",
+      "btu": "In BTU/h"
+    },
+    "vent": {
+      "title": "Ventilation (IEC 62485-2)",
+      "flow": "Air flow",
+      "area": "Free area",
+      "lithium": "Not applicable (lithium)"
+    },
+    "layout": {
+      "title": "Layout",
+      "footprint": "Floor space with clearances",
+      "remaining": "Remaining area",
+      "door": "Door passage",
+      "floor": "Distributed floor load"
+    }
+  },
+  "plan": {
+    "title": "Layout plan",
+    "legend": "Top view to scale. Hatched areas: service clearances.",
+    "dragHelp": "Drag an item to move it; double-click or press R to rotate it by 90°.",
+    "reset": "Auto-arrange",
+    "remaining": "Remaining area: {{m2}} m²",
+    "door": "Door",
+    "scale": "Scale"
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "close": "Close",
+    "kW": "kW",
+    "kVA": "kVA",
+    "W": "W",
+    "m": "m",
+    "mm": "mm",
+    "kg": "kg",
+    "min": "min",
+    "save": "Save",
+    "cancel": "Cancel",
+    "loading": "Loading…"
+  },
+  "singleLine": {
+    "title": "Single-line diagram",
+    "mains": "Mains",
+    "generator": "Genset",
+    "system": "System {{s}}",
+    "board": "UPS distribution board",
+    "maintenanceBypass": "Maintenance bypass",
+    "battery": "Batteries",
+    "feeders": "Outgoing feeders",
+    "legend": "Simplified IEC 60617 symbols. Ratings and cable sizes are indicative."
+  },
+  "report": {
+    "title": "Pre-sizing report",
+    "date": "Date",
+    "installation": "Installation",
+    "summary": "Summary",
+    "sampleNotice": "The products listed come from SAMPLE datasheets inspired by public data: replace them with the chosen manufacturer's references.",
+    "intro": "The report includes the summary, the selected solution, the layout, the single-line diagram, the bill of materials and the calculation note.",
+    "download": "Download the PDF report",
+    "generating": "Generating…",
+    "error": "Generation failed: {{error}}"
+  },
+  "exports": {
+    "xlsx": "Download as Excel",
+    "csv": "Download as CSV",
+    "all": "Download everything",
+    "project": "Project (.ups.json)"
+  }
+}

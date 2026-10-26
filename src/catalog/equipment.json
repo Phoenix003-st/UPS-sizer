@@ -1,0 +1,223 @@
+[
+  {
+    "id": "ip-camera",
+    "category": "cctv",
+    "label": {
+      "fr": "Caméra IP",
+      "en": "IP camera",
+      "ar": "كاميرا IP"
+    },
+    "defaultW": 10,
+    "rangeW": [5, 15],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "ptz-camera",
+    "category": "cctv",
+    "label": {
+      "fr": "Caméra PTZ",
+      "en": "PTZ camera",
+      "ar": "كاميرا PTZ"
+    },
+    "defaultW": 30,
+    "rangeW": [15, 60],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "nvr",
+    "category": "cctv",
+    "label": {
+      "fr": "Enregistreur NVR",
+      "en": "NVR recorder",
+      "ar": "مسجل NVR"
+    },
+    "defaultW": 60,
+    "rangeW": [30, 150],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "poe-switch-8",
+    "category": "network",
+    "label": {
+      "fr": "Switch PoE 8 ports",
+      "en": "8-port PoE switch",
+      "ar": "محول PoE بثمانية منافذ"
+    },
+    "defaultW": 150,
+    "rangeW": [60, 250],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "poe-switch-24",
+    "category": "network",
+    "label": {
+      "fr": "Switch PoE 24 ports",
+      "en": "24-port PoE switch",
+      "ar": "محول PoE بأربعة وعشرين منفذا"
+    },
+    "defaultW": 400,
+    "rangeW": [100, 740],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "router",
+    "category": "network",
+    "label": {
+      "fr": "Routeur / pare-feu",
+      "en": "Router / firewall",
+      "ar": "موجه / جدار حماية"
+    },
+    "defaultW": 80,
+    "rangeW": [20, 300],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "wifi-ap",
+    "category": "network",
+    "label": {
+      "fr": "Borne Wi-Fi",
+      "en": "Wi-Fi access point",
+      "ar": "نقطة وصول Wi-Fi"
+    },
+    "defaultW": 15,
+    "rangeW": [8, 30],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "server-1u",
+    "category": "it",
+    "label": {
+      "fr": "Serveur 1U",
+      "en": "1U server",
+      "ar": "خادم 1U"
+    },
+    "defaultW": 350,
+    "rangeW": [200, 600],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "server-2u",
+    "category": "it",
+    "label": {
+      "fr": "Serveur 2U",
+      "en": "2U server",
+      "ar": "خادم 2U"
+    },
+    "defaultW": 600,
+    "rangeW": [300, 1200],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "storage",
+    "category": "it",
+    "label": {
+      "fr": "Baie de stockage",
+      "en": "Storage array",
+      "ar": "وحدة تخزين"
+    },
+    "defaultW": 800,
+    "rangeW": [300, 2000],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "it-rack",
+    "category": "it",
+    "label": {
+      "fr": "Baie IT",
+      "en": "IT rack",
+      "ar": "خزانة IT"
+    },
+    "defaultW": 5000,
+    "rangeW": [2000, 20000],
+    "pf": 0.95,
+    "unit": "kW"
+  },
+  {
+    "id": "pc",
+    "category": "office",
+    "label": {
+      "fr": "PC de bureau",
+      "en": "Desktop PC",
+      "ar": "حاسوب مكتبي"
+    },
+    "defaultW": 150,
+    "rangeW": [60, 300],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "monitor",
+    "category": "office",
+    "label": {
+      "fr": "Écran",
+      "en": "Monitor",
+      "ar": "شاشة"
+    },
+    "defaultW": 30,
+    "rangeW": [15, 60],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "printer",
+    "category": "office",
+    "label": {
+      "fr": "Imprimante réseau",
+      "en": "Network printer",
+      "ar": "طابعة شبكية"
+    },
+    "defaultW": 400,
+    "rangeW": [50, 1000],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "access-control",
+    "category": "building",
+    "label": {
+      "fr": "Contrôleur d'accès",
+      "en": "Access controller",
+      "ar": "وحدة التحكم في الدخول"
+    },
+    "defaultW": 40,
+    "rangeW": [10, 100],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "fire-panel",
+    "category": "building",
+    "label": {
+      "fr": "Centrale incendie",
+      "en": "Fire alarm panel",
+      "ar": "لوحة إنذار الحريق"
+    },
+    "defaultW": 100,
+    "rangeW": [30, 300],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "emergency-lighting",
+    "category": "building",
+    "label": {
+      "fr": "Éclairage de sécurité (par kW)",
+      "en": "Emergency lighting (per kW)",
+      "ar": "إنارة الطوارئ (لكل كيلوواط)"
+    },
+    "defaultW": 1000,
+    "rangeW": [100, 5000],
+    "pf": 0.9,
+    "unit": "kW"
+  }
+]

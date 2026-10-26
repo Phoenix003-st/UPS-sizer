@@ -1,0 +1,8 @@
+dist
+dist-single
+coverage
+node_modules
+package-lock.json
+docs/PASSATION.md
+docs/CAHIER-DES-CHARGES.md
+docs/archive

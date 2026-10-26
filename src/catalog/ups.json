@@ -1,0 +1,3654 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "catalogVersion": "2026-10-EXEMPLE",
+    "sample": true,
+    "notice": "EXEMPLE – à remplacer par les fiches constructeur"
+  },
+  "models": [
+    {
+      "id": "EX-LI-1K",
+      "sample": true,
+      "reference": "EXEMPLE Line Interactive Tour 1 kVA",
+      "range": "EXEMPLE Line Interactive",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1,
+        "kW": 0.9,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 170,
+        "d": 440,
+        "h": 220
+      },
+      "weightKg": 13,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Smart-UPS SMT (line interactive)",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-LI-1K5",
+      "sample": true,
+      "reference": "EXEMPLE Line Interactive Tour 1,5 kVA",
+      "range": "EXEMPLE Line Interactive",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1.5,
+        "kW": 1.35,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 170,
+        "d": 440,
+        "h": 220
+      },
+      "weightKg": 24,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 41,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V18",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Smart-UPS SMT (line interactive)",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-LI-2K2",
+      "sample": true,
+      "reference": "EXEMPLE Line Interactive Tour 2,2 kVA",
+      "range": "EXEMPLE Line Interactive",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 2.2,
+        "kW": 1.98,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 196,
+        "d": 546,
+        "h": 432
+      },
+      "weightKg": 36,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V18",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 3,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Smart-UPS SMT (line interactive)",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-LI-3K",
+      "sample": true,
+      "reference": "EXEMPLE Line Interactive Tour 3 kVA",
+      "range": "EXEMPLE Line Interactive",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 3,
+        "kW": 2.7,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 196,
+        "d": 546,
+        "h": 432
+      },
+      "weightKg": 38,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V18",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 3,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Smart-UPS SMT (line interactive)",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-LI-3K-RT",
+      "sample": true,
+      "reference": "EXEMPLE Line Interactive Tour/Rack 3 kVA XL",
+      "range": "EXEMPLE Line Interactive",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 3,
+        "kW": 2.7,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 630,
+        "h": 88
+      },
+      "weightKg": 29,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["EX-EBM-48"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "Infosec UPS Systems",
+        "model": "E3 Performance RT (line interactive)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-OP-1K",
+      "sample": true,
+      "reference": "EXEMPLE Online Performance Tour 1 kVA",
+      "range": "EXEMPLE Online Performance",
+      "technology": "online_performance",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1,
+        "kW": 0.9,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.85
+          },
+          {
+            "load": 0.5,
+            "eta": 0.88
+          },
+          {
+            "load": 0.75,
+            "eta": 0.89
+          },
+          {
+            "load": 1,
+            "eta": 0.89
+          }
+        ],
+        "eco": 0.95,
+        "battery": 0.85
+      },
+      "dimensionsMm": {
+        "w": 145,
+        "d": 400,
+        "h": 220
+      },
+      "weightKg": 10,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [3],
+          "default": 3
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 3,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": ["EX-EBM-36"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Easy UPS On-Line SRV",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-OP-2K",
+      "sample": true,
+      "reference": "EXEMPLE Online Performance Tour 2 kVA",
+      "range": "EXEMPLE Online Performance",
+      "technology": "online_performance",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 2,
+        "kW": 1.8,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.95,
+        "battery": 0.86
+      },
+      "dimensionsMm": {
+        "w": 190,
+        "d": 450,
+        "h": 340
+      },
+      "weightKg": 18,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 48,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": ["EX-EBM-72"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Easy UPS On-Line SRV",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-OP-3K",
+      "sample": true,
+      "reference": "EXEMPLE Online Performance Tour 3 kVA",
+      "range": "EXEMPLE Online Performance",
+      "technology": "online_performance",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 3,
+        "kW": 2.7,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.87
+          },
+          {
+            "load": 0.5,
+            "eta": 0.9
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.95,
+        "battery": 0.86
+      },
+      "dimensionsMm": {
+        "w": 190,
+        "d": 450,
+        "h": 340
+      },
+      "weightKg": 26,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 50,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EX-EBM-72"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Easy UPS On-Line SRV",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-OP-6K",
+      "sample": true,
+      "reference": "EXEMPLE Online Performance Tour 6 kVA",
+      "range": "EXEMPLE Online Performance",
+      "technology": "online_performance",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 6,
+        "kW": 5.4,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.88
+          },
+          {
+            "load": 0.5,
+            "eta": 0.91
+          },
+          {
+            "load": 0.75,
+            "eta": 0.92
+          },
+          {
+            "load": 1,
+            "eta": 0.92
+          }
+        ],
+        "eco": 0.96,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 250,
+        "d": 550,
+        "h": 500
+      },
+      "weightKg": 60,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 52,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EX-EBM-192"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9E",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-OP-10K",
+      "sample": true,
+      "reference": "EXEMPLE Online Performance Tour 10 kVA",
+      "range": "EXEMPLE Online Performance",
+      "technology": "online_performance",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 10,
+        "kW": 9,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.88
+          },
+          {
+            "load": 0.5,
+            "eta": 0.91
+          },
+          {
+            "load": 0.75,
+            "eta": 0.92
+          },
+          {
+            "load": 1,
+            "eta": 0.92
+          }
+        ],
+        "eco": 0.96,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 250,
+        "d": 550,
+        "h": 500
+      },
+      "weightKg": 85,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
+          "strings": 2
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["EX-EBM-192"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9E",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC1-1K",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tour/Rack 1 kVA",
+      "range": "EXEMPLE Online Double Conversion mono",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1,
+        "kW": 0.9,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 310,
+        "h": 88
+      },
+      "weightKg": 12.7,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [3],
+          "default": 3
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 3,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": ["EX-EBM-36"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "Infosec UPS Systems",
+        "model": "E3 Pro RT (1 kVA : 438 × 310 × 88 mm, 12,7 kg ; 2 kVA : 438 × 410 × 88 mm, 19 kg)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC1-2K",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tour/Rack 2 kVA",
+      "range": "EXEMPLE Online Double Conversion mono",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 2,
+        "kW": 1.8,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.88
+          },
+          {
+            "load": 0.5,
+            "eta": 0.9
+          },
+          {
+            "load": 0.75,
+            "eta": 0.91
+          },
+          {
+            "load": 1,
+            "eta": 0.91
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 410,
+        "h": 88
+      },
+      "weightKg": 19,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": ["EX-EBM-48"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "Infosec UPS Systems",
+        "model": "E3 Pro RT (1 kVA : 438 × 310 × 88 mm, 12,7 kg ; 2 kVA : 438 × 410 × 88 mm, 19 kg)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC1-3K",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tour 3 kVA",
+      "range": "EXEMPLE Online Double Conversion mono",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 3,
+        "kW": 2.7,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.89
+          },
+          {
+            "load": 0.5,
+            "eta": 0.92
+          },
+          {
+            "load": 0.75,
+            "eta": 0.93
+          },
+          {
+            "load": 1,
+            "eta": 0.93
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.9
+      },
+      "dimensionsMm": {
+        "w": 85,
+        "d": 635,
+        "h": 432
+      },
+      "weightKg": 31.3,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 47,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [8],
+          "default": 8
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 8,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2.5,
+        "compatibleCabinetIds": ["EX-EBM-96"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 10
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://apc.com/za/en/product/SRT3000XLI/smartups-srt-3kva-230v",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Smart-UPS SRT 3000 (SRT3000XLI : 3 kVA / 2,7 kW, 31,3 kg)",
+        "url": "https://apc.com/za/en/product/SRT3000XLI/smartups-srt-3kva-230v",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC1-6K",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tour 6 kVA",
+      "range": "EXEMPLE Online Double Conversion mono",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 6,
+        "kW": 5.4,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.9
+          },
+          {
+            "load": 0.5,
+            "eta": 0.93
+          },
+          {
+            "load": 0.75,
+            "eta": 0.94
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 244,
+        "d": 542,
+        "h": 575
+      },
+      "weightKg": 65.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 50,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [20],
+          "default": 20
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 20,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["EX-EBM-240"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9SX 6000i (6 kVA / 5,4 kW, 65,5 kg, 20 × 12 V 7 Ah, 94 % online)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC1-10K",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tour 10 kVA",
+      "range": "EXEMPLE Online Double Conversion mono",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 10,
+        "kW": 9,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.9
+          },
+          {
+            "load": 0.5,
+            "eta": 0.93
+          },
+          {
+            "load": 0.75,
+            "eta": 0.94
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 260,
+        "d": 700,
+        "h": 700
+      },
+      "weightKg": 110,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 52,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [20],
+          "default": 20
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 20,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-EBM-240"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9SX 6000i (6 kVA / 5,4 kW, 65,5 kg, 20 × 12 V 7 Ah, 94 % online)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-10",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 10 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 10,
+        "kW": 10,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.955
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 350,
+        "d": 800,
+        "h": 1350
+      },
+      "weightKg": 90,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 52,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Galaxy VS 10–150 kW (jusqu'à 97 % en double conversion)",
+        "url": "https://www.se.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-15",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 15 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 15,
+        "kW": 15,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.955
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 350,
+        "d": 800,
+        "h": 1350
+      },
+      "weightKg": 95,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 52,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Galaxy VS 10–150 kW (jusqu'à 97 % en double conversion)",
+        "url": "https://www.se.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-20",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 20 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 20,
+        "kW": 20,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.935
+          },
+          {
+            "load": 0.5,
+            "eta": 0.952
+          },
+          {
+            "load": 0.75,
+            "eta": 0.957
+          },
+          {
+            "load": 1,
+            "eta": 0.952
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 350,
+        "d": 800,
+        "h": 1350
+      },
+      "weightKg": 100,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 54,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 8,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Galaxy VS 10–150 kW (jusqu'à 97 % en double conversion)",
+        "url": "https://www.se.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-30",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 30 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 30,
+        "kW": 30,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 560,
+        "d": 900,
+        "h": 1880
+      },
+      "weightKg": 270,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 58,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 15,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM 30–200 kW (560 × 914 × 1876 mm pour 30–60 kW ; < 60–65 dBA ; 97 %)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-40",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 40 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 40,
+        "kW": 40,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 560,
+        "d": 900,
+        "h": 1880
+      },
+      "weightKg": 280,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 58,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 15,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM 30–200 kW (560 × 914 × 1876 mm pour 30–60 kW ; < 60–65 dBA ; 97 %)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-60",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 60 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 60,
+        "kW": 60,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 560,
+        "d": 900,
+        "h": 1880
+      },
+      "weightKg": 300,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 60,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 20,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM 30–200 kW (560 × 914 × 1876 mm pour 30–60 kW ; < 60–65 dBA ; 97 %)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-80",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 80 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 80,
+        "kW": 80,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 850,
+        "h": 1880
+      },
+      "weightKg": 350,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 63,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 30,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "Infosec UPS Systems",
+        "model": "Gamme triphasée (M6Ti)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-100",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 100 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 100,
+        "kW": 100,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 850,
+        "h": 1880
+      },
+      "weightKg": 380,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 63,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 30,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "Infosec UPS Systems",
+        "model": "Gamme triphasée (M6Ti)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-120",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 120 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 120,
+        "kW": 120,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.952
+          },
+          {
+            "load": 0.5,
+            "eta": 0.966
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 850,
+        "d": 850,
+        "h": 1880
+      },
+      "weightKg": 520,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 63,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 40,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM 30–200 kW (560 × 914 × 1876 mm pour 30–60 kW ; < 60–65 dBA ; 97 %)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-160",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 160 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 160,
+        "kW": 160,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.952
+          },
+          {
+            "load": 0.5,
+            "eta": 0.966
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 850,
+        "d": 850,
+        "h": 1880
+      },
+      "weightKg": 560,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 65,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 40,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM 30–200 kW (560 × 914 × 1876 mm pour 30–60 kW ; < 60–65 dBA ; 97 %)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-200",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 200 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 200,
+        "kW": 200,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.952
+          },
+          {
+            "load": 0.5,
+            "eta": 0.966
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 850,
+        "d": 850,
+        "h": 1880
+      },
+      "weightKg": 620,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 65,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 50,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM 30–200 kW (560 × 914 × 1876 mm pour 30–60 kW ; < 60–65 dBA ; 97 %)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-250",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 250 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 250,
+        "kW": 250,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.955
+          },
+          {
+            "load": 0.5,
+            "eta": 0.967
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1100,
+        "d": 850,
+        "h": 1950
+      },
+      "weightKg": 800,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 68,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 50,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9395P / 93PM grande puissance",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-300",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 300 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 300,
+        "kW": 300,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.955
+          },
+          {
+            "load": 0.5,
+            "eta": 0.967
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1100,
+        "d": 850,
+        "h": 1950
+      },
+      "weightKg": 850,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 68,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 60,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9395P / 93PM grande puissance",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-400",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 400 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 400,
+        "kW": 400,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.955
+          },
+          {
+            "load": 0.5,
+            "eta": 0.967
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1600,
+        "d": 900,
+        "h": 1950
+      },
+      "weightKg": 1200,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 70,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 80,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9395P / 93PM grande puissance",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-500",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 500 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 500,
+        "kW": 500,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.955
+          },
+          {
+            "load": 0.5,
+            "eta": 0.967
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1600,
+        "d": 900,
+        "h": 1950
+      },
+      "weightKg": 1350,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 70,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 80,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9395P / 93PM grande puissance",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-600",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 600 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 600,
+        "kW": 600,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.955
+          },
+          {
+            "load": 0.5,
+            "eta": 0.967
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 2000,
+        "d": 950,
+        "h": 1950
+      },
+      "weightKg": 1700,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 72,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 100,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 3
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9395P / 93PM grande puissance",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-ODC3-800",
+      "sample": true,
+      "reference": "EXEMPLE Online DC Tri 800 kVA",
+      "range": "EXEMPLE Online Double Conversion tri/tri",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 800,
+        "kW": 800,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.955
+          },
+          {
+            "load": 0.5,
+            "eta": 0.967
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.966
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 2400,
+        "d": 950,
+        "h": 1950
+      },
+      "weightKg": 2200,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 72,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 120,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "9395P / 93PM grande puissance",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-MOD20-40",
+      "sample": true,
+      "reference": "EXEMPLE Modulaire 20 kW × 2",
+      "range": "EXEMPLE Modulaire triphasé",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 40,
+        "kW": 40,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 450,
+        "d": 800,
+        "h": 1750
+      },
+      "weightKg": 150,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 60,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 10,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": {
+        "moduleKVA": 20,
+        "moduleKW": 20,
+        "maxModules": 2,
+        "frameMaxKVA": 40,
+        "moduleWeightKg": 25,
+        "emptyFrameWeightKg": 150,
+        "frameParallelMax": 4
+      },
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PS 8–40 kW (modules 20 kW)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-MOD25-100",
+      "sample": true,
+      "reference": "EXEMPLE Modulaire 25 kW × 4",
+      "range": "EXEMPLE Modulaire triphasé",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 100,
+        "kW": 100,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1070,
+        "h": 2000
+      },
+      "weightKg": 300,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 60,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 25,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": {
+        "moduleKVA": 25,
+        "moduleKW": 25,
+        "maxModules": 4,
+        "frameMaxKVA": 100,
+        "moduleWeightKg": 30,
+        "emptyFrameWeightKg": 300,
+        "frameParallelMax": 4
+      },
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Symmetra PX 100–500 kW (modules 25 kW)",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-MOD25-250",
+      "sample": true,
+      "reference": "EXEMPLE Modulaire 25 kW × 10",
+      "range": "EXEMPLE Modulaire triphasé",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 250,
+        "kW": 250,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1200,
+        "d": 1070,
+        "h": 2000
+      },
+      "weightKg": 520,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 66,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 60,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": {
+        "moduleKVA": 25,
+        "moduleKW": 25,
+        "maxModules": 10,
+        "frameMaxKVA": 250,
+        "moduleWeightKg": 30,
+        "emptyFrameWeightKg": 520,
+        "frameParallelMax": 4
+      },
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Symmetra PX 100–500 kW (modules 25 kW)",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-MOD25-500",
+      "sample": true,
+      "reference": "EXEMPLE Modulaire 25 kW × 20",
+      "range": "EXEMPLE Modulaire triphasé",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 500,
+        "kW": 500,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 2400,
+        "d": 1070,
+        "h": 2000
+      },
+      "weightKg": 950,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 70,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 100,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": {
+        "moduleKVA": 25,
+        "moduleKW": 25,
+        "maxModules": 20,
+        "frameMaxKVA": 500,
+        "moduleWeightKg": 30,
+        "emptyFrameWeightKg": 950,
+        "frameParallelMax": 4
+      },
+      "datasheetUrl": "https://www.apc.com/",
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Symmetra PX 100–500 kW (modules 25 kW)",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-MOD30-150",
+      "sample": true,
+      "reference": "EXEMPLE Modulaire 30 kW × 5",
+      "range": "EXEMPLE Modulaire triphasé",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 150,
+        "kW": 150,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 900,
+        "h": 2000
+      },
+      "weightKg": 280,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 66,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 30,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": {
+        "moduleKVA": 30,
+        "moduleKW": 30,
+        "maxModules": 5,
+        "frameMaxKVA": 150,
+        "moduleWeightKg": 32,
+        "emptyFrameWeightKg": 280,
+        "frameParallelMax": 4
+      },
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "Infosec UPS Systems",
+        "model": "Gamme modulaire (Mod5T)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-MOD30-300",
+      "sample": true,
+      "reference": "EXEMPLE Modulaire 30 kW × 10",
+      "range": "EXEMPLE Modulaire triphasé",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 300,
+        "kW": 300,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1000,
+        "d": 1000,
+        "h": 2000
+      },
+      "weightKg": 480,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 66,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 60,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": {
+        "moduleKVA": 30,
+        "moduleKW": 30,
+        "maxModules": 10,
+        "frameMaxKVA": 300,
+        "moduleWeightKg": 32,
+        "emptyFrameWeightKg": 480,
+        "frameParallelMax": 4
+      },
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "Infosec UPS Systems",
+        "model": "Gamme modulaire (Mod5T)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-MOD50-200",
+      "sample": true,
+      "reference": "EXEMPLE Modulaire 50 kW × 4",
+      "range": "EXEMPLE Modulaire triphasé",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 200,
+        "kW": 200,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1100,
+        "d": 900,
+        "h": 1880
+      },
+      "weightKg": 420,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 60,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 50,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": {
+        "moduleKVA": 50,
+        "moduleKW": 50,
+        "maxModules": 4,
+        "frameMaxKVA": 200,
+        "moduleWeightKg": 45,
+        "emptyFrameWeightKg": 420,
+        "frameParallelMax": 4
+      },
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM (modules 50 kW)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-MOD50-500",
+      "sample": true,
+      "reference": "EXEMPLE Modulaire 50 kW × 10",
+      "range": "EXEMPLE Modulaire triphasé",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 500,
+        "kW": 500,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.965
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.965
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 2200,
+        "d": 900,
+        "h": 1880
+      },
+      "weightKg": 900,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 66,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 100,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": {
+        "moduleKVA": 50,
+        "moduleKW": 50,
+        "maxModules": 10,
+        "frameMaxKVA": 500,
+        "moduleWeightKg": 45,
+        "emptyFrameWeightKg": 900,
+        "frameParallelMax": 4
+      },
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM (modules 50 kW)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    }
+  ]
+}

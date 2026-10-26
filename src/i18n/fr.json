@@ -1,0 +1,604 @@
+{
+  "app": {
+    "name": "UPS Sizer",
+    "tagline": "Pré-dimensionnement d'onduleurs d'intérieur",
+    "disclaimer": "Pré-dimensionnement indicatif – à valider par un bureau d'études avant installation",
+    "sample": "EXEMPLE – à remplacer",
+    "skip": "Aller au contenu",
+    "localOnly": "Vos projets restent dans ce navigateur. Rien n'est envoyé à un serveur."
+  },
+  "nav": {
+    "home": "Accueil",
+    "projects": "Mes projets",
+    "settings": "Paramètres",
+    "catalogs": "Catalogues",
+    "language": "Langue",
+    "back": "Retour",
+    "next": "Continuer",
+    "newProject": "Nouveau projet",
+    "menu": "Menu"
+  },
+  "steps": {
+    "type": "Type",
+    "power": "Puissance",
+    "room": "Local",
+    "solution": "Solution",
+    "deliverables": "Livrables",
+    "label": "Progression",
+    "current": "étape en cours"
+  },
+  "scenario": {
+    "cctv": {
+      "title": "Vidéosurveillance",
+      "desc": "Caméras IP, enregistreurs, switchs PoE"
+    },
+    "office": {
+      "title": "Bureautique",
+      "desc": "PC, écrans, imprimantes réseau"
+    },
+    "server": {
+      "title": "Serveurs",
+      "desc": "Salle informatique, baies, stockage"
+    },
+    "datacenter": {
+      "title": "Data center",
+      "desc": "Plusieurs baies IT, redondance"
+    },
+    "airport": {
+      "title": "Aéroport",
+      "desc": "Locaux techniques intérieurs, autonomie longue"
+    },
+    "building": {
+      "title": "Bâtiment",
+      "desc": "Bureaux, hôtels, écoles, commerces, cliniques"
+    },
+    "custom": {
+      "title": "Personnalisé",
+      "desc": "Je règle tout moi-même"
+    }
+  },
+  "home": {
+    "title": "Que voulez-vous protéger ?",
+    "subtitle": "Choisissez un type d'installation : les valeurs par défaut sont déjà remplies.",
+    "resume": "Reprendre « {{name}} »",
+    "myProjects": "Mes projets"
+  },
+  "power": {
+    "title": "Puissance et autonomie",
+    "quick": "Saisie rapide",
+    "assisted": "Mes équipements",
+    "load": "Puissance de la charge",
+    "unit": "Unité",
+    "autonomy": "Autonomie souhaitée",
+    "other": "Autre",
+    "minutes": "min",
+    "advanced": "Options avancées",
+    "outputPf": "Facteur de puissance de sortie",
+    "growthMargin": "Marge d'extension",
+    "targetLoadRate": "Taux de charge maximal de l'UPS",
+    "phases": "Alimentation",
+    "phasesAuto": "Automatique",
+    "phasesMono": "Monophasé",
+    "phasesTri": "Triphasé",
+    "voltage": "Tension",
+    "frequency": "Fréquence",
+    "redundancy": "Redondance",
+    "redundancyHelp": {
+      "N": "Un seul système",
+      "N+1": "Une unité ou un module de secours",
+      "2N": "Deux systèmes indépendants A et B"
+    },
+    "batteryChemistry": "Batteries",
+    "chemistry": {
+      "auto": "Automatique",
+      "VRLA": "Plomb (VRLA)",
+      "LI": "Lithium (LFP)"
+    },
+    "eod": "Tension de fin de décharge",
+    "eodAuto": "Automatique",
+    "summary": "Résumé",
+    "loadReal": "Charge",
+    "design": "À dimensionner",
+    "library": {
+      "add": "Ajouter",
+      "qty": "Quantité",
+      "unitW": "Puissance unitaire (W)",
+      "remove": "Retirer {{name}}",
+      "total": "Total",
+      "empty": "Ajoutez vos équipements depuis la liste ci-dessous.",
+      "category": {
+        "cctv": "Vidéosurveillance",
+        "network": "Réseau",
+        "it": "Informatique",
+        "office": "Bureautique",
+        "building": "Bâtiment",
+        "other": "Autres"
+      }
+    }
+  },
+  "room": {
+    "title": "Local d'installation",
+    "keepDefaults": "Je ne connais pas : les valeurs par défaut sont gardées, vous pourrez les modifier plus tard.",
+    "dimensions": "Dimensions du local",
+    "length": "Longueur",
+    "width": "Largeur",
+    "height": "Hauteur",
+    "door": "Porte",
+    "doorWidth": "Largeur de porte",
+    "doorHeight": "Hauteur de porte",
+    "doorWall": "Mur de la porte",
+    "wall": {
+      "top": "Haut",
+      "bottom": "Bas",
+      "left": "Gauche",
+      "right": "Droite"
+    },
+    "floor": "Charge admissible du sol",
+    "floorUnknown": "Inconnue (valeur par défaut : {{value}} kg/m²)",
+    "environment": "Environnement",
+    "ambient": "Température ambiante",
+    "humidity": "Humidité relative",
+    "altitude": "Altitude",
+    "hvac": "Climatisation existante",
+    "hvacKW": "Puissance froid",
+    "raisedFloor": "Faux plancher",
+    "kind": "Type de local",
+    "kinds": {
+      "dedicated": "Salle technique dédiée",
+      "shared": "Local partagé",
+      "office": "Bureau",
+      "rack": "Baie existante"
+    },
+    "installation": "Installation électrique",
+    "generator": "Groupe électrogène avec inverseur de source",
+    "maintenanceBypass": "Bypass de maintenance externe",
+    "cableLengths": "Longueurs de câbles",
+    "cable": {
+      "input": "Entrée",
+      "bypass": "Bypass",
+      "output": "Sortie",
+      "battery": "Batterie"
+    },
+    "checks": "Contrôles",
+    "noAlert": "Aucune alerte sur le local."
+  },
+  "solutions": {
+    "title": "Solutions proposées",
+    "subtitle": "Jusqu'à trois options. La recommandée est mise en avant.",
+    "tier": {
+      "economy": "Économique",
+      "recommended": "Recommandée",
+      "performance": "Performance"
+    },
+    "tierHelp": {
+      "economy": "La puissance juste suffisante",
+      "recommended": "Le meilleur compromis",
+      "performance": "Le meilleur rendement et la plus grande marge"
+    },
+    "choose": "Choisir cette option",
+    "chosen": "Option choisie",
+    "technology": "Technologie",
+    "configuration": "Configuration",
+    "units_other": "{{count}} unités",
+    "modules_other": "{{count}} modules de {{kw}} kW",
+    "systems": "Systèmes A et B",
+    "loadRate": "Taux de charge",
+    "efficiency": "Rendement",
+    "autonomy": "Autonomie",
+    "autonomyDesign": "{{min}} min (fin de vie, toutes marges)",
+    "autonomyNew": "≈ {{min}} min avec batteries neuves",
+    "battery": "Batteries",
+    "batteryLine": "{{chemistry}} {{v}} V {{ah}} Ah — {{bps}} blocs × {{strings}} chaîne(s)",
+    "internal": "Batteries internes",
+    "cabinets": "{{qty}} × {{ref}}",
+    "perSet": "par jeu, {{sets}} jeu(x)",
+    "dimensions": "Dimensions (L × P × H)",
+    "weight": "Masse totale",
+    "footprint": "Emprise au sol, dégagements compris",
+    "placeInRoom": "Place dans le local",
+    "noise": "Niveau sonore",
+    "seeCalc": "Voir le calcul",
+    "none": "Aucune solution ne convient avec ces données.",
+    "status": {
+      "ok": "OK",
+      "warn": "À vérifier",
+      "block": "Bloquant"
+    },
+    "units_one": "{{count}} unité",
+    "modules_one": "{{count}} module de {{kw}} kW"
+  },
+  "tech": {
+    "line_interactive": "Line Interactive",
+    "online_performance": "Online Performance",
+    "online_double_conversion": "Online double conversion",
+    "modular": "Modulaire"
+  },
+  "formFactor": {
+    "tower": "Tour",
+    "rack": "Rack",
+    "tower_rack": "Tour/rack",
+    "cabinet": "Armoire"
+  },
+  "chemistry": {
+    "VRLA_AGM": "Plomb AGM",
+    "VRLA_GEL": "Plomb gel",
+    "LI_LFP": "Lithium LFP"
+  },
+  "deliverables": {
+    "title": "Livrables",
+    "tabs": {
+      "plan": "Plan",
+      "singleLine": "Schéma unifilaire",
+      "calcNote": "Note de calcul",
+      "bom": "Nomenclature",
+      "report": "Rapport PDF"
+    },
+    "print": "Imprimer",
+    "comingSoon": "Disponible dans une prochaine version.",
+    "noOption": "Choisissez d'abord une solution."
+  },
+  "calcNote": {
+    "title": "Note de calcul",
+    "project": "Projet",
+    "inputs": "Données d'entrée",
+    "solution": "Solution retenue",
+    "currents": "Courants, protections et câbles",
+    "thermal": "Dissipation thermique",
+    "floor": "Charge au sol",
+    "ventilation": "Ventilation du local batteries",
+    "alerts": "Alertes",
+    "formula": "Formule",
+    "values": "Application numérique",
+    "result": "Résultat",
+    "ref": "Référence",
+    "circuit": "Circuit",
+    "ib": "Ib (A)",
+    "in": "Calibre (A)",
+    "section": "Section",
+    "length": "Longueur",
+    "drop": "Chute de tension",
+    "qty": "Qté",
+    "notApplicable": "Sans objet (batteries lithium)."
+  },
+  "bom": {
+    "title": "Nomenclature",
+    "columns": {
+      "reference": "Référence",
+      "designation": "Désignation",
+      "qty": "Qté",
+      "unit": "Unité",
+      "unitPrice": "Prix unitaire",
+      "total": "Total"
+    },
+    "unit": {
+      "pcs": "u",
+      "m": "m"
+    },
+    "ups": "Onduleur {{kva}} kVA / {{kw}} kW",
+    "frame": "Châssis modulaire ({{maxModules}} emplacements)",
+    "module": "Module de puissance {{kw}} kW",
+    "battery": "Bloc batterie {{v}} V {{ah}} Ah",
+    "cabinet": "Armoire ou module batteries",
+    "cable": "Câble {{cores}} × {{section}} mm² (indicatif)",
+    "circuit": {
+      "rectifier": "Disjoncteur d'entrée redresseur",
+      "bypass": "Disjoncteur d'entrée bypass",
+      "output": "Disjoncteur de sortie onduleur",
+      "battery": "Disjoncteur batterie (DC)",
+      "maintenanceBypass": "Bypass de maintenance externe",
+      "feeder": "Disjoncteur de départ (tableau ondulé)",
+      "ats": "Inverseur de source (ATS)"
+    },
+    "sampleNote": "Les lignes marquées * proviennent de fiches d'exemple."
+  },
+  "settings": {
+    "title": "Paramètres et hypothèses",
+    "intro": "Toutes les hypothèses de calcul. Elles s'appliquent à tous les projets de ce navigateur.",
+    "reset": "Revenir aux valeurs par défaut",
+    "resetDone": "Valeurs par défaut rétablies.",
+    "saved": "Enregistré",
+    "invalid": "Valeur refusée : {{error}}",
+    "groups": {
+      "power": "Puissance",
+      "battery": "Batteries",
+      "room": "Local",
+      "electrical": "Électrique",
+      "selection": "Sélection des options",
+      "scenarios": "Types d'installation"
+    },
+    "fields": {
+      "growthMargin": "Marge d'extension",
+      "targetLoadRate": "Taux de charge cible",
+      "defaultPf": "Facteur de puissance par défaut",
+      "monoToTriThresholdKVA": "Seuil de passage en triphasé (kVA)",
+      "altitudeDerating": "Déclassement en altitude (m : coefficient)",
+      "agingFactor": "Facteur de vieillissement (plomb)",
+      "agingFactorLithium": "Facteur de vieillissement (lithium)",
+      "designMargin": "Marge de conception",
+      "defaultEodVpc": "Fin de décharge par défaut (V/élément)",
+      "shortAutonomyEodVpc": "Fin de décharge, autonomie courte (V/élément)",
+      "shortAutonomyThresholdMin": "Autonomie courte en dessous de (min)",
+      "allowedEodVpc": "Fins de décharge autorisées",
+      "maxStrings": "Nombre maximal de chaînes",
+      "chargeEfficiency": "Rendement de recharge",
+      "floatVpc": "Tension de floating (V/élément)",
+      "gasCurrentMaPerAh": "Courant de gaz (mA/Ah)",
+      "defaultFloorLoadKgM2": "Charge au sol par défaut (kg/m²)",
+      "doorMarginMm": "Marge de passage de porte (mm)",
+      "recommendedTempC": "Température recommandée (°C)",
+      "allowedTempC": "Température admissible (°C)",
+      "maxHumidityPct": "Humidité maximale (%)",
+      "defaultHeightMm": "Hauteur de local par défaut (mm)",
+      "noHvacMaxW": "Dissipation maximale sans climatisation (W)",
+      "officeNoiseWarnDb": "Bruit maximal en bureau (dB)",
+      "floorCheckMinWeightKg": "Masse minimale pour le contrôle du sol (kg)",
+      "breakerSeriesA": "Série de calibres (A)",
+      "groupingFactor": "Facteur de groupement des câbles",
+      "cableAmbientC": "Température ambiante des câbles (°C)",
+      "maxParallel": "Câbles en parallèle au plus",
+      "maxVoltageDropAc": "Chute de tension maximale AC (%)",
+      "maxVoltageDropDc": "Chute de tension maximale DC (%)",
+      "inputPf": "Facteur de puissance d'entrée",
+      "outputFeeders": "Nombre de départs du tableau ondulé",
+      "generatorSizingFactor": "Coefficient groupe électrogène",
+      "defaultCableLengths": "Longueurs de câbles par défaut (m)",
+      "weightEfficiency": "Poids : rendement",
+      "weightFootprint": "Poids : emprise",
+      "weightMargin": "Poids : marge",
+      "weightPrice": "Poids : prix",
+      "maxOversizeFactor": "Surdimensionnement maximal (×)",
+      "idealLoadRate": "Taux de charge idéal",
+      "autonomyMin": "Autonomie (min)",
+      "technologies": "Technologies",
+      "redundancy": "Redondance"
+    },
+    "listHelp": "Valeurs séparées par des virgules"
+  },
+  "catalogs": {
+    "title": "Catalogues",
+    "intro": "Les catalogues fournis sont des EXEMPLES. Remplacez-les par vos fiches (import JSON ou modification ici) : aucune modification du code n'est nécessaire.",
+    "tabs": {
+      "ups": "UPS",
+      "blocks": "Blocs batteries",
+      "cabinets": "Armoires",
+      "equipment": "Équipements"
+    },
+    "import": "Importer un JSON",
+    "export": "Exporter en JSON",
+    "reset": "Revenir aux exemples",
+    "edit": "Modifier",
+    "add": "Ajouter une fiche",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "imported": "Catalogue importé.",
+    "invalid": "Catalogue refusé :",
+    "editHelp": "Fiche au format JSON. Elle est vérifiée à l'enregistrement.",
+    "count_other": "{{count}} fiches",
+    "confirmReset": "Remplacer ce catalogue par les exemples ?",
+    "confirmDelete": "Supprimer « {{name}} » ?",
+    "columns": {
+      "reference": "Référence",
+      "technology": "Technologie",
+      "power": "Puissance",
+      "dimensions": "L × P × H (mm)",
+      "weight": "Masse",
+      "chemistry": "Chimie",
+      "capacity": "Capacité",
+      "category": "Catégorie",
+      "defaultW": "Puissance",
+      "source": "Source",
+      "actions": "Actions"
+    },
+    "count_one": "{{count}} fiche"
+  },
+  "projects": {
+    "title": "Mes projets",
+    "empty": "Aucun projet pour l'instant.",
+    "open": "Ouvrir",
+    "duplicate": "Dupliquer",
+    "delete": "Supprimer",
+    "export": "Exporter (.ups.json)",
+    "import": "Importer un projet",
+    "imported": "Projet importé.",
+    "invalid": "Fichier refusé :",
+    "confirmDelete": "Supprimer le projet « {{name}} » ?",
+    "untitled": "Projet sans nom",
+    "copy": "{{name}} (copie)",
+    "updated": "Modifié le {{date}}",
+    "name": "Nom du projet",
+    "client": "Client",
+    "author": "Auteur"
+  },
+  "calcModal": {
+    "title": "Voir le calcul",
+    "close": "Fermer"
+  },
+  "axis": {
+    "length": "longueur",
+    "width": "largeur",
+    "height": "hauteur"
+  },
+  "alert": {
+    "temp_out_of_range": "Température de {{t}} °C hors plage : l'UPS fonctionne entre {{min}} et {{max}} °C.",
+    "temp_not_recommended": "Température de {{t}} °C : {{min}} à {{max}} °C sont recommandés pour la durée de vie des batteries.",
+    "humidity_too_high": "Humidité de {{h}} % trop élevée (maximum {{max}} %, sans condensation).",
+    "altitude_derating": "Altitude de {{altitude}} m : la puissance des UPS est réduite de {{pct}} %.",
+    "phase_switched_to_three": "{{kva}} kVA dépasse {{threshold}} kVA : l'installation passe en triphasé.",
+    "no_load": "Indiquez la puissance à protéger.",
+    "no_ups": "Aucun UPS du catalogue ne convient pour {{kw}} kW avec ces options.",
+    "no_battery": "Aucune batterie du catalogue n'atteint {{autonomy}} min pour {{kw}} kW.",
+    "room_too_small": "Le local est trop petit pour cette configuration. Il manque {{missing}} m en {{axis}}.",
+    "items_overlap": "Des équipements se chevauchent sur le plan.",
+    "floor_overload": "Le sol est insuffisant : {{load}} kg/m² sous « {{item}} » pour {{admissible}} kg/m² admissibles.",
+    "floor_overload_unknown": "Charge au sol à vérifier : {{load}} kg/m² sous « {{item}} » ; la valeur par défaut est {{admissible}} kg/m².",
+    "floor_concentrated": "Charge concentrée de {{load}} kg/m² sous les équipements (sol : {{admissible}} kg/m²) : prévoir une répartition.",
+    "raised_floor_support": "Faux plancher : prévoir un châssis support pour {{weight}} kg d'équipements.",
+    "door_blocked": "Un équipement gêne l'ouverture de la porte.",
+    "rack_units": "Installation dans la baie existante : {{u}} U nécessaires.",
+    "door_too_narrow": "La porte est trop étroite pour « {{item}} » : il manque {{missing}} m.",
+    "door_too_low": "La porte est trop basse pour « {{item}} » : il manque {{missing}} m.",
+    "hvac_insufficient": "Climatisation insuffisante : {{required}} kW à évacuer pour {{available}} kW disponibles.",
+    "hvac_required": "Prévoir une climatisation d'au moins {{required}} kW.",
+    "noise_high": "Niveau sonore de {{db}} dB : élevé pour un bureau (repère {{max}} dB).",
+    "noise_level": "Niveau sonore : {{db}} dB.",
+    "breaker_out_of_range": "Un courant dépasse la série de calibres : étude spécifique nécessaire.",
+    "cable_out_of_range": "Une section de câble n'a pas pu être déterminée : étude spécifique nécessaire.",
+    "ventilation_required": "Ventilation du local batteries : {{flow}} m³/h (IEC 62485-2).",
+    "external_battery_packs": "{{qty}} module(s) batteries externe(s) à côté de l'UPS.",
+    "lithium_unavailable": "Pas de batterie lithium pour ce modèle : batteries plomb proposées."
+  },
+  "calc": {
+    "load": {
+      "title": "Puissance requise",
+      "sumItems": "Somme des équipements",
+      "fromKVA": "Puissance active",
+      "direct": "Puissance saisie",
+      "kwReq": "Puissance active à dimensionner",
+      "kvaReq": "Puissance apparente à dimensionner"
+    },
+    "phases": {
+      "title": "Monophasé ou triphasé",
+      "rule": "Règle de bascule",
+      "voltage": "Tension de calcul"
+    },
+    "env": {
+      "title": "Environnement",
+      "altitude": "Coefficient d'altitude"
+    },
+    "selection": {
+      "title": "Sélection de l'UPS",
+      "rule": "Modèles retenus"
+    },
+    "modular": {
+      "title": "Modules",
+      "n": "Modules nécessaires",
+      "redundancy": "Avec redondance"
+    },
+    "battery": {
+      "title": "Batteries (puissance constante)",
+      "pdc": "Puissance demandée aux batteries",
+      "cells": "Nombre d'éléments",
+      "factors": "Facteurs de correction",
+      "pcell": "Puissance par élément",
+      "available": "Puissance disponible (table)",
+      "autonomy": "Autonomie calculée",
+      "none": "Aucune solution"
+    },
+    "elec": {
+      "title": "Courants et protections",
+      "output": "Courant de sortie d'une unité",
+      "rectifier": "Courant d'entrée redresseur",
+      "battery": "Courant batterie maximal",
+      "systemOutput": "Courant de sortie du système",
+      "generator": "Groupe électrogène"
+    },
+    "circuit": {
+      "generic": {
+        "breaker": "Calibre",
+        "cable": "Câble"
+      },
+      "rectifier": {
+        "breaker": "Entrée redresseur : calibre",
+        "cable": "Entrée redresseur : câble"
+      },
+      "bypass": {
+        "breaker": "Entrée bypass : calibre",
+        "cable": "Entrée bypass : câble"
+      },
+      "output": {
+        "breaker": "Sortie : calibre",
+        "cable": "Sortie : câble"
+      },
+      "battery": {
+        "breaker": "Batterie : calibre",
+        "cable": "Batterie : câble"
+      },
+      "maintenanceBypass": {
+        "breaker": "Bypass de maintenance : calibre",
+        "cable": "Bypass de maintenance : câble"
+      },
+      "feeder": {
+        "breaker": "Départ : calibre",
+        "cable": "Départ : câble"
+      },
+      "ats": {
+        "breaker": "Inverseur de source : calibre",
+        "cable": "Inverseur de source : câble"
+      }
+    },
+    "thermal": {
+      "title": "Dissipation thermique",
+      "ups": "Pertes de l'UPS",
+      "catalog": "Pertes de l'UPS (catalogue)",
+      "charge": "Pertes de recharge",
+      "total": "Dissipation totale",
+      "btu": "En BTU/h"
+    },
+    "vent": {
+      "title": "Ventilation (IEC 62485-2)",
+      "flow": "Débit d'air",
+      "area": "Section libre",
+      "lithium": "Sans objet (lithium)"
+    },
+    "layout": {
+      "title": "Implantation",
+      "footprint": "Emprise avec dégagements",
+      "remaining": "Surface restante",
+      "door": "Passage de porte",
+      "floor": "Charge au sol répartie"
+    }
+  },
+  "plan": {
+    "title": "Plan d'implantation",
+    "legend": "Vue de dessus à l'échelle. Zones hachurées : dégagements de service.",
+    "dragHelp": "Glissez un équipement pour le déplacer ; double-cliquez ou touche R pour le tourner de 90°.",
+    "reset": "Replacer automatiquement",
+    "remaining": "Surface restante : {{m2}} m²",
+    "door": "Porte",
+    "scale": "Échelle"
+  },
+  "common": {
+    "yes": "Oui",
+    "no": "Non",
+    "close": "Fermer",
+    "kW": "kW",
+    "kVA": "kVA",
+    "W": "W",
+    "m": "m",
+    "mm": "mm",
+    "kg": "kg",
+    "min": "min",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "loading": "Chargement…"
+  },
+  "singleLine": {
+    "title": "Schéma unifilaire",
+    "mains": "Réseau",
+    "generator": "GE",
+    "system": "Système {{s}}",
+    "board": "Tableau ondulé",
+    "maintenanceBypass": "Bypass de maintenance",
+    "battery": "Batteries",
+    "feeders": "Départs",
+    "legend": "Symboles IEC 60617 simplifiés. Calibres et sections indicatifs."
+  },
+  "report": {
+    "title": "Rapport de pré-dimensionnement",
+    "date": "Date",
+    "installation": "Installation",
+    "summary": "Récapitulatif",
+    "sampleNotice": "Les produits cités proviennent de fiches d'EXEMPLE, inspirées de données publiques : ils sont à remplacer par les références du fabricant retenu.",
+    "intro": "Le rapport reprend le récapitulatif, la solution retenue, le plan, le schéma unifilaire, la nomenclature et la note de calcul.",
+    "download": "Télécharger le rapport PDF",
+    "generating": "Génération en cours…",
+    "error": "La génération a échoué : {{error}}"
+  },
+  "exports": {
+    "xlsx": "Télécharger en Excel",
+    "csv": "Télécharger en CSV",
+    "all": "Tout télécharger",
+    "project": "Projet (.ups.json)"
+  }
+}
