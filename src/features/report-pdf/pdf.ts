@@ -9,6 +9,7 @@
 import type { TFunction } from 'i18next';
 import type { jsPDF as JsPdf } from 'jspdf';
 import type { CellHookData, UserOptions } from 'jspdf-autotable';
+import type { Catalogs } from '../../catalog/schemas';
 import type { Project } from '../../engine/project';
 import type { SizingResult, SolutionOption } from '../../engine/types';
 import {
@@ -34,6 +35,8 @@ export interface ReportContext {
   lang: string;
   /** Logo (SVG en texte) ; par défaut le logo neutre de l'application. */
   logoSvg?: string;
+  /** Catalogues : détail des équipements pour la vue 3D (page omise si absents). */
+  catalogs?: Catalogs;
 }
 
 const FONT = 'DejaVuSans';
@@ -340,6 +343,33 @@ export async function buildReportPdf(ctx: ReportContext): Promise<Blob> {
   });
   doc.setFontSize(9);
   doc.text(doc.splitTextToSize(t('plan.legend'), usable), xText, cursor + planH + 8, { align });
+
+  // ── Vue 3D : extérieur et intérieur (si WebGL est disponible) ──
+  if (ctx.catalogs) {
+    const [{ buildRoom3D }, { render3DSnapshot }] = await Promise.all([
+      import('../room-3d/model'),
+      import('../room-3d/snapshot'),
+    ]);
+    const room3d = buildRoom3D(option, ctx.catalogs, project.room.kind);
+    const outside = render3DSnapshot(room3d, { xray: false });
+    const inside = outside ? render3DSnapshot(room3d, { xray: true }) : null;
+    if (outside && inside) {
+      newPage();
+      heading(t('room3d.snapshot'));
+      const imgW = usable;
+      const imgH = (imgW * 1000) / 1600;
+      doc.addImage(outside, 'PNG', x0, cursor + 2, imgW, imgH, undefined, 'FAST');
+      doc.setFontSize(9);
+      doc.text(t('room3d.views.iso'), xText, cursor + imgH + 7, { align });
+      doc.addImage(inside, 'PNG', x0, cursor + imgH + 11, imgW, imgH, undefined, 'FAST');
+      doc.text(
+        `${t('room3d.xray')} — ${t('room3d.roomSize', { l: `${n(room3d.length, 2)} m`, w: `${n(room3d.width, 2)} m`, h: `${n(room3d.height, 2)} m` })}`,
+        xText,
+        cursor + 2 * imgH + 16,
+        { align },
+      );
+    }
+  }
 
   // ── Schéma unifilaire (paysage) ──
   newPage('landscape');

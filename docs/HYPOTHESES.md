@@ -110,6 +110,15 @@
 
 ## 7. Interface et livrables
 
+- Vue 3D (three.js, chargée à la demande) : apparence générique et neutre des équipements
+  (armoire anthracite, écran, ouïes, voyants), à l'échelle des dimensions du catalogue. Les
+  modules d'un châssis sont répartis en colonnes d'environ 0,5 m ; les blocs batteries sont rangés
+  sur des étagères dans l'orientation qui en loge le plus (marges de 4 cm, pas de 5 cm entre
+  étagères) — c'est une illustration, pas le plan de montage du fabricant.
+- Hors baie, un équipement au format rack (UPS tour/rack, module batteries 19") est représenté
+  debout, en tour, dans l'emprise prévue au plan. Avec « baie existante », il est empilé dans une
+  baie 42U de 600 × 1 000 × 2 000 mm.
+- Le rapport PDF contient deux rendus 3D (extérieur, intérieur) si l'appareil dispose de WebGL.
 - Tension : le choix 230 V / 400 V est la tension du réseau ; en triphasé on calcule avec 400 V
   entre phases, en monophasé avec 230 V phase-neutre (220 ↔ 380, 240 ↔ 415).
 - Plan : 1 unité SVG = 1 mm, pas de déplacement de 50 mm à la souris, 100 mm (10 mm avec Maj) au

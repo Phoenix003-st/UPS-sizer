@@ -13,19 +13,20 @@ import { BomTable } from '../bom/BomTable';
 import { bomToCsv, bomToXlsx } from '../bom/exportBom';
 import { CalcNote } from '../calc-note/CalcNote';
 import { LayoutPlan } from '../layout-plan/LayoutPlan';
+import { Room3D } from '../room-3d/Room3D';
 import type { Diagram } from '../single-line/diagram';
 import { SingleLineSvg } from '../single-line/SingleLineDiagram';
 import { useDiagram } from '../single-line/useDiagram';
 import { selectedOption } from './selectedOption';
 
-type Tab = 'plan' | 'singleLine' | 'calcNote' | 'bom' | 'report';
-const TABS: Tab[] = ['plan', 'singleLine', 'calcNote', 'bom', 'report'];
+type Tab = 'view3d' | 'plan' | 'singleLine' | 'calcNote' | 'bom' | 'report';
+const TABS: Tab[] = ['view3d', 'plan', 'singleLine', 'calcNote', 'bom', 'report'];
 
 export function DeliverablesScreen({ project }: { project: Project }) {
   const { t } = useTranslation();
   const result = useSizing(project);
   const option = selectedOption(project, result);
-  const [tab, setTab] = useState<Tab>('plan');
+  const [tab, setTab] = useState<Tab>('view3d');
 
   return (
     <>
@@ -64,6 +65,7 @@ function Deliverables({
   setTab: (t: Tab) => void;
 }) {
   const { t, i18n } = useTranslation();
+  const catalogs = useCatalogStore((s) => s.catalogs);
   const model = useCatalogStore((s) =>
     s.catalogs.ups.models.find((m) => m.id === option.ups.modelId),
   );
@@ -90,7 +92,7 @@ function Deliverables({
     const { buildReportPdf } = await import('../report-pdf/pdf');
     downloadBlob(
       `${base}.pdf`,
-      await buildReportPdf({ project, result, option, diagram, t, lang: i18n.language }),
+      await buildReportPdf({ project, result, option, diagram, t, lang: i18n.language, catalogs }),
     );
   };
   const xlsx = async () => downloadBlob(`${base}-nomenclature.xlsx`, await bomToXlsx(ctx));
@@ -124,6 +126,7 @@ function Deliverables({
         tabs={TABS.map((id) => ({ id, label: t(`deliverables.tabs.${id}`) }))}
       />
       <TabPanel id={tab}>
+        {tab === 'view3d' && <Room3D project={project} option={option} />}
         {tab === 'plan' && <LayoutPlan project={project} option={option} />}
         {tab === 'singleLine' && <SingleLine diagram={diagram} />}
         {tab === 'calcNote' && (

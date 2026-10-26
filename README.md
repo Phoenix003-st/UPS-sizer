@@ -21,15 +21,15 @@ dans le navigateur (IndexedDB) et s'exportent / s'importent en `.ups.json`.
 
 ## Fonctionnalités
 
-| Étape      | Contenu                                                                                                       |
-| ---------- | ------------------------------------------------------------------------------------------------------------- |
-| Type       | 7 cartes (CCTV, bureautique, serveurs, data center, aéroport, bâtiment, personnalisé) avec valeurs par défaut |
-| Puissance  | saisie rapide (kW / kVA, curseur) ou bibliothèque d'équipements ; autonomie ; options avancées repliées       |
-| Local      | dimensions, porte, sol, température, humidité, altitude, climatisation, faux plancher ; alertes en direct     |
-| Solutions  | jusqu'à 3 options, alertes vert / orange / rouge, « Voir le calcul », mini-vue du local                       |
-| Livrables  | plan déplaçable à l'échelle, unifilaire IEC, note de calcul, nomenclature Excel / CSV, rapport PDF vectoriel  |
-| Paramètres | toutes les hypothèses de calcul, retour aux valeurs par défaut                                                |
-| Catalogues | édition des fiches (JSON validé), import / export, retour aux exemples                                        |
+| Étape      | Contenu                                                                                                                                                                       |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type       | 7 cartes (CCTV, bureautique, serveurs, data center, aéroport, bâtiment, personnalisé) avec valeurs par défaut                                                                 |
+| Puissance  | saisie rapide (kW / kVA, curseur) ou bibliothèque d'équipements ; autonomie ; options avancées repliées                                                                       |
+| Local      | dimensions, porte, sol, température, humidité, altitude, climatisation, faux plancher ; alertes en direct                                                                     |
+| Solutions  | jusqu'à 3 options, alertes vert / orange / rouge, « Voir le calcul », mini-vue du local                                                                                       |
+| Livrables  | vue 3D immersive du local (armoires, modules, batteries, cotes), plan déplaçable à l'échelle, unifilaire IEC, note de calcul, nomenclature Excel / CSV, rapport PDF vectoriel |
+| Paramètres | toutes les hypothèses de calcul, retour aux valeurs par défaut                                                                                                                |
+| Catalogues | édition des fiches (JSON validé), import / export, retour aux exemples                                                                                                        |
 
 ## Remplacer les catalogues d'exemple
 

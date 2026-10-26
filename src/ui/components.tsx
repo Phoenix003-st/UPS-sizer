@@ -370,7 +370,7 @@ export function Modal({
       aria-labelledby={titleId}
       onClose={onClose}
       onCancel={onClose}
-      className="m-auto w-[min(56rem,calc(100vw-2rem))] rounded-xl border border-border bg-surface p-0 text-text shadow-xl backdrop:bg-black/40"
+      className="m-auto w-[min(72rem,calc(100vw-2rem))] rounded-xl border border-border bg-surface p-0 text-text shadow-xl backdrop:bg-black/40"
     >
       {open && (
         <div className="flex max-h-[85vh] flex-col">
