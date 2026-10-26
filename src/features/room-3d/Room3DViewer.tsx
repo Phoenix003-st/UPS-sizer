@@ -347,7 +347,7 @@ export default function Room3DViewer({ option, project, height = '60vh' }: Props
       className={`relative overflow-hidden rounded-xl border border-border bg-bg focus-visible:outline-3 focus-visible:outline-[var(--color-accent)] ${fullscreen ? 'flex flex-col' : ''}`}
     >
       <div
-        className="flex flex-wrap items-center gap-2 border-b border-border bg-surface p-2"
+        className="flex items-center gap-2 overflow-x-auto border-b border-border bg-surface p-2 *:shrink-0 sm:flex-wrap"
         role="toolbar"
         aria-label={t('room3d.toolbar')}
       >
