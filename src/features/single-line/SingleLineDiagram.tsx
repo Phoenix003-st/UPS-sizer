@@ -238,7 +238,7 @@ function Symbol({ kind, x, y, label }: { kind: string; x: number; y: number; lab
             />
           )}
           {label && (
-            <text x={x} y={y - 25} textAnchor="middle" fontWeight={600} fill={INK}>
+            <text x={x} y={y - 25} textAnchor="middle" fontWeight={700} fill={INK}>
               {label}
             </text>
           )}

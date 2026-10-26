@@ -583,5 +583,22 @@
     "battery": "Batteries",
     "feeders": "Outgoing feeders",
     "legend": "Simplified IEC 60617 symbols. Ratings and cable sizes are indicative."
+  },
+  "report": {
+    "title": "Pre-sizing report",
+    "date": "Date",
+    "installation": "Installation",
+    "summary": "Summary",
+    "sampleNotice": "The products listed come from SAMPLE datasheets inspired by public data: replace them with the chosen manufacturer's references.",
+    "intro": "The report includes the summary, the selected solution, the layout, the single-line diagram, the bill of materials and the calculation note.",
+    "download": "Download the PDF report",
+    "generating": "Generating…",
+    "error": "Generation failed: {{error}}"
+  },
+  "exports": {
+    "xlsx": "Download as Excel",
+    "csv": "Download as CSV",
+    "all": "Download everything",
+    "project": "Project (.ups.json)"
   }
 }

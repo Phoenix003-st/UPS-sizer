@@ -476,7 +476,9 @@ export function Stat({ label, children }: { label: string; children: ReactNode }
   return (
     <div className="flex flex-wrap justify-between gap-x-4 gap-y-0.5 border-b border-border/60 py-1.5 text-sm last:border-0">
       <dt className="text-muted">{label}</dt>
-      <dd className="text-end font-medium">{children}</dd>
+      <dd dir="auto" className="text-end font-medium">
+        {children}
+      </dd>
     </div>
   );
 }

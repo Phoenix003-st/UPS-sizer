@@ -1,0 +1,616 @@
+{
+  "app": {
+    "name": "UPS Sizer",
+    "tagline": "تحديد أولي لأحجام أنظمة UPS الداخلية",
+    "disclaimer": "تحديد أولي إرشادي – يجب اعتماده من مكتب دراسات قبل التركيب",
+    "sample": "مثال – يجب استبداله",
+    "skip": "الانتقال إلى المحتوى",
+    "localOnly": "تبقى مشاريعك في هذا المتصفح. لا يُرسل أي شيء إلى خادم."
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "projects": "مشاريعي",
+    "settings": "الإعدادات",
+    "catalogs": "الكتالوجات",
+    "language": "اللغة",
+    "back": "رجوع",
+    "next": "متابعة",
+    "newProject": "مشروع جديد",
+    "menu": "القائمة"
+  },
+  "steps": {
+    "type": "النوع",
+    "power": "القدرة",
+    "room": "الغرفة",
+    "solution": "الحل",
+    "deliverables": "المخرجات",
+    "label": "التقدم",
+    "current": "الخطوة الحالية"
+  },
+  "scenario": {
+    "cctv": {
+      "title": "المراقبة بالفيديو",
+      "desc": "كاميرات IP، مسجلات، محولات PoE"
+    },
+    "office": {
+      "title": "المكاتب",
+      "desc": "حواسيب، شاشات، طابعات شبكية"
+    },
+    "server": {
+      "title": "الخوادم",
+      "desc": "غرفة خوادم، خزائن، تخزين"
+    },
+    "datacenter": {
+      "title": "مركز البيانات",
+      "desc": "عدة خزائن IT مع تكرار"
+    },
+    "airport": {
+      "title": "المطار",
+      "desc": "غرف تقنية داخلية، زمن تشغيل طويل"
+    },
+    "building": {
+      "title": "المباني",
+      "desc": "مكاتب، فنادق، مدارس، متاجر، عيادات"
+    },
+    "custom": {
+      "title": "مخصص",
+      "desc": "أضبط كل شيء بنفسي"
+    }
+  },
+  "home": {
+    "title": "ماذا تريد أن تحمي؟",
+    "subtitle": "اختر نوع التركيب: القيم الافتراضية معبأة مسبقًا.",
+    "resume": "متابعة «{{name}}»",
+    "myProjects": "مشاريعي"
+  },
+  "power": {
+    "title": "القدرة وزمن التشغيل",
+    "quick": "إدخال سريع",
+    "assisted": "معداتي",
+    "load": "قدرة الحمل",
+    "unit": "الوحدة",
+    "autonomy": "زمن التشغيل المطلوب",
+    "other": "آخر",
+    "minutes": "دقيقة",
+    "advanced": "خيارات متقدمة",
+    "outputPf": "معامل قدرة الخرج",
+    "growthMargin": "هامش التوسع",
+    "targetLoadRate": "أقصى نسبة تحميل لـ UPS",
+    "phases": "التغذية",
+    "phasesAuto": "تلقائي",
+    "phasesMono": "أحادي الطور",
+    "phasesTri": "ثلاثي الأطوار",
+    "voltage": "الجهد",
+    "frequency": "التردد",
+    "redundancy": "التكرار",
+    "redundancyHelp": {
+      "N": "نظام واحد",
+      "N+1": "وحدة أو وحدة قدرة احتياطية",
+      "2N": "نظامان مستقلان A و B"
+    },
+    "batteryChemistry": "البطاريات",
+    "chemistry": {
+      "auto": "تلقائي",
+      "VRLA": "رصاص (VRLA)",
+      "LI": "ليثيوم (LFP)"
+    },
+    "eod": "جهد نهاية التفريغ",
+    "eodAuto": "تلقائي",
+    "summary": "ملخص",
+    "loadReal": "الحمل",
+    "design": "قيمة التصميم",
+    "library": {
+      "add": "إضافة",
+      "qty": "الكمية",
+      "unitW": "قدرة الوحدة (W)",
+      "remove": "إزالة {{name}}",
+      "total": "الإجمالي",
+      "empty": "أضف معداتك من القائمة أدناه.",
+      "category": {
+        "cctv": "المراقبة بالفيديو",
+        "network": "الشبكة",
+        "it": "تقنية المعلومات",
+        "office": "المكاتب",
+        "building": "المبنى",
+        "other": "أخرى"
+      }
+    }
+  },
+  "room": {
+    "title": "غرفة التركيب",
+    "keepDefaults": "لا تعرف؟ نحتفظ بالقيم الافتراضية ويمكنك تعديلها لاحقًا.",
+    "dimensions": "أبعاد الغرفة",
+    "length": "الطول",
+    "width": "العرض",
+    "height": "الارتفاع",
+    "door": "الباب",
+    "doorWidth": "عرض الباب",
+    "doorHeight": "ارتفاع الباب",
+    "doorWall": "جدار الباب",
+    "wall": {
+      "top": "أعلى",
+      "bottom": "أسفل",
+      "left": "يسار",
+      "right": "يمين"
+    },
+    "floor": "قدرة تحمل الأرضية",
+    "floorUnknown": "غير معروفة (القيمة الافتراضية: {{value}} kg/m²)",
+    "environment": "البيئة",
+    "ambient": "درجة الحرارة المحيطة",
+    "humidity": "الرطوبة النسبية",
+    "altitude": "الارتفاع عن سطح البحر",
+    "hvac": "تكييف موجود",
+    "hvacKW": "قدرة التبريد",
+    "raisedFloor": "أرضية مرتفعة",
+    "kind": "نوع الغرفة",
+    "kinds": {
+      "dedicated": "غرفة تقنية مخصصة",
+      "shared": "غرفة مشتركة",
+      "office": "مكتب",
+      "rack": "خزانة موجودة"
+    },
+    "installation": "التركيب الكهربائي",
+    "generator": "مولد مع مفتاح تحويل تلقائي",
+    "maintenanceBypass": "تجاوز صيانة خارجي",
+    "cableLengths": "أطوال الكابلات",
+    "cable": {
+      "input": "الدخل",
+      "bypass": "التجاوز",
+      "output": "الخرج",
+      "battery": "البطارية"
+    },
+    "checks": "عمليات التحقق",
+    "noAlert": "لا توجد تنبيهات للغرفة."
+  },
+  "solutions": {
+    "title": "الحلول المقترحة",
+    "subtitle": "حتى ثلاثة خيارات. الخيار الموصى به مميز.",
+    "tier": {
+      "economy": "اقتصادي",
+      "recommended": "موصى به",
+      "performance": "أداء"
+    },
+    "tierHelp": {
+      "economy": "القدرة الكافية فقط",
+      "recommended": "أفضل توازن",
+      "performance": "أفضل كفاءة وأكبر هامش"
+    },
+    "choose": "اختيار هذا الخيار",
+    "chosen": "الخيار المختار",
+    "technology": "التقنية",
+    "configuration": "التكوين",
+    "units_zero": "{{count}} وحدة",
+    "units_one": "وحدة واحدة",
+    "units_two": "وحدتان",
+    "units_few": "{{count}} وحدات",
+    "units_many": "{{count}} وحدة",
+    "units_other": "{{count}} وحدة",
+    "modules_zero": "{{count}} وحدة قدرة {{kw}} kW",
+    "modules_one": "وحدة قدرة واحدة {{kw}} kW",
+    "modules_two": "وحدتا قدرة {{kw}} kW",
+    "modules_few": "{{count}} وحدات قدرة {{kw}} kW",
+    "modules_many": "{{count}} وحدة قدرة {{kw}} kW",
+    "modules_other": "{{count}} وحدة قدرة {{kw}} kW",
+    "systems": "النظامان A و B",
+    "loadRate": "نسبة التحميل",
+    "efficiency": "الكفاءة",
+    "autonomy": "زمن التشغيل",
+    "autonomyDesign": "{{min}} دقيقة (نهاية العمر، مع كل الهوامش)",
+    "autonomyNew": "≈ {{min}} دقيقة مع بطاريات جديدة",
+    "battery": "البطاريات",
+    "batteryLine": "{{chemistry}} {{v}} V {{ah}} Ah — {{bps}} بطارية × {{strings}} سلسلة",
+    "internal": "بطاريات داخلية",
+    "cabinets": "{{qty}} × {{ref}}",
+    "perSet": "لكل مجموعة، {{sets}} مجموعة",
+    "dimensions": "الأبعاد (ع × ع × ا)",
+    "weight": "الكتلة الإجمالية",
+    "footprint": "المساحة مع الخلوصات",
+    "placeInRoom": "الموقع في الغرفة",
+    "noise": "مستوى الضجيج",
+    "seeCalc": "عرض الحساب",
+    "none": "لا يوجد حل مناسب لهذه المعطيات.",
+    "status": {
+      "ok": "سليم",
+      "warn": "يجب التحقق",
+      "block": "مانع"
+    }
+  },
+  "tech": {
+    "line_interactive": "تفاعلي خطي",
+    "online_performance": "أونلاين أداء",
+    "online_double_conversion": "أونلاين تحويل مزدوج",
+    "modular": "معياري"
+  },
+  "formFactor": {
+    "tower": "برج",
+    "rack": "رف",
+    "tower_rack": "برج/رف",
+    "cabinet": "خزانة"
+  },
+  "chemistry": {
+    "VRLA_AGM": "رصاص AGM",
+    "VRLA_GEL": "رصاص جل",
+    "LI_LFP": "ليثيوم LFP"
+  },
+  "deliverables": {
+    "title": "المخرجات",
+    "tabs": {
+      "plan": "المخطط",
+      "singleLine": "المخطط أحادي الخط",
+      "calcNote": "مذكرة الحساب",
+      "bom": "قائمة المواد",
+      "report": "تقرير PDF"
+    },
+    "print": "طباعة",
+    "comingSoon": "متاح في إصدار لاحق.",
+    "noOption": "اختر حلًا أولًا."
+  },
+  "calcNote": {
+    "title": "مذكرة الحساب",
+    "project": "المشروع",
+    "inputs": "المعطيات",
+    "solution": "الحل المختار",
+    "currents": "التيارات والحمايات والكابلات",
+    "thermal": "التبديد الحراري",
+    "floor": "حمل الأرضية",
+    "ventilation": "تهوية غرفة البطاريات",
+    "alerts": "التنبيهات",
+    "formula": "الصيغة",
+    "values": "التطبيق العددي",
+    "result": "النتيجة",
+    "ref": "المرجع",
+    "circuit": "الدائرة",
+    "ib": "Ib (A)",
+    "in": "المعايرة (A)",
+    "section": "المقطع",
+    "length": "الطول",
+    "drop": "هبوط الجهد",
+    "qty": "الكمية",
+    "notApplicable": "غير منطبق (بطاريات ليثيوم)."
+  },
+  "bom": {
+    "title": "قائمة المواد",
+    "columns": {
+      "reference": "المرجع",
+      "designation": "الوصف",
+      "qty": "الكمية",
+      "unit": "الوحدة",
+      "unitPrice": "سعر الوحدة",
+      "total": "الإجمالي"
+    },
+    "unit": {
+      "pcs": "قطعة",
+      "m": "م"
+    },
+    "ups": "UPS {{kva}} kVA / {{kw}} kW",
+    "frame": "هيكل معياري ({{maxModules}} فتحات)",
+    "module": "وحدة قدرة {{kw}} kW",
+    "battery": "بطارية {{v}} V {{ah}} Ah",
+    "cabinet": "خزانة أو وحدة بطاريات",
+    "cable": "كابل {{cores}} × {{section}} mm² (إرشادي)",
+    "circuit": {
+      "rectifier": "قاطع دخل المقوم",
+      "bypass": "قاطع دخل التجاوز",
+      "output": "قاطع خرج UPS",
+      "battery": "قاطع البطارية (DC)",
+      "maintenanceBypass": "تجاوز صيانة خارجي",
+      "feeder": "قاطع مخرج (لوحة التوزيع المحمية)",
+      "ats": "مفتاح تحويل تلقائي (ATS)"
+    },
+    "sampleNote": "البنود المعلّمة بـ * مأخوذة من بطاقات أمثلة."
+  },
+  "settings": {
+    "title": "الإعدادات والفرضيات",
+    "intro": "جميع فرضيات الحساب. تنطبق على كل المشاريع في هذا المتصفح.",
+    "reset": "استعادة القيم الافتراضية",
+    "resetDone": "تمت استعادة القيم الافتراضية.",
+    "saved": "تم الحفظ",
+    "invalid": "قيمة مرفوضة: {{error}}",
+    "groups": {
+      "power": "القدرة",
+      "battery": "البطاريات",
+      "room": "الغرفة",
+      "electrical": "الكهرباء",
+      "selection": "اختيار الخيارات",
+      "scenarios": "أنواع التركيب"
+    },
+    "fields": {
+      "growthMargin": "هامش التوسع",
+      "targetLoadRate": "نسبة التحميل المستهدفة",
+      "defaultPf": "معامل القدرة الافتراضي",
+      "monoToTriThresholdKVA": "حد الانتقال إلى ثلاثي الأطوار (kVA)",
+      "altitudeDerating": "تخفيض القدرة حسب الارتفاع (م : معامل)",
+      "agingFactor": "معامل التقادم (رصاص)",
+      "agingFactorLithium": "معامل التقادم (ليثيوم)",
+      "designMargin": "هامش التصميم",
+      "defaultEodVpc": "نهاية التفريغ الافتراضية (V/خلية)",
+      "shortAutonomyEodVpc": "نهاية التفريغ لزمن قصير (V/خلية)",
+      "shortAutonomyThresholdMin": "زمن قصير أقل من (دقيقة)",
+      "allowedEodVpc": "جهود نهاية التفريغ المسموحة",
+      "maxStrings": "أقصى عدد للسلاسل",
+      "chargeEfficiency": "كفاءة الشحن",
+      "floatVpc": "جهد التعويم (V/خلية)",
+      "gasCurrentMaPerAh": "تيار الغاز (mA/Ah)",
+      "defaultFloorLoadKgM2": "حمل الأرضية الافتراضي (kg/m²)",
+      "doorMarginMm": "هامش المرور من الباب (mm)",
+      "recommendedTempC": "درجة الحرارة الموصى بها (°C)",
+      "allowedTempC": "درجة الحرارة المسموحة (°C)",
+      "maxHumidityPct": "أقصى رطوبة (%)",
+      "defaultHeightMm": "ارتفاع الغرفة الافتراضي (mm)",
+      "noHvacMaxW": "أقصى تبديد بدون تكييف (W)",
+      "officeNoiseWarnDb": "أقصى ضجيج في المكتب (dB)",
+      "floorCheckMinWeightKg": "أدنى كتلة لفحص الأرضية (kg)",
+      "breakerSeriesA": "سلسلة معايرات القواطع (A)",
+      "groupingFactor": "معامل تجميع الكابلات",
+      "cableAmbientC": "درجة حرارة محيط الكابلات (°C)",
+      "maxParallel": "أقصى عدد كابلات متوازية",
+      "maxVoltageDropAc": "أقصى هبوط جهد AC (%)",
+      "maxVoltageDropDc": "أقصى هبوط جهد DC (%)",
+      "inputPf": "معامل قدرة الدخل",
+      "outputFeeders": "عدد مخارج اللوحة المحمية",
+      "generatorSizingFactor": "معامل تحجيم المولد",
+      "defaultCableLengths": "أطوال الكابلات الافتراضية (م)",
+      "weightEfficiency": "الوزن: الكفاءة",
+      "weightFootprint": "الوزن: المساحة",
+      "weightMargin": "الوزن: الهامش",
+      "weightPrice": "الوزن: السعر",
+      "maxOversizeFactor": "أقصى زيادة في الحجم (×)",
+      "idealLoadRate": "نسبة التحميل المثلى",
+      "autonomyMin": "زمن التشغيل (دقيقة)",
+      "technologies": "التقنيات",
+      "redundancy": "التكرار"
+    },
+    "listHelp": "قيم مفصولة بفواصل"
+  },
+  "catalogs": {
+    "title": "الكتالوجات",
+    "intro": "الكتالوجات المرفقة أمثلة. استبدلها ببطاقاتك (استيراد JSON أو التعديل هنا) دون أي تعديل في الشيفرة.",
+    "tabs": {
+      "ups": "UPS",
+      "blocks": "البطاريات",
+      "cabinets": "الخزائن",
+      "equipment": "المعدات"
+    },
+    "import": "استيراد JSON",
+    "export": "تصدير JSON",
+    "reset": "استعادة الأمثلة",
+    "edit": "تعديل",
+    "add": "إضافة بطاقة",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "imported": "تم استيراد الكتالوج.",
+    "invalid": "تم رفض الكتالوج:",
+    "editHelp": "البطاقة بصيغة JSON. يتم التحقق منها عند الحفظ.",
+    "count_zero": "لا توجد بطاقات",
+    "count_one": "بطاقة واحدة",
+    "count_two": "بطاقتان",
+    "count_few": "{{count}} بطاقات",
+    "count_many": "{{count}} بطاقة",
+    "count_other": "{{count}} بطاقة",
+    "confirmReset": "استبدال هذا الكتالوج بالأمثلة؟",
+    "confirmDelete": "حذف «{{name}}»؟",
+    "columns": {
+      "reference": "المرجع",
+      "technology": "التقنية",
+      "power": "القدرة",
+      "dimensions": "ع × ع × ا (mm)",
+      "weight": "الكتلة",
+      "chemistry": "الكيمياء",
+      "capacity": "السعة",
+      "category": "الفئة",
+      "defaultW": "القدرة",
+      "source": "المصدر",
+      "actions": "إجراءات"
+    }
+  },
+  "projects": {
+    "title": "مشاريعي",
+    "empty": "لا توجد مشاريع بعد.",
+    "open": "فتح",
+    "duplicate": "نسخ",
+    "delete": "حذف",
+    "export": "تصدير (.ups.json)",
+    "import": "استيراد مشروع",
+    "imported": "تم استيراد المشروع.",
+    "invalid": "تم رفض الملف:",
+    "confirmDelete": "حذف المشروع «{{name}}»؟",
+    "untitled": "مشروع بدون اسم",
+    "copy": "{{name}} (نسخة)",
+    "updated": "عُدّل في {{date}}",
+    "name": "اسم المشروع",
+    "client": "العميل",
+    "author": "المؤلف"
+  },
+  "calcModal": {
+    "title": "عرض الحساب",
+    "close": "إغلاق"
+  },
+  "axis": {
+    "length": "الطول",
+    "width": "العرض",
+    "height": "الارتفاع"
+  },
+  "alert": {
+    "temp_out_of_range": "درجة الحرارة {{t}} °C خارج النطاق: يعمل UPS بين {{min}} و {{max}} °C.",
+    "temp_not_recommended": "درجة الحرارة {{t}} °C: يوصى بـ {{min}} إلى {{max}} °C لعمر البطاريات.",
+    "humidity_too_high": "الرطوبة {{h}} % مرتفعة جدًا (الحد الأقصى {{max}} % دون تكاثف).",
+    "altitude_derating": "ارتفاع {{altitude}} م: تنخفض قدرة UPS بنسبة {{pct}} %.",
+    "phase_switched_to_three": "{{kva}} kVA يتجاوز {{threshold}} kVA: يتحول التركيب إلى ثلاثي الأطوار.",
+    "no_load": "أدخل القدرة المطلوب حمايتها.",
+    "no_ups": "لا يوجد UPS في الكتالوج يناسب {{kw}} kW مع هذه الخيارات.",
+    "no_battery": "لا توجد بطارية في الكتالوج تحقق {{autonomy}} دقيقة عند {{kw}} kW.",
+    "room_too_small": "الغرفة صغيرة جدًا لهذا التكوين. ينقص {{missing}} م في {{axis}}.",
+    "items_overlap": "بعض المعدات متداخلة في المخطط.",
+    "floor_overload": "الأرضية غير كافية: {{load}} kg/m² تحت «{{item}}» مقابل {{admissible}} kg/m² مسموحة.",
+    "floor_overload_unknown": "يجب التحقق من حمل الأرضية: {{load}} kg/m² تحت «{{item}}»؛ القيمة الافتراضية {{admissible}} kg/m².",
+    "floor_concentrated": "حمل مركّز {{load}} kg/m² تحت المعدات (الأرضية: {{admissible}} kg/m²): يلزم توزيع الحمل.",
+    "raised_floor_support": "أرضية مرتفعة: يلزم هيكل دعم لـ {{weight}} kg من المعدات.",
+    "door_blocked": "إحدى المعدات تعيق فتح الباب.",
+    "rack_units": "التركيب في الخزانة الموجودة: يلزم {{u}} U.",
+    "door_too_narrow": "الباب ضيق جدًا لـ «{{item}}»: ينقص {{missing}} م.",
+    "door_too_low": "الباب منخفض جدًا لـ «{{item}}»: ينقص {{missing}} م.",
+    "hvac_insufficient": "التكييف غير كافٍ: {{required}} kW يجب تصريفها مقابل {{available}} kW متاحة.",
+    "hvac_required": "يلزم تكييف لا يقل عن {{required}} kW.",
+    "noise_high": "مستوى الضجيج {{db}} dB: مرتفع لمكتب (القيمة المرجعية {{max}} dB).",
+    "noise_level": "مستوى الضجيج: {{db}} dB.",
+    "breaker_out_of_range": "تيار يتجاوز سلسلة المعايرات: يلزم دراسة خاصة.",
+    "cable_out_of_range": "تعذر تحديد مقطع كابل: يلزم دراسة خاصة.",
+    "ventilation_required": "تهوية غرفة البطاريات: {{flow}} m³/h (IEC 62485-2).",
+    "external_battery_packs": "{{qty}} وحدة بطاريات خارجية بجانب UPS.",
+    "lithium_unavailable": "لا توجد بطارية ليثيوم لهذا الطراز: نقترح بطاريات رصاص."
+  },
+  "calc": {
+    "load": {
+      "title": "القدرة المطلوبة",
+      "sumItems": "مجموع المعدات",
+      "fromKVA": "القدرة الفعالة",
+      "direct": "القدرة المدخلة",
+      "kwReq": "القدرة الفعالة للتصميم",
+      "kvaReq": "القدرة الظاهرية للتصميم"
+    },
+    "phases": {
+      "title": "أحادي أو ثلاثي الأطوار",
+      "rule": "قاعدة التحويل",
+      "voltage": "جهد الحساب"
+    },
+    "env": {
+      "title": "البيئة",
+      "altitude": "معامل الارتفاع"
+    },
+    "selection": {
+      "title": "اختيار UPS",
+      "rule": "الطرازات المقبولة"
+    },
+    "modular": {
+      "title": "وحدات القدرة",
+      "n": "الوحدات اللازمة",
+      "redundancy": "مع التكرار"
+    },
+    "battery": {
+      "title": "البطاريات (قدرة ثابتة)",
+      "pdc": "القدرة المسحوبة من البطاريات",
+      "cells": "عدد الخلايا",
+      "factors": "معاملات التصحيح",
+      "pcell": "القدرة لكل خلية",
+      "available": "القدرة المتاحة (الجدول)",
+      "autonomy": "زمن التشغيل المحسوب",
+      "none": "لا يوجد حل"
+    },
+    "elec": {
+      "title": "التيارات والحمايات",
+      "output": "تيار خرج الوحدة",
+      "rectifier": "تيار دخل المقوم",
+      "battery": "أقصى تيار للبطارية",
+      "systemOutput": "تيار خرج النظام",
+      "generator": "المولد"
+    },
+    "circuit": {
+      "generic": {
+        "breaker": "المعايرة",
+        "cable": "الكابل"
+      },
+      "rectifier": {
+        "breaker": "دخل المقوم: المعايرة",
+        "cable": "دخل المقوم: الكابل"
+      },
+      "bypass": {
+        "breaker": "دخل التجاوز: المعايرة",
+        "cable": "دخل التجاوز: الكابل"
+      },
+      "output": {
+        "breaker": "الخرج: المعايرة",
+        "cable": "الخرج: الكابل"
+      },
+      "battery": {
+        "breaker": "البطارية: المعايرة",
+        "cable": "البطارية: الكابل"
+      },
+      "maintenanceBypass": {
+        "breaker": "تجاوز الصيانة: المعايرة",
+        "cable": "تجاوز الصيانة: الكابل"
+      },
+      "feeder": {
+        "breaker": "المخرج: المعايرة",
+        "cable": "المخرج: الكابل"
+      },
+      "ats": {
+        "breaker": "مفتاح التحويل: المعايرة",
+        "cable": "مفتاح التحويل: الكابل"
+      }
+    },
+    "thermal": {
+      "title": "التبديد الحراري",
+      "ups": "مفاقيد UPS",
+      "catalog": "مفاقيد UPS (الكتالوج)",
+      "charge": "مفاقيد الشحن",
+      "total": "إجمالي التبديد",
+      "btu": "بوحدة BTU/h"
+    },
+    "vent": {
+      "title": "التهوية (IEC 62485-2)",
+      "flow": "تدفق الهواء",
+      "area": "المقطع الحر",
+      "lithium": "غير منطبق (ليثيوم)"
+    },
+    "layout": {
+      "title": "التوضيع",
+      "footprint": "المساحة مع الخلوصات",
+      "remaining": "المساحة المتبقية",
+      "door": "المرور من الباب",
+      "floor": "حمل الأرضية الموزع"
+    }
+  },
+  "plan": {
+    "title": "مخطط التوضيع",
+    "legend": "منظر علوي بمقياس رسم. المناطق المخططة: خلوصات الخدمة.",
+    "dragHelp": "اسحب أي معدة لتحريكها؛ انقر مرتين أو اضغط R لتدويرها 90°.",
+    "reset": "ترتيب تلقائي",
+    "remaining": "المساحة المتبقية: {{m2}} m²",
+    "door": "الباب",
+    "scale": "المقياس"
+  },
+  "singleLine": {
+    "title": "المخطط أحادي الخط",
+    "mains": "الشبكة",
+    "generator": "مولد",
+    "system": "النظام {{s}}",
+    "board": "لوحة التوزيع المحمية",
+    "maintenanceBypass": "تجاوز الصيانة",
+    "battery": "البطاريات",
+    "feeders": "المخارج",
+    "legend": "رموز IEC 60617 مبسطة. المعايرات والمقاطع إرشادية."
+  },
+  "common": {
+    "yes": "نعم",
+    "no": "لا",
+    "close": "إغلاق",
+    "kW": "kW",
+    "kVA": "kVA",
+    "W": "W",
+    "m": "م",
+    "mm": "mm",
+    "kg": "kg",
+    "min": "دقيقة",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "loading": "جارٍ التحميل…"
+  },
+  "report": {
+    "title": "تقرير التحديد الأولي",
+    "date": "التاريخ",
+    "installation": "التركيب",
+    "summary": "ملخص",
+    "sampleNotice": "المنتجات المذكورة مأخوذة من بطاقات أمثلة مستوحاة من بيانات عامة: يجب استبدالها بمراجع المصنّع المختار.",
+    "intro": "يتضمن التقرير الملخص والحل المختار والمخطط والمخطط أحادي الخط وقائمة المواد ومذكرة الحساب.",
+    "download": "تنزيل تقرير PDF",
+    "generating": "جارٍ الإنشاء…",
+    "error": "فشل الإنشاء: {{error}}"
+  },
+  "exports": {
+    "xlsx": "تنزيل بصيغة Excel",
+    "csv": "تنزيل بصيغة CSV",
+    "all": "تنزيل الكل",
+    "project": "المشروع (.ups.json)"
+  }
+}

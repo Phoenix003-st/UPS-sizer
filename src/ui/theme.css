@@ -1,7 +1,8 @@
 @import 'tailwindcss';
 
 /*
- * Thème neutre et rebrandable : changer uniquement ces variables (et public/logo.svg).
+ * Thème neutre et rebrandable : changer uniquement ces variables et le logo (src/ui/logo.svg ;
+ * icônes PWA dans public/icons/).
  * Contrastes vérifiés WCAG 2.1 AA sur fond --color-bg / --color-surface.
  */
 :root {

@@ -119,11 +119,22 @@ interface PlanSvgProps {
   /** Absent : plan statique (rapport PDF). */
   onMove?: (it: LayoutItem, p: { x: number; y: number; rot: Rot }, done: boolean) => void;
   current?: (it: LayoutItem) => { x: number; y: number; rot: Rot };
+  /** Impression / PDF : grille au mètre en traits simples (motifs imbriqués mal rendus en PDF). */
+  print?: boolean;
 }
 
 /** Rendu SVG du plan (réutilisé tel quel dans le rapport PDF). */
 export const PlanSvg = forwardRef<SVGSVGElement, PlanSvgProps>(function PlanSvg(
-  { layout, colliding = new Set(), title, doorLabel, remainingLabel, onMove, current },
+  {
+    layout,
+    colliding = new Set(),
+    title,
+    doorLabel,
+    remainingLabel,
+    onMove,
+    current,
+    print = false,
+  },
   ref,
 ) {
   const { lengthMm: L, widthMm: W } = layout.room;
@@ -179,7 +190,7 @@ export const PlanSvg = forwardRef<SVGSVGElement, PlanSvgProps>(function PlanSvg(
       role="group"
       aria-label={title}
       className="h-auto w-full touch-none select-none rounded-lg border border-border bg-white"
-      style={{ maxHeight: '70vh' }}
+      style={{ maxHeight: '70vh', direction: 'ltr' }}
       fontFamily="system-ui, sans-serif"
     >
       <title>{title}</title>
@@ -204,7 +215,18 @@ export const PlanSvg = forwardRef<SVGSVGElement, PlanSvgProps>(function PlanSvg(
       </defs>
 
       {/* Local et grille */}
-      <rect x={0} y={0} width={L} height={W} fill="url(#grid1000)" />
+      {print ? (
+        <g stroke="#c9d1db" strokeWidth={stroke}>
+          {Array.from({ length: Math.floor(L / 1000) }, (_, i) => (
+            <line key={`gx${i}`} x1={(i + 1) * 1000} y1={0} x2={(i + 1) * 1000} y2={W} />
+          ))}
+          {Array.from({ length: Math.floor(W / 1000) }, (_, i) => (
+            <line key={`gy${i}`} x1={0} y1={(i + 1) * 1000} x2={L} y2={(i + 1) * 1000} />
+          ))}
+        </g>
+      ) : (
+        <rect x={0} y={0} width={L} height={W} fill="url(#grid1000)" />
+      )}
       <rect
         x={0}
         y={0}

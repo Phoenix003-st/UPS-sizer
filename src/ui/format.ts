@@ -2,9 +2,20 @@
 import type { TFunction } from 'i18next';
 import type { Alert } from '../engine/types';
 
+/** Locale de formatage : chiffres latins en arabe (usage technique, cohérent avec les formules). */
+export function numberLocale(lang: string): string {
+  return lang.startsWith('ar') ? 'ar-u-nu-latn' : lang;
+}
+
+/** Date courte au format de la langue. */
+export function formatDate(iso: string, lang: string, withTime = false): string {
+  const d = new Date(iso);
+  return withTime ? d.toLocaleString(numberLocale(lang)) : d.toLocaleDateString(numberLocale(lang));
+}
+
 export function formatNumber(n: number, lang: string, maxDigits = 2, minDigits = 0): string {
   if (!Number.isFinite(n)) return '—';
-  return new Intl.NumberFormat(lang, {
+  return new Intl.NumberFormat(numberLocale(lang), {
     maximumFractionDigits: maxDigits,
     minimumFractionDigits: minDigits,
   }).format(n);
@@ -12,9 +23,10 @@ export function formatNumber(n: number, lang: string, maxDigits = 2, minDigits =
 
 /** Pourcentage à partir d'un ratio (0,8 → « 80 % »). */
 export function formatPct(ratio: number, lang: string, digits = 0): string {
-  return new Intl.NumberFormat(lang, { style: 'percent', maximumFractionDigits: digits }).format(
-    ratio,
-  );
+  return new Intl.NumberFormat(numberLocale(lang), {
+    style: 'percent',
+    maximumFractionDigits: digits,
+  }).format(ratio);
 }
 
 /** Message traduit d'une alerte, nombres au format local et axe traduit. */

@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { DEFAULT_CATALOGS } from '../../catalog';
 import { createProject, runSizing } from '../../engine';
 import { DEFAULT_SETTINGS, SCENARIOS } from '../../settings/schema';
+import ar from '../ar.json';
 import en from '../en.json';
 import fr from '../fr.json';
 
@@ -19,6 +20,17 @@ function has(d: Dict, key: string): boolean {
 describe('traductions', () => {
   it('le français et l’anglais ont les mêmes clés', () => {
     expect(keys(en as Dict).sort()).toEqual(keys(fr as Dict).sort());
+  });
+
+  it('l’arabe couvre toutes les clés (formes plurielles comprises)', () => {
+    const arKeys = new Set(keys(ar as Dict));
+    for (const k of keys(fr as Dict)) {
+      const plural = k.match(/^(.*)_(one|other)$/);
+      if (plural) {
+        for (const form of ['zero', 'one', 'two', 'few', 'many', 'other'])
+          expect(arKeys.has(`${plural[1]}_${form}`), `${plural[1]}_${form}`).toBe(true);
+      } else expect(arKeys.has(k), k).toBe(true);
+    }
   });
 
   it('toutes les alertes et étapes de calcul produites par le moteur sont traduites', () => {
@@ -61,7 +73,7 @@ describe('traductions', () => {
       }
     }
     expect(codes.size).toBeGreaterThan(10);
-    for (const d of [fr, en] as Dict[]) {
+    for (const d of [fr, en, ar] as Dict[]) {
       for (const c of codes) expect(has(d, `alert.${c}`), `alert.${c}`).toBe(true);
       for (const l of labels) expect(has(d, l), l).toBe(true);
     }

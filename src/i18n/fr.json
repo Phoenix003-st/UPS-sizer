@@ -583,5 +583,22 @@
     "battery": "Batteries",
     "feeders": "Départs",
     "legend": "Symboles IEC 60617 simplifiés. Calibres et sections indicatifs."
+  },
+  "report": {
+    "title": "Rapport de pré-dimensionnement",
+    "date": "Date",
+    "installation": "Installation",
+    "summary": "Récapitulatif",
+    "sampleNotice": "Les produits cités proviennent de fiches d'EXEMPLE, inspirées de données publiques : ils sont à remplacer par les références du fabricant retenu.",
+    "intro": "Le rapport reprend le récapitulatif, la solution retenue, le plan, le schéma unifilaire, la nomenclature et la note de calcul.",
+    "download": "Télécharger le rapport PDF",
+    "generating": "Génération en cours…",
+    "error": "La génération a échoué : {{error}}"
+  },
+  "exports": {
+    "xlsx": "Télécharger en Excel",
+    "csv": "Télécharger en CSV",
+    "all": "Tout télécharger",
+    "project": "Projet (.ups.json)"
   }
 }

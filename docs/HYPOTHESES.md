@@ -108,6 +108,25 @@
   A = 28 × Q cm² ; sans objet pour le lithium.
 - Bureau / local partagé : alerte de bruit au-delà de 55 dB(A).
 
-## 7. Outillage
+## 7. Interface et livrables
+
+- Tension : le choix 230 V / 400 V est la tension du réseau ; en triphasé on calcule avec 400 V
+  entre phases, en monophasé avec 230 V phase-neutre (220 ↔ 380, 240 ↔ 415).
+- Plan : 1 unité SVG = 1 mm, pas de déplacement de 50 mm à la souris, 100 mm (10 mm avec Maj) au
+  clavier. Placement automatique dos au mur le plus long ; la porte est sur le mur du bas à
+  300 mm du coin par défaut (modifiable à l'étape Local).
+- Schéma unifilaire : au-delà de 3 unités en parallèle, les suivantes sont résumées (« … × n ») ;
+  4 départs par défaut sur le tableau ondulé.
+- Rapport PDF : police DejaVu Sans embarquée (symboles η, √, ≤ et écriture arabe). Plan et
+  schéma vectoriels. Le rapport est produit dans la langue de l'interface.
+- PDF en arabe : colonnes des tableaux en miroir ; dans les phrases mêlant arabe et latin, le
+  placement de certains signes (parenthèses) peut être imparfait (algorithme bidirectionnel
+  simplifié de jsPDF).
+- Arabe : chiffres latins (usage technique, cohérent avec les formules) ; les plans et schémas
+  restent orientés de gauche à droite.
+- CSV : séparateur « ; », UTF-8 avec BOM, virgule décimale en français (ouverture directe dans
+  Excel FR). Excel : colonne prix à saisir, totaux en formule.
+
+## 8. Outillage
 
 - Versions figées : React 18.3, TypeScript 5.9 (strict), Vite 7, Vitest 3, ESLint 9, Tailwind CSS 4.

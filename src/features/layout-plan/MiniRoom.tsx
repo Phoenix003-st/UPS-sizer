@@ -13,6 +13,7 @@ export function MiniRoom({ layout, label }: { layout: LayoutResult; label: strin
       aria-label={label}
       className="h-auto max-h-56 w-full rounded-lg bg-bg"
       preserveAspectRatio="xMidYMid meet"
+      style={{ direction: 'ltr' }}
     >
       <rect
         x={0}

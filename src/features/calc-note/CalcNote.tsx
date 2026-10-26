@@ -4,7 +4,7 @@ import type { Project } from '../../engine/project';
 import type { SizingResult, SolutionOption } from '../../engine/types';
 import { TraceList } from '../../ui/CalcView';
 import { AlertList, Stat } from '../../ui/components';
-import { formatNumber, formatPct } from '../../ui/format';
+import { formatDate, formatNumber, formatPct } from '../../ui/format';
 
 export function CalcNote({
   project,
@@ -26,8 +26,7 @@ export function CalcNote({
         <h2 className="text-xl font-bold">{t('calcNote.title')}</h2>
         <p className="text-sm text-muted">
           {project.name || t('projects.untitled')}
-          {project.client && ` — ${project.client}`} —{' '}
-          {new Date(project.updatedAt).toLocaleDateString(lang)}
+          {project.client && ` — ${project.client}`} — {formatDate(project.updatedAt, lang)}
         </p>
         <p className="mt-2 rounded-md border border-warn bg-warn-bg px-3 py-1.5 text-sm font-semibold text-warn">
           {t('app.disclaimer')}

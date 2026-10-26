@@ -1,12 +1,14 @@
-/** Traductions (i18next) : français, anglais ; l'arabe (RTL) s'ajoute dans `ar.json`. */
+/** Traductions (i18next) : français, anglais et arabe (mise en page de droite à gauche). */
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import ar from './ar.json';
 import en from './en.json';
 import fr from './fr.json';
 
 export const LANGUAGES = [
   { code: 'fr', label: 'Français', dir: 'ltr' },
   { code: 'en', label: 'English', dir: 'ltr' },
+  { code: 'ar', label: 'العربية', dir: 'rtl' },
 ] as const;
 export type Lang = (typeof LANGUAGES)[number]['code'];
 
@@ -41,7 +43,7 @@ export function setLanguage(lang: Lang) {
 }
 
 void i18n.use(initReactI18next).init({
-  resources: { fr: { translation: fr }, en: { translation: en } },
+  resources: { fr: { translation: fr }, en: { translation: en }, ar: { translation: ar } },
   lng: initialLanguage(),
   fallbackLng: 'fr',
   interpolation: { escapeValue: false },

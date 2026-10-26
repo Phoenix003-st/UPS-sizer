@@ -9,6 +9,7 @@ import { RoomScreen } from '../features/room/RoomScreen';
 import { SettingsScreen } from '../features/settings-screen/SettingsScreen';
 import { SolutionsScreen } from '../features/solutions/SolutionsScreen';
 import { LANGUAGES, setLanguage, type Lang } from '../i18n';
+import logoUrl from '../ui/logo.svg';
 import { useCurrentProject } from '../state/projectStore';
 import { FLOW, navigate, useRoute, type Route } from './router';
 
@@ -40,7 +41,7 @@ function Header({ route }: { route: Route }) {
           onClick={() => navigate('home')}
           className="flex min-h-11 items-center gap-2 rounded-lg pe-2 focus-visible:outline-3 focus-visible:outline-white"
         >
-          <img src="./logo.svg" alt="" className="h-8 w-8 rounded-md bg-white/10" />
+          <img src={logoUrl} alt="" className="h-8 w-8 rounded-md bg-white/10" />
           <span className="text-lg font-bold">{t('app.name')}</span>
           <span className="hidden text-sm opacity-85 md:inline">— {t('app.tagline')}</span>
         </button>

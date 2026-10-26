@@ -8,6 +8,7 @@ import { useCurrentProject, useProjectStore } from '../../state/projectStore';
 import { Button, Card, PageTitle, TextField } from '../../ui/components';
 import { pickTextFile } from '../../ui/files';
 import { exportProject } from './projectFiles';
+import { formatDate } from '../../ui/format';
 import { ScenarioIcon } from '../../ui/icons';
 
 export function ProjectsScreen() {
@@ -98,7 +99,7 @@ export function ProjectsScreen() {
                   <p className="text-xs text-muted">
                     {t(`scenario.${p.scenario}.title`)} ·{' '}
                     {t('projects.updated', {
-                      date: new Date(p.updatedAt).toLocaleString(i18n.language),
+                      date: formatDate(p.updatedAt, i18n.language, true),
                     })}
                   </p>
                 </div>

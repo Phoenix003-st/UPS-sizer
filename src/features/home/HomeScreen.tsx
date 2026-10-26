@@ -6,10 +6,11 @@ import { useCatalogStore } from '../../state/catalogStore';
 import { useCurrentProject, useProjectStore } from '../../state/projectStore';
 import { useSettingsStore } from '../../state/settingsStore';
 import { Button, PageTitle } from '../../ui/components';
+import { formatDate } from '../../ui/format';
 import { ScenarioIcon } from '../../ui/icons';
 
 export function HomeScreen() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const create = useProjectStore((s) => s.create);
   const settings = useSettingsStore((s) => s.settings);
   const catalogVersion = useCatalogStore((s) => s.catalogs.ups.meta.catalogVersion);
@@ -26,7 +27,7 @@ export function HomeScreen() {
               onClick={() => {
                 const p = create(sc, settings, catalogVersion);
                 useProjectStore.getState().update((d) => {
-                  d.name = `${t(`scenario.${sc}.title`)} — ${new Date(p.createdAt).toLocaleDateString()}`;
+                  d.name = `${t(`scenario.${sc}.title`)} — ${formatDate(p.createdAt, i18n.language)}`;
                 });
                 navigate('power');
               }}
