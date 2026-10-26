@@ -28,13 +28,34 @@
     "current": "current step"
   },
   "scenario": {
-    "cctv": { "title": "Video surveillance", "desc": "IP cameras, recorders, PoE switches" },
-    "office": { "title": "Office", "desc": "PCs, monitors, network printers" },
-    "server": { "title": "Servers", "desc": "Server room, racks, storage" },
-    "datacenter": { "title": "Data centre", "desc": "Several IT racks, redundancy" },
-    "airport": { "title": "Airport", "desc": "Indoor technical rooms, long runtime" },
-    "building": { "title": "Building", "desc": "Offices, hotels, schools, shops, clinics" },
-    "custom": { "title": "Custom", "desc": "I set everything myself" }
+    "cctv": {
+      "title": "Video surveillance",
+      "desc": "IP cameras, recorders, PoE switches"
+    },
+    "office": {
+      "title": "Office",
+      "desc": "PCs, monitors, network printers"
+    },
+    "server": {
+      "title": "Servers",
+      "desc": "Server room, racks, storage"
+    },
+    "datacenter": {
+      "title": "Data centre",
+      "desc": "Several IT racks, redundancy"
+    },
+    "airport": {
+      "title": "Airport",
+      "desc": "Indoor technical rooms, long runtime"
+    },
+    "building": {
+      "title": "Building",
+      "desc": "Offices, hotels, schools, shops, clinics"
+    },
+    "custom": {
+      "title": "Custom",
+      "desc": "I set everything myself"
+    }
   },
   "home": {
     "title": "What do you want to protect?",
@@ -68,7 +89,11 @@
       "2N": "Two independent systems A and B"
     },
     "batteryChemistry": "Batteries",
-    "chemistry": { "auto": "Automatic", "VRLA": "Lead-acid (VRLA)", "LI": "Lithium (LFP)" },
+    "chemistry": {
+      "auto": "Automatic",
+      "VRLA": "Lead-acid (VRLA)",
+      "LI": "Lithium (LFP)"
+    },
     "eod": "End-of-discharge voltage",
     "eodAuto": "Automatic",
     "summary": "Summary",
@@ -102,7 +127,12 @@
     "doorWidth": "Door width",
     "doorHeight": "Door height",
     "doorWall": "Door wall",
-    "wall": { "top": "Top", "bottom": "Bottom", "left": "Left", "right": "Right" },
+    "wall": {
+      "top": "Top",
+      "bottom": "Bottom",
+      "left": "Left",
+      "right": "Right"
+    },
     "floor": "Floor load capacity",
     "floorUnknown": "Unknown (default: {{value}} kg/m²)",
     "environment": "Environment",
@@ -123,14 +153,23 @@
     "generator": "Generator with automatic transfer switch",
     "maintenanceBypass": "External maintenance bypass",
     "cableLengths": "Cable lengths",
-    "cable": { "input": "Input", "bypass": "Bypass", "output": "Output", "battery": "Battery" },
+    "cable": {
+      "input": "Input",
+      "bypass": "Bypass",
+      "output": "Output",
+      "battery": "Battery"
+    },
     "checks": "Checks",
     "noAlert": "No room alert."
   },
   "solutions": {
     "title": "Proposed solutions",
     "subtitle": "Up to three options. The recommended one is highlighted.",
-    "tier": { "economy": "Economy", "recommended": "Recommended", "performance": "Performance" },
+    "tier": {
+      "economy": "Economy",
+      "recommended": "Recommended",
+      "performance": "Performance"
+    },
     "tierHelp": {
       "economy": "Just enough power",
       "recommended": "The best trade-off",
@@ -162,7 +201,11 @@
     "noise": "Noise level",
     "seeCalc": "Show calculation",
     "none": "No solution fits these inputs.",
-    "status": { "ok": "OK", "warn": "To check", "block": "Blocking" }
+    "status": {
+      "ok": "OK",
+      "warn": "To check",
+      "block": "Blocking"
+    }
   },
   "tech": {
     "line_interactive": "Line interactive",
@@ -227,7 +270,10 @@
       "unitPrice": "Unit price",
       "total": "Total"
     },
-    "unit": { "pcs": "pcs", "m": "m" },
+    "unit": {
+      "pcs": "pcs",
+      "m": "m"
+    },
     "ups": "UPS {{kva}} kVA / {{kw}} kW",
     "frame": "Modular frame ({{maxModules}} slots)",
     "module": "{{kw}} kW power module",
@@ -364,8 +410,15 @@
     "client": "Customer",
     "author": "Author"
   },
-  "calcModal": { "title": "Show calculation", "close": "Close" },
-  "axis": { "length": "length", "width": "width", "height": "height" },
+  "calcModal": {
+    "title": "Show calculation",
+    "close": "Close"
+  },
+  "axis": {
+    "length": "length",
+    "width": "width",
+    "height": "height"
+  },
   "alert": {
     "temp_out_of_range": "Temperature of {{t}} °C out of range: the UPS operates between {{min}} and {{max}} °C.",
     "temp_not_recommended": "Temperature of {{t}} °C: {{min}} to {{max}} °C is recommended for battery life.",
@@ -409,9 +462,19 @@
       "rule": "Switching rule",
       "voltage": "Calculation voltage"
     },
-    "env": { "title": "Environment", "altitude": "Altitude factor" },
-    "selection": { "title": "UPS selection", "rule": "Models kept" },
-    "modular": { "title": "Modules", "n": "Modules needed", "redundancy": "With redundancy" },
+    "env": {
+      "title": "Environment",
+      "altitude": "Altitude factor"
+    },
+    "selection": {
+      "title": "UPS selection",
+      "rule": "Models kept"
+    },
+    "modular": {
+      "title": "Modules",
+      "n": "Modules needed",
+      "redundancy": "With redundancy"
+    },
     "battery": {
       "title": "Batteries (constant power)",
       "pdc": "Power drawn from batteries",
@@ -431,17 +494,38 @@
       "generator": "Generator"
     },
     "circuit": {
-      "generic": { "breaker": "Rating", "cable": "Cable" },
-      "rectifier": { "breaker": "Rectifier input: rating", "cable": "Rectifier input: cable" },
-      "bypass": { "breaker": "Bypass input: rating", "cable": "Bypass input: cable" },
-      "output": { "breaker": "Output: rating", "cable": "Output: cable" },
-      "battery": { "breaker": "Battery: rating", "cable": "Battery: cable" },
+      "generic": {
+        "breaker": "Rating",
+        "cable": "Cable"
+      },
+      "rectifier": {
+        "breaker": "Rectifier input: rating",
+        "cable": "Rectifier input: cable"
+      },
+      "bypass": {
+        "breaker": "Bypass input: rating",
+        "cable": "Bypass input: cable"
+      },
+      "output": {
+        "breaker": "Output: rating",
+        "cable": "Output: cable"
+      },
+      "battery": {
+        "breaker": "Battery: rating",
+        "cable": "Battery: cable"
+      },
       "maintenanceBypass": {
         "breaker": "Maintenance bypass: rating",
         "cable": "Maintenance bypass: cable"
       },
-      "feeder": { "breaker": "Feeder: rating", "cable": "Feeder: cable" },
-      "ats": { "breaker": "Transfer switch: rating", "cable": "Transfer switch: cable" }
+      "feeder": {
+        "breaker": "Feeder: rating",
+        "cable": "Feeder: cable"
+      },
+      "ats": {
+        "breaker": "Transfer switch: rating",
+        "cable": "Transfer switch: cable"
+      }
     },
     "thermal": {
       "title": "Heat dissipation",
@@ -488,5 +572,16 @@
     "save": "Save",
     "cancel": "Cancel",
     "loading": "Loading…"
+  },
+  "singleLine": {
+    "title": "Single-line diagram",
+    "mains": "Mains",
+    "generator": "Genset",
+    "system": "System {{s}}",
+    "board": "UPS distribution board",
+    "maintenanceBypass": "Maintenance bypass",
+    "battery": "Batteries",
+    "feeders": "Outgoing feeders",
+    "legend": "Simplified IEC 60617 symbols. Ratings and cable sizes are indicative."
   }
 }

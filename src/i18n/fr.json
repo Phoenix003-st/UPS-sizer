@@ -572,5 +572,16 @@
     "save": "Enregistrer",
     "cancel": "Annuler",
     "loading": "Chargement…"
+  },
+  "singleLine": {
+    "title": "Schéma unifilaire",
+    "mains": "Réseau",
+    "generator": "GE",
+    "system": "Système {{s}}",
+    "board": "Tableau ondulé",
+    "maintenanceBypass": "Bypass de maintenance",
+    "battery": "Batteries",
+    "feeders": "Départs",
+    "legend": "Symboles IEC 60617 simplifiés. Calibres et sections indicatifs."
   }
 }

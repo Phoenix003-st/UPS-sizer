@@ -7,7 +7,12 @@ import { Button, Card, PageTitle, TabPanel, Tabs } from '../../ui/components';
 import { FlowNav } from '../../ui/FlowNav';
 import { BomTable } from '../bom/BomTable';
 import { CalcNote } from '../calc-note/CalcNote';
-import { MiniRoom } from '../layout-plan/MiniRoom';
+import { LayoutPlan } from '../layout-plan/LayoutPlan';
+import { SingleLineSvg } from '../single-line/SingleLineDiagram';
+import { useDiagram } from '../single-line/useDiagram';
+import { useCatalogStore } from '../../state/catalogStore';
+import { useSettingsStore } from '../../state/settingsStore';
+import type { SolutionOption } from '../../engine/types';
 import { selectedOption } from './selectedOption';
 
 type Tab = 'plan' | 'singleLine' | 'calcNote' | 'bom' | 'report';
@@ -43,8 +48,8 @@ export function DeliverablesScreen({ project }: { project: Project }) {
             tabs={TABS.map((id) => ({ id, label: t(`deliverables.tabs.${id}`) }))}
           />
           <TabPanel id={tab}>
-            {tab === 'plan' && <MiniRoom layout={option.layout} label={t('plan.title')} />}
-            {tab === 'singleLine' && <p className="text-muted">{t('deliverables.comingSoon')}</p>}
+            {tab === 'plan' && <LayoutPlan project={project} option={option} />}
+            {tab === 'singleLine' && <SingleLine project={project} option={option} />}
             {tab === 'calcNote' && (
               <>
                 <div className="mb-3 flex justify-end print:hidden">
@@ -60,5 +65,24 @@ export function DeliverablesScreen({ project }: { project: Project }) {
       )}
       <FlowNav back="solutions" />
     </>
+  );
+}
+
+function SingleLine({ project, option }: { project: Project; option: SolutionOption }) {
+  const { t } = useTranslation();
+  const model = useCatalogStore((s) =>
+    s.catalogs.ups.models.find((m) => m.id === option.ups.modelId),
+  );
+  const feeders = useSettingsStore((s) => s.settings.electrical.outputFeeders);
+  const diagram = useDiagram(option, model, project, feeders);
+  return (
+    <div>
+      <p className="mb-2 text-sm text-muted">{t('singleLine.legend')}</p>
+      <div className="overflow-x-auto">
+        <div style={{ minWidth: Math.min(diagram.width, 1400) }}>
+          <SingleLineSvg diagram={diagram} title={t('singleLine.title')} />
+        </div>
+      </div>
+    </div>
   );
 }

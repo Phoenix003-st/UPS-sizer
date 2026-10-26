@@ -101,7 +101,9 @@ function Stepper({ route }: { route: (typeof FLOW)[number] }) {
                 >
                   {done ? '✓' : i + 1}
                 </span>
-                <span className={current ? 'truncate' : 'hidden truncate sm:inline'}>{t(STEP_KEYS[r])}</span>
+                <span className={current ? 'truncate' : 'hidden truncate sm:inline'}>
+                  {t(STEP_KEYS[r])}
+                </span>
                 {current && <span className="sr-only">({t('steps.current')})</span>}
               </button>
             </li>
