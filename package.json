@@ -17,7 +17,8 @@
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
     "catalogs:generate": "node scripts/generate-sample-catalogs.mjs && prettier --write src/catalog/*.json",
-    "demo": "tsx scripts/demo-scenarios.ts"
+    "demo": "tsx scripts/demo-scenarios.ts",
+    "catalogs:brands": "tsx scripts/brand-catalogs/build.ts && prettier --write src/catalog/brands/*.json"
   },
   "dependencies": {
     "dejavu-fonts-ttf": "2.37.3",

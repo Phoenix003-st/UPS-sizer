@@ -131,11 +131,23 @@ function SolutionCard({
       <div className="flex items-center gap-3">
         <UpsIllustration formFactor={o.display.formFactor} className="h-16 w-16 shrink-0" />
         <div>
-          <p className="text-lg font-bold leading-tight">{o.ups.reference}</p>
+          <p className="text-lg font-bold leading-tight">{model?.reference ?? o.ups.reference}</p>
+          {model?.partNumber && (
+            <p className="text-sm font-semibold">
+              {t('solutions.partNumber')} : {model.partNumber}
+            </p>
+          )}
           <p className="text-sm text-muted">
             {t(`tech.${o.ups.technology}`)} · {t(`formFactor.${o.display.formFactor}`)}
           </p>
           {o.display.sample && <SampleBadge />}
+          {model && model.estimated.length > 0 && (
+            <p className="mt-1 text-xs text-muted">
+              {t('solutions.estimated', {
+                fields: model.estimated.map((f) => t(`estimatedField.${f}`)).join(', '),
+              })}
+            </p>
+          )}
         </div>
       </div>
 

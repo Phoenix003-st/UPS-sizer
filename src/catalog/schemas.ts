@@ -73,6 +73,10 @@ export const upsModelSchema = z
   .object({
     id: z.string().min(1),
     sample: z.boolean().default(false),
+    /** Marque (InfoSec, APC, Eaton…) ; vide pour les fiches d'exemple. */
+    brand: z.string().default(''),
+    /** Référence commerciale du fabricant (code article), telle qu'imprimée au catalogue. */
+    partNumber: z.string().default(''),
     reference: z.string().min(1),
     range: z.string(),
     technology: technologySchema,
@@ -126,6 +130,11 @@ export const upsModelSchema = z
     priceIndex: z.number().positive().optional(),
     datasheetUrl: z.string().default(''),
     source: sourceSchema.optional(),
+    /**
+     * Données absentes du catalogue constructeur et estimées : `weight`, `efficiency`,
+     * `internalBattery`, `batteryVoltage`, `chargeCurrent`.
+     */
+    estimated: z.array(z.string()).default([]),
   })
   .superRefine((m, ctx) => {
     if (m.technology === 'modular' && !m.modular) {
@@ -151,6 +160,11 @@ export const upsModelSchema = z
     }
   });
 export type UpsModel = z.infer<typeof upsModelSchema>;
+
+/** Désignation affichée : désignation commerciale suivie de la référence produit quand elle existe. */
+export function displayReference(m: { reference: string; partNumber?: string }): string {
+  return m.partNumber ? `${m.reference} — réf. ${m.partNumber}` : m.reference;
+}
 
 export const upsCatalogSchema = z
   .object({ meta: metaSchema, models: z.array(upsModelSchema) })
@@ -198,6 +212,8 @@ export type BatteryBlock = z.infer<typeof batteryBlockSchema>;
 export const batteryCabinetSchema = z.object({
   id: z.string().min(1),
   sample: z.boolean().default(false),
+  brand: z.string().default(''),
+  partNumber: z.string().default(''),
   reference: z.string().min(1),
   /** `ebm` = module batteries externe (format tour / rack) des petits UPS. */
   kind: z.enum(['cabinet', 'ebm']).default('cabinet'),

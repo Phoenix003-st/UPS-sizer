@@ -2,6 +2,7 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 import { defaultCatalogs } from '../catalog';
+import { EDITION } from '../catalog/edition';
 import {
   batteryCatalogSchema,
   equipmentLibrarySchema,
@@ -32,7 +33,7 @@ export const useCatalogStore = create<CatalogState>()(
         setState((s) => ({ catalogs: { ...s.catalogs, [part]: defaultCatalogs()[part] } })),
     }),
     {
-      name: 'ups-sizer:catalogs',
+      name: `ups-sizer:catalogs:${EDITION.id}`,
       version: 1,
       storage: createJSONStorage(() => browserStorage),
       partialize: (s) => ({ catalogs: s.catalogs }),

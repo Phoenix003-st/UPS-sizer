@@ -12,6 +12,7 @@ import { LANGUAGES, setLanguage, type Lang } from '../i18n';
 import logoUrl from '../ui/logo.svg';
 import { useCurrentProject } from '../state/projectStore';
 import { FLOW, navigate, useRoute, type Route } from './router';
+import { EDITION } from '../catalog/edition';
 
 const STEP_KEYS: Record<(typeof FLOW)[number], string> = {
   home: 'steps.type',
@@ -43,6 +44,9 @@ function Header({ route }: { route: Route }) {
         >
           <img src={logoUrl} alt="" className="h-8 w-8 rounded-md bg-white/10" />
           <span className="text-lg font-bold">{t('app.name')}</span>
+          <span className="rounded bg-white/15 px-1.5 py-0.5 text-xs font-semibold">
+            {t(EDITION.labelKey)}
+          </span>
           <span className="hidden text-sm opacity-85 md:inline">— {t('app.tagline')}</span>
         </button>
         <nav aria-label={t('nav.menu')} className="flex flex-wrap items-center gap-1">

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_CATALOGS } from '../../catalog';
+import { SAMPLE_CATALOGS } from '../../catalog/samples';
 import { createProject, runSizing } from '../../engine';
 import { DEFAULT_SETTINGS } from '../../settings/schema';
 import { buildSingleLine, type DiagramLabels } from '../single-line/diagram';
@@ -22,8 +22,8 @@ function diagramFor(
 ) {
   const p = createProject(scenario, DEFAULT_SETTINGS, { id: 't', now: '2026-01-01' });
   tweak?.(p);
-  const o = runSizing(p, DEFAULT_CATALOGS, DEFAULT_SETTINGS).options[0]!;
-  const model = DEFAULT_CATALOGS.ups.models.find((m) => m.id === o.ups.modelId);
+  const o = runSizing(p, SAMPLE_CATALOGS, DEFAULT_SETTINGS).options[0]!;
+  const model = SAMPLE_CATALOGS.ups.models.find((m) => m.id === o.ups.modelId);
   return { o, d: buildSingleLine(o, model, p.installation, 4, labels) };
 }
 

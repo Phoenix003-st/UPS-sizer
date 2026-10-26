@@ -61,6 +61,8 @@ export function cabinet(over: Partial<BatteryCabinet> = {}): BatteryCabinet {
   return {
     id: 'C1',
     sample: true,
+    brand: '',
+    partNumber: '',
     reference: 'Armoire test',
     kind: 'cabinet',
     dimensionsMm: { w: 800, d: 800, h: 1900 },
@@ -76,6 +78,9 @@ export function model(over: Partial<UpsModel> = {}): UpsModel {
   return {
     id: 'U1',
     sample: true,
+    brand: '',
+    partNumber: '',
+    estimated: [],
     reference: 'UPS test 100 kVA',
     range: 'Test',
     technology: 'online_double_conversion',

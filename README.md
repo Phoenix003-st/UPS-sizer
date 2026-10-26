@@ -7,7 +7,9 @@ dans le local et produit le plan, le schéma unifilaire, la note de calcul, la n
 rapport PDF.
 
 > **Pré-dimensionnement indicatif – à valider par un bureau d'études avant installation.**
-> Les catalogues fournis sont des **EXEMPLES** inspirés de fiches techniques publiques, à remplacer.
+> **Édition InfoSec** : les UPS proposés sont ceux du catalogue INFOSEC, avec leur référence
+> produit ; les batteries sont génériques et les valeurs non publiées sont estimées (voir
+> [`docs/CATALOGUES-MARQUES.md`](docs/CATALOGUES-MARQUES.md)).
 
 ## Utiliser l'application
 
