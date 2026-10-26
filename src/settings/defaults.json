@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "power": {
+    "growthMargin": 0.2,
+    "targetLoadRate": 0.8,
+    "defaultPf": 1.0,
+    "monoToTriThresholdKVA": 10,
+    "altitudeDerating": [
+      {
+        "m": 1000,
+        "k": 1.0
+      },
+      {
+        "m": 1500,
+        "k": 0.95
+      },
+      {
+        "m": 2000,
+        "k": 0.91
+      },
+      {
+        "m": 2500,
+        "k": 0.86
+      },
+      {
+        "m": 3000,
+        "k": 0.82
+      }
+    ]
+  },
+  "battery": {
+    "agingFactor": 1.25,
+    "agingFactorLithium": 1.1,
+    "designMargin": 1.1,
+    "defaultEodVpc": 1.75,
+    "shortAutonomyEodVpc": 1.67,
+    "shortAutonomyThresholdMin": 15,
+    "allowedEodVpc": [1.67, 1.7, 1.75],
+    "maxStrings": 8,
+    "chargeEfficiency": 0.85,
+    "floatVpc": 2.27,
+    "gasCurrentMaPerAh": 1
+  },
+  "room": {
+    "defaultFloorLoadKgM2": 500,
+    "doorMarginMm": 50,
+    "recommendedTempC": [20, 25],
+    "allowedTempC": [0, 40],
+    "maxHumidityPct": 95,
+    "defaultHeightMm": 2700,
+    "noHvacMaxW": 500,
+    "officeNoiseWarnDb": 55,
+    "floorCheckMinWeightKg": 150
+  },
+  "electrical": {
+    "breakerSeriesA": [
+      6, 10, 16, 20, 25, 32, 40, 50, 63, 80, 100, 125, 160, 200, 250, 320, 400, 500, 630, 800, 1000,
+      1250, 1600, 2000, 2500, 3200, 4000
+    ],
+    "cable": {
+      "material": "Cu",
+      "insulation": "XLPE",
+      "installMethod": "E",
+      "ambientC": 30,
+      "groupingFactor": 0.8,
+      "maxParallel": 8
+    },
+    "maxVoltageDropPct": {
+      "ac": 3,
+      "dc": 1
+    },
+    "defaultCableLengthsM": {
+      "input": 20,
+      "bypass": 20,
+      "output": 20,
+      "battery": 5
+    },
+    "inputPf": 0.99,
+    "outputFeeders": 4,
+    "generatorSizingFactor": 1.5
+  },
+  "selection": {
+    "weights": {
+      "efficiency": 0.3,
+      "footprint": 0.2,
+      "margin": 0.3,
+      "price": 0.2
+    },
+    "maxOversizeFactor": 2,
+    "idealLoadRate": 0.5
+  },
+  "scenarios": {
+    "cctv": {
+      "autonomyMin": 30,
+      "technologies": ["line_interactive", "online_double_conversion"],
+      "redundancy": "N"
+    },
+    "office": {
+      "autonomyMin": 10,
+      "technologies": ["line_interactive", "online_performance"],
+      "redundancy": "N"
+    },
+    "server": {
+      "autonomyMin": 15,
+      "technologies": ["online_double_conversion"],
+      "redundancy": "N"
+    },
+    "datacenter": {
+      "autonomyMin": 10,
+      "technologies": ["online_double_conversion", "modular"],
+      "redundancy": "N+1"
+    },
+    "airport": {
+      "autonomyMin": 30,
+      "technologies": ["online_double_conversion", "modular"],
+      "redundancy": "2N"
+    },
+    "building": {
+      "autonomyMin": 15,
+      "technologies": ["online_performance", "online_double_conversion"],
+      "redundancy": "N"
+    },
+    "custom": {
+      "autonomyMin": 15,
+      "technologies": ["*"],
+      "redundancy": "N"
+    }
+  }
+}

@@ -1,0 +1,2591 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "catalogVersion": "2026-10-EXEMPLE",
+    "sample": true,
+    "notice": "EXEMPLE – à remplacer"
+  },
+  "blocks": [
+    {
+      "id": "EX-VRLA-12V7",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 7 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 7,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 151,
+        "d": 65,
+        "h": 100
+      },
+      "weightKg": 2.5,
+      "designLifeYears": 5,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 54.8
+              },
+              {
+                "min": 10,
+                "W": 36.2
+              },
+              {
+                "min": 15,
+                "W": 27
+              },
+              {
+                "min": 20,
+                "W": 21.5
+              },
+              {
+                "min": 30,
+                "W": 15.6
+              },
+              {
+                "min": 45,
+                "W": 11.3
+              },
+              {
+                "min": 60,
+                "W": 9
+              },
+              {
+                "min": 90,
+                "W": 6.6
+              },
+              {
+                "min": 120,
+                "W": 5.1
+              },
+              {
+                "min": 180,
+                "W": 3.5
+              },
+              {
+                "min": 240,
+                "W": 2.7
+              },
+              {
+                "min": 300,
+                "W": 2.1
+              },
+              {
+                "min": 480,
+                "W": 1.4
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 53.3
+              },
+              {
+                "min": 10,
+                "W": 35.6
+              },
+              {
+                "min": 15,
+                "W": 26.7
+              },
+              {
+                "min": 20,
+                "W": 21.3
+              },
+              {
+                "min": 30,
+                "W": 15.4
+              },
+              {
+                "min": 45,
+                "W": 11.3
+              },
+              {
+                "min": 60,
+                "W": 9
+              },
+              {
+                "min": 90,
+                "W": 6.5
+              },
+              {
+                "min": 120,
+                "W": 5.1
+              },
+              {
+                "min": 180,
+                "W": 3.5
+              },
+              {
+                "min": 240,
+                "W": 2.7
+              },
+              {
+                "min": 300,
+                "W": 2.1
+              },
+              {
+                "min": 480,
+                "W": 1.3
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 51.8
+              },
+              {
+                "min": 10,
+                "W": 35
+              },
+              {
+                "min": 15,
+                "W": 26.5
+              },
+              {
+                "min": 20,
+                "W": 21.1
+              },
+              {
+                "min": 30,
+                "W": 15.3
+              },
+              {
+                "min": 45,
+                "W": 11.2
+              },
+              {
+                "min": 60,
+                "W": 9
+              },
+              {
+                "min": 90,
+                "W": 6.5
+              },
+              {
+                "min": 120,
+                "W": 5.1
+              },
+              {
+                "min": 180,
+                "W": 3.4
+              },
+              {
+                "min": 240,
+                "W": 2.7
+              },
+              {
+                "min": 300,
+                "W": 2.1
+              },
+              {
+                "min": 480,
+                "W": 1.3
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "CSB",
+        "model": "Série HR / HRL haute décharge",
+        "url": "https://csb-battery.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-VRLA-12V9",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 9 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 9,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 151,
+        "d": 65,
+        "h": 100
+      },
+      "weightKg": 2.7,
+      "designLifeYears": 5,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 69.6
+              },
+              {
+                "min": 10,
+                "W": 46
+              },
+              {
+                "min": 15,
+                "W": 34.3
+              },
+              {
+                "min": 20,
+                "W": 27.3
+              },
+              {
+                "min": 30,
+                "W": 19.8
+              },
+              {
+                "min": 45,
+                "W": 14.4
+              },
+              {
+                "min": 60,
+                "W": 11.5
+              },
+              {
+                "min": 90,
+                "W": 8.3
+              },
+              {
+                "min": 120,
+                "W": 6.4
+              },
+              {
+                "min": 180,
+                "W": 4.4
+              },
+              {
+                "min": 240,
+                "W": 3.4
+              },
+              {
+                "min": 300,
+                "W": 2.7
+              },
+              {
+                "min": 480,
+                "W": 1.7
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 67.7
+              },
+              {
+                "min": 10,
+                "W": 45.2
+              },
+              {
+                "min": 15,
+                "W": 34
+              },
+              {
+                "min": 20,
+                "W": 27
+              },
+              {
+                "min": 30,
+                "W": 19.6
+              },
+              {
+                "min": 45,
+                "W": 14.3
+              },
+              {
+                "min": 60,
+                "W": 11.4
+              },
+              {
+                "min": 90,
+                "W": 8.3
+              },
+              {
+                "min": 120,
+                "W": 6.4
+              },
+              {
+                "min": 180,
+                "W": 4.4
+              },
+              {
+                "min": 240,
+                "W": 3.4
+              },
+              {
+                "min": 300,
+                "W": 2.7
+              },
+              {
+                "min": 480,
+                "W": 1.7
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 65.8
+              },
+              {
+                "min": 10,
+                "W": 44.5
+              },
+              {
+                "min": 15,
+                "W": 33.6
+              },
+              {
+                "min": 20,
+                "W": 26.8
+              },
+              {
+                "min": 30,
+                "W": 19.5
+              },
+              {
+                "min": 45,
+                "W": 14.2
+              },
+              {
+                "min": 60,
+                "W": 11.4
+              },
+              {
+                "min": 90,
+                "W": 8.3
+              },
+              {
+                "min": 120,
+                "W": 6.4
+              },
+              {
+                "min": 180,
+                "W": 4.4
+              },
+              {
+                "min": 240,
+                "W": 3.4
+              },
+              {
+                "min": 300,
+                "W": 2.7
+              },
+              {
+                "min": 480,
+                "W": 1.7
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "CSB",
+        "model": "HR1234W (34,3 W/élément à 15 min, 1,67 V/él.)",
+        "url": "https://csb-battery.com/wp-content/uploads/2026/03/CSB-Datasheet-HR1234W-01312026.pdf",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-VRLA-12V18",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 18 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 18,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 181,
+        "d": 77,
+        "h": 167
+      },
+      "weightKg": 5.9,
+      "designLifeYears": 5,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 125.9
+              },
+              {
+                "min": 10,
+                "W": 83.1
+              },
+              {
+                "min": 15,
+                "W": 62
+              },
+              {
+                "min": 20,
+                "W": 49.4
+              },
+              {
+                "min": 30,
+                "W": 35.8
+              },
+              {
+                "min": 45,
+                "W": 26
+              },
+              {
+                "min": 60,
+                "W": 20.8
+              },
+              {
+                "min": 90,
+                "W": 15.1
+              },
+              {
+                "min": 120,
+                "W": 11.7
+              },
+              {
+                "min": 180,
+                "W": 7.9
+              },
+              {
+                "min": 240,
+                "W": 6.1
+              },
+              {
+                "min": 300,
+                "W": 4.9
+              },
+              {
+                "min": 480,
+                "W": 3.1
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 122.4
+              },
+              {
+                "min": 10,
+                "W": 81.8
+              },
+              {
+                "min": 15,
+                "W": 61.4
+              },
+              {
+                "min": 20,
+                "W": 48.9
+              },
+              {
+                "min": 30,
+                "W": 35.5
+              },
+              {
+                "min": 45,
+                "W": 25.9
+              },
+              {
+                "min": 60,
+                "W": 20.7
+              },
+              {
+                "min": 90,
+                "W": 15
+              },
+              {
+                "min": 120,
+                "W": 11.6
+              },
+              {
+                "min": 180,
+                "W": 7.9
+              },
+              {
+                "min": 240,
+                "W": 6.1
+              },
+              {
+                "min": 300,
+                "W": 4.9
+              },
+              {
+                "min": 480,
+                "W": 3.1
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 118.9
+              },
+              {
+                "min": 10,
+                "W": 80.4
+              },
+              {
+                "min": 15,
+                "W": 60.8
+              },
+              {
+                "min": 20,
+                "W": 48.4
+              },
+              {
+                "min": 30,
+                "W": 35.2
+              },
+              {
+                "min": 45,
+                "W": 25.7
+              },
+              {
+                "min": 60,
+                "W": 20.6
+              },
+              {
+                "min": 90,
+                "W": 15
+              },
+              {
+                "min": 120,
+                "W": 11.6
+              },
+              {
+                "min": 180,
+                "W": 7.9
+              },
+              {
+                "min": 240,
+                "W": 6.1
+              },
+              {
+                "min": 300,
+                "W": 4.9
+              },
+              {
+                "min": 480,
+                "W": 3.1
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "CSB",
+        "model": "Série HR / HRL haute décharge",
+        "url": "https://csb-battery.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-VRLA-12V28",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 28 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 28,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 166,
+        "d": 175,
+        "h": 125
+      },
+      "weightKg": 9,
+      "designLifeYears": 10,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 192.9
+              },
+              {
+                "min": 10,
+                "W": 127.3
+              },
+              {
+                "min": 15,
+                "W": 95
+              },
+              {
+                "min": 20,
+                "W": 75.6
+              },
+              {
+                "min": 30,
+                "W": 54.8
+              },
+              {
+                "min": 45,
+                "W": 39.9
+              },
+              {
+                "min": 60,
+                "W": 31.8
+              },
+              {
+                "min": 90,
+                "W": 23.1
+              },
+              {
+                "min": 120,
+                "W": 17.9
+              },
+              {
+                "min": 180,
+                "W": 12.2
+              },
+              {
+                "min": 240,
+                "W": 9.4
+              },
+              {
+                "min": 300,
+                "W": 7.5
+              },
+              {
+                "min": 480,
+                "W": 4.8
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 187.5
+              },
+              {
+                "min": 10,
+                "W": 125.3
+              },
+              {
+                "min": 15,
+                "W": 94.1
+              },
+              {
+                "min": 20,
+                "W": 74.9
+              },
+              {
+                "min": 30,
+                "W": 54.3
+              },
+              {
+                "min": 45,
+                "W": 39.7
+              },
+              {
+                "min": 60,
+                "W": 31.7
+              },
+              {
+                "min": 90,
+                "W": 23
+              },
+              {
+                "min": 120,
+                "W": 17.8
+              },
+              {
+                "min": 180,
+                "W": 12.1
+              },
+              {
+                "min": 240,
+                "W": 9.4
+              },
+              {
+                "min": 300,
+                "W": 7.5
+              },
+              {
+                "min": 480,
+                "W": 4.7
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 182.2
+              },
+              {
+                "min": 10,
+                "W": 123.2
+              },
+              {
+                "min": 15,
+                "W": 93.1
+              },
+              {
+                "min": 20,
+                "W": 74.2
+              },
+              {
+                "min": 30,
+                "W": 53.9
+              },
+              {
+                "min": 45,
+                "W": 39.4
+              },
+              {
+                "min": 60,
+                "W": 31.5
+              },
+              {
+                "min": 90,
+                "W": 23
+              },
+              {
+                "min": 120,
+                "W": 17.8
+              },
+              {
+                "min": 180,
+                "W": 12.1
+              },
+              {
+                "min": 240,
+                "W": 9.4
+              },
+              {
+                "min": 300,
+                "W": 7.5
+              },
+              {
+                "min": 480,
+                "W": 4.7
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "CSB",
+        "model": "Série HR / HRL haute décharge",
+        "url": "https://csb-battery.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-VRLA-12V40",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 40 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 40,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 197,
+        "d": 165,
+        "h": 170
+      },
+      "weightKg": 14,
+      "designLifeYears": 10,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 274
+              },
+              {
+                "min": 10,
+                "W": 180.9
+              },
+              {
+                "min": 15,
+                "W": 135
+              },
+              {
+                "min": 20,
+                "W": 107.5
+              },
+              {
+                "min": 30,
+                "W": 77.9
+              },
+              {
+                "min": 45,
+                "W": 56.7
+              },
+              {
+                "min": 60,
+                "W": 45.2
+              },
+              {
+                "min": 90,
+                "W": 32.8
+              },
+              {
+                "min": 120,
+                "W": 25.4
+              },
+              {
+                "min": 180,
+                "W": 17.3
+              },
+              {
+                "min": 240,
+                "W": 13.4
+              },
+              {
+                "min": 300,
+                "W": 10.7
+              },
+              {
+                "min": 480,
+                "W": 6.8
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 266.5
+              },
+              {
+                "min": 10,
+                "W": 178
+              },
+              {
+                "min": 15,
+                "W": 133.7
+              },
+              {
+                "min": 20,
+                "W": 106.4
+              },
+              {
+                "min": 30,
+                "W": 77.2
+              },
+              {
+                "min": 45,
+                "W": 56.4
+              },
+              {
+                "min": 60,
+                "W": 45
+              },
+              {
+                "min": 90,
+                "W": 32.7
+              },
+              {
+                "min": 120,
+                "W": 25.3
+              },
+              {
+                "min": 180,
+                "W": 17.3
+              },
+              {
+                "min": 240,
+                "W": 13.3
+              },
+              {
+                "min": 300,
+                "W": 10.6
+              },
+              {
+                "min": 480,
+                "W": 6.7
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 259
+              },
+              {
+                "min": 10,
+                "W": 175.1
+              },
+              {
+                "min": 15,
+                "W": 132.3
+              },
+              {
+                "min": 20,
+                "W": 105.4
+              },
+              {
+                "min": 30,
+                "W": 76.6
+              },
+              {
+                "min": 45,
+                "W": 56
+              },
+              {
+                "min": 60,
+                "W": 44.8
+              },
+              {
+                "min": 90,
+                "W": 32.7
+              },
+              {
+                "min": 120,
+                "W": 25.3
+              },
+              {
+                "min": 180,
+                "W": 17.2
+              },
+              {
+                "min": 240,
+                "W": 13.3
+              },
+              {
+                "min": 300,
+                "W": 10.6
+              },
+              {
+                "min": 480,
+                "W": 6.7
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "Yuasa",
+        "model": "Série SWL (haute décharge, onduleurs)",
+        "url": "https://www.yuasa.co.uk/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-VRLA-12V65",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 65 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 65,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 350,
+        "d": 166,
+        "h": 174
+      },
+      "weightKg": 22,
+      "designLifeYears": 10,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 426.3
+              },
+              {
+                "min": 10,
+                "W": 281.4
+              },
+              {
+                "min": 15,
+                "W": 210
+              },
+              {
+                "min": 20,
+                "W": 167.2
+              },
+              {
+                "min": 30,
+                "W": 121.2
+              },
+              {
+                "min": 45,
+                "W": 88.2
+              },
+              {
+                "min": 60,
+                "W": 70.4
+              },
+              {
+                "min": 90,
+                "W": 51
+              },
+              {
+                "min": 120,
+                "W": 39.5
+              },
+              {
+                "min": 180,
+                "W": 26.9
+              },
+              {
+                "min": 240,
+                "W": 20.8
+              },
+              {
+                "min": 300,
+                "W": 16.6
+              },
+              {
+                "min": 480,
+                "W": 10.5
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 414.6
+              },
+              {
+                "min": 10,
+                "W": 276.9
+              },
+              {
+                "min": 15,
+                "W": 207.9
+              },
+              {
+                "min": 20,
+                "W": 165.6
+              },
+              {
+                "min": 30,
+                "W": 120.1
+              },
+              {
+                "min": 45,
+                "W": 87.7
+              },
+              {
+                "min": 60,
+                "W": 70
+              },
+              {
+                "min": 90,
+                "W": 50.9
+              },
+              {
+                "min": 120,
+                "W": 39.4
+              },
+              {
+                "min": 180,
+                "W": 26.8
+              },
+              {
+                "min": 240,
+                "W": 20.8
+              },
+              {
+                "min": 300,
+                "W": 16.6
+              },
+              {
+                "min": 480,
+                "W": 10.5
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 402.9
+              },
+              {
+                "min": 10,
+                "W": 272.4
+              },
+              {
+                "min": 15,
+                "W": 205.8
+              },
+              {
+                "min": 20,
+                "W": 164
+              },
+              {
+                "min": 30,
+                "W": 119.1
+              },
+              {
+                "min": 45,
+                "W": 87.1
+              },
+              {
+                "min": 60,
+                "W": 69.7
+              },
+              {
+                "min": 90,
+                "W": 50.8
+              },
+              {
+                "min": 120,
+                "W": 39.4
+              },
+              {
+                "min": 180,
+                "W": 26.8
+              },
+              {
+                "min": 240,
+                "W": 20.7
+              },
+              {
+                "min": 300,
+                "W": 16.5
+              },
+              {
+                "min": 480,
+                "W": 10.5
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "Fiamm",
+        "model": "Série 12FIT (haute décharge)",
+        "url": "https://www.fiamm.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-VRLA-12V100",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 100 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 100,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 307,
+        "d": 169,
+        "h": 211
+      },
+      "weightKg": 30,
+      "designLifeYears": 10,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 730.8
+              },
+              {
+                "min": 10,
+                "W": 482.4
+              },
+              {
+                "min": 15,
+                "W": 360
+              },
+              {
+                "min": 20,
+                "W": 286.6
+              },
+              {
+                "min": 30,
+                "W": 207.7
+              },
+              {
+                "min": 45,
+                "W": 151.2
+              },
+              {
+                "min": 60,
+                "W": 120.6
+              },
+              {
+                "min": 90,
+                "W": 87.5
+              },
+              {
+                "min": 120,
+                "W": 67.7
+              },
+              {
+                "min": 180,
+                "W": 46.1
+              },
+              {
+                "min": 240,
+                "W": 35.6
+              },
+              {
+                "min": 300,
+                "W": 28.4
+              },
+              {
+                "min": 480,
+                "W": 18
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 710.7
+              },
+              {
+                "min": 10,
+                "W": 474.7
+              },
+              {
+                "min": 15,
+                "W": 356.4
+              },
+              {
+                "min": 20,
+                "W": 283.8
+              },
+              {
+                "min": 30,
+                "W": 206
+              },
+              {
+                "min": 45,
+                "W": 150.3
+              },
+              {
+                "min": 60,
+                "W": 120.1
+              },
+              {
+                "min": 90,
+                "W": 87.3
+              },
+              {
+                "min": 120,
+                "W": 67.6
+              },
+              {
+                "min": 180,
+                "W": 46
+              },
+              {
+                "min": 240,
+                "W": 35.6
+              },
+              {
+                "min": 300,
+                "W": 28.4
+              },
+              {
+                "min": 480,
+                "W": 18
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 690.6
+              },
+              {
+                "min": 10,
+                "W": 467
+              },
+              {
+                "min": 15,
+                "W": 352.8
+              },
+              {
+                "min": 20,
+                "W": 281.1
+              },
+              {
+                "min": 30,
+                "W": 204.2
+              },
+              {
+                "min": 45,
+                "W": 149.4
+              },
+              {
+                "min": 60,
+                "W": 119.5
+              },
+              {
+                "min": 90,
+                "W": 87.1
+              },
+              {
+                "min": 120,
+                "W": 67.5
+              },
+              {
+                "min": 180,
+                "W": 45.9
+              },
+              {
+                "min": 240,
+                "W": 35.5
+              },
+              {
+                "min": 300,
+                "W": 28.4
+              },
+              {
+                "min": 480,
+                "W": 17.9
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "CSB",
+        "model": "Série HR / HRL haute décharge",
+        "url": "https://csb-battery.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-VRLA-12V150",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 150 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 150,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 341,
+        "d": 173,
+        "h": 283
+      },
+      "weightKg": 46,
+      "designLifeYears": 10,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 1055.6
+              },
+              {
+                "min": 10,
+                "W": 696.8
+              },
+              {
+                "min": 15,
+                "W": 520
+              },
+              {
+                "min": 20,
+                "W": 413.9
+              },
+              {
+                "min": 30,
+                "W": 300
+              },
+              {
+                "min": 45,
+                "W": 218.4
+              },
+              {
+                "min": 60,
+                "W": 174.2
+              },
+              {
+                "min": 90,
+                "W": 126.4
+              },
+              {
+                "min": 120,
+                "W": 97.8
+              },
+              {
+                "min": 180,
+                "W": 66.6
+              },
+              {
+                "min": 240,
+                "W": 51.5
+              },
+              {
+                "min": 300,
+                "W": 41.1
+              },
+              {
+                "min": 480,
+                "W": 26
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 1026.6
+              },
+              {
+                "min": 10,
+                "W": 685.7
+              },
+              {
+                "min": 15,
+                "W": 514.8
+              },
+              {
+                "min": 20,
+                "W": 410
+              },
+              {
+                "min": 30,
+                "W": 297.5
+              },
+              {
+                "min": 45,
+                "W": 217.1
+              },
+              {
+                "min": 60,
+                "W": 173.4
+              },
+              {
+                "min": 90,
+                "W": 126.1
+              },
+              {
+                "min": 120,
+                "W": 97.6
+              },
+              {
+                "min": 180,
+                "W": 66.5
+              },
+              {
+                "min": 240,
+                "W": 51.4
+              },
+              {
+                "min": 300,
+                "W": 41
+              },
+              {
+                "min": 480,
+                "W": 26
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 997.5
+              },
+              {
+                "min": 10,
+                "W": 674.5
+              },
+              {
+                "min": 15,
+                "W": 509.6
+              },
+              {
+                "min": 20,
+                "W": 406.1
+              },
+              {
+                "min": 30,
+                "W": 294.9
+              },
+              {
+                "min": 45,
+                "W": 215.8
+              },
+              {
+                "min": 60,
+                "W": 172.6
+              },
+              {
+                "min": 90,
+                "W": 125.9
+              },
+              {
+                "min": 120,
+                "W": 97.5
+              },
+              {
+                "min": 180,
+                "W": 66.4
+              },
+              {
+                "min": 240,
+                "W": 51.3
+              },
+              {
+                "min": 300,
+                "W": 41
+              },
+              {
+                "min": 480,
+                "W": 25.9
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "CSB",
+        "model": "Série HR / HRL haute décharge",
+        "url": "https://csb-battery.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-VRLA-12V200",
+      "sample": true,
+      "reference": "EXEMPLE VRLA 12 V 200 Ah",
+      "chemistry": "VRLA_AGM",
+      "nominalV": 12,
+      "cells": 6,
+      "capacityAh": 200,
+      "capacityRate": "C10",
+      "dimensionsMm": {
+        "w": 522,
+        "d": 240,
+        "h": 219
+      },
+      "weightKg": 62,
+      "designLifeYears": 12,
+      "floatVpc": 2.27,
+      "discharge": {
+        "unit": "W_per_cell",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 1.67,
+            "points": [
+              {
+                "min": 5,
+                "W": 1258.6
+              },
+              {
+                "min": 10,
+                "W": 830.8
+              },
+              {
+                "min": 15,
+                "W": 620
+              },
+              {
+                "min": 20,
+                "W": 493.5
+              },
+              {
+                "min": 30,
+                "W": 357.7
+              },
+              {
+                "min": 45,
+                "W": 260.4
+              },
+              {
+                "min": 60,
+                "W": 207.7
+              },
+              {
+                "min": 90,
+                "W": 150.7
+              },
+              {
+                "min": 120,
+                "W": 116.6
+              },
+              {
+                "min": 180,
+                "W": 79.4
+              },
+              {
+                "min": 240,
+                "W": 61.4
+              },
+              {
+                "min": 300,
+                "W": 49
+              },
+              {
+                "min": 480,
+                "W": 31
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.7,
+            "points": [
+              {
+                "min": 5,
+                "W": 1224
+              },
+              {
+                "min": 10,
+                "W": 817.5
+              },
+              {
+                "min": 15,
+                "W": 613.8
+              },
+              {
+                "min": 20,
+                "W": 488.8
+              },
+              {
+                "min": 30,
+                "W": 354.7
+              },
+              {
+                "min": 45,
+                "W": 258.8
+              },
+              {
+                "min": 60,
+                "W": 206.8
+              },
+              {
+                "min": 90,
+                "W": 150.4
+              },
+              {
+                "min": 120,
+                "W": 116.4
+              },
+              {
+                "min": 180,
+                "W": 79.2
+              },
+              {
+                "min": 240,
+                "W": 61.3
+              },
+              {
+                "min": 300,
+                "W": 48.9
+              },
+              {
+                "min": 480,
+                "W": 31
+              }
+            ]
+          },
+          {
+            "eodVpc": 1.75,
+            "points": [
+              {
+                "min": 5,
+                "W": 1189.4
+              },
+              {
+                "min": 10,
+                "W": 804.2
+              },
+              {
+                "min": 15,
+                "W": 607.6
+              },
+              {
+                "min": 20,
+                "W": 484.1
+              },
+              {
+                "min": 30,
+                "W": 351.7
+              },
+              {
+                "min": 45,
+                "W": 257.3
+              },
+              {
+                "min": 60,
+                "W": 205.8
+              },
+              {
+                "min": 90,
+                "W": 150.1
+              },
+              {
+                "min": 120,
+                "W": 116.2
+              },
+              {
+                "min": 180,
+                "W": 79.1
+              },
+              {
+                "min": 240,
+                "W": 61.2
+              },
+              {
+                "min": 300,
+                "W": 48.8
+              },
+              {
+                "min": 480,
+                "W": 30.9
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.8
+        },
+        {
+          "tC": 10,
+          "k": 0.88
+        },
+        {
+          "tC": 20,
+          "k": 0.97
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 30,
+          "k": 1.02
+        },
+        {
+          "tC": 40,
+          "k": 1.05
+        }
+      ],
+      "source": {
+        "brand": "Fiamm",
+        "model": "Série 12FIT (haute décharge)",
+        "url": "https://www.fiamm.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-LFP-12V50",
+      "sample": true,
+      "reference": "EXEMPLE LFP 12,8 V 50 Ah",
+      "chemistry": "LI_LFP",
+      "nominalV": 12.8,
+      "cells": 4,
+      "capacityAh": 50,
+      "capacityRate": "C1",
+      "dimensionsMm": {
+        "w": 229,
+        "d": 138,
+        "h": 208
+      },
+      "weightKg": 7.5,
+      "designLifeYears": 15,
+      "discharge": {
+        "unit": "W_per_block",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 2.8,
+            "points": [
+              {
+                "min": 10,
+                "W": 3648
+              },
+              {
+                "min": 15,
+                "W": 2432
+              },
+              {
+                "min": 20,
+                "W": 1824
+              },
+              {
+                "min": 30,
+                "W": 1216
+              },
+              {
+                "min": 45,
+                "W": 811
+              },
+              {
+                "min": 60,
+                "W": 608
+              },
+              {
+                "min": 90,
+                "W": 405
+              },
+              {
+                "min": 120,
+                "W": 304
+              },
+              {
+                "min": 180,
+                "W": 203
+              },
+              {
+                "min": 240,
+                "W": 152
+              },
+              {
+                "min": 300,
+                "W": 122
+              },
+              {
+                "min": 480,
+                "W": 76
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.85
+        },
+        {
+          "tC": 10,
+          "k": 0.93
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 40,
+          "k": 1
+        }
+      ],
+      "source": {
+        "brand": "Leoch",
+        "model": "Batteries LiFePO4 pour onduleurs",
+        "url": "https://www.leoch.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-LFP-12V100",
+      "sample": true,
+      "reference": "EXEMPLE LFP 12,8 V 100 Ah",
+      "chemistry": "LI_LFP",
+      "nominalV": 12.8,
+      "cells": 4,
+      "capacityAh": 100,
+      "capacityRate": "C1",
+      "dimensionsMm": {
+        "w": 330,
+        "d": 172,
+        "h": 215
+      },
+      "weightKg": 12.5,
+      "designLifeYears": 15,
+      "discharge": {
+        "unit": "W_per_block",
+        "refTempC": 25,
+        "tables": [
+          {
+            "eodVpc": 2.8,
+            "points": [
+              {
+                "min": 20,
+                "W": 3648
+              },
+              {
+                "min": 30,
+                "W": 2432
+              },
+              {
+                "min": 45,
+                "W": 1621
+              },
+              {
+                "min": 60,
+                "W": 1216
+              },
+              {
+                "min": 90,
+                "W": 811
+              },
+              {
+                "min": 120,
+                "W": 608
+              },
+              {
+                "min": 180,
+                "W": 405
+              },
+              {
+                "min": 240,
+                "W": 304
+              },
+              {
+                "min": 300,
+                "W": 243
+              },
+              {
+                "min": 480,
+                "W": 152
+              }
+            ]
+          }
+        ]
+      },
+      "tempCorrection": [
+        {
+          "tC": 0,
+          "k": 0.85
+        },
+        {
+          "tC": 10,
+          "k": 0.93
+        },
+        {
+          "tC": 25,
+          "k": 1
+        },
+        {
+          "tC": 40,
+          "k": 1
+        }
+      ],
+      "source": {
+        "brand": "Leoch",
+        "model": "Batteries LiFePO4 pour onduleurs",
+        "url": "https://www.leoch.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    }
+  ],
+  "cabinets": [
+    {
+      "id": "EX-EBM-48",
+      "sample": true,
+      "reference": "EXEMPLE Module batteries 48 V (rack 2U)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 438,
+        "d": 500,
+        "h": 88
+      },
+      "emptyWeightKg": 6,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 8
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Smart-UPS SRT 3000 (SRT3000XLI : 3 kVA / 2,7 kW, 31,3 kg)",
+        "url": "https://apc.com/za/en/product/SRT3000XLI/smartups-srt-3kva-230v",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-EBM-36",
+      "sample": true,
+      "reference": "EXEMPLE Module batteries 36 V (tour)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 145,
+        "d": 400,
+        "h": 220
+      },
+      "emptyWeightKg": 4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 6
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 6
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Easy UPS On-Line SRV",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-EBM-72",
+      "sample": true,
+      "reference": "EXEMPLE Module batteries 72 V (tour)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 190,
+        "d": 450,
+        "h": 340
+      },
+      "emptyWeightKg": 8,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 12
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 12
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Easy UPS On-Line SRV",
+        "url": "https://www.apc.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-EBM-96",
+      "sample": true,
+      "reference": "EXEMPLE Module batteries 96 V (tour/rack)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 85,
+        "d": 635,
+        "h": 432
+      },
+      "emptyWeightKg": 10,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 16
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Smart-UPS SRT 3000 (SRT3000XLI : 3 kVA / 2,7 kW, 31,3 kg)",
+        "url": "https://apc.com/za/en/product/SRT3000XLI/smartups-srt-3kva-230v",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-EBM-192",
+      "sample": true,
+      "reference": "EXEMPLE Module batteries 192 V (tour)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 250,
+        "d": 550,
+        "h": 500
+      },
+      "emptyWeightKg": 15,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 32
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "Eaton",
+        "model": "9E",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-EBM-240",
+      "sample": true,
+      "reference": "EXEMPLE Module batteries 240 V (tour)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 244,
+        "d": 542,
+        "h": 575
+      },
+      "emptyWeightKg": 18,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 40
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 40
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "Eaton",
+        "model": "9SX 6000i (6 kVA / 5,4 kW, 65,5 kg, 20 × 12 V 7 Ah, 94 % online)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-CAB-S",
+      "sample": true,
+      "reference": "EXEMPLE Armoire batteries S",
+      "kind": "cabinet",
+      "dimensionsMm": {
+        "w": 650,
+        "d": 800,
+        "h": 1600
+      },
+      "emptyWeightKg": 110,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 300
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 120
+        },
+        {
+          "blockId": "EX-VRLA-12V18",
+          "maxBlocks": 80
+        },
+        {
+          "blockId": "EX-VRLA-12V28",
+          "maxBlocks": 64
+        },
+        {
+          "blockId": "EX-VRLA-12V40",
+          "maxBlocks": 40
+        },
+        {
+          "blockId": "EX-LFP-12V50",
+          "maxBlocks": 40
+        }
+      ],
+      "breakerA": 125,
+      "source": {
+        "brand": "Eaton",
+        "model": "93PM 30–200 kW (560 × 914 × 1876 mm pour 30–60 kW ; < 60–65 dBA ; 97 %)",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-CAB-M",
+      "sample": true,
+      "reference": "EXEMPLE Armoire batteries M",
+      "kind": "cabinet",
+      "dimensionsMm": {
+        "w": 800,
+        "d": 850,
+        "h": 1900
+      },
+      "emptyWeightKg": 160,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 300
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V40",
+          "maxBlocks": 64
+        },
+        {
+          "blockId": "EX-VRLA-12V65",
+          "maxBlocks": 48
+        },
+        {
+          "blockId": "EX-VRLA-12V100",
+          "maxBlocks": 40
+        },
+        {
+          "blockId": "EX-LFP-12V50",
+          "maxBlocks": 80
+        },
+        {
+          "blockId": "EX-LFP-12V100",
+          "maxBlocks": 40
+        }
+      ],
+      "breakerA": 250,
+      "source": {
+        "brand": "APC by Schneider Electric",
+        "model": "Galaxy VS 10–150 kW (jusqu'à 97 % en double conversion)",
+        "url": "https://www.se.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    },
+    {
+      "id": "EX-CAB-L",
+      "sample": true,
+      "reference": "EXEMPLE Armoire batteries L",
+      "kind": "cabinet",
+      "dimensionsMm": {
+        "w": 1000,
+        "d": 850,
+        "h": 1900
+      },
+      "emptyWeightKg": 200,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 300
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V100",
+          "maxBlocks": 64
+        },
+        {
+          "blockId": "EX-VRLA-12V150",
+          "maxBlocks": 40
+        },
+        {
+          "blockId": "EX-VRLA-12V200",
+          "maxBlocks": 40
+        },
+        {
+          "blockId": "EX-LFP-12V100",
+          "maxBlocks": 80
+        }
+      ],
+      "breakerA": 400,
+      "source": {
+        "brand": "Eaton",
+        "model": "9395P / 93PM grande puissance",
+        "url": "https://www.eaton.com/",
+        "note": "Valeurs approchées et arrondies, à vérifier sur la fiche du fabricant."
+      }
+    }
+  ]
+}
