@@ -22,6 +22,7 @@ import type {
   UpsModel,
 } from '../catalog/schemas';
 import type { Settings } from '../settings/schema';
+import type { BatterySolution } from './types';
 import { ceilSafe, interpLinear, interpLogLog, type XY } from './math';
 import { fmt, trace, type Calc } from './trace';
 
@@ -321,4 +322,56 @@ export function batteryTrace(req: BatteryRequest, c: BatteryCandidate | null) {
       unit: c.autonomyIsLowerBound ? 'min (≥)' : 'min',
     });
   return t.build();
+}
+
+export interface AutonomyPoint {
+  /** Charge en % de la puissance utile (N) d'un système. */
+  loadPct: number;
+  /** Charge de sortie d'un système, W. */
+  loadW: number;
+  /** Fin de vie, avec tous les facteurs (vieillissement, température, marge), min. */
+  endOfLifeMin: number;
+  endOfLifeLowerBound: boolean;
+  /** Batteries neuves (correction de température seule), min. */
+  newMin: number;
+  newLowerBound: boolean;
+}
+
+/**
+ * Autonomie en fonction de la charge, pour la batterie retenue : même méthode que le
+ * dimensionnement (P_élément = P_jeu ÷ η × k ÷ N), la charge étant répartie sur les jeux de
+ * batteries dans les mêmes proportions qu'à la charge de dimensionnement.
+ */
+export function autonomyVsLoad(p: {
+  block: BatteryBlock;
+  battery: Pick<
+    BatterySolution,
+    'eodVpc' | 'cellsPerString' | 'strings' | 'kAging' | 'kTemp' | 'kMargin' | 'setDetails'
+  >;
+  batteryEfficiency: number;
+  /** Puissance utile (N) d'un système, W. */
+  capacityW: number;
+  /** Charge de dimensionnement d'un système, W. */
+  designW: number;
+  loadsPct: number[];
+}): AutonomyPoint[] {
+  const { block, battery: b } = p;
+  const table = dischargeTable(block, b.eodVpc);
+  const cells = b.cellsPerString * b.strings;
+  const share =
+    p.designW > 0 ? Math.max(...b.setDetails.map((s) => s.designPowerW)) / p.designW : 1;
+  return p.loadsPct.map((pct) => {
+    const loadW = (p.capacityW * pct) / 100;
+    const pDc = (loadW * share) / p.batteryEfficiency;
+    const eol = autonomyAt(table, (pDc * b.kAging * b.kTemp * b.kMargin) / cells);
+    const fresh = autonomyAt(table, (pDc * b.kTemp) / cells);
+    return {
+      loadPct: pct,
+      loadW,
+      endOfLifeMin: eol.minutes,
+      endOfLifeLowerBound: eol.lowerBound,
+      newMin: fresh.minutes,
+      newLowerBound: fresh.lowerBound,
+    };
+  });
 }

@@ -230,6 +230,7 @@
       "plan": "Plan",
       "singleLine": "Schéma unifilaire",
       "calcNote": "Note de calcul",
+      "autonomy": "Autonomie selon la charge",
       "bom": "Nomenclature",
       "report": "Rapport PDF",
       "view3d": "Vue 3D"
@@ -237,6 +238,22 @@
     "print": "Imprimer",
     "comingSoon": "Disponible dans une prochaine version.",
     "noOption": "Choisissez d'abord une solution."
+  },
+  "autonomyLoad": {
+    "title": "Autonomie selon la charge",
+    "intro": "Autonomie estimée de la batterie retenue ({{battery}}) en fonction de la charge, exprimée en % de la puissance utile d'un système ({{kw}} kW).",
+    "loadPct": "Charge (%)",
+    "loadKw": "Charge (kW)",
+    "endOfLife": "Autonomie fin de vie (min)",
+    "new": "Autonomie batteries neuves (min)",
+    "minutes": "Autonomie (min)",
+    "chart": "Courbe d'autonomie en fonction de la charge",
+    "mark": {
+      "load": "Charge réelle",
+      "design": "Charge de dimensionnement"
+    },
+    "note": "Fin de vie : facteurs vieillissement × température × marge = {{factors}} ; batteries neuves : correction de température seule. Fin de décharge {{eod}} V/élément. « ≥ » : au-delà de la table de décharge du fabricant.",
+    "unavailable": "Données de batterie introuvables dans le catalogue."
   },
   "calcNote": {
     "title": "Note de calcul",

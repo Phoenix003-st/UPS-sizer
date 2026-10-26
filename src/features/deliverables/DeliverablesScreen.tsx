@@ -1,4 +1,7 @@
-/** Étape 5 — Livrables : plan, unifilaire, note de calcul, nomenclature, rapport PDF. */
+/**
+ * Étape 5 — Livrables : plan, unifilaire, note de calcul, autonomie selon la charge, nomenclature,
+ * rapport PDF.
+ */
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { Project } from '../../engine/project';
@@ -6,6 +9,7 @@ import type { SizingResult, SolutionOption } from '../../engine/types';
 import { useCatalogStore } from '../../state/catalogStore';
 import { useSettingsStore } from '../../state/settingsStore';
 import { useSizing } from '../../state/useSizing';
+import { AutonomyByLoad } from '../autonomy/AutonomyByLoad';
 import { Button, Card, PageTitle, TabPanel, Tabs } from '../../ui/components';
 import { downloadBlob, downloadText, safeFilename } from '../../ui/files';
 import { FlowNav } from '../../ui/FlowNav';
@@ -19,8 +23,8 @@ import { SingleLineSvg } from '../single-line/SingleLineDiagram';
 import { useDiagram } from '../single-line/useDiagram';
 import { selectedOption } from './selectedOption';
 
-type Tab = 'view3d' | 'plan' | 'singleLine' | 'calcNote' | 'bom' | 'report';
-const TABS: Tab[] = ['view3d', 'plan', 'singleLine', 'calcNote', 'bom', 'report'];
+type Tab = 'view3d' | 'plan' | 'singleLine' | 'calcNote' | 'autonomy' | 'bom' | 'report';
+const TABS: Tab[] = ['view3d', 'plan', 'singleLine', 'calcNote', 'autonomy', 'bom', 'report'];
 
 export function DeliverablesScreen({ project }: { project: Project }) {
   const { t } = useTranslation();
@@ -137,6 +141,7 @@ function Deliverables({
             <CalcNote project={project} result={result} option={option} />
           </>
         )}
+        {tab === 'autonomy' && <AutonomyByLoad option={option} inputs={result.inputs} />}
         {tab === 'bom' && (
           <>
             <div className="mb-3 flex flex-wrap gap-2">
