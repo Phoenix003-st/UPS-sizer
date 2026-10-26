@@ -344,11 +344,21 @@ function evaluateOption(
 }
 
 /** Point d'entrée du moteur. */
+/** Catalogues limités aux marques retenues (toutes si la liste est vide). */
+export function catalogsForBrands(catalogs: Catalogs, brands: string[]): Catalogs {
+  if (brands.length === 0) return catalogs;
+  return {
+    ...catalogs,
+    ups: { ...catalogs.ups, models: catalogs.ups.models.filter((m) => brands.includes(m.brand)) },
+  };
+}
+
 export function runSizing(
   project: Project,
-  catalogs: Catalogs,
+  allCatalogs: Catalogs,
   baseSettings: Settings,
 ): SizingResult {
+  const catalogs = catalogsForBrands(allCatalogs, project.choice.brands);
   const settings = mergeSettings(baseSettings, project.settingsOverrides as SettingsOverrides);
   const load = computeLoad(project.load, project.advanced, catalogs.equipment);
   const phases = resolvePhases(load.value.designVA, project.advanced, settings);
@@ -434,4 +444,27 @@ export function runSizing(
     score: p.score,
   }));
   return { inputs, options, globalAlerts: normalizeAlerts(globalAlerts), traces };
+}
+
+export interface BrandEquivalent {
+  brand: string;
+  /** Option recommandée quand la sélection est limitée à cette marque ; null si aucune ne convient. */
+  option: SolutionOption | null;
+}
+
+/** Pour chaque marque du catalogue, l'option recommandée pour le même besoin (équivalents). */
+export function brandEquivalents(
+  project: Project,
+  catalogs: Catalogs,
+  settings: Settings,
+): BrandEquivalent[] {
+  const brands = [...new Set(catalogs.ups.models.map((m) => m.brand).filter(Boolean))];
+  return brands.map((brand) => {
+    const r = runSizing(
+      { ...project, choice: { ...project.choice, brands: [brand] } },
+      catalogs,
+      settings,
+    );
+    return { brand, option: r.options.find((o) => o.tier === 'recommended') ?? null };
+  });
 }

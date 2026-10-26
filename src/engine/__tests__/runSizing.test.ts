@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_CATALOGS, defaultCatalogs } from '../../catalog';
+import { DEFAULT_BRANDS, DEFAULT_CATALOGS, defaultCatalogs } from '../../catalog';
 import { SAMPLE_CATALOGS } from '../../catalog/samples';
 import {
   batteryCatalogSchema,
@@ -9,7 +9,7 @@ import {
 } from '../../catalog/schemas';
 import { DEFAULT_SETTINGS, mergeSettings, SCENARIOS, settingsSchema } from '../../settings/schema';
 import { buildBom } from '../bom';
-import { createProject, projectSchema, runSizing } from '../index';
+import { brandEquivalents, createProject, projectSchema, runSizing } from '../index';
 import { project, settings } from './fixtures';
 
 const run = (p: ReturnType<typeof project>) => runSizing(p, DEFAULT_CATALOGS, settings);
@@ -241,13 +241,20 @@ describe('catalogues et paramètres', () => {
     expect(equipmentLibrarySchema.safeParse(c.equipment).success).toBe(true);
   });
 
-  it('le catalogue livré contient les UPS INFOSEC avec leurs références produit', () => {
+  it('le catalogue livré contient les UPS INFOSEC, APC et Eaton avec leurs références', () => {
     const c = defaultCatalogs();
     const models = c.ups.models;
-    expect(models.length).toBeGreaterThan(50);
-    expect(models.every((m) => m.brand === 'INFOSEC' && !m.sample && m.source)).toBe(true);
+    expect(DEFAULT_BRANDS).toEqual(['INFOSEC', 'APC', 'EATON']);
+    expect(models.every((m) => m.brand && !m.sample && m.source)).toBe(true);
+    const of = (b: string) => models.filter((m) => m.brand === b);
+    expect(of('INFOSEC').length).toBeGreaterThan(100);
+    expect(of('APC').length).toBeGreaterThan(20);
+    expect(of('EATON').length).toBeGreaterThan(60);
     // Les références imprimées au catalogue sont reprises (quelques châssis n'en ont pas).
-    expect(models.filter((m) => m.partNumber).length).toBeGreaterThan(90);
+    expect(of('INFOSEC').filter((m) => m.partNumber).length).toBeGreaterThan(90);
+    expect(models.find((m) => m.partNumber === 'SURT3000XLI')?.brand).toBe('APC');
+    expect(models.find((m) => m.partNumber === '9PX3000IRT2UANZ')?.brand).toBe('EATON');
+    expect(new Set(c.batteries.cabinets.map((x) => x.id)).size).toBe(c.batteries.cabinets.length);
     expect(models.find((m) => m.partNumber === '67310')?.reference).toBe('INFOSEC E3 Pro 3000 RT');
     // Tout ce qui n'est pas publié est signalé comme estimé.
     expect(models.every((m) => m.estimated.length > 0)).toBe(true);
@@ -258,12 +265,38 @@ describe('catalogues et paramètres', () => {
   });
 
   it('les options affichent la référence produit du constructeur', () => {
-    const r = run(project('server'));
+    const p = project('server');
+    p.choice.brands = ['INFOSEC'];
+    const r = run(p);
     expect(r.options.length).toBeGreaterThan(0);
     expect(r.options.every((o) => /— réf\. \d{5}/.test(o.ups.reference))).toBe(true);
     expect(
       r.options[0]!.bom.find((l) => l.category === 'ups' || l.category === 'frame')?.reference,
     ).toMatch(/^INFOSEC /);
+  });
+
+  it('sélection multi-marques, filtre par marque et équivalents', () => {
+    const p = project('cctv');
+    const all = run(p);
+    expect(all.options.length).toBeGreaterThan(0);
+    for (const brand of DEFAULT_BRANDS) {
+      p.choice.brands = [brand];
+      const r = run(p);
+      const ids = new Set(
+        DEFAULT_CATALOGS.ups.models.filter((m) => m.brand === brand).map((m) => m.id),
+      );
+      expect(r.options.every((o) => ids.has(o.ups.modelId))).toBe(true);
+    }
+    p.choice.brands = [];
+    const eq = brandEquivalents(p, DEFAULT_CATALOGS, settings);
+    expect(eq.map((e) => e.brand)).toEqual(DEFAULT_BRANDS);
+    expect(eq.every((e) => e.option !== null)).toBe(true);
+    // Le moteur choisit parmi toutes les marques : la Recommandée vaut au moins l'équivalent de la même marque.
+    const rec = all.options.find((o) => o.tier === 'recommended')!;
+    const brandOf = (id: string) => DEFAULT_CATALOGS.ups.models.find((m) => m.id === id)!.brand;
+    expect(
+      eq.some((e) => e.option && brandOf(e.option.ups.modelId) === brandOf(rec.ups.modelId)),
+    ).toBe(true);
   });
 
   it('un catalogue invalide est refusé avec le chemin du champ fautif', () => {

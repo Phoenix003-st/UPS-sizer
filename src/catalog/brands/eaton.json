@@ -1,0 +1,6972 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "catalogVersion": "2026-10-EATON",
+    "sample": false,
+    "notice": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ) — références produit du catalogue ; valeurs non publiées estimées (champ « estimated »)."
+  },
+  "models": [
+    {
+      "id": "EAT-5S550AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5S550AU",
+      "reference": "EATON 5S 550",
+      "range": "EATON 5S",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 0.55,
+        "kW": 0.33,
+        "pf": 0.6
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 87,
+        "d": 260,
+        "h": 250
+      },
+      "weightKg": 4.96,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [1],
+          "default": 1
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 1,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 8",
+        "url": "https://www.eaton.com/",
+        "note": "Modèle ANZ, sortie 240 V. Profondeur 260 / 382 mm attribuée selon la masse (le tableau ne précise pas les colonnes). Batteries internes estimées : 1 × 1 blocs 12V7 (autonomie calculée 12.3 min pour 10 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5S700AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5S700AU",
+      "reference": "EATON 5S 700",
+      "range": "EATON 5S",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 0.7,
+        "kW": 0.42,
+        "pf": 0.6
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 87,
+        "d": 260,
+        "h": 250
+      },
+      "weightKg": 5.98,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [1],
+          "default": 1
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 1,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 8",
+        "url": "https://www.eaton.com/",
+        "note": "Modèle ANZ, sortie 240 V. Profondeur 260 / 382 mm attribuée selon la masse (le tableau ne précise pas les colonnes). Batteries internes estimées : 1 × 1 blocs 12V7 (autonomie calculée 8.5 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5S850AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5S850AU",
+      "reference": "EATON 5S 850",
+      "range": "EATON 5S",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 0.85,
+        "kW": 0.51,
+        "pf": 0.6
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 87,
+        "d": 260,
+        "h": 250
+      },
+      "weightKg": 6.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [1],
+          "default": 1
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 1,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 8",
+        "url": "https://www.eaton.com/",
+        "note": "Modèle ANZ, sortie 240 V. Profondeur 260 / 382 mm attribuée selon la masse (le tableau ne précise pas les colonnes). Batteries internes estimées : 1 × 1 blocs 12V9 (autonomie calculée 9.2 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5S1200AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5S1200AU",
+      "reference": "EATON 5S 1200",
+      "range": "EATON 5S",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1.2,
+        "kW": 0.75,
+        "pf": 0.63
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 87,
+        "d": 382,
+        "h": 250
+      },
+      "weightKg": 9.48,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 8",
+        "url": "https://www.eaton.com/",
+        "note": "Modèle ANZ, sortie 240 V. Profondeur 260 / 382 mm attribuée selon la masse (le tableau ne précise pas les colonnes). Batteries internes estimées : 1 × 2 blocs 12V7 (autonomie calculée 10.3 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5S1600AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5S1600AU",
+      "reference": "EATON 5S 1600",
+      "range": "EATON 5S",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1.6,
+        "kW": 1,
+        "pf": 0.63
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 87,
+        "d": 382,
+        "h": 250
+      },
+      "weightKg": 11.08,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 8",
+        "url": "https://www.eaton.com/",
+        "note": "Modèle ANZ, sortie 240 V. Profondeur 260 / 382 mm attribuée selon la masse (le tableau ne précise pas les colonnes). Batteries internes estimées : 1 × 2 blocs 12V9 (autonomie calculée 9.5 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5SC1500IR-AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5SC1500IR-AU",
+      "reference": "EATON 5SC 1500 rack 2U",
+      "range": "EATON 5SC",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1.5,
+        "kW": 1.05,
+        "pf": 0.7
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 405,
+        "h": 86
+      },
+      "weightKg": 17.8,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 8",
+        "url": "https://www.eaton.com/",
+        "note": "Référence lue dans le guide de sélection (p. 3). Batteries internes estimées : 1 × 2 blocs 12V12 (autonomie calculée 12.7 min pour 13 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5P650AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5P650AU",
+      "reference": "EATON 5P 650 tour",
+      "range": "EATON 5P",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 0.65,
+        "kW": 0.42,
+        "pf": 0.65
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 150,
+        "d": 345,
+        "h": 230
+      },
+      "weightKg": 7.8,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 35
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [1],
+          "default": 1
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 1,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 9",
+        "url": "https://www.eaton.com/",
+        "note": "Température maximale 35 °C (le catalogue se contredit pour le 1550 : 35 et 40 °C). Batteries internes estimées : 1 × 1 blocs 12V7 (autonomie calculée 8.5 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5P650IR",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5P650iR",
+      "reference": "EATON 5P 650 rack 1U",
+      "range": "EATON 5P",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 1,
+      "power": {
+        "kVA": 0.65,
+        "kW": 0.42,
+        "pf": 0.65
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 364,
+        "h": 43
+      },
+      "weightKg": 8.6,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 35
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [1],
+          "default": 1
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 1,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 9",
+        "url": "https://www.eaton.com/",
+        "note": "Température maximale 35 °C (le catalogue se contredit pour le 1550 : 35 et 40 °C). Batteries internes estimées : 1 × 1 blocs 12V7 (autonomie calculée 8.5 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5P850AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5P850AU",
+      "reference": "EATON 5P 850 tour",
+      "range": "EATON 5P",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 0.85,
+        "kW": 0.6,
+        "pf": 0.71
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 150,
+        "d": 345,
+        "h": 230
+      },
+      "weightKg": 10.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 35
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 9",
+        "url": "https://www.eaton.com/",
+        "note": "Température maximale 35 °C (le catalogue se contredit pour le 1550 : 35 et 40 °C). Batteries internes estimées : 1 × 2 blocs 12V7 (autonomie calculée 14 min pour 12 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5P850IR",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5P850iR",
+      "reference": "EATON 5P 850 rack 1U",
+      "range": "EATON 5P",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 1,
+      "power": {
+        "kVA": 0.85,
+        "kW": 0.6,
+        "pf": 0.71
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 509,
+        "h": 43
+      },
+      "weightKg": 13.8,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 35
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 9",
+        "url": "https://www.eaton.com/",
+        "note": "Température maximale 35 °C (le catalogue se contredit pour le 1550 : 35 et 40 °C). Batteries internes estimées : 1 × 2 blocs 12V7 (autonomie calculée 14 min pour 12 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5P1150AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5P1150AU",
+      "reference": "EATON 5P 1150 tour",
+      "range": "EATON 5P",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1.15,
+        "kW": 0.77,
+        "pf": 0.67
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 150,
+        "d": 345,
+        "h": 230
+      },
+      "weightKg": 11.1,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 35
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 9",
+        "url": "https://www.eaton.com/",
+        "note": "Température maximale 35 °C (le catalogue se contredit pour le 1550 : 35 et 40 °C). Batteries internes estimées : 1 × 2 blocs 12V9 (autonomie calculée 13.8 min pour 12 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5P1150IR",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5P1150iR",
+      "reference": "EATON 5P 1150 rack 1U",
+      "range": "EATON 5P",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 1,
+      "power": {
+        "kVA": 1.15,
+        "kW": 0.77,
+        "pf": 0.67
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 509,
+        "h": 43
+      },
+      "weightKg": 14.6,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 35
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 9",
+        "url": "https://www.eaton.com/",
+        "note": "Température maximale 35 °C (le catalogue se contredit pour le 1550 : 35 et 40 °C). Batteries internes estimées : 1 × 2 blocs 12V9 (autonomie calculée 13.8 min pour 12 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5P1550AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5P1550AU",
+      "reference": "EATON 5P 1550 tour",
+      "range": "EATON 5P",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1.55,
+        "kW": 1.1,
+        "pf": 0.71
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 150,
+        "d": 445,
+        "h": 230
+      },
+      "weightKg": 15.6,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 9",
+        "url": "https://www.eaton.com/",
+        "note": "Batteries internes estimées : 1 × 2 blocs 12V12 (autonomie calculée 11.9 min pour 13 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5P1550IR",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5P1550iR",
+      "reference": "EATON 5P 1550 rack 1U",
+      "range": "EATON 5P",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 1,
+      "power": {
+        "kVA": 1.55,
+        "kW": 1.1,
+        "pf": 0.71
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 554,
+        "h": 43
+      },
+      "weightKg": 19.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 9",
+        "url": "https://www.eaton.com/",
+        "note": "Batteries internes estimées : 1 × 2 blocs 12V12 (autonomie calculée 11.9 min pour 13 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5SX1250AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5SX1250AU",
+      "reference": "EATON 5SX 1250",
+      "range": "EATON 5SX",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1.25,
+        "kW": 1.125,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 86,
+        "d": 522,
+        "h": 441
+      },
+      "weightKg": 25.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-5SXEBM48R2U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 11",
+        "url": "https://www.eaton.com/",
+        "note": "Modèle ANZ, sortie 240 V. Autonomie publiée à 100 % de charge. Tension batterie déduite de l'EBM associé (5SXEBM48R2U). Le guide de sélection écrit 5SX1250RAU. Batteries internes estimées : 1 × 4 blocs 12V7 (autonomie calculée 5.2 min pour 5 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5SX1750AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5SX1750AU",
+      "reference": "EATON 5SX 1750",
+      "range": "EATON 5SX",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1.75,
+        "kW": 1.575,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 86,
+        "d": 522,
+        "h": 441
+      },
+      "weightKg": 26.6,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-5SXEBM48R2U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 11",
+        "url": "https://www.eaton.com/",
+        "note": "Modèle ANZ, sortie 240 V. Autonomie publiée à 100 % de charge. Tension batterie déduite de l'EBM associé (5SXEBM48R2U). Le guide de sélection écrit 5SX1750RAU. Batteries internes estimées : 1 × 4 blocs 12V9 (autonomie calculée 4.5 min pour 3.7 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5SX3000AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5SX3000AU",
+      "reference": "EATON 5SX 3000",
+      "range": "EATON 5SX",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 3,
+        "kW": 2.7,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 86,
+        "d": 647,
+        "h": 441
+      },
+      "weightKg": 35.3,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-5SXEBM72R2U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 11",
+        "url": "https://www.eaton.com/",
+        "note": "Modèle ANZ, sortie 240 V. Autonomie publiée à 100 % de charge. Tension batterie déduite de l'EBM associé (5SXEBM72R2U). Le guide de sélection écrit 5SX3000RAU. Batteries internes estimées : 1 × 6 blocs 12V7 (autonomie calculée 2.4 min pour 2.4 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5PX1500IRT2UAUG2",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5PX1500IRT2UAUG2",
+      "reference": "EATON 5PX Gen 2 1500 RT2U",
+      "range": "EATON 5PX Gen 2",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1.5,
+        "kW": 1.5,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 448,
+        "h": 86
+      },
+      "weightKg": 22.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-5PXEBM48RT2UG2"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 12",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l'EBM associé. Batteries internes estimées : 1 × 4 blocs 12V9 (autonomie calculée 13.1 min pour 13 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5PX2000IRT2UAUG2",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5PX2000IRT2UAUG2",
+      "reference": "EATON 5PX Gen 2 2000 RT2U",
+      "range": "EATON 5PX Gen 2",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 2,
+        "kW": 2,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 603,
+        "h": 86
+      },
+      "weightKg": 28,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-5PXEBM72RT2UG2"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 12",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l'EBM associé. Batteries internes estimées : 1 × 6 blocs 12V7 (autonomie calculée 9.3 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5PX2200IRT2UAUG2",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5PX2200IRT2UAUG2",
+      "reference": "EATON 5PX Gen 2 2200 RT2U",
+      "range": "EATON 5PX Gen 2",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 2.2,
+        "kW": 2.2,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 603,
+        "h": 86
+      },
+      "weightKg": 28.2,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-5PXEBM72RT2UG2"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 12",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l'EBM associé. Batteries internes estimées : 1 × 6 blocs 12V7 (autonomie calculée 9.3 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5PX3000IRT2UAUG2",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5PX3000IRT2UAUG2",
+      "reference": "EATON 5PX Gen 2 3000 RT2U",
+      "range": "EATON 5PX Gen 2",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 3,
+        "kW": 3,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 603,
+        "h": 86
+      },
+      "weightKg": 31.7,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-5PXEBM72RT2UG2"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 12",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l'EBM associé. Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 7 min pour 7 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-5PX3000IRT3UAUG2",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "5PX3000IRT3UAUG2",
+      "reference": "EATON 5PX Gen 2 3000 RT3U",
+      "range": "EATON 5PX Gen 2",
+      "technology": "line_interactive",
+      "formFactor": "tower_rack",
+      "rackUnits": 3,
+      "power": {
+        "kVA": 3,
+        "kW": 3,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 438,
+        "d": 483,
+        "h": 129
+      },
+      "weightKg": 31.1,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-5PXEBM72RT3UG2"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 12",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l'EBM associé. Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 7 min pour 7 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9E1000IAU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9E1000IAU",
+      "reference": "EATON 9E 1000",
+      "range": "EATON 9E",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1,
+        "kW": 0.8,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.87
+          },
+          {
+            "load": 0.5,
+            "eta": 0.9
+          },
+          {
+            "load": 0.75,
+            "eta": 0.91
+          },
+          {
+            "load": 1,
+            "eta": 0.91
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 144,
+        "d": 356,
+        "h": 228
+      },
+      "weightKg": 9.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 37,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [1],
+          "default": 1
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V18",
+          "blocks": 1,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 13",
+        "url": "https://www.eaton.com/",
+        "note": "La colonne est titrée « 1500VA » mais indique 1000VA/800W. Rendement publié « jusqu’à » ; références lues dans le guide de sélection (p. 3). Batteries internes estimées : 1 × 1 blocs 12V18 (autonomie calculée 11.4 min pour 11 min au catalogue)."
+      },
+      "estimated": ["batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9E2000IAU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9E2000IAU",
+      "reference": "EATON 9E 2000",
+      "range": "EATON 9E",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 2,
+        "kW": 1.6,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.87
+          },
+          {
+            "load": 0.5,
+            "eta": 0.9
+          },
+          {
+            "load": 0.75,
+            "eta": 0.91
+          },
+          {
+            "load": 1,
+            "eta": 0.91
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 190,
+        "d": 399,
+        "h": 330
+      },
+      "weightKg": 22.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-9EEBM72"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 13",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM 9EEBM72. Rendement publié « jusqu’à » ; références lues dans le guide de sélection (p. 3). Batteries internes estimées : 1 × 6 blocs 12V7 (autonomie calculée 16.3 min pour 16 min au catalogue)."
+      },
+      "estimated": ["internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9E3000IAU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9E3000IAU",
+      "reference": "EATON 9E 3000",
+      "range": "EATON 9E",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 3,
+        "kW": 2.4,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.87
+          },
+          {
+            "load": 0.5,
+            "eta": 0.9
+          },
+          {
+            "load": 0.75,
+            "eta": 0.91
+          },
+          {
+            "load": 1,
+            "eta": 0.91
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 190,
+        "d": 399,
+        "h": 330
+      },
+      "weightKg": 24.2,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-9EEBM72"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 13",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM 9EEBM72. Rendement publié « jusqu’à » ; références lues dans le guide de sélection (p. 3). Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 13.1 min pour 13.4 min au catalogue)."
+      },
+      "estimated": ["internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9E6KI",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9E6KI",
+      "reference": "EATON 9E 6k",
+      "range": "EATON 9E",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 6,
+        "kW": 4.8,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.89
+          },
+          {
+            "load": 0.5,
+            "eta": 0.92
+          },
+          {
+            "load": 0.75,
+            "eta": 0.93
+          },
+          {
+            "load": 1,
+            "eta": 0.93
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 262,
+        "d": 613,
+        "h": 709
+      },
+      "weightKg": 68,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-192V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 13",
+        "url": "https://www.eaton.com/",
+        "note": "Rendement publié « jusqu’à » ; références lues dans le guide de sélection (p. 3). Batteries internes estimées : 1 × 16 blocs 12V9 (autonomie calculée 20.1 min pour 20 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9E10KI",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9E10KI",
+      "reference": "EATON 9E 10k",
+      "range": "EATON 9E",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 10,
+        "kW": 8,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.89
+          },
+          {
+            "load": 0.5,
+            "eta": 0.92
+          },
+          {
+            "load": 0.75,
+            "eta": 0.93
+          },
+          {
+            "load": 1,
+            "eta": 0.93
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 262,
+        "d": 613,
+        "h": 709
+      },
+      "weightKg": 85.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 16,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-192V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 13",
+        "url": "https://www.eaton.com/",
+        "note": "Entrée combinée mono ou tri (3:1 / 1:1) : modélisé en entrée monophasée. Rendement publié « jusqu’à » ; références lues dans le guide de sélection (p. 3). Batteries internes estimées : 1 × 16 blocs 12V12 (autonomie calculée 14.4 min pour 15 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9E15KI",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9E15KI",
+      "reference": "EATON 9E 15k",
+      "range": "EATON 9E",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 15,
+        "kW": 12,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.89
+          },
+          {
+            "load": 0.5,
+            "eta": 0.92
+          },
+          {
+            "load": 0.75,
+            "eta": 0.93
+          },
+          {
+            "load": 1,
+            "eta": 0.93
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 350,
+        "d": 706,
+        "h": 816
+      },
+      "weightKg": 145.3,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [20],
+          "default": 20
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V17",
+          "blocks": 20,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-240V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 13",
+        "url": "https://www.eaton.com/",
+        "note": "Entrée combinée mono ou tri (3:1 / 1:1) : modélisé en entrée monophasée. Rendement publié « jusqu’à » ; références lues dans le guide de sélection (p. 3). Batteries internes estimées : 1 × 20 blocs 12V17 (autonomie calculée 16.6 min pour 16 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9E20KI",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9E20KI",
+      "reference": "EATON 9E 20k",
+      "range": "EATON 9E",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 20,
+        "kW": 16,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.89
+          },
+          {
+            "load": 0.5,
+            "eta": 0.92
+          },
+          {
+            "load": 0.75,
+            "eta": 0.93
+          },
+          {
+            "load": 1,
+            "eta": 0.93
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 350,
+        "d": 706,
+        "h": 816
+      },
+      "weightKg": 159.9,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 16,
+          "strings": 2
+        },
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-192V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 13",
+        "url": "https://www.eaton.com/",
+        "note": "Entrée combinée mono ou tri (3:1 / 1:1) : modélisé en entrée monophasée. Rendement publié « jusqu’à » ; références lues dans le guide de sélection (p. 3). Batteries internes estimées : 2 × 16 blocs 12V12 (autonomie calculée 14.4 min pour 15 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9SX700I-AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9SX700I-AU",
+      "reference": "EATON 9SX 700 tour",
+      "range": "EATON 9SX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 0.7,
+        "kW": 0.63,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 160,
+        "d": 357,
+        "h": 252
+      },
+      "weightKg": 11.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 40,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 14",
+        "url": "https://www.eaton.com/",
+        "note": "Batteries internes estimées : 1 × 2 blocs 12V7 (autonomie calculée 14 min pour 14 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9SX1000I-AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9SX1000I-AU",
+      "reference": "EATON 9SX 1000 tour",
+      "range": "EATON 9SX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1,
+        "kW": 0.9,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 160,
+        "d": 387,
+        "h": 252
+      },
+      "weightKg": 14.8,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 41,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-24V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 14",
+        "url": "https://www.eaton.com/",
+        "note": "EBM publié sans référence : module générique. Batteries internes estimées : 1 × 2 blocs 12V12 (autonomie calculée 13.6 min pour 14 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9SX1500I-AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9SX1500I-AU",
+      "reference": "EATON 9SX 1500 tour",
+      "range": "EATON 9SX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1.5,
+        "kW": 1.35,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 160,
+        "d": 437,
+        "h": 252
+      },
+      "weightKg": 18.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 43,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [3],
+          "default": 3
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 3,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-36V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 14",
+        "url": "https://www.eaton.com/",
+        "note": "EBM publié sans référence : module générique. Batteries internes estimées : 1 × 3 blocs 12V12 (autonomie calculée 12.4 min pour 12 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9SX2000I-AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9SX2000I-AU",
+      "reference": "EATON 9SX 2000 tour",
+      "range": "EATON 9SX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 2,
+        "kW": 1.8,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 214,
+        "d": 412,
+        "h": 346
+      },
+      "weightKg": 33.3,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-72V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 14",
+        "url": "https://www.eaton.com/",
+        "note": "EBM publié sans référence : module générique. Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 22.1 min pour 22 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9SX3000I-AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9SX3000I-AU",
+      "reference": "EATON 9SX 3000 tour",
+      "range": "EATON 9SX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 3,
+        "kW": 2.7,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 214,
+        "d": 412,
+        "h": 346
+      },
+      "weightKg": 33.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V18",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-48V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 14",
+        "url": "https://www.eaton.com/",
+        "note": "EBM publié sans référence : module générique. Batteries internes estimées : 1 × 4 blocs 12V18 (autonomie calculée 16.8 min pour 17 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9SX6KI-AU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9SX6KI-AU",
+      "reference": "EATON 9SX 6k tour",
+      "range": "EATON 9SX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 6,
+        "kW": 5.4,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.9
+          },
+          {
+            "load": 0.5,
+            "eta": 0.93
+          },
+          {
+            "load": 0.75,
+            "eta": 0.94
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 244,
+        "d": 542,
+        "h": 575
+      },
+      "weightKg": 65.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 46,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [8],
+          "default": 8
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 8,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-96V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 14",
+        "url": "https://www.eaton.com/",
+        "note": "EBM publié sans référence : module générique. Batteries internes estimées : 1 × 8 blocs 12V9 (autonomie calculée 7.1 min pour 6 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX1000IRT2UANZ",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX1000IRT2UANZ",
+      "reference": "EATON 9PX 1000 RT2U",
+      "range": "EATON 9PX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1,
+        "kW": 1,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 450,
+        "h": 87
+      },
+      "weightKg": 17.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM48RT2U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM associé. Batteries internes estimées : 1 × 4 blocs 12V7 (autonomie calculée 17.7 min pour 16 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX1500IRT2UANZ",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX1500IRT2UANZ",
+      "reference": "EATON 9PX 1500 RT2U",
+      "range": "EATON 9PX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1.5,
+        "kW": 1.5,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 450,
+        "h": 87
+      },
+      "weightKg": 18.9,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM48RT2U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM associé. Batteries internes estimées : 1 × 4 blocs 12V9 (autonomie calculée 13.1 min pour 13 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX2000IRTAU",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX2000IRTAU",
+      "reference": "EATON 9PX 2000 RT2U",
+      "range": "EATON 9PX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 2,
+        "kW": 1.8,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 605,
+        "h": 87
+      },
+      "weightKg": 27.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM72RT2U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 15",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM associé. Batteries internes estimées : 1 × 6 blocs 12V7 (autonomie calculée 14 min pour 12 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX2200IRT2UANZ",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX2200IRT2UANZ",
+      "reference": "EATON 9PX 2200 RT2U",
+      "range": "EATON 9PX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 2.2,
+        "kW": 2.2,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 605,
+        "h": 87
+      },
+      "weightKg": 25,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM72RT2U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM associé. Batteries internes estimées : 1 × 6 blocs 12V7 (autonomie calculée 9.3 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX3000IRT2UANZ",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX3000IRT2UANZ",
+      "reference": "EATON 9PX 3000 RT2U",
+      "range": "EATON 9PX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 3,
+        "kW": 3,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 605,
+        "h": 87
+      },
+      "weightKg": 27.6,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM72RT2U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM associé. Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 7 min pour 7 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX2200IRT3UANZ",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX2200IRT3UANZ",
+      "reference": "EATON 9PX 2200 RT3U",
+      "range": "EATON 9PX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 3,
+      "power": {
+        "kVA": 2.2,
+        "kW": 2.2,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 485,
+        "h": 130
+      },
+      "weightKg": 24.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM72RT3U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM associé. Batteries internes estimées : 1 × 6 blocs 12V7 (autonomie calculée 9.3 min pour 9 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX3000IRT3UANZ",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX3000IRT3UANZ",
+      "reference": "EATON 9PX 3000 RT3U",
+      "range": "EATON 9PX",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 3,
+      "power": {
+        "kVA": 3,
+        "kW": 3,
+        "pf": 1
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 485,
+        "h": 130
+      },
+      "weightKg": 27.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM72RT3U"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Tension batterie déduite de l’EBM associé. Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 7 min pour 7 min au catalogue)."
+      },
+      "estimated": ["efficiency", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX5KI",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX5Ki",
+      "reference": "EATON 9PX 5k RT3U",
+      "range": "EATON 9PX 5–11 kVA",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 3,
+      "power": {
+        "kVA": 5,
+        "kW": 4.5,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.91
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 685,
+        "h": 130
+      },
+      "weightKg": 48,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [8],
+          "default": 8
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 8,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-96V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 18",
+        "url": "https://www.eaton.com/",
+        "note": "Batteries internes estimées : 1 × 8 blocs 12V12 (autonomie calculée 12.2 min pour 13 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX6KI",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX6Ki",
+      "reference": "EATON 9PX 6k RT3U",
+      "range": "EATON 9PX 5–11 kVA",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 3,
+      "power": {
+        "kVA": 6,
+        "kW": 5.4,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.91
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 685,
+        "h": 130
+      },
+      "weightKg": 48,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 16,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["EAT-EBM-GEN-192V"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 18",
+        "url": "https://www.eaton.com/",
+        "note": "Batteries internes estimées : 1 × 16 blocs 12V7 (autonomie calculée 12.6 min pour 11 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+      },
+      "estimated": ["batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX8KIPM",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX8KiPM + 9PXEBM240",
+      "reference": "EATON 9PX 8k RT6U + EBM",
+      "range": "EATON 9PX 5–11 kVA",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 6,
+      "power": {
+        "kVA": 8,
+        "kW": 7.2,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.91
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 700,
+        "h": 260
+      },
+      "weightKg": 84,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 48,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [20],
+          "default": 20
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 20,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM240"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 18",
+        "url": "https://www.eaton.com/",
+        "note": "Module de puissance livré avec un EBM 9PXEBM240 (guide de sélection) : batterie de base modélisée en interne. Batteries internes estimées : 1 × 20 blocs 12V12 (autonomie calculée 21.9 min pour 20 min au catalogue)."
+      },
+      "estimated": ["internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9PX11KIPM",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9PX11KiPM + 9PXEBM240",
+      "reference": "EATON 9PX 11k RT6U + EBM",
+      "range": "EATON 9PX 5–11 kVA",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 6,
+      "power": {
+        "kVA": 11,
+        "kW": 10,
+        "pf": 0.91
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [200, 208, 220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.91
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 440,
+        "d": 700,
+        "h": 260
+      },
+      "weightKg": 81,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 50,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [20],
+          "default": 20
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 20,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EAT-EBM-9PXEBM240"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 18",
+        "url": "https://www.eaton.com/",
+        "note": "Module de puissance livré avec un EBM 9PXEBM240 (guide de sélection) : batterie de base modélisée en interne. Batteries internes estimées : 1 × 20 blocs 12V12 (autonomie calculée 14.4 min pour 13 min au catalogue)."
+      },
+      "estimated": ["internalBattery", "chargeCurrent", "weight"]
+    },
+    {
+      "id": "EAT-93PS-8-KW",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93PS 8 kW",
+      "range": "EATON 93PS",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 8,
+        "kW": 8,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 335,
+        "d": 750,
+        "h": 1300
+      },
+      "weightKg": 58,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 21",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Châssis 20 kW (8–20 kW) ou 40 kW (30–40 kW). Batteries internes possibles (32 blocs, 384 V) : armoires externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent", "weight"]
+    },
+    {
+      "id": "EAT-93PS-10-KW",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93PS 10 kW",
+      "range": "EATON 93PS",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 10,
+        "kW": 10,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 335,
+        "d": 750,
+        "h": 1300
+      },
+      "weightKg": 62,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 21",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Châssis 20 kW (8–20 kW) ou 40 kW (30–40 kW). Batteries internes possibles (32 blocs, 384 V) : armoires externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent", "weight"]
+    },
+    {
+      "id": "EAT-93PS-15-KW",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93PS 15 kW",
+      "range": "EATON 93PS",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 15,
+        "kW": 15,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 335,
+        "d": 750,
+        "h": 1300
+      },
+      "weightKg": 73,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 21",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Châssis 20 kW (8–20 kW) ou 40 kW (30–40 kW). Batteries internes possibles (32 blocs, 384 V) : armoires externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent", "weight"]
+    },
+    {
+      "id": "EAT-93PS-20-KW",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93PS 20 kW",
+      "range": "EATON 93PS",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 20,
+        "kW": 20,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 335,
+        "d": 750,
+        "h": 1300
+      },
+      "weightKg": 84,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 21",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Châssis 20 kW (8–20 kW) ou 40 kW (30–40 kW). Batteries internes possibles (32 blocs, 384 V) : armoires externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent", "weight"]
+    },
+    {
+      "id": "EAT-93PS-30-KW",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93PS 30 kW",
+      "range": "EATON 93PS",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 30,
+        "kW": 30,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 480,
+        "d": 750,
+        "h": 1750
+      },
+      "weightKg": 106,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 8,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 21",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Châssis 20 kW (8–20 kW) ou 40 kW (30–40 kW). Batteries internes possibles (32 blocs, 384 V) : armoires externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent", "weight"]
+    },
+    {
+      "id": "EAT-93PS-40-KW",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93PS 40 kW",
+      "range": "EATON 93PS",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 40,
+        "kW": 40,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 480,
+        "d": 750,
+        "h": 1750
+      },
+      "weightKg": 128,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 10,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 21",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Châssis 20 kW (8–20 kW) ou 40 kW (30–40 kW). Batteries internes possibles (32 blocs, 384 V) : armoires externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent", "weight"]
+    },
+    {
+      "id": "EAT-93E-15-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 15 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 15,
+        "kW": 13.5,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 72,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-20-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 20 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 20,
+        "kW": 18,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 72,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-30-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 30 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 30,
+        "kW": 27,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 91,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 62,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 8,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-40-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 40 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 40,
+        "kW": 36,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 120,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 62,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 10,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-60-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 60 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 60,
+        "kW": 54,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 202,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 65,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 15,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-80-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 80 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 80,
+        "kW": 72,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 245,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 65,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 20,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-100-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 100 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 100,
+        "kW": 90,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 283,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 65,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 25,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-120-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 120 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 120,
+        "kW": 108,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 311,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 65,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 30,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-160-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 160 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 160,
+        "kW": 144,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 457,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 70,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 40,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-93E-200-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 93E 200 kVA",
+      "range": "EATON 93E",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 200,
+        "kW": 180,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.94
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.94
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 800,
+        "h": 1876
+      },
+      "weightKg": 457,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 70,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 50,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 22",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Masse sans batteries internes. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-9016-9295",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9016-9295",
+      "reference": "EATON 93PR châssis 75 kW (3 × UPM 25 kW)",
+      "range": "EATON 93PR",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 75,
+        "kW": 75,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.96
+          },
+          {
+            "load": 0.5,
+            "eta": 0.97
+          },
+          {
+            "load": 0.75,
+            "eta": 0.98
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 603,
+        "d": 1013,
+        "h": 2050
+      },
+      "weightKg": 468,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 19,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": {
+        "moduleKVA": 25,
+        "moduleKW": 25,
+        "maxModules": 3,
+        "frameMaxKVA": 75,
+        "moduleWeightKg": 28,
+        "emptyFrameWeightKg": 468,
+        "frameParallelMax": 1
+      },
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 24",
+        "url": "https://www.eaton.com/",
+        "note": "Châssis à batteries internes (masse publiée avec batteries) : armoires externes retenues. Module UPM 25 kW : réf. 730-80492-00P. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["batteryVoltage", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9106-42218-00P",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "9106-42218-00P",
+      "reference": "EATON 93PR châssis 200 kW (8 × UPM 25 kW)",
+      "range": "EATON 93PR",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 200,
+        "kW": 200,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.96
+          },
+          {
+            "load": 0.5,
+            "eta": 0.97
+          },
+          {
+            "load": 0.75,
+            "eta": 0.98
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 603,
+        "d": 1013,
+        "h": 2050
+      },
+      "weightKg": 310,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [30, 32, 34, 36, 38, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 50,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": {
+        "moduleKVA": 25,
+        "moduleKW": 25,
+        "maxModules": 8,
+        "frameMaxKVA": 200,
+        "moduleWeightKg": 28,
+        "emptyFrameWeightKg": 310,
+        "frameParallelMax": 1
+      },
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 24",
+        "url": "https://www.eaton.com/",
+        "note": "Module UPM 25 kW : réf. 730-80492-00P. Version avec bypass de maintenance : 9106-42217-00P. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["batteryVoltage", "chargeCurrent"]
+    },
+    {
+      "id": "EAT-9395P-300-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 9395P 300 kVA",
+      "range": "EATON 9395P",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 300,
+        "kW": 300,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1350,
+        "d": 880,
+        "h": 1880
+      },
+      "weightKg": 830,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 78,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 75,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 8
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 25",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-9395P-600-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 9395P 600 kVA",
+      "range": "EATON 9395P",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 600,
+        "kW": 600,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1890,
+        "d": 880,
+        "h": 1880
+      },
+      "weightKg": 1440,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 81,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 150,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 8
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 25",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-9395P-900-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 9395P 900 kVA",
+      "range": "EATON 9395P",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 900,
+        "kW": 900,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 3710,
+        "d": 880,
+        "h": 1880
+      },
+      "weightKg": 2680,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 83,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 225,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 8
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 25",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "EAT-9395P-1200-KVA",
+      "sample": false,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON 9395P 1200 kVA",
+      "range": "EATON 9395P",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1200,
+        "kW": 1200,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 4450,
+        "d": 880,
+        "h": 1880
+      },
+      "weightKg": 3120,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 85,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 300,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 8
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.eaton.com/",
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 25",
+        "url": "https://www.eaton.com/",
+        "note": "Pas de référence produit publiée. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    }
+  ],
+  "cabinets": [
+    {
+      "id": "EAT-EBM-5SXEBM48R2U",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "5SXEBM48R2U",
+      "reference": "EATON 5SX EBM 48 V rack 2U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 86,
+        "d": 522,
+        "h": 441
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 8
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 8
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 11",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-5SXEBM72R2U",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "5SXEBM72R2U",
+      "reference": "EATON 5SX EBM 72 V rack 2U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 86,
+        "d": 647,
+        "h": 441
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 12
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 11",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-5PXEBM48RT2UG2",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "5PXEBM48RT2UG2",
+      "reference": "EATON 5PX EBM 48 V RT2U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 438,
+        "d": 448,
+        "h": 86
+      },
+      "emptyWeightKg": 8.3,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 8
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 12",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-5PXEBM72RT2UG2",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "5PXEBM72RT2UG2",
+      "reference": "EATON 5PX EBM 72 V RT2U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 438,
+        "d": 603,
+        "h": 86
+      },
+      "emptyWeightKg": 12.1,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 12
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 12
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 12",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-5PXEBM72RT3UG2",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "5PXEBM72RT3UG2",
+      "reference": "EATON 5PX EBM 72 V RT3U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 438,
+        "d": 483,
+        "h": 129
+      },
+      "emptyWeightKg": 11.9,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 12
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 12",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-9EEBM72",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "9EEBM72",
+      "reference": "EATON 9E EBM 72 V",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 190,
+        "d": 399,
+        "h": 327
+      },
+      "emptyWeightKg": 10.7,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 12
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 12
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 13",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-GEN-192V",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON module batteries externe 192 V (référence à préciser)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 262,
+        "d": 613,
+        "h": 709
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 32
+        },
+        {
+          "blockId": "EX-VRLA-12V12",
+          "maxBlocks": 32
+        },
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 32
+        }
+      ],
+      "breakerA": 63
+    },
+    {
+      "id": "EAT-EBM-GEN-240V",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON module batteries externe 240 V (référence à préciser)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 350,
+        "d": 706,
+        "h": 816
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V17",
+          "maxBlocks": 40
+        }
+      ],
+      "breakerA": 63
+    },
+    {
+      "id": "EAT-EBM-GEN-24V",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON module batteries externe 24 V (référence à préciser)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 160,
+        "d": 387,
+        "h": 252
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V12",
+          "maxBlocks": 4
+        }
+      ],
+      "breakerA": 63
+    },
+    {
+      "id": "EAT-EBM-GEN-36V",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON module batteries externe 36 V (référence à préciser)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 160,
+        "d": 437,
+        "h": 252
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V12",
+          "maxBlocks": 6
+        }
+      ],
+      "breakerA": 63
+    },
+    {
+      "id": "EAT-EBM-GEN-72V",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON module batteries externe 72 V (référence à préciser)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 214,
+        "d": 412,
+        "h": 346
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 12
+        }
+      ],
+      "breakerA": 63
+    },
+    {
+      "id": "EAT-EBM-GEN-48V",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON module batteries externe 48 V (référence à préciser)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 214,
+        "d": 412,
+        "h": 346
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V18",
+          "maxBlocks": 8
+        }
+      ],
+      "breakerA": 63
+    },
+    {
+      "id": "EAT-EBM-GEN-96V",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "",
+      "reference": "EATON module batteries externe 96 V (référence à préciser)",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 244,
+        "d": 542,
+        "h": 575
+      },
+      "emptyWeightKg": 5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 16
+        },
+        {
+          "blockId": "EX-VRLA-12V12",
+          "maxBlocks": 16
+        }
+      ],
+      "breakerA": 63
+    },
+    {
+      "id": "EAT-EBM-9PXEBM48RT2U",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "9PXEBM48RT2U",
+      "reference": "EATON 9PX EBM 48 V RT2U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 440,
+        "d": 450,
+        "h": 87
+      },
+      "emptyWeightKg": 8.9,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 8
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 8
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-9PXEBM72RT2U",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "9PXEBM72RT2U",
+      "reference": "EATON 9PX EBM 72 V RT2U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 440,
+        "d": 605,
+        "h": 87
+      },
+      "emptyWeightKg": 11.8,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 12
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 12
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-9PXEBM72RT3U",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "9PXEBM72RT3U",
+      "reference": "EATON 9PX EBM 72 V RT3U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 440,
+        "d": 485,
+        "h": 130
+      },
+      "emptyWeightKg": 11.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 12
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 12
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 16",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "EAT-EBM-9PXEBM240",
+      "sample": true,
+      "brand": "EATON",
+      "partNumber": "9PXEBM240",
+      "reference": "EATON 9PX EBM 240 V RT3U",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 440,
+        "d": 680,
+        "h": 130
+      },
+      "emptyWeightKg": 19.5,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V12",
+          "maxBlocks": 20
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "EATON",
+        "model": "Eaton Backup and Power Protection Products 2022–2023 (Australie / NZ), p. 18",
+        "url": "https://www.eaton.com/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    }
+  ]
+}

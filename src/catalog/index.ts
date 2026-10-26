@@ -1,10 +1,13 @@
 /**
  * Catalogues livrés avec l'application, validés au chargement.
  *
- * Édition InfoSec : UPS du catalogue INFOSEC (références produit du constructeur). Les batteries
- * (blocs et armoires) restent génériques : le catalogue INFOSEC ne les détaille pas.
+ * Édition InfoSec + concurrents : UPS des catalogues INFOSEC, APC et Eaton (références produit des
+ * constructeurs) ; la sélection choisit parmi toutes les marques. Les batteries (blocs et armoires)
+ * restent génériques : les catalogues ne les détaillent pas.
  */
 import batteriesJson from './batteries.json';
+import apcJson from './brands/apc.json';
+import eatonJson from './brands/eaton.json';
 import infosecJson from './brands/infosec.json';
 import equipmentJson from './equipment.json';
 import {
@@ -15,7 +18,12 @@ import {
 } from './schemas';
 
 /** Catalogues de marque inclus dans cette édition de l'application. */
-const BRAND_CATALOGS = [infosecJson];
+interface BrandCatalogJson {
+  meta: { catalogVersion: string };
+  models: unknown[];
+  cabinets: { id: string }[];
+}
+const BRAND_CATALOGS: BrandCatalogJson[] = [infosecJson, apcJson, eatonJson];
 
 const genericBatteries = batteryCatalogSchema.parse(batteriesJson);
 

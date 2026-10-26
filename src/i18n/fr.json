@@ -6,7 +6,7 @@
     "sample": "Données génériques – à confirmer",
     "skip": "Aller au contenu",
     "localOnly": "Vos projets restent dans ce navigateur. Rien n'est envoyé à un serveur.",
-    "edition": "Édition InfoSec"
+    "edition": "Édition InfoSec + concurrents"
   },
   "nav": {
     "home": "Accueil",
@@ -664,5 +664,17 @@
     "internalBattery": "batteries internes",
     "batteryVoltage": "tension batterie",
     "chargeCurrent": "courant de charge"
+  },
+  "brands": {
+    "legend": "Marques proposées",
+    "all": "Toutes les marques",
+    "compareTitle": "Équivalents par marque",
+    "compareHelp": "Meilleure option de chaque marque pour le même besoin (mêmes charge, autonomie et local).",
+    "brand": "Marque",
+    "model": "Modèle",
+    "autonomy": "Autonomie",
+    "none": "Aucun modèle de cette marque ne convient.",
+    "only": "Ne proposer que cette marque",
+    "showAll": "Revenir à toutes les marques"
   }
 }

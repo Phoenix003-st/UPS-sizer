@@ -27,10 +27,12 @@ import {
   type UpsModel,
 } from '../../src/catalog/schemas';
 import { autonomyAt, dischargeTable } from '../../src/engine/battery';
+import { APC } from './apc';
+import { EATON } from './eaton';
 import { INFOSEC } from './infosec';
 import type { BrandData, Entry } from './types';
 
-const BRANDS: BrandData[] = [INFOSEC];
+const BRANDS: BrandData[] = [INFOSEC, APC, EATON];
 
 const OUT = join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'src', 'catalog', 'brands');
 const VERSION = '2026-10';

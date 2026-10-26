@@ -6,7 +6,7 @@
     "sample": "Generic data – to be confirmed",
     "skip": "Skip to content",
     "localOnly": "Your projects stay in this browser. Nothing is sent to a server.",
-    "edition": "InfoSec edition"
+    "edition": "InfoSec + competitors edition"
   },
   "nav": {
     "home": "Home",
@@ -664,5 +664,17 @@
     "internalBattery": "internal batteries",
     "batteryVoltage": "battery voltage",
     "chargeCurrent": "charge current"
+  },
+  "brands": {
+    "legend": "Brands offered",
+    "all": "All brands",
+    "compareTitle": "Equivalents by brand",
+    "compareHelp": "Best option from each brand for the same need (same load, runtime and room).",
+    "brand": "Brand",
+    "model": "Model",
+    "autonomy": "Runtime",
+    "none": "No model from this brand fits.",
+    "only": "Offer this brand only",
+    "showAll": "Back to all brands"
   }
 }

@@ -23,6 +23,7 @@ import { formatNumber, formatPct } from '../../ui/format';
 import { UpsIllustration } from '../../ui/icons';
 import { MiniRoom } from '../layout-plan/MiniRoom';
 import { Room3D } from '../room-3d/Room3D';
+import { BrandComparison, BrandFilter } from './BrandComparison';
 
 export function SolutionsScreen({ project }: { project: Project }) {
   const { t } = useTranslation();
@@ -40,6 +41,7 @@ export function SolutionsScreen({ project }: { project: Project }) {
           <AlertList alerts={result.globalAlerts} />
         </div>
       )}
+      <BrandFilter project={project} />
       {result.options.length === 0 ? (
         <Card>
           <p>{t('solutions.none')}</p>
@@ -67,6 +69,7 @@ export function SolutionsScreen({ project }: { project: Project }) {
           ))}
         </ul>
       )}
+      <BrandComparison project={project} />
       <Modal open={calcFor !== null} onClose={() => setCalcFor(null)} title={t('calcModal.title')}>
         {calcFor && <TraceList traces={calcFor.traces} />}
       </Modal>

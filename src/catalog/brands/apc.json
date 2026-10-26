@@ -1,0 +1,2150 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "catalogVersion": "2026-10-APC",
+    "sample": false,
+    "notice": "Catalogue distributeur SabMatic — APC by Schneider Electric — références produit du catalogue ; valeurs non publiées estimées (champ « estimated »)."
+  },
+  "models": [
+    {
+      "id": "APC-SUA750I",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA750I",
+      "reference": "APC Smart-UPS SUA750I",
+      "range": "APC Smart-UPS SUA",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 0.75,
+        "kW": 0.5,
+        "pf": 0.67
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 137,
+        "d": 358,
+        "h": 157
+      },
+      "weightKg": 13.2,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 41,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 26,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 4",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie publiée : 2 × 12 V 7 Ah."
+      },
+      "estimated": ["efficiency", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA1000I",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA1000I",
+      "reference": "APC Smart-UPS SUA1000I",
+      "range": "APC Smart-UPS SUA",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1,
+        "kW": 0.67,
+        "pf": 0.67
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 170,
+        "d": 439,
+        "h": 216
+      },
+      "weightKg": 19.1,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 41,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 29,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 4",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie publiée : 2 × 12 V 12 Ah."
+      },
+      "estimated": ["efficiency", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA1500I",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA1500I",
+      "reference": "APC Smart-UPS SUA1500I",
+      "range": "APC Smart-UPS SUA",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 1.5,
+        "kW": 0.98,
+        "pf": 0.65
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 170,
+        "d": 439,
+        "h": 216
+      },
+      "weightKg": 24.1,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V17",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 40,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 4",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie publiée : 2 × 12 V 17 Ah."
+      },
+      "estimated": ["efficiency", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA2200I",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA2200I",
+      "reference": "APC Smart-UPS SUA2200I",
+      "range": "APC Smart-UPS SUA",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 2.2,
+        "kW": 1.6,
+        "pf": 0.73
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 196,
+        "d": 546,
+        "h": 432
+      },
+      "weightKg": 50.8,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 45,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V17",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 81,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 4",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie publiée : 4 × 12 V 17 Ah."
+      },
+      "estimated": ["efficiency", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA3000I",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA3000I",
+      "reference": "APC Smart-UPS SUA3000I",
+      "range": "APC Smart-UPS SUA",
+      "technology": "line_interactive",
+      "formFactor": "tower",
+      "rackUnits": null,
+      "power": {
+        "kVA": 3,
+        "kW": 2.25,
+        "pf": 0.75
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 196,
+        "d": 546,
+        "h": 432
+      },
+      "weightKg": 55.8,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 53,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V17",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 110,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 4",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie publiée : 4 × 12 V 17 Ah."
+      },
+      "estimated": ["efficiency", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA750RMI2U",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA750RMI2U",
+      "reference": "APC Smart-UPS SUA750RMI2U",
+      "range": "APC Smart-UPS SUA RM",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 0.75,
+        "kW": 0.5,
+        "pf": 0.67
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 432,
+        "d": 457,
+        "h": 89
+      },
+      "weightKg": 21.82,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [1],
+          "default": 1
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 1,
+          "strings": 2
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 10",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batteries internes estimées : 2 × 1 blocs 12V7 (autonomie calculée 17.7 min pour 16.4 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA1000RMI2U",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA1000RMI2U",
+      "reference": "APC Smart-UPS SUA1000RMI2U",
+      "range": "APC Smart-UPS SUA RM",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1,
+        "kW": 0.67,
+        "pf": 0.67
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 432,
+        "d": 457,
+        "h": 89
+      },
+      "weightKg": 28.18,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V17",
+          "blocks": 2,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 10",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batteries internes estimées : 1 × 2 blocs 12V17 (autonomie calculée 32.8 min pour 31.6 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA1500RMI2U",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA1500RMI2U",
+      "reference": "APC Smart-UPS SUA1500RMI2U",
+      "range": "APC Smart-UPS SUA RM",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1.5,
+        "kW": 0.98,
+        "pf": 0.65
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 432,
+        "d": 457,
+        "h": 89
+      },
+      "weightKg": 28.64,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [2],
+          "default": 2
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 2,
+          "strings": 2
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 10",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batteries internes estimées : 2 × 2 blocs 12V9 (autonomie calculée 24.6 min pour 26.5 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA2200RMI2U",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA2200RMI2U",
+      "reference": "APC Smart-UPS SUA2200RMI2U",
+      "range": "APC Smart-UPS SUA RM",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 2.2,
+        "kW": 1.98,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 483,
+        "d": 660,
+        "h": 89
+      },
+      "weightKg": 43.64,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [3],
+          "default": 3
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V18",
+          "blocks": 3,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 10",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Le catalogue imprime « 2000VA/1980W » pour ce modèle 2200 VA. Batteries internes estimées : 1 × 3 blocs 12V18 (autonomie calculée 14.8 min pour 15.7 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SUA3000RMI2U",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUA3000RMI2U",
+      "reference": "APC Smart-UPS SUA3000RMI2U",
+      "range": "APC Smart-UPS SUA RM",
+      "technology": "line_interactive",
+      "formFactor": "rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 3,
+        "kW": 2.7,
+        "pf": 0.9
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.97
+          }
+        ],
+        "eco": null,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 483,
+        "d": 660,
+        "h": 89
+      },
+      "weightKg": 43.64,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [6],
+          "default": 6
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 6,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": [],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 10",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 11.1 min pour 11.3 min au catalogue)."
+      },
+      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent"]
+    },
+    {
+      "id": "APC-SURT1000XLI",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SURT1000XLI",
+      "reference": "APC Smart-UPS RT SURT1000XLI",
+      "range": "APC Smart-UPS RT (SURT)",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 1,
+        "kW": 0.7,
+        "pf": 0.7
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.84
+          },
+          {
+            "load": 0.5,
+            "eta": 0.87
+          },
+          {
+            "load": 0.75,
+            "eta": 0.88
+          },
+          {
+            "load": 1,
+            "eta": 0.88
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 85,
+        "d": 483,
+        "h": 432
+      },
+      "weightKg": 23,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 50,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 1.5,
+        "compatibleCabinetIds": ["APC-EBM-SURT48XLBP"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 70,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Tension batterie publiée : 48 V ; capacité des blocs internes non publiée. Existe aussi en versions RMXLI (rack) et UXI."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SURT2000XLI",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SURT2000XLI",
+      "reference": "APC Smart-UPS RT SURT2000XLI",
+      "range": "APC Smart-UPS RT (SURT)",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 2,
+      "power": {
+        "kVA": 2,
+        "kW": 1.4,
+        "pf": 0.7
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.86
+          },
+          {
+            "load": 0.5,
+            "eta": 0.89
+          },
+          {
+            "load": 0.75,
+            "eta": 0.9
+          },
+          {
+            "load": 1,
+            "eta": 0.9
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 85,
+        "d": 483,
+        "h": 432
+      },
+      "weightKg": 25,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 50,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [4],
+          "default": 4
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 4,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["APC-EBM-SURT48XLBP"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 191,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Tension batterie publiée : 48 V ; capacité des blocs internes non publiée. Existe aussi en versions RMXLI (rack) et UXI."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SURT3000XLI",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SURT3000XLI",
+      "reference": "APC Smart-UPS RT SURT3000XLI",
+      "range": "APC Smart-UPS RT (SURT)",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 3,
+      "power": {
+        "kVA": 3,
+        "kW": 2.1,
+        "pf": 0.7
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.87
+          },
+          {
+            "load": 0.5,
+            "eta": 0.9
+          },
+          {
+            "load": 0.75,
+            "eta": 0.91
+          },
+          {
+            "load": 1,
+            "eta": 0.91
+          }
+        ],
+        "eco": 0.97,
+        "battery": 0.88
+      },
+      "dimensionsMm": {
+        "w": 130,
+        "d": 660,
+        "h": 432
+      },
+      "weightKg": 54.55,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 2,
+        "compatibleCabinetIds": ["APC-EBM-SURT192XLBP"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 192,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Tension batterie publiée : 192 V ; capacité des blocs internes non publiée. Existe aussi en versions RMXLI (rack) et UXI."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SURT5000XLI",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SURT5000XLI",
+      "reference": "APC Smart-UPS RT SURT5000XLI",
+      "range": "APC Smart-UPS RT (SURT)",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 3,
+      "power": {
+        "kVA": 5,
+        "kW": 3.5,
+        "pf": 0.7
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.88
+          },
+          {
+            "load": 0.5,
+            "eta": 0.91
+          },
+          {
+            "load": 0.75,
+            "eta": 0.92
+          },
+          {
+            "load": 1,
+            "eta": 0.92
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 130,
+        "d": 660,
+        "h": 432
+      },
+      "weightKg": 54.55,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["APC-EBM-SURT192XLBP"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 305,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Tension batterie publiée : 192 V ; capacité des blocs internes non publiée. Existe aussi en versions RMXLI (rack) et UXI."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SURT6000XLI",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SURT6000XLI",
+      "reference": "APC Smart-UPS RT SURT6000XLI",
+      "range": "APC Smart-UPS RT (SURT)",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 3,
+      "power": {
+        "kVA": 6,
+        "kW": 4.2,
+        "pf": 0.7
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.88
+          },
+          {
+            "load": 0.5,
+            "eta": 0.91
+          },
+          {
+            "load": 0.75,
+            "eta": 0.92
+          },
+          {
+            "load": 1,
+            "eta": 0.92
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 130,
+        "d": 660,
+        "h": 432
+      },
+      "weightKg": 54.55,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
+          "strings": 1
+        },
+        "maxChargeCurrentA": 4,
+        "compatibleCabinetIds": ["APC-EBM-SURT192XLBP"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 305,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Tension batterie publiée : 192 V ; capacité des blocs internes non publiée. Existe aussi en versions RMXLI (rack) et UXI."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SURT8000XLI",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SURT8000XLI",
+      "reference": "APC Smart-UPS RT SURT8000XLI",
+      "range": "APC Smart-UPS RT (SURT)",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 6,
+      "power": {
+        "kVA": 8,
+        "kW": 6.4,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.88
+          },
+          {
+            "load": 0.5,
+            "eta": 0.91
+          },
+          {
+            "load": 0.75,
+            "eta": 0.92
+          },
+          {
+            "load": 1,
+            "eta": 0.92
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 263,
+        "d": 736,
+        "h": 432
+      },
+      "weightKg": 110.91,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
+          "strings": 2
+        },
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["APC-EBM-SURT192XLBP"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 450,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Tension batterie publiée : 2 × 192 V ; capacité des blocs internes non publiée. Existe aussi en versions RMXLI (rack) et UXI."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SURT10000XLI",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SURT10000XLI",
+      "reference": "APC Smart-UPS RT SURT10000XLI",
+      "range": "APC Smart-UPS RT (SURT)",
+      "technology": "online_double_conversion",
+      "formFactor": "tower_rack",
+      "rackUnits": 6,
+      "power": {
+        "kVA": 10,
+        "kW": 8,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 1,
+        "out": 1
+      },
+      "voltages": {
+        "out": [220, 230, 240],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.88
+          },
+          {
+            "load": 0.5,
+            "eta": 0.91
+          },
+          {
+            "load": 0.75,
+            "eta": 0.92
+          },
+          {
+            "load": 1,
+            "eta": 0.92
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.92
+      },
+      "dimensionsMm": {
+        "w": 263,
+        "d": 736,
+        "h": 432
+      },
+      "weightKg": 110.91,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 150,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 55,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [16],
+          "default": 16
+        },
+        "internal": {
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
+          "strings": 2
+        },
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["APC-EBM-SURT192XLBP"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": 649,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Tension batterie publiée : 2 × 192 V ; capacité des blocs internes non publiée. Existe aussi en versions RMXLI (rack) et UXI."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SUVTP10KH",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUVTP10KH",
+      "reference": "APC Smart-UPS VT SUVTP10KH",
+      "range": "APC Smart-UPS VT (SUVT)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 10,
+        "kW": 8,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 352,
+        "d": 813,
+        "h": 823
+      },
+      "weightKg": 134,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 13",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie ± 192 V (2 × 16 blocs) ; bruit publié 54 à 64 dBA selon le modèle. Existe aussi en SUVTR30KH / SUVTR40KH. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SUVTP15KH",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUVTP15KH",
+      "reference": "APC Smart-UPS VT SUVTP15KH",
+      "range": "APC Smart-UPS VT (SUVT)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 15,
+        "kW": 12,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 352,
+        "d": 813,
+        "h": 823
+      },
+      "weightKg": 134,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 13",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie ± 192 V (2 × 16 blocs) ; bruit publié 54 à 64 dBA selon le modèle. Existe aussi en SUVTR30KH / SUVTR40KH. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SUVTP20KH",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUVTP20KH",
+      "reference": "APC Smart-UPS VT SUVTP20KH",
+      "range": "APC Smart-UPS VT (SUVT)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 20,
+        "kW": 16,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 352,
+        "d": 813,
+        "h": 823
+      },
+      "weightKg": 134,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 13",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie ± 192 V (2 × 16 blocs) ; bruit publié 54 à 64 dBA selon le modèle. Existe aussi en SUVTR30KH / SUVTR40KH. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SUVTP30KH",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUVTP30KH",
+      "reference": "APC Smart-UPS VT SUVTP30KH",
+      "range": "APC Smart-UPS VT (SUVT)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 30,
+        "kW": 24,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 523,
+        "d": 813,
+        "h": 823
+      },
+      "weightKg": 183,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 8,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 13",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie ± 192 V (2 × 16 blocs) ; bruit publié 54 à 64 dBA selon le modèle. Existe aussi en SUVTR30KH / SUVTR40KH. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    },
+    {
+      "id": "APC-SUVTP40KH",
+      "sample": false,
+      "brand": "APC",
+      "partNumber": "SUVTP40KH",
+      "reference": "APC Smart-UPS VT SUVTP40KH",
+      "range": "APC Smart-UPS VT (SUVT)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 40,
+        "kW": 32,
+        "pf": 0.8
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 523,
+        "d": 813,
+        "h": 823
+      },
+      "weightKg": 183,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": null,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 10,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 4
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": false,
+        "maxUnits": 1
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.se.com/africa/fr/brands/apc/",
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 13",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Batterie ± 192 V (2 × 16 blocs) ; bruit publié 54 à 64 dBA selon le modèle. Existe aussi en SUVTR30KH / SUVTR40KH. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": ["chargeCurrent"]
+    }
+  ],
+  "cabinets": [
+    {
+      "id": "APC-EBM-SURT48XLBP",
+      "sample": true,
+      "brand": "APC",
+      "partNumber": "SURT48XLBP",
+      "reference": "APC Smart-UPS RT 48 V Battery Pack",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 85,
+        "d": 483,
+        "h": 432
+      },
+      "emptyWeightKg": 8.9,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 8
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "APC-EBM-SURT192XLBP",
+      "sample": true,
+      "brand": "APC",
+      "partNumber": "SURT192XLBP",
+      "reference": "APC Smart-UPS RT 192 V Battery Pack",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 130,
+        "d": 660,
+        "h": 432
+      },
+      "emptyWeightKg": 27.3,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 16
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "APC",
+        "model": "Catalogue distributeur SabMatic — APC by Schneider Electric, p. 7",
+        "url": "https://www.se.com/africa/fr/brands/apc/",
+        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    }
+  ]
+}

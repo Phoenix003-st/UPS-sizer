@@ -90,6 +90,8 @@ export const projectSchema = z.object({
   choice: z.object({
     tier: tierSchema,
     overrides: z.record(z.string(), z.unknown()).default({}),
+    /** Marques retenues pour la sélection ; vide = toutes les marques du catalogue. */
+    brands: z.array(z.string()).default([]),
   }),
   layout: z.object({
     positions: z
@@ -196,7 +198,7 @@ export function createProject(
       ...preset,
     },
     installation: { generator: false, externalMaintenanceBypass: large, cableLengthsM: null },
-    choice: { tier: 'recommended', overrides: {} },
+    choice: { tier: 'recommended', overrides: {}, brands: [] },
     layout: { positions: {} },
     settingsOverrides: {},
   };
