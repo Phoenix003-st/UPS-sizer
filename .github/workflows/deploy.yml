@@ -1,5 +1,10 @@
 # Build, tests et déploiement sur GitHub Pages à chaque push sur main.
 # Les branches et pull requests sont seulement vérifiées (lint, types, tests, build).
+# Le site publie aussi les deux éditions de marque, construites depuis leur branche :
+#   /<dépôt>/infosec/      ← version-infosec
+#   /<dépôt>/concurrents/  ← version-infosec-concurrents
+# Après un push sur l'une de ces branches, relancer ce workflow sur main (Actions → Run workflow)
+# pour mettre le site à jour.
 name: CI et déploiement
 
 on:
@@ -38,6 +43,24 @@ jobs:
         run: npm run build:single
       - name: Joindre le fichier unique au site
         run: cp dist-single/index.html dist/ups-sizer.html
+      - name: Éditions de marque (InfoSec, InfoSec + concurrents)
+        env:
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          for edition in infosec:version-infosec concurrents:version-infosec-concurrents; do
+            dir=${edition%%:*}
+            branch=${edition#*:}
+            git fetch --depth 1 origin "$branch"
+            git worktree add "../$dir" FETCH_HEAD
+            (
+              cd "../$dir"
+              npm ci
+              BASE_PATH="/$REPO/$dir/" npm run build
+              npm run build:single
+              cp dist-single/index.html dist/ups-sizer.html
+            )
+            cp -r "../$dir/dist" "dist/$dir"
+          done
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:

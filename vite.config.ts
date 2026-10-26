@@ -53,6 +53,8 @@ export default defineConfig(({ mode }) => {
               globPatterns: ['**/*.{js,css,html,svg,png,ttf,woff2,json}'],
               maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
               navigateFallback: 'index.html',
+              // Les éditions de marque publiées dans des sous-dossiers ont leur propre index.html.
+              navigateFallbackDenylist: [/\/(infosec|concurrents)\//],
             },
           }),
     ],
