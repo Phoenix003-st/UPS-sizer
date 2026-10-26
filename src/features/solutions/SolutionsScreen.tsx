@@ -22,12 +22,14 @@ import { FlowNav } from '../../ui/FlowNav';
 import { formatNumber, formatPct } from '../../ui/format';
 import { UpsIllustration } from '../../ui/icons';
 import { MiniRoom } from '../layout-plan/MiniRoom';
+import { Room3D } from '../room-3d/Room3D';
 
 export function SolutionsScreen({ project }: { project: Project }) {
   const { t } = useTranslation();
   const result = useSizing(project);
   const update = useProjectStore((s) => s.update);
   const [calcFor, setCalcFor] = useState<SolutionOption | null>(null);
+  const [view3dFor, setView3dFor] = useState<SolutionOption | null>(null);
   if (!result) return null;
 
   return (
@@ -59,6 +61,7 @@ export function SolutionsScreen({ project }: { project: Project }) {
                   navigate('deliverables');
                 }}
                 onShowCalc={() => setCalcFor(o)}
+                onShow3d={() => setView3dFor(o)}
               />
             </li>
           ))}
@@ -66,6 +69,13 @@ export function SolutionsScreen({ project }: { project: Project }) {
       )}
       <Modal open={calcFor !== null} onClose={() => setCalcFor(null)} title={t('calcModal.title')}>
         {calcFor && <TraceList traces={calcFor.traces} />}
+      </Modal>
+      <Modal
+        open={view3dFor !== null}
+        onClose={() => setView3dFor(null)}
+        title={`${t('room3d.title')}${view3dFor ? ` — ${view3dFor.ups.reference}` : ''}`}
+      >
+        {view3dFor && <Room3D option={view3dFor} project={project} height="62vh" />}
       </Modal>
       <FlowNav back="room" />
     </>
@@ -77,11 +87,13 @@ function SolutionCard({
   chosen,
   onChoose,
   onShowCalc,
+  onShow3d,
 }: {
   option: SolutionOption;
   chosen: boolean;
   onChoose: () => void;
   onShowCalc: () => void;
+  onShow3d: () => void;
 }) {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
@@ -195,6 +207,9 @@ function SolutionCard({
           aria-pressed={chosen}
         >
           {chosen ? `✓ ${t('solutions.chosen')}` : t('solutions.choose')}
+        </Button>
+        <Button variant="ghost" onClick={onShow3d}>
+          {t('room3d.open')}
         </Button>
         <Button variant="ghost" onClick={onShowCalc}>
           {t('solutions.seeCalc')}

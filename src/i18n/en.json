@@ -231,7 +231,8 @@
       "singleLine": "Single-line diagram",
       "calcNote": "Calculation note",
       "bom": "Bill of materials",
-      "report": "PDF report"
+      "report": "PDF report",
+      "view3d": "3D view"
     },
     "print": "Print",
     "comingSoon": "Available in a later version.",
@@ -600,5 +601,41 @@
     "csv": "Download as CSV",
     "all": "Download everything",
     "project": "Project (.ups.json)"
+  },
+  "room3d": {
+    "title": "3D room view",
+    "toolbar": "3D view tools",
+    "views": {
+      "iso": "3D view",
+      "top": "Top",
+      "front": "Front"
+    },
+    "xray": "See inside",
+    "dims": "Dimensions",
+    "zones": "Clearances",
+    "capture": "PNG capture",
+    "fullscreen": "Full screen",
+    "exitFullscreen": "Exit full screen",
+    "help": "Drag: rotate · wheel or pinch: zoom · right-click or two fingers: pan · click: select equipment",
+    "noWebgl": "The 3D view is not available on this device (WebGL disabled). Use the 2D layout.",
+    "loading": "Loading the 3D view…",
+    "system": "system {{s}}",
+    "size": "W × D × H",
+    "modulesLabel": "Modules",
+    "modules": "{{installed}} / {{slots}} slots · {{kw}} kW",
+    "blocks": "{{count}} × {{ref}}",
+    "seeInside": "See inside",
+    "itemsList": "Equipment ({{count}})",
+    "roomSize": "Room: {{l}} × {{w}} × {{h}}",
+    "open": "View in 3D",
+    "kinds": {
+      "ups-cabinet": "UPS cabinet",
+      "modular-frame": "Modular frame",
+      "ups-tower": "Tower UPS",
+      "ups-rack": "Rack UPS",
+      "battery-cabinet": "Battery cabinet",
+      "ebm": "Battery pack"
+    },
+    "snapshot": "3D room view"
   }
 }

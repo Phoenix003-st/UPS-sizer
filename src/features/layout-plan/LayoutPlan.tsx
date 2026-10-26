@@ -392,6 +392,19 @@ export const PlanSvg = forwardRef<SVGSVGElement, PlanSvgProps>(function PlanSvg(
             >
               {label}
             </text>
+            {it.body.h > fs * 3.2 && (
+              <text
+                x={it.body.x + it.body.w / 2}
+                y={it.body.y + it.body.h / 2 + fs * 1.25}
+                fontSize={fs * 0.75}
+                fill="#dbe4ee"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                pointerEvents="none"
+              >
+                {it.w} × {it.d}
+              </text>
+            )}
           </g>
         );
       })}

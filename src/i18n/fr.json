@@ -231,7 +231,8 @@
       "singleLine": "Schéma unifilaire",
       "calcNote": "Note de calcul",
       "bom": "Nomenclature",
-      "report": "Rapport PDF"
+      "report": "Rapport PDF",
+      "view3d": "Vue 3D"
     },
     "print": "Imprimer",
     "comingSoon": "Disponible dans une prochaine version.",
@@ -600,5 +601,41 @@
     "csv": "Télécharger en CSV",
     "all": "Tout télécharger",
     "project": "Projet (.ups.json)"
+  },
+  "room3d": {
+    "title": "Vue 3D du local",
+    "toolbar": "Outils de la vue 3D",
+    "views": {
+      "iso": "Vue 3D",
+      "top": "Dessus",
+      "front": "Face"
+    },
+    "xray": "Voir l'intérieur",
+    "dims": "Cotes",
+    "zones": "Dégagements",
+    "capture": "Capture PNG",
+    "fullscreen": "Plein écran",
+    "exitFullscreen": "Quitter le plein écran",
+    "help": "Glisser : tourner · molette ou pincer : zoomer · clic droit ou deux doigts : déplacer · clic : sélectionner un équipement",
+    "noWebgl": "La vue 3D n'est pas disponible sur cet appareil (WebGL désactivé). Utilisez le plan 2D.",
+    "loading": "Chargement de la vue 3D…",
+    "system": "système {{s}}",
+    "size": "L × P × H",
+    "modulesLabel": "Modules",
+    "modules": "{{installed}} / {{slots}} emplacements · {{kw}} kW",
+    "blocks": "{{count}} × {{ref}}",
+    "seeInside": "Voir l'intérieur",
+    "itemsList": "Équipements ({{count}})",
+    "roomSize": "Local : {{l}} × {{w}} × {{h}}",
+    "open": "Voir en 3D",
+    "kinds": {
+      "ups-cabinet": "Armoire UPS",
+      "modular-frame": "Châssis modulaire",
+      "ups-tower": "UPS tour",
+      "ups-rack": "UPS rack",
+      "battery-cabinet": "Armoire batteries",
+      "ebm": "Module batteries"
+    },
+    "snapshot": "Vue 3D du local"
   }
 }
