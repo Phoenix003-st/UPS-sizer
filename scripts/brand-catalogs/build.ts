@@ -230,7 +230,7 @@ function buildBrand(data: BrandData) {
         );
         compatible.push(cabId);
       } else if (e.extendable) {
-        const cabId = `GEN-EBM-${bps * 12}V`;
+        const cabId = `${data.idPrefix}-EBM-GEN-${bps * 12}V`;
         const prev = cabinets.get(cabId);
         const cap = new Map((prev?.capacity ?? []).map((c) => [c.blockId, c.maxBlocks]));
         cap.set(internal.blockId, bps * 2);
@@ -239,7 +239,8 @@ function buildBrand(data: BrandData) {
           batteryCabinetSchema.parse({
             id: cabId,
             sample: true,
-            reference: `Module batteries externe ${bps * 12} V (générique, à confirmer)`,
+            brand: data.brand,
+            reference: `${data.brand} module batteries externe ${bps * 12} V (référence à préciser)`,
             kind: 'ebm',
             dimensionsMm: prev?.dimensionsMm ?? { w: e.dims[0], d: e.dims[1], h: e.dims[2] },
             emptyWeightKg: 5,

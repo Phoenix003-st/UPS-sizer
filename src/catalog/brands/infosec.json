@@ -3502,7 +3502,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 1.5,
-        "compatibleCabinetIds": ["GEN-EBM-24V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-24V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3597,7 +3597,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 1.5,
-        "compatibleCabinetIds": ["GEN-EBM-24V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-24V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3692,7 +3692,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["GEN-EBM-48V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-48V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3787,7 +3787,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["GEN-EBM-72V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-72V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3882,7 +3882,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["GEN-EBM-96V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-96V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3977,7 +3977,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["GEN-EBM-96V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-96V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4072,7 +4072,7 @@
           "strings": 3
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["GEN-EBM-96V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-96V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4167,7 +4167,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 1.5,
-        "compatibleCabinetIds": ["GEN-EBM-24V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-24V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4262,7 +4262,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["GEN-EBM-48V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-48V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4357,7 +4357,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["GEN-EBM-48V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-48V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4452,7 +4452,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["GEN-EBM-72V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-72V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4547,7 +4547,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["GEN-EBM-192V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4642,7 +4642,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["GEN-EBM-192V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4737,7 +4737,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["GEN-EBM-240V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-240V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4832,7 +4832,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["GEN-EBM-240V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-240V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -5877,7 +5877,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["GEN-EBM-48V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-48V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -5972,7 +5972,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["GEN-EBM-72V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-72V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -6067,7 +6067,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["GEN-EBM-192V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -6162,7 +6162,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["GEN-EBM-192V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -6257,7 +6257,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["GEN-EBM-240V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-240V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -6352,7 +6352,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["GEN-EBM-240V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-240V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -6447,7 +6447,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["GEN-EBM-240V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-240V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -6542,7 +6542,7 @@
           "strings": 1
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["GEN-EBM-240V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-240V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -6637,7 +6637,7 @@
           "strings": 2
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["GEN-EBM-240V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-240V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -9910,11 +9910,11 @@
       }
     },
     {
-      "id": "GEN-EBM-24V",
+      "id": "INF-EBM-GEN-24V",
       "sample": true,
-      "brand": "",
+      "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "Module batteries externe 24 V (générique, à confirmer)",
+      "reference": "INFOSEC module batteries externe 24 V (référence à préciser)",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
@@ -9942,11 +9942,11 @@
       "breakerA": 63
     },
     {
-      "id": "GEN-EBM-48V",
+      "id": "INF-EBM-GEN-48V",
       "sample": true,
-      "brand": "",
+      "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "Module batteries externe 48 V (générique, à confirmer)",
+      "reference": "INFOSEC module batteries externe 48 V (référence à préciser)",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
@@ -9974,11 +9974,11 @@
       "breakerA": 63
     },
     {
-      "id": "GEN-EBM-72V",
+      "id": "INF-EBM-GEN-72V",
       "sample": true,
-      "brand": "",
+      "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "Module batteries externe 72 V (générique, à confirmer)",
+      "reference": "INFOSEC module batteries externe 72 V (référence à préciser)",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
@@ -10002,11 +10002,11 @@
       "breakerA": 63
     },
     {
-      "id": "GEN-EBM-96V",
+      "id": "INF-EBM-GEN-96V",
       "sample": true,
-      "brand": "",
+      "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "Module batteries externe 96 V (générique, à confirmer)",
+      "reference": "INFOSEC module batteries externe 96 V (référence à préciser)",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
@@ -10038,11 +10038,11 @@
       "breakerA": 63
     },
     {
-      "id": "GEN-EBM-192V",
+      "id": "INF-EBM-GEN-192V",
       "sample": true,
-      "brand": "",
+      "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "Module batteries externe 192 V (générique, à confirmer)",
+      "reference": "INFOSEC module batteries externe 192 V (référence à préciser)",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
@@ -10070,11 +10070,11 @@
       "breakerA": 63
     },
     {
-      "id": "GEN-EBM-240V",
+      "id": "INF-EBM-GEN-240V",
       "sample": true,
-      "brand": "",
+      "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "Module batteries externe 240 V (générique, à confirmer)",
+      "reference": "INFOSEC module batteries externe 240 V (référence à préciser)",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
