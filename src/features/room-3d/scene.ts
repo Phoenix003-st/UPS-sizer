@@ -7,6 +7,7 @@
  * internes, organes de puissance) ; il se bascule sans reconstruire la scène (`setXray`).
  */
 import * as THREE from 'three';
+import { buildDecor, buildRack, FLOOR_STYLE, furnishMaterials } from './furnishScene';
 import type { Item3D, Room3D } from './model';
 
 export type WallSide = 'top' | 'bottom' | 'left' | 'right';
@@ -35,9 +36,6 @@ export interface BuiltScene {
 }
 
 const COLORS = {
-  floor: 0xdfe3e8,
-  grid: 0xb9c2cc,
-  wall: 0xf2f4f7,
   body: 0x2d333a,
   bodyBattery: 0x3a434d,
   door: 0x39414a,
@@ -55,7 +53,6 @@ const COLORS = {
   zone: 0x0f766e,
   doorLeaf: 0xb07a3c,
   dim: 0x1f4e79,
-  rackFrame: 0x23282e,
   highlight: 0xffb300,
 };
 
@@ -87,10 +84,16 @@ function box(
 export function buildScene(room: Room3D): BuiltScene {
   const disposables: { dispose: () => void }[] = [];
   const track = <T extends { dispose: () => void }>(o: T) => (disposables.push(o), o);
+  const floorStyle = FLOOR_STYLE[room.furnishing.floor];
   const M = {
-    floor: track(material(COLORS.floor, { roughness: 0.9, metalness: 0 })),
+    floor: track(material(floorStyle.color, { roughness: 0.9, metalness: 0 })),
     wall: track(
-      material(COLORS.wall, { roughness: 0.95, metalness: 0, transparent: true, opacity: 1 }),
+      material(room.furnishing.wallColor, {
+        roughness: 0.95,
+        metalness: 0,
+        transparent: true,
+        opacity: 1,
+      }),
     ),
     body: track(material(COLORS.body, { transparent: true })),
     bodyBattery: track(material(COLORS.bodyBattery, { transparent: true })),
@@ -112,7 +115,6 @@ export function buildScene(room: Room3D): BuiltScene {
     doorLeaf: track(
       material(COLORS.doorLeaf, { roughness: 0.7, metalness: 0, transparent: true, opacity: 0.55 }),
     ),
-    rack: track(material(COLORS.rackFrame, { metalness: 0.5 })),
     glass: track(
       material(0x9fb4c8, {
         transparent: true,
@@ -137,14 +139,14 @@ export function buildScene(room: Room3D): BuiltScene {
   const floor = box(L + 0.2, 0.02, W + 0.2, M.floor, L / 2, -0.02, W / 2);
   floor.castShadow = false;
   root.add(floor);
-  const step = Math.max(L, W) > 12 ? 1 : 0.5;
+  const step = Math.max(L, W) > 12 ? Math.max(1, floorStyle.step) : floorStyle.step;
   const pts: number[] = [];
   for (let x = 0; x <= L + 1e-6; x += step) pts.push(x, 0.002, 0, x, 0.002, W);
   for (let z = 0; z <= W + 1e-6; z += step) pts.push(0, 0.002, z, L, 0.002, z);
   const gridGeo = track(new THREE.BufferGeometry());
   gridGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
   const gridMat = track(
-    new THREE.LineBasicMaterial({ color: COLORS.grid, transparent: true, opacity: 0.6 }),
+    new THREE.LineBasicMaterial({ color: floorStyle.grid, transparent: true, opacity: 0.6 }),
   );
   root.add(new THREE.LineSegments(gridGeo, gridMat));
 
@@ -261,22 +263,13 @@ export function buildScene(room: Room3D): BuiltScene {
   }
   root.add(zones);
 
-  // ── Baie existante ──
-  if (room.rack) {
-    const r = room.rack;
-    const g = new THREE.Group();
-    g.position.set(r.x, 0, r.z);
-    g.rotation.y = r.rotY;
-    const post = 0.04;
-    for (const sx of [-1, 1])
-      for (const sz of [-1, 1])
-        g.add(box(post, r.h, post, M.rack, (sx * (r.w - post)) / 2, 0, (sz * (r.d - post)) / 2));
-    g.add(box(r.w, 0.06, r.d, M.rack, 0, r.h - 0.06, 0));
-    g.add(box(r.w, 0.08, r.d, M.rack, 0, 0, 0));
-    const glass = box(r.w - 0.02, r.h - 0.16, 0.01, M.glass, 0, 0.08, r.d / 2);
-    glass.castShadow = false;
-    g.add(glass);
-    root.add(g);
+  // ── Aménagement selon le type de local : baies existantes, mobilier, bâtiment ──
+  const FM = furnishMaterials(track);
+  for (const r of room.racks) root.add(buildRack(r, FM).group);
+  for (const dc of room.furnishing.decor) {
+    const built = buildDecor(dc, FM);
+    root.add(built.group);
+    for (const mesh of built.wallMeshes) walls.push({ mesh, side: dc.wall });
   }
 
   // ── Équipements ──
