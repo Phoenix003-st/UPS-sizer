@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "power": {
-    "growthMargin": 0.2,
+    "growthMargin": 0,
     "targetLoadRate": 0.8,
     "defaultPf": 1.0,
     "monoToTriThresholdKVA": 10,

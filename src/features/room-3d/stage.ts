@@ -30,13 +30,22 @@ export function addLights(scene: THREE.Scene, room: Room3D): void {
 
 /** Emprise des équipements (centre et taille), ou le local s'il est vide. */
 export function equipmentBounds(room: Room3D): { center: THREE.Vector3; size: number } {
-  if (room.items.length === 0)
+  // Les baies existantes font partie du cadrage (équipements montés dedans).
+  const solids = [
+    ...room.items.map((it) => ({ x: it.x, z: it.z, y: it.y, w: it.w, d: it.d, h: it.h })),
+    ...room.racks.map((r) => ({ x: r.x, z: r.z, y: 0, w: r.w, d: r.d, h: r.h })),
+    // Mobilier et équipements du bâtiment posés au sol : la vue montre l'aménagement du local.
+    ...room.furnishing.decor
+      .filter((d) => d.y === 0)
+      .map((d) => ({ x: d.x, z: d.z, y: 0, w: d.w, d: d.d, h: d.h })),
+  ];
+  if (solids.length === 0)
     return {
       center: new THREE.Vector3(room.length / 2, 0, room.width / 2),
       size: Math.max(room.length, room.width),
     };
   const box = new THREE.Box3();
-  for (const it of room.items) {
+  for (const it of solids) {
     const r = Math.max(it.w, it.d) / 2;
     box.expandByPoint(new THREE.Vector3(it.x - r, it.y, it.z - r));
     box.expandByPoint(new THREE.Vector3(it.x + r, it.y + it.h, it.z + r));

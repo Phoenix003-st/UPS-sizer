@@ -115,6 +115,7 @@ describe('runSizing — cas particuliers', () => {
 
   it('préférence lithium et repli VRLA avec alerte', () => {
     const li = project('server');
+    li.advanced.growthMargin = 0.2; // charge où une offre lithium existe
     li.advanced.batteryChemistry = 'LI';
     expect(run(li).options.every((o) => o.battery.chemistry === 'LI_LFP')).toBe(true);
     const small = project('office');

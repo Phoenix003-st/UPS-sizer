@@ -73,8 +73,8 @@ export default function Room3DViewer({ option, project, height = '60vh' }: Props
   const lang = i18n.language;
   const catalogs = useCatalogStore((s) => s.catalogs);
   const room = useMemo(
-    () => buildRoom3D(option, catalogs, project.room.kind),
-    [option, catalogs, project.room.kind],
+    () => buildRoom3D(option, catalogs, project.room),
+    [option, catalogs, project.room],
   );
   const wrapRef = useRef<HTMLDivElement>(null);
   const hostRef = useRef<HTMLDivElement>(null);
