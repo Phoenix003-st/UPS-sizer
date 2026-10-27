@@ -29,7 +29,8 @@ function diagramFor(
 
 describe('schéma unifilaire', () => {
   it('système simple : réseau, entrées redresseur et bypass, sortie, batterie, départs', () => {
-    const { o, d } = diagramFor('server');
+    // Marge de 20 % : UPS triphasé avec batteries externes (disjoncteur batterie Q4).
+    const { o, d } = diagramFor('server', (p) => void (p.advanced.growthMargin = 0.2));
     const breakers = d.elements.filter((e) => e.type === 'breaker');
     // Q1 redresseur, Q2 bypass, Q3 sortie, Q4 batterie, 4 départs (pas de bypass externe par défaut)
     expect(breakers).toHaveLength(4 + 4);

@@ -19,9 +19,17 @@ export const useSettingsStore = create<SettingsState>()(
     }),
     {
       name: 'ups-sizer:settings',
-      version: 1,
+      version: 2,
       storage: createJSONStorage(() => browserStorage),
       partialize: (s) => ({ settings: s.settings }),
+      // v1 → v2 : la marge d'extension par défaut passe de 20 % à 0 % ; une valeur restée à
+      // l'ancien défaut est ramenée au nouveau, une valeur choisie par l'utilisateur est gardée.
+      migrate: (persisted, version) => {
+        const st = persisted as { settings?: { power?: { growthMargin?: number } } } | undefined;
+        if (version < 2 && st?.settings?.power?.growthMargin === 0.2)
+          st.settings.power.growthMargin = defaultSettings().power.growthMargin;
+        return st as { settings: Settings };
+      },
       // Des paramètres enregistrés invalides (version antérieure…) sont remplacés par les défauts.
       merge: (persisted, current) => {
         const parsed = settingsSchema.safeParse(

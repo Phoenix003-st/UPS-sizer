@@ -19,7 +19,7 @@ import {
   Stat,
 } from '../../ui/components';
 import { FlowNav } from '../../ui/FlowNav';
-import { formatNumber } from '../../ui/format';
+import { formatNumber, formatPct } from '../../ui/format';
 
 const AUTONOMY_PRESETS = [10, 15, 30, 60];
 const LOG_MIN = Math.log10(0.1);
@@ -300,6 +300,9 @@ export function PowerScreen({ project }: { project: Project }) {
               <dl>
                 <Stat label={t('power.loadReal')}>
                   {formatNumber(result.inputs.loadW / 1000, lang, 2)} kW
+                </Stat>
+                <Stat label={t('power.growthMargin')}>
+                  {formatPct(result.inputs.growthMargin, lang)}
                 </Stat>
                 <Stat label={t('power.design')}>
                   {formatNumber(result.inputs.designW / 1000, lang, 2)} kW /{' '}

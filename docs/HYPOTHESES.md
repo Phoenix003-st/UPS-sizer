@@ -38,7 +38,7 @@
 
 ## 2. Puissance _(Paramètres)_
 
-- Marge d'extension 20 %, taux de charge cible 80 %, FP de sortie 1,0 par défaut (0,9 au choix).
+- Marge d'extension 0 % (à saisir selon le projet, 20 % usuel en extension prévue), taux de charge cible 80 %, FP de sortie 1,0 par défaut (0,9 au choix).
 - En mode rapide en kVA, la puissance active vaut kVA × FP de sortie. En mode assisté, la
   puissance apparente retenue est la plus forte entre P_req ÷ FP de sortie et Σ W ÷ FP de chaque
   équipement.
