@@ -17,6 +17,14 @@ export default defineConfig(({ mode }) => {
   const base = process.env.BASE_PATH ?? './';
   return {
     base,
+    define: {
+      // Version affichée en pied de page : date de construction et commit.
+      __APP_BUILD__: JSON.stringify(
+        `${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC${
+          process.env.GITHUB_SHA ? ` · ${process.env.GITHUB_SHA.slice(0, 7)}` : ''
+        }`,
+      ),
+    },
     plugins: [
       react(),
       tailwindcss(),
@@ -24,7 +32,9 @@ export default defineConfig(({ mode }) => {
         ? viteSingleFile({ removeViteModuleLoader: true })
         : VitePWA({
             registerType: 'autoUpdate',
-            injectRegister: 'script-defer',
+            // Enregistrement fait dans src/pwa.ts : la page se recharge dès qu'une nouvelle version
+            // est installée, au lieu de rester sur l'ancienne version en cache.
+            injectRegister: false,
             includeAssets: ['icons/apple-touch-icon.png'],
             manifest: {
               name: 'UPS Sizer — pré-dimensionnement d’onduleurs',
@@ -49,6 +59,10 @@ export default defineConfig(({ mode }) => {
               ],
             },
             workbox: {
+              // La nouvelle version prend la main tout de suite sur les pages ouvertes (sinon elle
+              // attend la fermeture de tous les onglets et l'ancienne version reste affichée).
+              skipWaiting: true,
+              clientsClaim: true,
               // Tout est mis en cache, police du PDF comprise : l'application fonctionne sans réseau.
               globPatterns: ['**/*.{js,css,html,svg,png,ttf,woff2,json}'],
               maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
