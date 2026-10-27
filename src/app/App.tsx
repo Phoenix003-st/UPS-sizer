@@ -211,6 +211,7 @@ export function App() {
         <div className="mx-auto max-w-6xl px-4 py-3 text-xs text-muted">
           <p className="font-semibold text-text">{t('app.disclaimer')}</p>
           <p>{t('app.localOnly')}</p>
+          <p>{t('app.version', { build: __APP_BUILD__ })}</p>
         </div>
       </footer>
     </div>

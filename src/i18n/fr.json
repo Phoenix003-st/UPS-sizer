@@ -4,6 +4,7 @@
     "tagline": "Pré-dimensionnement d'onduleurs d'intérieur",
     "disclaimer": "Pré-dimensionnement indicatif – à valider par un bureau d'études avant installation",
     "sample": "Données génériques – à confirmer",
+    "version": "Version du {{build}}",
     "skip": "Aller au contenu",
     "localOnly": "Vos projets restent dans ce navigateur. Rien n'est envoyé à un serveur.",
     "edition": "Édition InfoSec + concurrents"

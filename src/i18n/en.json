@@ -4,6 +4,7 @@
     "tagline": "Indoor UPS pre-sizing",
     "disclaimer": "Indicative pre-sizing – to be validated by a design office before installation",
     "sample": "Generic data – to be confirmed",
+    "version": "Version of {{build}}",
     "skip": "Skip to content",
     "localOnly": "Your projects stay in this browser. Nothing is sent to a server.",
     "edition": "InfoSec + competitors edition"
