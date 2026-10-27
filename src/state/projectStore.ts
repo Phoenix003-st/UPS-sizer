@@ -74,9 +74,19 @@ export const useProjectStore = create<ProjectState>()(
     }),
     {
       name: 'ups-sizer:projects',
-      version: 1,
+      version: 2,
       storage: createJSONStorage(() => browserStorage),
       partialize: (s) => ({ projects: s.projects, currentId: s.currentId }),
+      // v1 → v2 : la marge d'extension par défaut passe de 20 % à 0 %. Les projets enregistrés
+      // avec l'ancien défaut (20 %) sont ramenés à 0 % ; une autre valeur saisie est gardée.
+      migrate: (persisted, version) => {
+        const st = persisted as
+          { projects?: Record<string, { advanced?: { growthMargin?: number } }> } | undefined;
+        if (version < 2)
+          for (const p of Object.values(st?.projects ?? {}))
+            if (p.advanced?.growthMargin === 0.2) p.advanced.growthMargin = 0;
+        return st as Pick<ProjectState, 'projects' | 'currentId'>;
+      },
       merge: (persisted, current) => {
         const p = persisted as
           { projects?: Record<string, unknown>; currentId?: string | null } | undefined;
