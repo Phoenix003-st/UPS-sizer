@@ -9,7 +9,19 @@
  * tournée vers +Z à 0° et suit la rotation du plan.
  */
 import type { BatteryBlock, Catalogs, UpsModel } from '../../catalog/schemas';
-import type { RoomKind } from '../../engine/project';
+import type { Project, RoomKind } from '../../engine/project';
+import {
+  buildRackRow,
+  furnishRoom,
+  RACK_BASE,
+  RACK_U,
+  wallOfRotation,
+  type FloorRect,
+  type Furnishing,
+  type Rack3D,
+} from './furnish';
+
+export type { Decor3D, Rack3D, RackGear } from './furnish';
 import type { LayoutItem, LayoutResult, SolutionOption } from '../../engine/types';
 
 export type Item3DKind =
@@ -65,16 +77,6 @@ export interface Item3D {
   rackUnits?: number | null;
 }
 
-export interface Rack3D {
-  x: number;
-  z: number;
-  rotY: number;
-  w: number;
-  d: number;
-  h: number;
-  units: number;
-}
-
 export interface Zone3D {
   x: number;
   z: number;
@@ -90,8 +92,16 @@ export interface Room3D {
   door: { wall: LayoutResult['door']['wall']; offset: number; width: number; height: number };
   items: Item3D[];
   zones: Zone3D[];
+  kind: RoomKind;
+  /** Baie d'accueil des équipements rackables (baie existante), sinon null. */
   rack: Rack3D | null;
+  /** Rangée de baies existantes (type « Baie existante »). */
+  racks: Rack3D[];
+  furnishing: Furnishing;
 }
+
+/** Local tel que décrit dans le projet (seuls le type, le faux plancher et la clim servent). */
+export type RoomContext = RoomKind | Pick<Project['room'], 'kind' | 'raisedFloor' | 'hvac'>;
 
 const MM = 0.001;
 
@@ -180,8 +190,13 @@ function blockSize(b: BatteryBlock) {
 export function buildRoom3D(
   option: SolutionOption,
   catalogs: Catalogs,
-  roomKind: RoomKind,
+  context: RoomContext,
 ): Room3D {
+  const env =
+    typeof context === 'string'
+      ? { kind: context, raisedFloor: false, hvac: { present: context !== 'shared', kW: 0 } }
+      : context;
+  const roomKind = env.kind;
   const { layout, battery } = option;
   const model = catalogs.ups.models.find((m) => m.id === option.ups.modelId);
   const block = catalogs.batteries.blocks.find((b) => b.id === battery.blockId);
@@ -256,37 +271,7 @@ export function buildRoom3D(
     return item;
   });
 
-  // Baie existante : les équipements rackables sont empilés dans une baie 42U.
-  let rack: Rack3D | null = null;
-  if (roomKind === 'rack') {
-    const rackable = items.filter(
-      (i) => i.kind === 'ups-rack' || (i.kind === 'ebm' && i.h <= 0.15),
-    );
-    const first = rackable[0];
-    if (first) {
-      rack = { x: first.x, z: first.z, rotY: first.rotY, w: 0.6, d: 1.0, h: 2.0, units: 42 };
-      let y = 0.1;
-      for (const r of rackable) {
-        r.x = first.x;
-        r.z = first.z;
-        r.rotY = first.rotY;
-        r.y = y;
-        y += Math.max(r.h, (r.rackUnits ?? 2) * 0.04445);
-      }
-    }
-  }
-
-  const zones: Zone3D[] = layout.items.flatMap((it) =>
-    it.zones.map((z) => ({
-      x: (z.rect.x + z.rect.w / 2) * MM,
-      z: (z.rect.y + z.rect.h / 2) * MM,
-      w: z.rect.w * MM,
-      d: z.rect.h * MM,
-      itemId: it.id,
-    })),
-  );
-
-  return {
+  const frame = {
     length: layout.room.lengthMm * MM,
     width: layout.room.widthMm * MM,
     height: layout.room.heightMm * MM,
@@ -296,8 +281,105 @@ export function buildRoom3D(
       width: layout.door.widthMm * MM,
       height: layout.door.heightMm * MM,
     },
-    items,
-    zones: rack ? [] : zones,
-    rack,
   };
+  const rectOf = (r: { x: number; y: number; w: number; h: number }): FloorRect => ({
+    x: r.x * MM,
+    z: r.y * MM,
+    w: r.w * MM,
+    d: r.h * MM,
+  });
+
+  // Baie existante : les équipements rackables sont montés en bas d'une baie 42U de la rangée.
+  let racks: Rack3D[] = [];
+  const racked = new Set<string>();
+  if (roomKind === 'rack') {
+    const rackable = items.filter(
+      (i) => i.kind === 'ups-rack' || (i.kind === 'ebm' && i.h <= 0.15),
+    );
+    rackable.forEach((r) => racked.add(r.id));
+    const floorOccupied = layout.items
+      .filter((it) => !racked.has(it.id))
+      .flatMap((it) => [it.body, ...it.zones.map((z) => z.rect)].map(rectOf));
+    const first = rackable[0];
+    const row = buildRackRow(
+      frame,
+      rackable.map((r) => ({
+        id: r.id,
+        units: r.rackUnits ?? Math.max(1, Math.ceil(r.h / RACK_U - 0.05)),
+      })),
+      floorOccupied,
+      first ? { wall: wallOfRotation(first.rotY), x: first.x, z: first.z } : undefined,
+    );
+    racks = row.racks;
+    for (const r of rackable) {
+      const pos = row.positions.get(r.id);
+      const rk = pos ? racks[pos.rack] : undefined;
+      if (!pos || !rk) continue;
+      r.x = rk.x;
+      r.z = rk.z;
+      r.rotY = rk.rotY;
+      r.y = RACK_BASE + (pos.u - 1) * RACK_U;
+    }
+  }
+
+  const zones: Zone3D[] = layout.items
+    .filter((it) => !racked.has(it.id))
+    .flatMap((it) =>
+      it.zones.map((z) => ({
+        x: (z.rect.x + z.rect.w / 2) * MM,
+        z: (z.rect.y + z.rect.h / 2) * MM,
+        w: z.rect.w * MM,
+        d: z.rect.h * MM,
+        itemId: it.id,
+      })),
+    );
+
+  // Aménagement : tout ce qui est au sol (équipements, dégagements, baies) est évité.
+  const occupied: FloorRect[] = [
+    ...layout.items
+      .filter((it) => !racked.has(it.id))
+      .flatMap((it) => [it.body, ...it.zones.map((z) => z.rect)].map(rectOf)),
+    ...racks.flatMap((r) => rackFootprint(r)),
+  ];
+  const mainItem = items.find((i) => i.y === 0) ?? items[0];
+  const preferWall = racks[0]
+    ? wallOfRotation(racks[0].rotY)
+    : mainItem
+      ? wallOfRotation(mainItem.rotY)
+      : undefined;
+  const furnishing = furnishRoom(
+    frame,
+    roomKind,
+    { raisedFloor: env.raisedFloor, hvacKW: env.hvac.present ? env.hvac.kW : 0 },
+    occupied,
+    preferWall,
+  );
+
+  return {
+    ...frame,
+    items,
+    zones,
+    kind: roomKind,
+    rack: racks.find((r) => r.host) ?? null,
+    racks,
+    furnishing,
+  };
+}
+
+/** Emprise d'une baie et de son dégagement avant (1 m) et arrière (0,1 m d'écart au mur). */
+function rackFootprint(r: Rack3D): FloorRect[] {
+  const quarter = Math.abs(Math.sin(r.rotY)) > 0.5;
+  const w = quarter ? r.d : r.w;
+  const d = quarter ? r.w : r.d;
+  const body = { x: r.x - w / 2, z: r.z - d / 2, w, d };
+  // Le dégagement avant est du côté de la face avant (+Z local tourné de rotY).
+  const fx = Math.round(Math.sin(r.rotY));
+  const fz = Math.round(Math.cos(r.rotY));
+  const front = {
+    x: fx > 0 ? body.x + w : fx < 0 ? body.x - 1 : body.x,
+    z: fz > 0 ? body.z + d : fz < 0 ? body.z - 1 : body.z,
+    w: fx !== 0 ? 1 : w,
+    d: fz !== 0 ? 1 : d,
+  };
+  return [body, front];
 }
