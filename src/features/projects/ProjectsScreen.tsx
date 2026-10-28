@@ -14,7 +14,7 @@ import { ScenarioIcon } from '../../ui/icons';
 export function ProjectsScreen() {
   const { t, i18n } = useTranslation();
   const projects = useProjectStore((s) => s.projects);
-  const { open, remove, duplicate, importProject, update } = useProjectStore.getState();
+  const { open, remove, removeAll, duplicate, importProject, update } = useProjectStore.getState();
   const current = useCurrentProject();
   const [errors, setErrors] = useState<string[]>([]);
   const [message, setMessage] = useState<string | null>(null);
@@ -67,6 +67,19 @@ export function ProjectsScreen() {
           ＋ {t('nav.newProject')}
         </Button>
         <Button onClick={doImport}>{t('projects.import')}</Button>
+        {list.length > 0 && (
+          <Button
+            variant="danger"
+            onClick={() => {
+              if (!window.confirm(t('projects.confirmDeleteAll', { n: list.length }))) return;
+              removeAll();
+              setErrors([]);
+              setMessage(t('projects.deletedAll'));
+            }}
+          >
+            {t('projects.deleteAll')}
+          </Button>
+        )}
       </div>
       <div role="status" aria-live="polite">
         {message && <p className="mb-2 text-sm text-ok">{message}</p>}
