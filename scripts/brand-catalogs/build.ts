@@ -112,6 +112,9 @@ function bpsOptions(e: Entry): number[] {
   const va = e.kva * 1000;
   if (va <= 1000) return [1, 2, 3];
   if (va <= 3000) return [2, 3, 4, 6, 8];
+  // Double conversion au-delà de 3 kVA : bus continu d'au moins 192 V (16 blocs). À 96 V, un
+  // 10 kVA tirerait plus de 100 A de ses batteries.
+  if (e.tech === 'online_double_conversion') return [16, 20];
   return [8, 16, 20];
 }
 

@@ -508,9 +508,10 @@
     "ventilation_required": "تهوية غرفة البطاريات: {{flow}} m³/h (IEC 62485-2).",
     "external_battery_packs": "{{qty}} وحدة بطاريات خارجية بجانب UPS.",
     "lithium_unavailable": "لا توجد بطارية ليثيوم لهذا الطراز: نقترح بطاريات رصاص.",
-    "mono_above_threshold": "{{kva}} kVA أحادي الطور: فوق {{threshold}} kVA يُنصح بثلاثي الأطوار.",
+    "mono_above_threshold": "مطلوب UPS بقدرة {{kva}} kVA ‏({{design}} kVA ÷ أقصى نسبة حمل {{rate}} %): فوق {{threshold}} kVA يُنصح بثلاثي الأطوار.",
     "phase_auto_three": "لا يوجد UPS أحادي الطور يناسب هذه الاختيارات: تم اعتماد التغذية ثلاثية الأطوار.",
-    "phase_auto_three_mono": "لا يوجد UPS أحادي الطور يناسب هذه الاختيارات: تم اعتماد UPS ثلاثي/أحادي (دخل ثلاثي، خرج أحادي)."
+    "phase_auto_three_mono": "لا يوجد UPS أحادي الطور يناسب هذه الاختيارات: تم اعتماد UPS ثلاثي/أحادي (دخل ثلاثي، خرج أحادي).",
+    "load_rate_above_target": "نسبة الحمل {{rate}} %، أعلى من الحد المختار ({{target}} %): وحدة واحدة بدلاً من عدة وحدات على التوازي."
   },
   "calc": {
     "load": {
