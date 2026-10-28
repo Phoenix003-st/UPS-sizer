@@ -151,6 +151,7 @@ describe('candidats', () => {
 describe('choix des trois options', () => {
   const item = (o: Partial<ScoredInput>): ScoredInput => ({
     key: 'k',
+    group: o.key ?? 'k',
     installedVA: 100000,
     priceIndex: 100,
     efficiency: 0.95,

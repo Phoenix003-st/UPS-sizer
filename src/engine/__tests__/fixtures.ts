@@ -131,6 +131,8 @@ export function inputs(over: Partial<NormalizedInputs> = {}): NormalizedInputs {
     outputPf: 1,
     targetLoadRate: 0.8,
     phases: 3,
+    inputPhases: 3,
+    formFactor: 'auto',
     voltageV: 400,
     freqHz: 50,
     redundancy: 'N',

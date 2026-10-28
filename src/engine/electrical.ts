@@ -15,6 +15,7 @@ import type { Settings } from '../settings/schema';
 import { interpLinear, nextInSeries, SQRT3 } from './math';
 import { fmt, trace, type Calc, type TraceBuilder } from './trace';
 import type { Project } from './project';
+import { systemVoltage } from './phases';
 import { efficiencyAt } from './selection';
 import type {
   BatterySolution,
@@ -222,6 +223,10 @@ export function computeElectrical(i: ElectricalInput): Calc<ElectricalResult> {
   const ph = inputs.phases;
   const lengths = installation.cableLengthsM ?? settings.electrical.defaultCableLengthsM;
   const acKind: CircuitKind = ph === 3 ? 'ac3' : 'ac1';
+  // Côté réseau (redresseur), les phases d'entrée de l'UPS : triphasé pour un tri/mono.
+  const phIn = model.phases.in;
+  const Uin = phIn === ph ? U : systemVoltage(phIn, U);
+  const inKind: CircuitKind = phIn === 3 ? 'ac3' : 'ac1';
   const t = trace('calc.elec.title');
 
   const rating = unitRating(model, config);
@@ -229,7 +234,7 @@ export function computeElectrical(i: ElectricalInput): Calc<ElectricalResult> {
   const unitOutputA = currentFromVA(rating.va, U, ph);
   const pCharge = model.battery.maxChargeCurrentA * chargeVoltage(battery, settings);
   const pfIn = settings.electrical.inputPf;
-  const unitRectifierA = (rating.w / etaFull + pCharge) / ((ph === 3 ? SQRT3 : 1) * U * pfIn);
+  const unitRectifierA = (rating.w / etaFull + pCharge) / ((phIn === 3 ? SQRT3 : 1) * Uin * pfIn);
   const unitsPerSet = battery.setDetails[0]?.unitsCovered ?? 1;
   const unitBatteryA =
     (unitsPerSet * rating.w) / model.efficiency.battery / (battery.cellsPerString * battery.eodVpc);
@@ -249,10 +254,10 @@ export function computeElectrical(i: ElectricalInput): Calc<ElectricalResult> {
     .step({
       label: 'calc.elec.rectifier',
       formula:
-        ph === 3
+        phIn === 3
           ? 'I = (P ÷ η + P_recharge) ÷ (√3 × U × FP_e)'
           : 'I = (P ÷ η + P_recharge) ÷ (U × FP_e)',
-      substituted: `(${fmt(rating.w, 0)} ÷ ${fmt(etaFull, 3)} + ${fmt(pCharge, 0)}) ÷ (${ph === 3 ? '√3 × ' : ''}${U} × ${fmt(pfIn)})`,
+      substituted: `(${fmt(rating.w, 0)} ÷ ${fmt(etaFull, 3)} + ${fmt(pCharge, 0)}) ÷ (${phIn === 3 ? '√3 × ' : ''}${Uin} × ${fmt(pfIn)})`,
       result: Number(unitRectifierA.toFixed(1)),
       unit: 'A',
     })
@@ -296,7 +301,7 @@ export function computeElectrical(i: ElectricalInput): Calc<ElectricalResult> {
       system,
       currentA: ib,
       breakerA: r.value.breakerA,
-      poles: kind === 'dc' ? 2 : ph === 3 ? 4 : 2,
+      poles: kind === 'ac3' ? 4 : 2,
       dc: kind === 'dc',
       lengthM,
       cable: r.value.cable,
@@ -304,7 +309,7 @@ export function computeElectrical(i: ElectricalInput): Calc<ElectricalResult> {
     });
   };
   for (const s of systems) {
-    add('rectifier', s, unitRectifierA, acKind, lengths.input, U, pfIn, config.unitsPerSystem);
+    add('rectifier', s, unitRectifierA, inKind, lengths.input, Uin, pfIn, config.unitsPerSystem);
     add(
       'bypass',
       s,
@@ -336,9 +341,9 @@ export function computeElectrical(i: ElectricalInput): Calc<ElectricalResult> {
         'ats',
         s,
         Math.max(config.unitsPerSystem * unitRectifierA, systemOutputA),
-        acKind,
+        inKind,
         lengths.input,
-        U,
+        Uin,
         pfIn,
         1,
       );
