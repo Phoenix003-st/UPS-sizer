@@ -21,6 +21,7 @@ import {
 import { FlowNav } from '../../ui/FlowNav';
 import { formatNumber, formatPct } from '../../ui/format';
 import { FormFactorChoiceField, PhaseChoiceField } from '../solutions/SelectionChoices';
+import { splitCategories } from './sectorCategories';
 
 const AUTONOMY_PRESETS = [10, 15, 30, 60];
 const LOG_MIN = Math.log10(0.1);
@@ -46,8 +47,42 @@ export function PowerScreen({ project }: { project: Project }) {
     const it = library.find((l) => l.id === id);
     return it ? (it.label[lang as 'fr' | 'en' | 'ar'] ?? it.label.fr) : id;
   };
-  const categories = [...new Set(library.map((l) => l.category))] as EquipmentCategory[];
+  const { main, others } = splitCategories(project.scenario, [
+    ...new Set(library.map((l) => l.category)),
+  ] as EquipmentCategory[]);
   const totalW = load.items.reduce((s, i) => s + i.qty * i.unitW, 0);
+  const renderCategory = (cat: EquipmentCategory) => (
+    <div key={cat}>
+      <h3 className="mb-1 text-sm font-semibold text-muted">
+        {t(`power.library.category.${cat}`)}
+      </h3>
+      <div className="flex flex-wrap gap-2">
+        {library
+          .filter((l) => l.category === cat)
+          .map((l) => (
+            <Button
+              key={l.id}
+              onClick={() =>
+                update((d) => {
+                  const existing = d.load.items.find((i) => i.libId === l.id);
+                  if (existing) existing.qty += 1;
+                  else
+                    d.load.items.push({
+                      libId: l.id,
+                      qty: 1,
+                      unitW: l.defaultW,
+                      pf: l.pf,
+                    });
+                })
+              }
+            >
+              ＋ {label(l.id)}{' '}
+              <span className="text-xs text-muted">{formatNumber(l.defaultW, lang)} W</span>
+            </Button>
+          ))}
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -139,40 +174,12 @@ export function PowerScreen({ project }: { project: Project }) {
                 <p className="text-sm font-semibold">
                   {t('power.library.total')} : {formatNumber(totalW / 1000, lang, 3)} kW
                 </p>
-                {categories.map((cat) => (
-                  <div key={cat}>
-                    <h3 className="mb-1 text-sm font-semibold text-muted">
-                      {t(`power.library.category.${cat}`)}
-                    </h3>
-                    <div className="flex flex-wrap gap-2">
-                      {library
-                        .filter((l) => l.category === cat)
-                        .map((l) => (
-                          <Button
-                            key={l.id}
-                            onClick={() =>
-                              update((d) => {
-                                const existing = d.load.items.find((i) => i.libId === l.id);
-                                if (existing) existing.qty += 1;
-                                else
-                                  d.load.items.push({
-                                    libId: l.id,
-                                    qty: 1,
-                                    unitW: l.defaultW,
-                                    pf: l.pf,
-                                  });
-                              })
-                            }
-                          >
-                            ＋ {label(l.id)}{' '}
-                            <span className="text-xs text-muted">
-                              {formatNumber(l.defaultW, lang)} W
-                            </span>
-                          </Button>
-                        ))}
-                    </div>
-                  </div>
-                ))}
+                {main.map(renderCategory)}
+                {others.length > 0 && (
+                  <Collapsible title={t('power.library.others')}>
+                    <div className="space-y-4">{others.map(renderCategory)}</div>
+                  </Collapsible>
+                )}
               </div>
             )}
           </Card>

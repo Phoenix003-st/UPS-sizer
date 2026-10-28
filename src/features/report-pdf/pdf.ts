@@ -351,7 +351,10 @@ export async function buildReportPdf(ctx: ReportContext): Promise<Blob> {
       import('../room-3d/model'),
       import('../room-3d/snapshot'),
     ]);
-    const room3d = buildRoom3D(option, ctx.catalogs, project.room);
+    const room3d = buildRoom3D(option, ctx.catalogs, {
+      ...project.room,
+      sector: project.scenario,
+    });
     const outside = render3DSnapshot(room3d, { xray: false });
     const inside = outside ? render3DSnapshot(room3d, { xray: true }) : null;
     if (outside && inside) {

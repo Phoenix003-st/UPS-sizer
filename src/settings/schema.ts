@@ -19,6 +19,10 @@ export const scenarioIdSchema = z.enum([
   'datacenter',
   'airport',
   'building',
+  'medical',
+  'industrial',
+  'enterprise',
+  'elevator',
   'custom',
 ]);
 export type ScenarioId = z.infer<typeof scenarioIdSchema>;
@@ -102,6 +106,10 @@ export const settingsSchema = z.object({
     datacenter: scenarioSchema,
     airport: scenarioSchema,
     building: scenarioSchema,
+    medical: scenarioSchema,
+    industrial: scenarioSchema,
+    enterprise: scenarioSchema,
+    elevator: scenarioSchema,
     custom: scenarioSchema,
   }),
 });

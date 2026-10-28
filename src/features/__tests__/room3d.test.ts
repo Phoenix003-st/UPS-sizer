@@ -12,7 +12,10 @@ function room3d(scenario: ScenarioId, tweak?: (p: ReturnType<typeof createProjec
   const p = createProject(scenario, DEFAULT_SETTINGS, { id: 't', now: '2026-01-01' });
   tweak?.(p);
   const option = runSizing(p, DEFAULT_CATALOGS, DEFAULT_SETTINGS).options[0]!;
-  return { option, room: buildRoom3D(option, DEFAULT_CATALOGS, p.room) };
+  return {
+    option,
+    room: buildRoom3D(option, DEFAULT_CATALOGS, { ...p.room, sector: p.scenario }),
+  };
 }
 
 describe('modèle 3D', () => {
@@ -114,7 +117,16 @@ describe('aménagement selon le type de local', () => {
         kind === 'rack'
           ? (['server', 'office'] as const)
           : (['server', 'office', 'datacenter'] as const);
-      for (const scenario of scenarios) {
+      for (const scenario of [
+        ...scenarios,
+        'airport',
+        'medical',
+        'industrial',
+        'enterprise',
+        'elevator',
+      ] as const) {
+        // En baie existante, seul le réseau d'entreprise (petite puissance) a une solution rackable.
+        if (kind === 'rack' && !['server', 'office', 'enterprise'].includes(scenario)) continue;
         const { option, room } = room3d(scenario, (p) => void (p.room.kind = kind));
         const mm = (r: { x: number; y: number; w: number; h: number }) => ({
           x: r.x / 1000,
@@ -166,6 +178,35 @@ describe('aménagement selon le type de local', () => {
     expect(room3d('datacenter').room.furnishing.decor.some((d) => d.kind === 'crac')).toBe(true);
     expect(room3d('datacenter').room.furnishing.floor).toBe('raised');
     expect(room3d('server').room.racks).toEqual([]);
+  });
+
+  it('chaque secteur a son aménagement propre', () => {
+    const decor = (sc: ScenarioId) => new Set(room3d(sc).room.furnishing.decor.map((d) => d.kind));
+    for (const k of ['badge-reader', 'access-panel', 'fids-screen', 'security-camera'])
+      expect(decor('airport').has(k as never), k).toBe(true);
+    for (const k of ['medical-panel', 'medical-cart', 'sign'])
+      expect(decor('medical').has(k as never), k).toBe(true);
+    for (const k of ['plc-cabinet', 'floor-marking'])
+      expect(decor('industrial').has(k as never), k).toBe(true);
+    for (const k of ['open-rack', 'network-cabinet', 'wifi-ap'])
+      expect(decor('enterprise').has(k as never), k).toBe(true);
+    for (const k of ['lift-machine', 'lift-controller', 'hoist-beam'])
+      expect(decor('elevator').has(k as never), k).toBe(true);
+    expect(decor('server').has('badge-reader')).toBe(false);
+    expect(room3d('medical').room.furnishing.floor).toBe('vinyl');
+    expect(room3d('industrial').room.furnishing.floor).toBe('industrial');
+    // Le lecteur de badge est à côté de la porte, pas dessus.
+    const { room } = room3d('airport');
+    const reader = room.furnishing.decor.find((d) => d.kind === 'badge-reader')!;
+    expect(reader.wall).toBe(room.door.wall);
+    const door = doorSwingRect(room);
+    const along = reader.wall === 'top' || reader.wall === 'bottom' ? reader.x : reader.z;
+    const [d0, d1] =
+      reader.wall === 'top' || reader.wall === 'bottom'
+        ? [door.x, door.x + door.w]
+        : [door.z, door.z + door.d];
+    expect(along < d0 || along > d1).toBe(true);
+    expect(Math.min(Math.abs(along - d0), Math.abs(along - d1))).toBeLessThan(0.5);
   });
 
   it('contenu type d’une baie : brassage en haut, rien sous l’unité demandée', () => {

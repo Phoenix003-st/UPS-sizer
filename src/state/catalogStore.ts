@@ -1,7 +1,7 @@
 /** Catalogues (UPS, batteries, équipements), modifiables et sauvegardés dans le navigateur. */
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
-import { defaultCatalogs } from '../catalog';
+import { DEFAULT_CATALOGS, defaultCatalogs } from '../catalog';
 import { EDITION } from '../catalog/edition';
 import {
   batteryCatalogSchema,
@@ -34,9 +34,25 @@ export const useCatalogStore = create<CatalogState>()(
     }),
     {
       name: `ups-sizer:catalogs:${EDITION.id}`,
-      version: 1,
+      version: 2,
       storage: createJSONStorage(() => browserStorage),
       partialize: (s) => ({ catalogs: s.catalogs }),
+      // v1 → v2 : nouveaux secteurs. Les équipements livrés absents de la bibliothèque enregistrée
+      // y sont ajoutés, et le contrôleur d'accès passe dans la famille « Contrôle d'accès ».
+      migrate: (persisted, version) => {
+        const st = persisted as { catalogs?: { equipment?: unknown } } | undefined;
+        const saved = st?.catalogs?.equipment;
+        if (version < 2 && Array.isArray(saved)) {
+          const items = saved as { id?: unknown; category?: unknown }[];
+          for (const it of items)
+            if (it.id === 'access-control' && it.category === 'building') it.category = 'access';
+          const ids = new Set(items.map((it) => it.id));
+          items.push(
+            ...DEFAULT_CATALOGS.equipment.filter((e) => !ids.has(e.id)).map((e) => ({ ...e })),
+          );
+        }
+        return st as { catalogs: Catalogs };
+      },
       merge: (persisted, current) => {
         const c = (persisted as { catalogs?: Partial<Record<keyof Catalogs, unknown>> } | undefined)
           ?.catalogs;

@@ -9,10 +9,16 @@
  * - Baie existante : rangée de baies 42U déjà équipées (brassage, commutateurs, serveurs,
  *   stockage) ; les équipements rackables du projet sont montés en bas de la baie d'accueil.
  *
+ * Selon le secteur (aéroport, médical, industriel, réseau d'entreprise, ascenseur), des éléments
+ * propres au milieu s'ajoutent : contrôle d'accès et affichage des vols, tableau IT médical et
+ * chariot de soins, armoires d'automates et marquage au sol, baie de brassage ouverte et borne
+ * Wi-Fi, machine de traction et armoire de manœuvre d'ascenseur.
+ *
  * Tout est placé le long des murs, hors de l'emprise des équipements, de leurs dégagements et du
  * débattement de la porte. Un élément qui ne trouve pas de place n'est pas dessiné.
  */
 import type { RoomKind } from '../../engine/project';
+import type { ScenarioId } from '../../settings/schema';
 
 export type WallSide = 'top' | 'bottom' | 'left' | 'right';
 
@@ -34,7 +40,25 @@ export type DecorKind =
   | 'shelving'
   | 'network-cabinet'
   | 'window'
-  | 'plant';
+  | 'plant'
+  // Éléments propres au secteur.
+  | 'access-panel'
+  | 'badge-reader'
+  | 'security-camera'
+  | 'fids-screen'
+  | 'medical-panel'
+  | 'medical-cart'
+  | 'plc-cabinet'
+  | 'floor-marking'
+  | 'open-rack'
+  | 'wifi-ap'
+  | 'lift-machine'
+  | 'lift-controller'
+  | 'hoist-beam'
+  | 'sign';
+
+/** Pictogramme d'une plaque murale. */
+export type SignKind = 'medical' | 'danger' | 'lift';
 
 export interface Decor3D {
   kind: DecorKind;
@@ -50,6 +74,8 @@ export interface Decor3D {
   h: number;
   /** Mur porteur : l'élément suit la coupe de ce mur. */
   wall: WallSide;
+  /** Pictogramme (plaque murale). */
+  sign?: SignKind;
 }
 
 export type RackGearType =
@@ -77,7 +103,7 @@ export interface Rack3D {
   sides: { left: boolean; right: boolean };
 }
 
-export type FloorFinish = 'epoxy' | 'raised' | 'concrete' | 'carpet';
+export type FloorFinish = 'epoxy' | 'raised' | 'concrete' | 'carpet' | 'vinyl' | 'industrial';
 
 export interface Furnishing {
   floor: FloorFinish;
@@ -393,7 +419,7 @@ export function buildRackRow(
 export function furnishRoom(
   room: RoomFrame,
   kind: RoomKind,
-  env: { raisedFloor: boolean; hvacKW: number | null },
+  env: { raisedFloor: boolean; hvacKW: number | null; sector?: ScenarioId },
   occupied: FloorRect[],
   preferWall?: WallSide,
 ): Furnishing {
@@ -407,6 +433,13 @@ export function furnishRoom(
   // Éléments muraux en hauteur (split, coffret, fenêtre) : ne se chevauchent pas entre eux.
   const high: FloorRect[] = [];
   const doorStrip = doorSwingRect(room);
+  // Porte et son chambranle (0,15 m de part et d'autre) : rien n'est fixé au mur dessus.
+  const doorFrame = {
+    x: doorStrip.x - 0.15,
+    z: doorStrip.z - 0.15,
+    w: doorStrip.w + 0.3,
+    d: doorStrip.d + 0.3,
+  };
 
   const place = (
     k: DecorKind,
@@ -448,11 +481,12 @@ export function furnishRoom(
     y: number,
     walls: WallSide[],
     blockers: FloorRect[] = [],
+    near?: { x: number; z: number },
   ): Decor3D | null => {
     const s = findWallSpot(
       room,
-      { len: size.w, depth: Math.max(size.d, 0.3), clear: 0, walls, margin: 0.3 },
-      [...high, ...blockers, doorStrip],
+      { len: size.w, depth: Math.max(size.d, 0.3), clear: 0, walls, margin: 0.3, near },
+      [...high, ...blockers, doorFrame],
     );
     if (!s) return null;
     high.push(s.body);
@@ -470,9 +504,71 @@ export function furnishRoom(
     return d;
   };
 
-  const nearDoor = { x: doorStrip.x + doorStrip.w / 2, z: doorStrip.z + doorStrip.d / 2 };
   const hvac = env.hvacKW ?? 0;
   const technical = kind === 'dedicated' || kind === 'rack';
+
+  const nearDoor = { x: doorStrip.x + doorStrip.w / 2, z: doorStrip.z + doorStrip.d / 2 };
+  // Éléments propres au secteur, placés avant le mobilier générique (prioritaires sur la place).
+  const sector = env.sector;
+  const sign = (s: SignKind, blockers: FloorRect[]) => {
+    const d = placeHigh('sign', { w: 0.3, d: 0.02, h: 0.3 }, 1.75, order, blockers);
+    if (d) d.sign = s;
+  };
+  if (sector === 'airport') {
+    // Contrôle d'accès : lecteur de badge à côté de la porte, centrale murale, caméra en hauteur,
+    // écran d'affichage des vols (supervision des écrans du terminal).
+    placeHigh('badge-reader', { w: 0.09, d: 0.04, h: 0.14 }, 1.05, [room.door.wall], [], nearDoor);
+    placeHigh('access-panel', { w: 0.45, d: 0.15, h: 0.55 }, 1.3, order, taken);
+    placeHigh('fids-screen', { w: 1.1, d: 0.08, h: 0.65 }, 1.55, order, taken);
+    placeHigh('security-camera', { w: 0.25, d: 0.3, h: 0.25 }, H - 0.45, order);
+  } else if (sector === 'medical') {
+    // Tableau IT médical (transformateur d'isolement, contrôleur d'isolement) et chariot de soins.
+    place('medical-panel', { w: 0.8, d: 0.45, h: 1.9 }, { clear: 0.8 });
+    place('medical-cart', { w: 0.6, d: 0.5, h: 1.35 }, { clear: 0 });
+    sign('medical', taken);
+  } else if (sector === 'industrial') {
+    // Armoires d'automates (RAL 7035) avec pupitre IHM en façade, marquage de sécurité au sol.
+    for (let i = 0; i < 2; i++) place('plc-cabinet', { w: 0.8, d: 0.4, h: 1.8 }, { clear: 0.8 });
+    decor.push({
+      kind: 'floor-marking',
+      x: room.length / 2,
+      z: room.width / 2,
+      y: 0.001,
+      rotY: 0,
+      w: room.length,
+      d: room.width,
+      h: 0.002,
+      wall: 'top',
+    });
+    sign('danger', taken);
+  } else if (sector === 'enterprise') {
+    // Local de brassage : baie ouverte 2 montants (brassage, commutateurs), coffret mural, Wi-Fi.
+    place('open-rack', { w: 0.55, d: 0.6, h: 2.0 }, { clear: 0.8 });
+    if (kind !== 'shared')
+      placeHigh('network-cabinet', { w: 0.6, d: 0.45, h: 0.64 }, 1.25, order, taken);
+    placeHigh('wifi-ap', { w: 0.22, d: 0.05, h: 0.22 }, H - 0.4, order);
+  } else if (sector === 'elevator') {
+    // Local de machinerie : machine de traction (moteur, poulie, câbles vers la gaine), armoire de
+    // manœuvre et poutre de levage au-dessus de la machine.
+    // Au fond du local, à l'opposé de la porte (au-dessus de la gaine), même à côté des UPS.
+    const far = doorStrip.z > room.width / 2 ? 0 : room.width;
+    const machine = place(
+      'lift-machine',
+      { w: 1.2, d: 0.8, h: H },
+      { clear: 0.6, near: { x: room.length - 1, z: far }, walls: wallOrder(room) },
+    );
+    place('lift-controller', { w: 0.8, d: 0.4, h: 1.9 }, { clear: 0.8 });
+    if (machine)
+      decor.push({
+        ...machine,
+        kind: 'hoist-beam',
+        y: H - 0.25,
+        w: Math.min(2.4, wallLength(room, machine.wall) - 0.2),
+        d: 0.12,
+        h: 0.2,
+      });
+    sign('lift', taken);
+  }
 
   if (technical) {
     // Climatisation : armoire de précision au-delà de ~15 kW froid, sinon split mural.
@@ -516,7 +612,7 @@ export function furnishRoom(
     if (hvac > 0) placeHigh('split-ac', { w: 0.85, d: 0.22, h: 0.3 }, H - 0.45, order);
   }
 
-  const floor: FloorFinish =
+  let floor: FloorFinish =
     kind === 'office'
       ? 'carpet'
       : kind === 'shared'
@@ -524,6 +620,12 @@ export function furnishRoom(
         : env.raisedFloor
           ? 'raised'
           : 'epoxy';
-  const wallColor = kind === 'office' ? 0xf4f1ea : kind === 'shared' ? 0xe4e4e0 : 0xf2f4f7;
+  let wallColor = kind === 'office' ? 0xf4f1ea : kind === 'shared' ? 0xe4e4e0 : 0xf2f4f7;
+  // Revêtements du secteur (sauf bureau et faux plancher, qui gardent le leur).
+  if (kind !== 'office' && floor !== 'raised') {
+    if (sector === 'medical') [floor, wallColor] = ['vinyl', 0xeef6f3];
+    else if (sector === 'industrial') [floor, wallColor] = ['industrial', 0xe3e5e7];
+    else if (sector === 'elevator') [floor, wallColor] = ['concrete', 0xe7e6e2];
+  }
   return { floor, wallColor, decor };
 }
