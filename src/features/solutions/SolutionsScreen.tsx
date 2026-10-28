@@ -1,4 +1,7 @@
-/** Étape 4 — Jusqu'à trois options côte à côte ; la Recommandée est mise en avant. */
+/**
+ * Étape 4 — Jusqu'à trois options côte à côte (la Recommandée est mise en avant), puis toutes les
+ * autres configurations qui respectent les choix d'alimentation et de format.
+ */
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { navigate } from '../../app/router';
@@ -21,8 +24,10 @@ import {
 import { FlowNav } from '../../ui/FlowNav';
 import { formatNumber, formatPct } from '../../ui/format';
 import { UpsIllustration } from '../../ui/icons';
+import { selectedOption } from '../deliverables/selectedOption';
 import { MiniRoom } from '../layout-plan/MiniRoom';
 import { Room3D } from '../room-3d/Room3D';
+import { FormFactorChoiceField, PhaseChoiceField } from './SelectionChoices';
 
 export function SolutionsScreen({ project }: { project: Project }) {
   const { t } = useTranslation();
@@ -30,11 +35,32 @@ export function SolutionsScreen({ project }: { project: Project }) {
   const update = useProjectStore((s) => s.update);
   const [calcFor, setCalcFor] = useState<SolutionOption | null>(null);
   const [view3dFor, setView3dFor] = useState<SolutionOption | null>(null);
+  const [detailsFor, setDetailsFor] = useState<SolutionOption | null>(null);
   if (!result) return null;
+  const chosen = selectedOption(project, result);
+  const choose = (o: SolutionOption) => {
+    update((d) => {
+      if (chosen?.key !== o.key) d.layout.positions = {};
+      if (o.tier === 'alternative') {
+        d.choice.key = o.key;
+      } else {
+        d.choice.tier = o.tier;
+        d.choice.key = null;
+      }
+    });
+    navigate('deliverables');
+  };
 
   return (
     <>
       <PageTitle title={t('solutions.title')} subtitle={t('solutions.subtitle')} />
+      <Card className="mb-4">
+        <h2 className="sr-only">{t('solutions.yourChoices')}</h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          <PhaseChoiceField project={project} />
+          <FormFactorChoiceField project={project} />
+        </div>
+      </Card>
       {result.globalAlerts.length > 0 && (
         <div className="mb-4">
           <AlertList alerts={result.globalAlerts} />
@@ -52,14 +78,8 @@ export function SolutionsScreen({ project }: { project: Project }) {
             <li key={o.tier} className={o.tier === 'recommended' ? 'lg:-mt-2' : ''}>
               <SolutionCard
                 option={o}
-                chosen={project.choice.tier === o.tier}
-                onChoose={() => {
-                  update((d) => {
-                    if (d.choice.tier !== o.tier) d.layout.positions = {};
-                    d.choice.tier = o.tier;
-                  });
-                  navigate('deliverables');
-                }}
+                chosen={chosen === o}
+                onChoose={() => choose(o)}
                 onShowCalc={() => setCalcFor(o)}
                 onShow3d={() => setView3dFor(o)}
               />
@@ -67,6 +87,45 @@ export function SolutionsScreen({ project }: { project: Project }) {
           ))}
         </ul>
       )}
+      {result.options.length > 0 && (
+        <section className="mt-8" aria-labelledby="alternatives-title">
+          <h2 id="alternatives-title" className="text-lg font-bold">
+            {t('solutions.alternativesTitle')} ({result.alternatives.length})
+          </h2>
+          <p className="mb-3 text-sm text-muted">{t('solutions.alternativesHelp')}</p>
+          {result.alternatives.length === 0 ? (
+            <p className="text-sm">{t('solutions.alternativesNone')}</p>
+          ) : (
+            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {result.alternatives.map((o) => (
+                <li key={o.key}>
+                  <AlternativeCard
+                    option={o}
+                    chosen={chosen === o}
+                    onChoose={() => choose(o)}
+                    onDetails={() => setDetailsFor(o)}
+                  />
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
+      <Modal
+        open={detailsFor !== null}
+        onClose={() => setDetailsFor(null)}
+        title={detailsFor?.ups.reference ?? ''}
+      >
+        {detailsFor && (
+          <SolutionCard
+            option={detailsFor}
+            chosen={chosen === detailsFor}
+            onChoose={() => choose(detailsFor)}
+            onShowCalc={() => setCalcFor(detailsFor)}
+            onShow3d={() => setView3dFor(detailsFor)}
+          />
+        )}
+      </Modal>
       <Modal open={calcFor !== null} onClose={() => setCalcFor(null)} title={t('calcModal.title')}>
         {calcFor && <TraceList traces={calcFor.traces} />}
       </Modal>
@@ -230,6 +289,75 @@ function SolutionCard({
         </Button>
         <Button variant="ghost" onClick={onShowCalc}>
           {t('solutions.seeCalc')}
+        </Button>
+      </div>
+    </Card>
+  );
+}
+
+/** Carte compacte d'une autre configuration possible. */
+function AlternativeCard({
+  option: o,
+  chosen,
+  onChoose,
+  onDetails,
+}: {
+  option: SolutionOption;
+  chosen: boolean;
+  onChoose: () => void;
+  onDetails: () => void;
+}) {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+  const model = useCatalogStore((s) => s.catalogs.ups.models.find((m) => m.id === o.ups.modelId));
+  const b = o.battery;
+  const dims = o.display.dimensionsSummary;
+  return (
+    <Card
+      as="article"
+      className={`flex h-full flex-col ${chosen ? 'border-2 border-primary' : ''}`}
+    >
+      <div className="flex items-start gap-3">
+        <UpsIllustration formFactor={o.display.formFactor} className="h-12 w-12 shrink-0" />
+        <div className="min-w-0 flex-1">
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="font-bold leading-tight">{model?.reference ?? o.ups.reference}</h3>
+            <StatusPill level={o.status} />
+          </div>
+          {model?.partNumber && (
+            <p className="text-sm font-semibold">
+              {t('solutions.partNumber')} : {model.partNumber}
+            </p>
+          )}
+          <p className="text-sm text-muted">
+            {t(`tech.${o.ups.technology}`)} · {t(`formFactor.${o.display.formFactor}`)}
+          </p>
+        </div>
+      </div>
+      <dl className="mt-2 text-sm">
+        <Stat label={t('solutions.configuration')}>
+          {o.ups.modulesPerSystem !== undefined && model?.modular
+            ? t('solutions.modules', { count: o.ups.modulesPerSystem, kw: model.modular.moduleKW })
+            : t('solutions.units', { count: o.ups.unitsPerSystem })}
+          {o.ups.systems === 2 && ' × 2'} · {o.ups.redundancy}
+        </Stat>
+        <Stat label={t('solutions.loadRate')}>{formatPct(o.ups.loadRate, lang)}</Stat>
+        <Stat label={t('solutions.autonomy')}>
+          {(b.autonomyIsLowerBound ? '≥ ' : '') + formatNumber(b.autonomyMin, lang, 0)} min
+        </Stat>
+        <Stat label={t('solutions.battery')}>
+          {t(`chemistry.${b.chemistry}`)} — {b.totalBlocks} × {formatNumber(b.capacityAh, lang)} Ah
+        </Stat>
+        <Stat label={t('solutions.dimensions')}>
+          {dims.w} × {dims.d} × {dims.h} mm
+        </Stat>
+      </dl>
+      <div className="mt-auto flex flex-wrap gap-2 pt-3">
+        <Button variant={chosen ? 'primary' : 'secondary'} onClick={onChoose} aria-pressed={chosen}>
+          {chosen ? `✓ ${t('solutions.chosen')}` : t('solutions.choose')}
+        </Button>
+        <Button variant="ghost" onClick={onDetails}>
+          {t('solutions.details')}
         </Button>
       </div>
     </Card>

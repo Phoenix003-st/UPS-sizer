@@ -116,6 +116,26 @@
         "building": "Building",
         "other": "Other"
       }
+    },
+    "phasesTriMono": "Three/single",
+    "phasesHelp": {
+      "auto": "Single-phase up to 10 kVA, three-phase above",
+      "1": "Single-phase in and out (1/1)",
+      "3": "Three-phase in and out (3/3)",
+      "3/1": "Three-phase in, single-phase out (3/1)"
+    },
+    "formFactor": "UPS form factor",
+    "formFactorOption": {
+      "auto": "Automatic",
+      "tower": "Tower",
+      "rack": "19\" rack",
+      "modular": "Modular"
+    },
+    "formFactorHelp": {
+      "auto": "Every form factor that suits the room",
+      "tower": "Floor-standing: tower, tower/rack or cabinet",
+      "rack": "19\" rack mounting: rack or tower/rack",
+      "modular": "Hot-swappable power modules"
     }
   },
   "room": {
@@ -166,16 +186,18 @@
   },
   "solutions": {
     "title": "Proposed solutions",
-    "subtitle": "Up to three options. The recommended one is highlighted.",
+    "subtitle": "Three highlighted options, then every other configuration that matches your choices.",
     "tier": {
       "economy": "Economy",
       "recommended": "Recommended",
-      "performance": "Performance"
+      "performance": "Performance",
+      "alternative": "Other configuration"
     },
     "tierHelp": {
       "economy": "Just enough power",
       "recommended": "The best trade-off",
-      "performance": "Best efficiency and largest margin"
+      "performance": "Best efficiency and largest margin",
+      "alternative": "Matches your choices"
     },
     "choose": "Choose this option",
     "chosen": "Selected option",
@@ -209,7 +231,12 @@
       "block": "Blocking"
     },
     "estimated": "Not published in the catalogue, estimated: {{fields}}",
-    "partNumber": "Part number"
+    "partNumber": "Part number",
+    "yourChoices": "Your choices",
+    "alternativesTitle": "Other possible configurations",
+    "alternativesHelp": "One model per range and form factor, sized for your load. You can pick one instead of the options above.",
+    "alternativesNone": "No other configuration matches these choices.",
+    "details": "Details"
   },
   "tech": {
     "line_interactive": "Line interactive",
@@ -468,7 +495,10 @@
     "cable_out_of_range": "A cable size could not be determined: specific design needed.",
     "ventilation_required": "Battery room ventilation: {{flow}} m³/h (IEC 62485-2).",
     "external_battery_packs": "{{qty}} external battery pack(s) next to the UPS.",
-    "lithium_unavailable": "No lithium battery for this model: lead-acid batteries proposed."
+    "lithium_unavailable": "No lithium battery for this model: lead-acid batteries proposed.",
+    "mono_above_threshold": "{{kva}} kVA in single-phase: above {{threshold}} kVA, three-phase is advised.",
+    "phase_auto_three": "No single-phase UPS fits these choices: three-phase supply selected.",
+    "phase_auto_three_mono": "No single-phase UPS fits these choices: three/single-phase UPS selected (three-phase in, single-phase out)."
   },
   "calc": {
     "load": {

@@ -1,14 +1,18 @@
 /**
  * Sélection des UPS et des trois options (Économique, Recommandée, Performance).
  *
- * 1. Filtrage : technologie du scénario, phases, tension, fréquence, température ambiante, format
- *    (baie existante → rack ; bureau ou local partagé → tour/rack privilégiés).
+ * 1. Filtrage selon les choix de l'utilisateur, appliqués strictement : phases d'entrée et de
+ *    sortie (1/1, 3/3 ou 3/1), format (tour, rack, modulaire), puis technologie du scénario,
+ *    tension, fréquence et température ambiante. En format automatique : baie existante → rack ;
+ *    bureau ou local partagé → tour/rack privilégiés.
  * 2. Configuration de chaque modèle : plus petit nombre d'unités (ou de modules) tel que
  *    P_req ÷ (P_unité × k_alt × n) ≤ taux cible, en kW et en kVA ; +1 unité en N+1 ; deux systèmes
  *    indépendants en 2N. Une seule unité est privilégiée quand c'est possible.
- * 3. Scoring pondéré (paramètres) : rendement, emprise, marge, prix (indice de prix ou puissance
- *    installée) → Recommandée. Économique = puissance installée minimale. Performance = meilleur
- *    rendement, plus grande marge et technologie la plus robuste.
+ * 3. Une configuration par gamme et par format : le plus petit modèle de la gamme qui convient,
+ *    batteries comprises (les tailles au-dessus ne feraient que surdimensionner).
+ * 4. Scoring pondéré (paramètres) : rendement, emprise, marge, prix (indice de prix ou puissance
+ *    installée) → Recommandée. Économique = la moins chère d'une autre gamme. Performance = meilleur
+ *    rendement, plus grande marge et technologie la plus robuste, d'une autre gamme encore.
  */
 import {
   displayReference,
@@ -19,7 +23,7 @@ import {
 import type { Settings } from '../settings/schema';
 import { ceilSafe, interpLinear } from './math';
 import { framesForModules, modulesNeeded } from './modular';
-import type { RoomKind, Tier } from './project';
+import type { FormFactorChoice, RoomKind, Tier } from './project';
 import { fmt, trace, type Calc } from './trace';
 import type { NormalizedInputs, UpsConfig } from './types';
 
@@ -47,17 +51,44 @@ export type ExclusionReason =
   | 'capacity'
   | 'parallel';
 
+/** Le modèle correspond-il au format demandé ? Une tour/rack convient en tour comme en rack. */
+export function matchesFormFactor(model: UpsModel, choice: FormFactorChoice): boolean {
+  const modular = model.technology === 'modular';
+  switch (choice) {
+    case 'tower':
+      return !modular && model.formFactor !== 'rack';
+    case 'rack':
+      return !modular && (model.formFactor === 'rack' || model.formFactor === 'tower_rack');
+    case 'modular':
+      return modular;
+    default:
+      return true;
+  }
+}
+
+/** Gamme et format : on ne garde qu'une taille par groupe. */
+export function modelGroup(model: UpsModel): string {
+  return `${model.brand}|${model.range || model.id}|${model.formFactor}|${model.phases.in}/${model.phases.out}`;
+}
+
 /** Raison d'exclusion d'un modèle, ou null s'il convient. */
 export function modelExclusion(model: UpsModel, ctx: SelectionContext): ExclusionReason | null {
   const { inputs } = ctx;
-  if (!inputs.technologies.includes(model.technology)) return 'technology';
-  if (model.phases.out !== inputs.phases) return 'phases';
-  if (inputs.phases === 3 && model.phases.in !== 3) return 'phases';
+  if (model.phases.out !== inputs.phases || model.phases.in !== inputs.inputPhases) return 'phases';
+  if (!matchesFormFactor(model, inputs.formFactor)) return 'form_factor';
+  // Un modulaire demandé explicitement l'emporte sur les technologies du scénario.
+  const modularAsked = inputs.formFactor === 'modular' && model.technology === 'modular';
+  if (!modularAsked && !inputs.technologies.includes(model.technology)) return 'technology';
   if (!model.voltages.out.some((v) => Math.abs(v - inputs.voltageV) <= 0.03 * inputs.voltageV))
     return 'voltage';
   if (!model.voltages.freqHz.includes(inputs.freqHz)) return 'frequency';
   if (ctx.ambientC > model.ambientC.max || ctx.ambientC < model.ambientC.min) return 'temperature';
-  if (ctx.roomKind === 'rack' && model.formFactor !== 'rack' && model.formFactor !== 'tower_rack')
+  if (
+    inputs.formFactor === 'auto' &&
+    ctx.roomKind === 'rack' &&
+    model.formFactor !== 'rack' &&
+    model.formFactor !== 'tower_rack'
+  )
     return 'form_factor';
   return null;
 }
@@ -179,8 +210,11 @@ export function upsCandidates(catalog: UpsCatalog, ctx: SelectionContext): Calc<
       excluded.push({ modelId: c.model.id, reason: 'parallel' });
     candidates = candidates.filter((c) => c.config.unitsN === 1);
   }
-  // Bureau ou local partagé : formats tour / rack privilégiés.
-  if (ctx.roomKind === 'office' || ctx.roomKind === 'shared') {
+  // Bureau ou local partagé : formats tour / rack privilégiés (sauf format demandé).
+  if (
+    ctx.inputs.formFactor === 'auto' &&
+    (ctx.roomKind === 'office' || ctx.roomKind === 'shared')
+  ) {
     const compact = candidates.filter((c) => c.model.formFactor !== 'cabinet');
     if (compact.length > 0) {
       for (const c of candidates.filter((c) => c.model.formFactor === 'cabinet'))
@@ -188,7 +222,6 @@ export function upsCandidates(catalog: UpsCatalog, ctx: SelectionContext): Calc<
       candidates = compact;
     }
   }
-  // Pas de surdimensionnement excessif.
   const t = trace('calc.selection.title').step({
     label: 'calc.selection.rule',
     formula: 'P_req ÷ (n × P_unité × k_alt) ≤ taux cible',
@@ -197,6 +230,39 @@ export function upsCandidates(catalog: UpsCatalog, ctx: SelectionContext): Calc<
     unit: '',
   });
   return { value: { candidates, excluded }, trace: t.build() };
+}
+
+/**
+ * Une seule taille par gamme et format : une unité seule si possible, puis la plus petite puissance
+ * installée, parmi les configurations non bloquantes s'il y en a. Les tailles au-dessus ne feraient que
+ * surdimensionner. Retourne les index conservés (toutes les chimies du modèle retenu).
+ */
+export function rightSized(
+  items: {
+    group: string;
+    modelId: string;
+    unitsN: number;
+    installedVA: number;
+    blocked: boolean;
+  }[],
+): number[] {
+  const best = new Map<string, number>();
+  const better = (a: number, b: number) => {
+    const A = items[a]!;
+    const B = items[b]!;
+    return (
+      Number(A.blocked) - Number(B.blocked) ||
+      Number(A.unitsN > 1) - Number(B.unitsN > 1) ||
+      A.installedVA - B.installedVA ||
+      A.unitsN - B.unitsN
+    );
+  };
+  items.forEach((it, i) => {
+    const cur = best.get(it.group);
+    if (cur === undefined || better(i, cur) < 0) best.set(it.group, i);
+  });
+  const keep = new Set([...best.values()].map((i) => items[i]!.modelId));
+  return items.map((_, i) => i).filter((i) => keep.has(items[i]!.modelId));
 }
 
 /** Rang de robustesse de la technologie (0 = la plus simple). */
@@ -209,6 +275,8 @@ export const TECH_RANK: Record<Technology, number> = {
 
 export interface ScoredInput {
   key: string;
+  /** Gamme et format (voir modelGroup) : les trois options viennent de groupes différents. */
+  group: string;
   installedVA: number;
   priceIndex: number;
   efficiency: number;
@@ -267,9 +335,10 @@ export function weightedScores(
  * Choisit jusqu'à trois options distinctes. Retourne pour chaque niveau l'index retenu dans `items`.
  *
  * - Recommandée : meilleur score pondéré (paramètres) ;
- * - Économique : l'option la moins chère, affichée seulement si elle coûte moins que la Recommandée ;
- * - Performance : meilleur rendement, plus grande marge et technologie la plus robuste, affichée
- *   seulement si elle fait mieux que la Recommandée sur ces critères.
+ * - Économique : l'option la moins chère d'une autre gamme, affichée seulement si elle coûte moins
+ *   que la Recommandée ;
+ * - Performance : meilleur rendement, plus grande marge et technologie la plus robuste, d'une autre
+ *   gamme quand c'est possible, affichée seulement si elle fait mieux que la Recommandée.
  *
  * Les options bloquantes ne sont retenues que s'il n'existe rien d'autre, et les options plus de
  * `maxOversizeFactor` fois plus puissantes que la plus petite sont écartées.
@@ -309,17 +378,28 @@ export function pickTiers(
   };
 
   const recommended = [...pool].sort((a, b) => scoreOf(b) - scoreOf(a) || cheaper(a, b))[0]!;
-  const economy = [...pool].sort(cheaper)[0]!;
-  const performance = [...pool]
-    .filter((i) => i !== recommended && i !== economy)
-    .sort((a, b) => perfScore(b) - perfScore(a) || cheaper(a, b))[0];
+  const groupOf = (i: number) => items[i]!.group;
+  // Économique : la moins chère d'une autre gamme, si elle coûte moins que la Recommandée.
+  const economy = [...pool]
+    .filter((i) => groupOf(i) !== groupOf(recommended) && cheaper(i, recommended) < 0)
+    .sort(cheaper)[0];
+  // Performance : d'une autre gamme si possible, sinon la même gamme avec une autre batterie.
+  const better = pool.filter(
+    (i) => i !== recommended && i !== economy && perfScore(i) > perfScore(recommended) + 1e-9,
+  );
+  const byPerf = (a: number, b: number) => perfScore(b) - perfScore(a) || cheaper(a, b);
+  const ecoGroup = economy !== undefined ? groupOf(economy) : undefined;
+  const others = better.filter((i) => groupOf(i) !== ecoGroup);
+  const performance =
+    others.filter((i) => groupOf(i) !== groupOf(recommended)).sort(byPerf)[0] ??
+    others.sort(byPerf)[0];
 
   const out: { tier: Tier; index: number; score: number }[] = [];
-  if (economy !== recommended && cheaper(economy, recommended) < 0) {
+  if (economy !== undefined) {
     out.push({ tier: 'economy', index: economy, score: scoreOf(economy) });
   }
   out.push({ tier: 'recommended', index: recommended, score: scoreOf(recommended) });
-  if (performance !== undefined && perfScore(performance) > perfScore(recommended) + 1e-9) {
+  if (performance !== undefined) {
     out.push({ tier: 'performance', index: performance, score: scoreOf(performance) });
   }
   return out;

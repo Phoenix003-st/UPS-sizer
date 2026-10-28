@@ -14,6 +14,19 @@ export const tierSchema = z.enum(['economy', 'recommended', 'performance']);
 export type Tier = z.infer<typeof tierSchema>;
 export const TIERS = tierSchema.options;
 
+/** Alimentation : monophasé (1/1), triphasé (3/3) ou entrée triphasée et sortie monophasée (3/1). */
+export const phaseChoiceSchema = z.union([
+  z.literal('auto'),
+  z.literal(1),
+  z.literal(3),
+  z.literal('3/1'),
+]);
+export type PhaseChoice = z.infer<typeof phaseChoiceSchema>;
+
+/** Format d'UPS demandé : tour (posé au sol), rack 19", modulaire, ou laissé au choix du moteur. */
+export const formFactorChoiceSchema = z.enum(['auto', 'tower', 'rack', 'modular']);
+export type FormFactorChoice = z.infer<typeof formFactorChoiceSchema>;
+
 export const roomKindSchema = z.enum(['dedicated', 'shared', 'office', 'rack']);
 export type RoomKind = z.infer<typeof roomKindSchema>;
 
@@ -49,7 +62,8 @@ export const projectSchema = z.object({
     outputPf: z.number().gt(0).lte(1),
     growthMargin: z.number().min(0).max(2),
     targetLoadRate: z.number().gt(0).lte(1),
-    phases: z.union([z.literal('auto'), z.literal(1), z.literal(3)]),
+    phases: phaseChoiceSchema,
+    formFactor: formFactorChoiceSchema.default('auto'),
     voltage: z.number().positive(),
     freqHz: z.union([z.literal(50), z.literal(60)]),
     redundancy: redundancySchema,
@@ -90,6 +104,8 @@ export const projectSchema = z.object({
   choice: z.object({
     tier: tierSchema,
     overrides: z.record(z.string(), z.unknown()).default({}),
+    /** Configuration choisie hors des trois options (identifiant « modèle|chimie »), sinon null. */
+    key: z.string().nullable().default(null),
   }),
   layout: z.object({
     positions: z
@@ -175,6 +191,7 @@ export function createProject(
       growthMargin: settings.power.growthMargin,
       targetLoadRate: settings.power.targetLoadRate,
       phases: 'auto',
+      formFactor: 'auto',
       voltage: large ? 400 : 230,
       freqHz: 50,
       redundancy: sc.redundancy,
@@ -196,7 +213,7 @@ export function createProject(
       ...preset,
     },
     installation: { generator: false, externalMaintenanceBypass: large, cableLengthsM: null },
-    choice: { tier: 'recommended', overrides: {} },
+    choice: { tier: 'recommended', overrides: {}, key: null },
     layout: { positions: {} },
     settingsOverrides: {},
   };
