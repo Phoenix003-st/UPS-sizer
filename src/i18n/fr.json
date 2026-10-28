@@ -116,6 +116,26 @@
         "building": "Bâtiment",
         "other": "Autres"
       }
+    },
+    "phasesTriMono": "Tri/Mono",
+    "phasesHelp": {
+      "auto": "Monophasé jusqu'à 10 kVA, triphasé au-delà",
+      "1": "UPS entrée et sortie monophasées (1/1)",
+      "3": "UPS entrée et sortie triphasées (3/3)",
+      "3/1": "UPS entrée triphasée, sortie monophasée (3/1)"
+    },
+    "formFactor": "Format de l'UPS",
+    "formFactorOption": {
+      "auto": "Automatique",
+      "tower": "Tour",
+      "rack": "Rack 19\"",
+      "modular": "Modulaire"
+    },
+    "formFactorHelp": {
+      "auto": "Tous les formats compatibles avec le local",
+      "tower": "Posé au sol : tour, tour/rack ou armoire",
+      "rack": "Montage en baie 19\" : rack ou tour/rack",
+      "modular": "Modules de puissance enfichables, extensibles à chaud"
     }
   },
   "room": {
@@ -166,16 +186,18 @@
   },
   "solutions": {
     "title": "Solutions proposées",
-    "subtitle": "Jusqu'à trois options. La recommandée est mise en avant.",
+    "subtitle": "Trois options mises en avant, puis toutes les autres configurations qui respectent vos choix.",
     "tier": {
       "economy": "Économique",
       "recommended": "Recommandée",
-      "performance": "Performance"
+      "performance": "Performance",
+      "alternative": "Autre configuration"
     },
     "tierHelp": {
       "economy": "La puissance juste suffisante",
       "recommended": "Le meilleur compromis",
-      "performance": "Le meilleur rendement et la plus grande marge"
+      "performance": "Le meilleur rendement et la plus grande marge",
+      "alternative": "Compatible avec vos choix"
     },
     "choose": "Choisir cette option",
     "chosen": "Option choisie",
@@ -209,7 +231,12 @@
     "units_one": "{{count}} unité",
     "modules_one": "{{count}} module de {{kw}} kW",
     "estimated": "Non publié au catalogue, estimé : {{fields}}",
-    "partNumber": "Référence produit"
+    "partNumber": "Référence produit",
+    "yourChoices": "Vos choix",
+    "alternativesTitle": "Autres configurations possibles",
+    "alternativesHelp": "Un modèle par gamme et par format, à la bonne taille pour votre charge. Vous pouvez en choisir un à la place des options ci-dessus.",
+    "alternativesNone": "Aucune autre configuration ne respecte ces choix.",
+    "details": "Détails"
   },
   "tech": {
     "line_interactive": "Line Interactive",
@@ -468,7 +495,10 @@
     "cable_out_of_range": "Une section de câble n'a pas pu être déterminée : étude spécifique nécessaire.",
     "ventilation_required": "Ventilation du local batteries : {{flow}} m³/h (IEC 62485-2).",
     "external_battery_packs": "{{qty}} module(s) batteries externe(s) à côté de l'UPS.",
-    "lithium_unavailable": "Pas de batterie lithium pour ce modèle : batteries plomb proposées."
+    "lithium_unavailable": "Pas de batterie lithium pour ce modèle : batteries plomb proposées.",
+    "mono_above_threshold": "{{kva}} kVA en monophasé : au-delà de {{threshold}} kVA, le triphasé est conseillé.",
+    "phase_auto_three": "Aucun UPS monophasé ne convient avec ces choix : alimentation triphasée retenue.",
+    "phase_auto_three_mono": "Aucun UPS monophasé ne convient avec ces choix : UPS tri/mono retenu (entrée triphasée, sortie monophasée)."
   },
   "calc": {
     "load": {

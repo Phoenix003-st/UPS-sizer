@@ -16,13 +16,16 @@ import { checkEnvironment } from './environment';
 import { computeLayout, type LayoutSource } from './layout';
 import { computeLoad } from './load';
 import { modulesNeeded } from './modular';
-import { resolvePhases } from './phases';
+import { resolvePhases, systemVoltage } from './phases';
 import type { Project } from './project';
 import {
   marginScore,
+  modelGroup,
   pickTiers,
+  rightSized,
   TECH_RANK,
   upsCandidates,
+  weightedScores,
   type ScoredInput,
   type UpsCandidate,
 } from './selection';
@@ -33,6 +36,7 @@ import type {
   BatterySet,
   BatterySolution,
   NormalizedInputs,
+  OptionTier,
   SizingResult,
   SolutionOption,
 } from './types';
@@ -177,7 +181,7 @@ export function layoutSources(
 }
 
 interface Evaluated {
-  option: Omit<SolutionOption, 'tier' | 'score'>;
+  option: Omit<SolutionOption, 'tier' | 'key' | 'score'>;
   scored: ScoredInput;
 }
 
@@ -326,6 +330,7 @@ function evaluateOption(
     },
     scored: {
       key: `${model.id}|${chemistry}`,
+      group: modelGroup(model),
       installedVA: config.installedVA,
       priceIndex,
       efficiency: config.efficiency,
@@ -377,6 +382,8 @@ export function runSizing(
     outputPf: load.value.pf,
     targetLoadRate: project.advanced.targetLoadRate,
     phases: phases.value.phases,
+    inputPhases: phases.value.inputPhases,
+    formFactor: project.advanced.formFactor,
     voltageV: phases.value.voltageV,
     freqHz: project.advanced.freqHz,
     redundancy: project.advanced.redundancy,
@@ -395,14 +402,37 @@ export function runSizing(
 
   if (inputs.loadW <= 0) {
     globalAlerts.push({ level: 'block', code: 'no_load', params: {} });
-    return { inputs, options: [], globalAlerts: normalizeAlerts(globalAlerts), traces };
+    return {
+      inputs,
+      options: [],
+      alternatives: [],
+      globalAlerts: normalizeAlerts(globalAlerts),
+      traces,
+    };
   }
 
-  const cands = upsCandidates(catalogs.ups, {
-    inputs,
-    roomKind: project.room.kind,
-    ambientC: project.room.ambientC,
-  });
+  const selectionCtx = { inputs, roomKind: project.room.kind, ambientC: project.room.ambientC };
+  let cands = upsCandidates(catalogs.ups, selectionCtx);
+  // Alimentation automatique : sans UPS monophasé qui convienne (format demandé, puissance),
+  // on essaie le tri/mono puis le triphasé.
+  if (project.advanced.phases === 'auto' && inputs.phases === 1) {
+    for (const [out, inp] of [
+      [1, 3],
+      [3, 3],
+    ] as const) {
+      if (cands.value.candidates.length > 0) break;
+      inputs.phases = out;
+      inputs.inputPhases = inp;
+      inputs.voltageV = systemVoltage(out, project.advanced.voltage);
+      cands = upsCandidates(catalogs.ups, selectionCtx);
+      if (cands.value.candidates.length > 0)
+        globalAlerts.push({
+          level: 'ok',
+          code: out === inp ? 'phase_auto_three' : 'phase_auto_three_mono',
+          params: {},
+        });
+    }
+  }
   traces.selection = cands.trace;
   const pref = project.advanced.batteryChemistry;
   const evaluated: Evaluated[] = [];
@@ -431,19 +461,56 @@ export function runSizing(
       code: cands.value.candidates.length === 0 ? 'no_ups' : 'no_battery',
       params: { kw: Number((inputs.designW / 1000).toFixed(1)), autonomy: inputs.autonomyMin },
     });
-    return { inputs, options: [], globalAlerts: normalizeAlerts(globalAlerts), traces };
+    return {
+      inputs,
+      options: [],
+      alternatives: [],
+      globalAlerts: normalizeAlerts(globalAlerts),
+      traces,
+    };
   }
 
-  const picks = pickTiers(
-    evaluated.map((e) => e.scored),
-    settings,
-  );
-  const options: SolutionOption[] = picks.map((p) => ({
-    ...evaluated[p.index]!.option,
-    tier: p.tier,
-    score: p.score,
-  }));
-  return { inputs, options, globalAlerts: normalizeAlerts(globalAlerts), traces };
+  // Une configuration par gamme et format, à la bonne taille.
+  const sized = rightSized(
+    evaluated.map((e) => ({
+      group: e.scored.group,
+      modelId: e.option.ups.modelId,
+      unitsN: e.option.ups.unitsN,
+      installedVA: e.option.ups.installedVA,
+      blocked: e.scored.blocked,
+    })),
+  ).map((i) => evaluated[i]!);
+  const scored = sized.map((e) => e.scored);
+  const picks = pickTiers(scored, settings);
+  const toOption = (i: number, tier: OptionTier, score: number): SolutionOption => ({
+    ...sized[i]!.option,
+    tier,
+    key: scored[i]!.key,
+    score,
+  });
+  const options = picks.map((p) => toOption(p.index, p.tier, p.score));
+
+  // Autres configurations : une par gamme et format non retenus, la mieux notée d'abord.
+  const scores = weightedScores(scored, settings.selection.weights);
+  const usedGroups = new Set(picks.map((p) => scored[p.index]!.group));
+  const alternatives: SolutionOption[] = [];
+  const order = scored
+    .map((_, i) => i)
+    .sort(
+      (a, b) =>
+        Number(scored[a]!.blocked) - Number(scored[b]!.blocked) ||
+        scores[b]! - scores[a]! ||
+        scored[a]!.priceIndex - scored[b]!.priceIndex,
+    );
+  // Au-delà de deux fois l'écart admis pour les trois options, le surdimensionnement n'a plus de sens.
+  const maxAltVA =
+    Math.min(...scored.map((x) => x.installedVA)) * settings.selection.maxOversizeFactor * 2;
+  for (const i of order) {
+    if (usedGroups.has(scored[i]!.group) || scored[i]!.installedVA > maxAltVA + 1e-6) continue;
+    usedGroups.add(scored[i]!.group);
+    alternatives.push(toOption(i, 'alternative', scores[i]!));
+  }
+  return { inputs, options, alternatives, globalAlerts: normalizeAlerts(globalAlerts), traces };
 }
 
 export interface BrandEquivalent {

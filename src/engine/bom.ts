@@ -105,7 +105,7 @@ export function buildBom(i: BomInput): BomLine[] {
   const cables = new Map<string, BomLine>();
   for (const c of electrical.circuits) {
     if (!c.cable) continue;
-    const cores = c.dc ? 2 : electrical.phases === 3 ? 5 : 3;
+    const cores = c.dc ? 2 : c.poles === 4 ? 5 : 3;
     const ref = `${cores}G${c.cable.sectionMm2} mm² Cu XLPE`;
     const len = Math.ceil(c.lengthM * c.cable.parallel * c.qty);
     const existing = cables.get(ref);

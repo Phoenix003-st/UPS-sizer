@@ -20,6 +20,7 @@ import {
 } from '../../ui/components';
 import { FlowNav } from '../../ui/FlowNav';
 import { formatNumber, formatPct } from '../../ui/format';
+import { FormFactorChoiceField, PhaseChoiceField } from '../solutions/SelectionChoices';
 
 const AUTONOMY_PRESETS = [10, 15, 30, 60];
 const LOG_MIN = Math.log10(0.1);
@@ -240,16 +241,8 @@ export function PowerScreen({ project }: { project: Project }) {
                 unit="%"
                 onChange={(v) => update((d) => void (d.advanced.targetLoadRate = v / 100))}
               />
-              <Choice
-                legend={t('power.phases')}
-                value={adv.phases}
-                options={[
-                  { value: 'auto', label: t('power.phasesAuto') },
-                  { value: 1, label: t('power.phasesMono') },
-                  { value: 3, label: t('power.phasesTri') },
-                ]}
-                onChange={(v) => update((d) => void (d.advanced.phases = v))}
-              />
+              <PhaseChoiceField project={project} />
+              <FormFactorChoiceField project={project} />
               <Choice
                 legend={t('power.voltage')}
                 value={adv.voltage}
@@ -309,8 +302,17 @@ export function PowerScreen({ project }: { project: Project }) {
                   {formatNumber(result.inputs.designVA / 1000, lang, 2)} kVA
                 </Stat>
                 <Stat label={t('power.phases')}>
-                  {result.inputs.phases === 3 ? t('power.phasesTri') : t('power.phasesMono')} —{' '}
-                  {result.inputs.voltageV} V
+                  {t(
+                    result.inputs.inputPhases !== result.inputs.phases
+                      ? 'power.phasesTriMono'
+                      : result.inputs.phases === 3
+                        ? 'power.phasesTri'
+                        : 'power.phasesMono',
+                  )}{' '}
+                  — {result.inputs.voltageV} V
+                </Stat>
+                <Stat label={t('power.formFactor')}>
+                  {t(`power.formFactorOption.${result.inputs.formFactor}`)}
                 </Stat>
                 <Stat label={t('power.redundancy')}>{result.inputs.redundancy}</Stat>
                 <Stat label={t('power.autonomy')}>

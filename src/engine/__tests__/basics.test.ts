@@ -131,11 +131,18 @@ describe('phases', () => {
     expect(r.phases).toBe(3);
     expect(r.voltageV).toBe(400);
   });
-  it('mono imposé au-delà du seuil : bascule forcée avec alerte', () => {
+  it('mono imposé au-delà du seuil : le choix est respecté, avec un avertissement', () => {
     const r = resolvePhases(20000, { ...adv, phases: 1 }, settings).value;
-    expect(r.phases).toBe(3);
-    expect(r.forced).toBe(true);
-    expect(r.alerts[0]?.code).toBe('phase_switched_to_three');
+    expect(r.phases).toBe(1);
+    expect(r.inputPhases).toBe(1);
+    expect(r.voltageV).toBe(230);
+    expect(r.alerts[0]?.code).toBe('mono_above_threshold');
+  });
+  it('tri/mono : entrée triphasée, sortie monophasée', () => {
+    const r = resolvePhases(20000, { ...adv, phases: '3/1' }, settings).value;
+    expect(r.phases).toBe(1);
+    expect(r.inputPhases).toBe(3);
+    expect(r.alerts).toEqual([]);
   });
   it('tri imposé reste tri', () => {
     expect(resolvePhases(2000, { ...adv, phases: 3, voltage: 400 }, settings).value).toMatchObject({
