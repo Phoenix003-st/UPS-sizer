@@ -242,29 +242,35 @@ describe('catalogues et paramètres', () => {
     expect(equipmentLibrarySchema.safeParse(c.equipment).success).toBe(true);
   });
 
-  it('le catalogue livré contient les UPS INFOSEC avec leurs références produit', () => {
+  it('le catalogue livré ne contient que des UPS génériques, sans marque ni référence', () => {
     const c = defaultCatalogs();
     const models = c.ups.models;
     expect(models.length).toBeGreaterThan(50);
-    expect(models.every((m) => m.brand === 'INFOSEC' && !m.sample && m.source)).toBe(true);
-    // Les références imprimées au catalogue sont reprises (quelques châssis n'en ont pas).
-    expect(models.filter((m) => m.partNumber).length).toBeGreaterThan(90);
-    expect(models.find((m) => m.partNumber === '67310')?.reference).toBe('INFOSEC E3 Pro 3000 RT');
-    // Tout ce qui n'est pas publié est signalé comme estimé.
-    expect(models.every((m) => m.estimated.length > 0)).toBe(true);
+    expect(
+      models.every((m) => !m.brand && !m.partNumber && !m.datasheetUrl && !m.source && m.sample),
+    ).toBe(true);
+    expect(c.batteries.cabinets.every((x) => !x.brand && !x.partNumber && !x.source)).toBe(true);
+    expect(c.batteries.blocks.every((x) => !x.source)).toBe(true);
+    expect(JSON.stringify(c)).not.toMatch(/infosec|\bAPC\b|eaton|schneider/i);
+    // Tous les choix restent couverts : rack, tri/mono, tri/tri et modulaire.
+    expect(models.some((m) => m.formFactor === 'rack')).toBe(true);
+    expect(models.some((m) => m.phases.in === 3 && m.phases.out === 1)).toBe(true);
+    expect(models.some((m) => m.phases.in === 3 && m.phases.out === 3)).toBe(true);
+    expect(models.some((m) => m.technology === 'modular')).toBe(true);
     const cabs = new Set(c.batteries.cabinets.map((x) => x.id));
     expect(models.every((m) => m.battery.compatibleCabinetIds.every((id) => cabs.has(id)))).toBe(
       true,
     );
   });
 
-  it('les options affichent la référence produit du constructeur', () => {
+  it('les options ne citent aucune marque ni référence produit', () => {
     const r = run(project('server'));
     expect(r.options.length).toBeGreaterThan(0);
-    expect(r.options.every((o) => /— réf\. \d{5}/.test(o.ups.reference))).toBe(true);
-    expect(
-      r.options[0]!.bom.find((l) => l.category === 'ups' || l.category === 'frame')?.reference,
-    ).toMatch(/^INFOSEC /);
+    for (const o of r.options) {
+      expect(o.ups.reference).toMatch(/^UPS /);
+      expect(o.ups.reference).not.toMatch(/réf\./);
+      expect(o.bom.every((l) => !/infosec/i.test(l.reference))).toBe(true);
+    }
   });
 
   it('un catalogue invalide est refusé avec le chemin du champ fautif', () => {

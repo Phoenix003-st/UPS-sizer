@@ -7,8 +7,9 @@ dans le local et produit le plan, le schéma unifilaire, la note de calcul, la n
 rapport PDF.
 
 > **Pré-dimensionnement indicatif – à valider par un bureau d'études avant installation.**
-> **Édition InfoSec** : les UPS proposés sont ceux du catalogue INFOSEC, avec leur référence
-> produit ; les batteries sont génériques et les valeurs non publiées sont estimées (voir
+> **Site principal, sans marque** : les UPS proposés sont génériques, sans marque ni référence
+> produit (`src/catalog/generic.json`, généré par `npm run catalogs:generic`). Les éditions
+> `/infosec/` et `/concurrents/` gardent les catalogues de marque (voir
 > [`docs/CATALOGUES-MARQUES.md`](docs/CATALOGUES-MARQUES.md)).
 
 ## Utiliser l'application

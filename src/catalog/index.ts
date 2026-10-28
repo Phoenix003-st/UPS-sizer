@@ -1,12 +1,13 @@
 /**
  * Catalogues livrés avec l'application, validés au chargement.
  *
- * Édition InfoSec : UPS du catalogue INFOSEC (références produit du constructeur). Les batteries
- * (blocs et armoires) restent génériques : le catalogue INFOSEC ne les détaille pas.
+ * Site principal : UPS génériques, sans marque ni référence produit (generic.json, généré par
+ * `npm run catalogs:generic`). Les éditions /infosec/ et /concurrents/ livrent les catalogues de
+ * marque.
  */
 import batteriesJson from './batteries.json';
-import infosecJson from './brands/infosec.json';
 import equipmentJson from './equipment.json';
+import genericJson from './generic.json';
 import {
   batteryCatalogSchema,
   equipmentLibrarySchema,
@@ -14,34 +15,25 @@ import {
   type Catalogs,
 } from './schemas';
 
-/** Catalogues de marque inclus dans cette édition de l'application. */
-const BRAND_CATALOGS = [infosecJson];
-
+/** Sans la source des fiches génériques, qui cite les fiches constructeur ayant servi de modèle. */
+const withoutSource = <T extends { source?: unknown }>({ source: _source, ...rest }: T) => rest;
 const genericBatteries = batteryCatalogSchema.parse(batteriesJson);
 
 export const DEFAULT_CATALOGS: Catalogs = {
-  ups: upsCatalogSchema.parse({
-    meta: {
-      ...BRAND_CATALOGS[0]!.meta,
-      catalogVersion: BRAND_CATALOGS.map((b) => b.meta.catalogVersion).join('+'),
-    },
-    models: BRAND_CATALOGS.flatMap((b) => b.models),
-  }),
+  ups: upsCatalogSchema.parse({ meta: genericJson.meta, models: genericJson.models }),
   batteries: batteryCatalogSchema.parse({
     meta: genericBatteries.meta,
-    blocks: genericBatteries.blocks,
-    // Armoires génériques, puis modules batteries des marques (sans doublon d'identifiant).
+    blocks: genericBatteries.blocks.map(withoutSource),
+    // Armoires génériques, puis modules batteries génériques des UPS (sans doublon d'identifiant).
     cabinets: [
-      ...genericBatteries.cabinets,
-      ...BRAND_CATALOGS.flatMap((b) => b.cabinets).filter(
-        (c, i, all) => all.findIndex((o) => o.id === c.id) === i,
-      ),
+      ...genericBatteries.cabinets.map(withoutSource),
+      ...genericJson.cabinets.filter((c) => !genericBatteries.cabinets.some((o) => o.id === c.id)),
     ],
   }),
   equipment: equipmentLibrarySchema.parse(equipmentJson),
 };
 
-/** Marques présentes dans le catalogue UPS livré, dans l'ordre d'apparition. */
+/** Marques présentes dans le catalogue UPS livré (aucune sur le site principal). */
 export const DEFAULT_BRANDS: string[] = [
   ...new Set(DEFAULT_CATALOGS.ups.models.map((m) => m.brand).filter(Boolean)),
 ];

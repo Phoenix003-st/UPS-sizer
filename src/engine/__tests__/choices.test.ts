@@ -24,9 +24,13 @@ const all = (r: SizingResult) =>
 const phasesOf = (m: UpsModel) => `${m.phases.in}/${m.phases.out}`;
 
 describe('les solutions suivent les choix de l’utilisateur', () => {
-  it('l’E3 Pro est proposé pour 3 kW en monophasé', () => {
+  it('la double conversion tour/rack à FP 0,9 est proposée pour 3 kW en monophasé', () => {
     const models = all(size(1, 'auto'));
-    expect(models.some((m) => m.range === 'INFOSEC E3 Pro')).toBe(true);
+    expect(
+      models.some(
+        (m) => m.range === 'UPS on-line double conversion tour/rack 19" mono/mono, FP 0,9',
+      ),
+    ).toBe(true);
   });
   it('monophasé : uniquement des UPS 1/1', () => {
     const models = all(size(1, 'auto'));
@@ -83,7 +87,7 @@ describe('les solutions suivent les choix de l’utilisateur', () => {
 });
 
 describe('une unité seule plutôt que plusieurs en parallèle', () => {
-  it('9 kVA (FP 0,9) en monophasé rack : un seul 10 kVA, E3 Pro compris, avec un avertissement', () => {
+  it('9 kVA (FP 0,9) en monophasé rack : un seul 10 kVA, FP 0,9 compris, avec un avertissement', () => {
     const p = project('custom');
     p.load.value = 9;
     p.load.unit = 'kVA';
@@ -94,9 +98,7 @@ describe('une unité seule plutôt que plusieurs en parallèle', () => {
     const r = runSizing(p, DEFAULT_CATALOGS, settings);
     const opts = [...r.options, ...r.alternatives];
     expect(opts.every((o) => o.ups.unitsPerSystem === 1)).toBe(true);
-    expect(opts.some((o) => modelOf(o.ups.modelId).reference === 'INFOSEC E3 Pro 10k RT')).toBe(
-      true,
-    );
+    expect(opts.some((o) => o.ups.modelId === 'GEN-ODC-TR-11-10000VA-9000W')).toBe(true);
     for (const o of opts) {
       expect(o.ups.loadRate).toBeLessThanOrEqual(1);
       expect(o.alerts.map((a) => a.code)).toContain('load_rate_above_target');
