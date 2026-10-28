@@ -496,9 +496,10 @@
     "ventilation_required": "Ventilation du local batteries : {{flow}} m³/h (IEC 62485-2).",
     "external_battery_packs": "{{qty}} module(s) batteries externe(s) à côté de l'UPS.",
     "lithium_unavailable": "Pas de batterie lithium pour ce modèle : batteries plomb proposées.",
-    "mono_above_threshold": "{{kva}} kVA en monophasé : au-delà de {{threshold}} kVA, le triphasé est conseillé.",
+    "mono_above_threshold": "UPS de {{kva}} kVA nécessaire ({{design}} kVA ÷ taux de charge max {{rate}} %) : au-delà de {{threshold}} kVA, le triphasé est conseillé.",
     "phase_auto_three": "Aucun UPS monophasé ne convient avec ces choix : alimentation triphasée retenue.",
-    "phase_auto_three_mono": "Aucun UPS monophasé ne convient avec ces choix : UPS tri/mono retenu (entrée triphasée, sortie monophasée)."
+    "phase_auto_three_mono": "Aucun UPS monophasé ne convient avec ces choix : UPS tri/mono retenu (entrée triphasée, sortie monophasée).",
+    "load_rate_above_target": "Taux de charge {{rate}} %, au-dessus du maximum choisi ({{target}} %) : une seule unité plutôt que plusieurs en parallèle."
   },
   "calc": {
     "load": {

@@ -496,9 +496,10 @@
     "ventilation_required": "Battery room ventilation: {{flow}} m³/h (IEC 62485-2).",
     "external_battery_packs": "{{qty}} external battery pack(s) next to the UPS.",
     "lithium_unavailable": "No lithium battery for this model: lead-acid batteries proposed.",
-    "mono_above_threshold": "{{kva}} kVA in single-phase: above {{threshold}} kVA, three-phase is advised.",
+    "mono_above_threshold": "{{kva}} kVA UPS needed ({{design}} kVA ÷ {{rate}} % max load): above {{threshold}} kVA, three-phase is advised.",
     "phase_auto_three": "No single-phase UPS fits these choices: three-phase supply selected.",
-    "phase_auto_three_mono": "No single-phase UPS fits these choices: three/single-phase UPS selected (three-phase in, single-phase out)."
+    "phase_auto_three_mono": "No single-phase UPS fits these choices: three/single-phase UPS selected (three-phase in, single-phase out).",
+    "load_rate_above_target": "Load {{rate}} %, above the chosen maximum ({{target}} %): one unit instead of several in parallel."
   },
   "calc": {
     "load": {

@@ -7,7 +7,8 @@
  *    bureau ou local partagé → tour/rack privilégiés.
  * 2. Configuration de chaque modèle : plus petit nombre d'unités (ou de modules) tel que
  *    P_req ÷ (P_unité × k_alt × n) ≤ taux cible, en kW et en kVA ; +1 unité en N+1 ; deux systèmes
- *    indépendants en 2N. Une seule unité est privilégiée quand c'est possible.
+ *    indépendants en 2N. Une seule unité est privilégiée quand c'est possible, quitte à dépasser
+ *    le taux cible (jusqu'à 100 %, avec un avertissement).
  * 3. Une configuration par gamme et par format : le plus petit modèle de la gamme qui convient,
  *    batteries comprises (les tailles au-dessus ne feraient que surdimensionner).
  * 4. Scoring pondéré (paramètres) : rendement, emprise, marge, prix (indice de prix ou puissance
@@ -147,11 +148,15 @@ export function configureModel(model: UpsModel, inputs: NormalizedInputs): UpsCo
 
   const uW = model.power.kW * 1000 * k;
   const uVA = model.power.kVA * 1000 * k;
-  const nN = Math.max(
+  const byTarget = Math.max(
     1,
     ceilSafe(inputs.designW / (uW * rate)),
     ceilSafe(inputs.designVA / (uVA * rate)),
   );
+  // Une unité seule qui porte la charge à 100 % au plus est préférée à plusieurs unités en
+  // parallèle : elle est retenue au-dessus du taux cible, avec un avertissement.
+  const oneFits = inputs.designW <= uW * (1 + 1e-9) && inputs.designVA <= uVA * (1 + 1e-9);
+  const nN = byTarget > 1 && oneFits ? 1 : byTarget;
   const perSystem = red === 'N+1' ? nN + 1 : nN;
   if (perSystem > 1 && (!model.parallel.capable || perSystem > model.parallel.maxUnits))
     return null;
@@ -233,8 +238,8 @@ export function upsCandidates(catalog: UpsCatalog, ctx: SelectionContext): Calc<
 }
 
 /**
- * Une seule taille par gamme et format : une unité seule si possible, puis la plus petite puissance
- * installée, parmi les configurations non bloquantes s'il y en a. Les tailles au-dessus ne feraient que
+ * Une seule taille par gamme et format : une unité seule si possible (dans le taux cible de
+ * préférence), puis la plus petite puissance installée, parmi les configurations non bloquantes s'il y en a. Les tailles au-dessus ne feraient que
  * surdimensionner. Retourne les index conservés (toutes les chimies du modèle retenu).
  */
 export function rightSized(
@@ -244,6 +249,8 @@ export function rightSized(
     unitsN: number;
     installedVA: number;
     blocked: boolean;
+    /** Taux de charge au-dessus du taux cible (unité seule chargée jusqu'à 100 %). */
+    overTarget: boolean;
   }[],
 ): number[] {
   const best = new Map<string, number>();
@@ -253,6 +260,7 @@ export function rightSized(
     return (
       Number(A.blocked) - Number(B.blocked) ||
       Number(A.unitsN > 1) - Number(B.unitsN > 1) ||
+      Number(A.overTarget) - Number(B.overTarget) ||
       A.installedVA - B.installedVA ||
       A.unitsN - B.unitsN
     );
