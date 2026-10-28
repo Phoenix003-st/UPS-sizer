@@ -20,5 +20,5 @@ export function planSvgMarkup(
 }
 
 export function singleLineSvgMarkup(diagram: Diagram, title: string): string {
-  return renderToStaticMarkup(<SingleLineSvg diagram={diagram} title={title} />);
+  return renderToStaticMarkup(<SingleLineSvg diagram={diagram} title={title} bidi={false} />);
 }
