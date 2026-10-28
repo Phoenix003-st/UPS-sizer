@@ -1,6 +1,7 @@
 /**
  * Rendu three.js de l'aménagement du local (`furnish.ts`) : revêtement de sol, baies 19"
- * existantes avec leur contenu, mobilier et équipements techniques du bâtiment.
+ * existantes avec leur contenu, mobilier, équipements techniques du bâtiment et éléments propres
+ * au secteur (contrôle d'accès, médical, industriel, réseau d'entreprise, ascenseur).
  */
 import * as THREE from 'three';
 import type { Decor3D, FloorFinish, Rack3D, RackGear } from './furnish';
@@ -53,6 +54,17 @@ export interface FurnishMaterials {
   glass: Mat;
   pot: Mat;
   leaf: Mat;
+  // Secteurs.
+  ral7035: Mat;
+  yellow: Mat;
+  green: Mat;
+  blue: Mat;
+  white: Mat;
+  screenOn: Mat;
+  steel: Mat;
+  motor: Mat;
+  cableBlue: Mat;
+  cableYellow: Mat;
 }
 
 export function furnishMaterials(track: Track): FurnishMaterials {
@@ -96,6 +108,16 @@ export function furnishMaterials(track: Track): FurnishMaterials {
     ),
     pot: t(mat(0x8d6e63, { roughness: 0.8, metalness: 0 })),
     leaf: t(mat(0x4f8a3c, { roughness: 0.85, metalness: 0 })),
+    ral7035: t(mat(0xcbd0cc, { metalness: 0.3, roughness: 0.55 })),
+    yellow: t(mat(0xf2c200, { roughness: 0.6, metalness: 0 })),
+    green: t(mat(0x2e9d5b, { roughness: 0.5, metalness: 0, ...wallMounted })),
+    blue: t(mat(0x1f6fb2, { roughness: 0.5, metalness: 0, ...wallMounted })),
+    white: t(mat(0xfbfbfb, { roughness: 0.5, metalness: 0.05, ...wallMounted })),
+    screenOn: t(mat(0x10244a, { emissive: 0x16356e, emissiveIntensity: 0.7, ...wallMounted })),
+    steel: t(mat(0xb3bcc4, { metalness: 0.45, roughness: 0.4 })),
+    motor: t(mat(0x2f5f8a, { metalness: 0.5, roughness: 0.45 })),
+    cableBlue: t(mat(0x2f80ed, { roughness: 0.6, metalness: 0 })),
+    cableYellow: t(mat(0xf2c94c, { roughness: 0.6, metalness: 0 })),
   };
 }
 
@@ -104,6 +126,8 @@ export const FLOOR_STYLE: Record<FloorFinish, { color: number; grid: number; ste
   raised: { color: 0xd3d8de, grid: 0x8f99a4, step: 0.6 },
   concrete: { color: 0xbfc2c4, grid: 0xa5a9ad, step: 1 },
   carpet: { color: 0x9aa7b4, grid: 0x8d99a6, step: 0.5 },
+  vinyl: { color: 0xd9e6e2, grid: 0xc7d6d1, step: 2 },
+  industrial: { color: 0x9ea3a6, grid: 0x8e9396, step: 1 },
 };
 
 /** Face avant d'un équipement de baie de `n` U (repère de la baie, face avant vers +Z). */
@@ -387,6 +411,230 @@ export function buildDecor(
       leaves.scale.set(1, 1.4, 1);
       leaves.castShadow = true;
       add(leaves);
+      break;
+    }
+
+    case 'badge-reader': {
+      // Lecteur de badge : boîtier, zone de lecture, voyant.
+      add(box(w, h, d, M.black), true);
+      add(box(w * 0.7, h * 0.4, 0.004, M.gearGrey, 0, h * 0.45, front), true);
+      add(box(0.012, 0.012, 0.004, M.ledGreen, 0, h * 0.15, front), true);
+      break;
+    }
+    case 'access-panel': {
+      // Centrale de contrôle d'accès : coffret métallique, clavier, voyants.
+      add(box(w, h, d, M.panel), true);
+      add(box(w - 0.03, h - 0.03, 0.006, M.panelDoor, 0, 0.015, front + 0.003), true);
+      add(box(0.12, 0.14, 0.006, M.black, -w * 0.18, h * 0.45, front + 0.007), true);
+      for (let i = 0; i < 3; i++)
+        add(
+          box(
+            0.012,
+            0.012,
+            0.004,
+            i === 2 ? M.ledAmber : M.ledGreen,
+            w * 0.2 + i * 0.03,
+            h * 0.8,
+            front + 0.008,
+          ),
+          true,
+        );
+      break;
+    }
+    case 'fids-screen': {
+      // Écran d'affichage des vols : cadre, dalle allumée, lignes d'horaires.
+      add(box(w, h, d, M.black), true);
+      add(box(w - 0.04, h - 0.04, 0.004, M.screenOn, 0, 0.02, front), true);
+      add(box(w - 0.1, 0.05, 0.003, M.yellow, 0, h - 0.1, front + 0.003), true);
+      for (let i = 0; i < 6; i++) {
+        const y = h - 0.18 - i * 0.07;
+        add(box(w * 0.32, 0.025, 0.003, M.white, -w * 0.28, y, front + 0.003), true);
+        add(
+          box(
+            w * 0.18,
+            0.025,
+            0.003,
+            i % 3 === 1 ? M.ledAmber : M.ledGreen,
+            w * 0.3,
+            y,
+            front + 0.003,
+          ),
+          true,
+        );
+      }
+      break;
+    }
+    case 'security-camera': {
+      // Caméra sur bras mural, orientée vers le bas du local.
+      add(box(0.08, 0.1, 0.02, M.white, 0, h * 0.5, -d / 2 + 0.01), true);
+      add(box(0.04, 0.04, d * 0.6, M.white, 0, h * 0.6, -d * 0.1), true);
+      const cam = box(0.1, 0.09, 0.22, M.white, 0, h * 0.35, d * 0.25);
+      cam.rotation.x = 0.35;
+      add(cam, true);
+      add(box(0.06, 0.06, 0.005, M.black, 0, h * 0.3, d * 0.37), true);
+      break;
+    }
+    case 'medical-panel': {
+      // Tableau IT médical : armoire avec transformateur d'isolement, contrôleur d'isolement,
+      // bandeau vert.
+      add(box(w, h, d, M.ral7035));
+      add(box(w - 0.03, h - 0.03, 0.01, M.panelDoor, 0, 0.015, front + 0.005));
+      add(box(w - 0.03, 0.08, 0.004, M.green, 0, h - 0.2, front + 0.012));
+      add(box(0.16, 0.1, 0.01, M.screenOn, -w * 0.2, h * 0.6, front + 0.012));
+      add(box(0.015, 0.015, 0.004, M.ledGreen, w * 0.05, h * 0.62, front + 0.012));
+      add(box(0.015, 0.015, 0.004, M.ledAmber, w * 0.12, h * 0.62, front + 0.012));
+      add(box(0.025, 0.12, 0.025, M.black, w / 2 - 0.06, h * 0.45, front + 0.02));
+      break;
+    }
+    case 'medical-cart': {
+      // Chariot de soins : caisson à tiroirs sur roulettes, moniteur patient sur potence.
+      const top = 0.95;
+      add(box(w, top - 0.12, d, M.white, 0, 0.12));
+      for (let i = 0; i < 4; i++)
+        add(box(w - 0.04, 0.008, 0.004, M.acGrille, 0, 0.3 + i * 0.16, front + 0.002));
+      for (const sx of [-1, 1])
+        for (const sz of [-1, 1])
+          add(box(0.05, 0.1, 0.05, M.black, (sx * (w - 0.08)) / 2, 0, (sz * (d - 0.08)) / 2));
+      add(box(w + 0.02, 0.03, d + 0.02, M.blue, 0, top));
+      add(box(0.03, h - top - 0.3, 0.03, M.steel, 0, top, -d * 0.2));
+      add(box(0.36, 0.28, 0.06, M.black, 0, h - 0.3, -d * 0.2));
+      add(box(0.32, 0.22, 0.004, M.screenOn, 0, h - 0.27, -d * 0.2 + 0.032));
+      add(box(0.2, 0.01, 0.004, M.ledGreen, 0, h - 0.18, -d * 0.2 + 0.035));
+      break;
+    }
+    case 'plc-cabinet': {
+      // Armoire d'automates RAL 7035 : deux portes, pupitre IHM, boutons et voyants.
+      add(box(w, 0.1, d, M.black));
+      add(box(w, h - 0.1, d, M.ral7035, 0, 0.1));
+      add(box(0.006, h - 0.14, 0.004, M.black, 0, 0.12, front + 0.002));
+      add(box(0.24, 0.17, 0.012, M.black, -w * 0.25, h * 0.62, front + 0.006));
+      add(box(0.21, 0.14, 0.004, M.screenOn, -w * 0.25, h * 0.62 + 0.015, front + 0.013));
+      add(box(0.04, 0.04, 0.02, M.red, w * 0.25, h * 0.62, front + 0.01));
+      add(box(0.02, 0.02, 0.006, M.ledGreen, w * 0.18, h * 0.72, front + 0.004));
+      add(box(0.02, 0.02, 0.006, M.ledAmber, w * 0.25, h * 0.72, front + 0.004));
+      add(box(0.15, 0.05, 0.004, M.yellow, w * 0.25, h - 0.15, front + 0.003));
+      break;
+    }
+    case 'floor-marking': {
+      // Marquage de sécurité jaune à 0,25 m des murs.
+      const inset = 0.25;
+      const t = 0.08;
+      add(box(w - 2 * inset, h, t, M.yellow, 0, 0, -d / 2 + inset));
+      add(box(w - 2 * inset, h, t, M.yellow, 0, 0, d / 2 - inset));
+      add(box(t, h, d - 2 * inset, M.yellow, -w / 2 + inset, 0, 0));
+      add(box(t, h, d - 2 * inset, M.yellow, w / 2 - inset, 0, 0));
+      g.traverse((o) => void (o.castShadow = false));
+      break;
+    }
+    case 'open-rack': {
+      // Baie ouverte à deux montants : panneaux de brassage, commutateurs, cordons de couleur.
+      add(box(w, 0.05, d, M.rackFrame));
+      for (const sx of [-1, 1]) add(box(0.06, h, 0.08, M.rackFrame, (sx * (w - 0.06)) / 2, 0, 0));
+      add(box(w, 0.05, 0.08, M.rackFrame, 0, h - 0.05, 0));
+      for (let i = 0; i < 10; i++) {
+        const y = 1.0 + i * 0.09;
+        add(
+          box(
+            0.44,
+            0.042,
+            i % 3 === 2 ? 0.3 : 0.05,
+            i % 3 === 2 ? M.gearDark : M.gearGrey,
+            0,
+            y,
+            i % 3 === 2 ? -0.11 : 0.02,
+          ),
+        );
+        for (let k = 0; k < 6; k++)
+          add(
+            box(
+              0.012,
+              0.012,
+              0.08,
+              k % 2 ? M.cableBlue : M.cableYellow,
+              -0.16 + k * 0.064,
+              y + 0.015,
+              0.08,
+            ),
+          );
+      }
+      add(box(0.006, 0.006, 0.006, M.ledGreen, 0.18, 1.2, 0.06));
+      add(box(0.12, 0.8, 0.08, M.cableBlue, -w / 2 + 0.1, 1.0, 0.06));
+      break;
+    }
+    case 'wifi-ap': {
+      // Borne Wi-Fi murale (disque blanc, voyant).
+      const disc = new THREE.Mesh(new THREE.CylinderGeometry(w / 2, w / 2, d, 28), M.white);
+      disc.rotation.x = Math.PI / 2;
+      disc.position.set(0, h / 2, 0);
+      add(disc, true);
+      add(box(0.02, 0.02, 0.004, M.ledBlue, 0, h / 2 - 0.01, front + 0.001), true);
+      break;
+    }
+    case 'lift-machine': {
+      // Machine de traction : bâti, moteur, frein, poulie à gorges, câbles vers la gaine.
+      add(box(w, 0.15, d, M.steel));
+      const motor = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.5, 24), M.motor);
+      motor.rotation.z = Math.PI / 2;
+      motor.position.set(-w * 0.22, 0.4, 0);
+      motor.castShadow = true;
+      add(motor);
+      add(box(0.18, 0.4, 0.38, M.yellow, w * 0.05, 0.15, 0)); // frein
+      const sheave = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.32, 0.16, 32), M.steel);
+      sheave.rotation.z = Math.PI / 2;
+      sheave.position.set(w * 0.3, 0.5, 0);
+      sheave.castShadow = true;
+      add(sheave);
+      // Câbles de traction jusqu'au plafond (trémie vers la gaine).
+      for (let i = 0; i < 4; i++)
+        add(box(0.012, h - 0.5, 0.012, M.black, w * 0.3 - 0.06 + i * 0.04, 0.5, 0.3));
+      break;
+    }
+    case 'lift-controller': {
+      // Armoire de manœuvre : porte, variateur, bandeau d'état.
+      add(box(w, h, d, M.panel));
+      add(box(w - 0.03, h - 0.03, 0.01, M.panelDoor, 0, 0.015, front + 0.005));
+      add(box(0.18, 0.12, 0.01, M.screenOn, -w * 0.2, h * 0.62, front + 0.012));
+      for (let i = 0; i < 3; i++)
+        add(
+          box(
+            0.02,
+            0.02,
+            0.006,
+            i === 0 ? M.ledGreen : M.ledAmber,
+            w * 0.08 + i * 0.05,
+            h * 0.64,
+            front + 0.012,
+          ),
+        );
+      add(box(0.025, 0.12, 0.025, M.black, w / 2 - 0.06, h * 0.45, front + 0.02));
+      add(box(w - 0.1, 0.05, 0.004, M.yellow, 0, h - 0.15, front + 0.012));
+      break;
+    }
+    case 'hoist-beam': {
+      // Poutre de levage sous plafond avec crochet.
+      add(box(w, h, d, M.yellow));
+      add(box(0.03, 0.25, 0.03, M.steel, 0, -0.25, 0));
+      add(box(0.08, 0.06, 0.03, M.black, 0, -0.3, 0));
+      break;
+    }
+    case 'sign': {
+      // Plaque murale : croix verte (médical), triangle jaune (danger), flèches (ascenseur).
+      const bg = dc.sign === 'medical' ? M.white : dc.sign === 'danger' ? M.yellow : M.blue;
+      add(box(w, h, d, bg), true);
+      const p = (pw: number, ph: number, m: Mat, x: number, y: number) =>
+        add(box(pw, ph, 0.004, m, x, y, front + 0.002), true);
+      if (dc.sign === 'medical') {
+        p(w * 0.6, w * 0.2, M.green, 0, h / 2 - w * 0.1);
+        p(w * 0.2, w * 0.6, M.green, 0, h / 2 - w * 0.3);
+      } else if (dc.sign === 'danger') {
+        for (let i = 0; i < 5; i++) p(w * (0.75 - i * 0.14), 0.035, M.black, 0, 0.05 + i * 0.045);
+        p(0.025, 0.08, M.yellow, 0, 0.1);
+      } else {
+        p(0.04, h * 0.5, M.white, -w * 0.15, h * 0.25);
+        p(0.04, h * 0.5, M.white, w * 0.15, h * 0.25);
+        p(0.1, 0.04, M.white, -w * 0.15, h * 0.72);
+        p(0.1, 0.04, M.white, w * 0.15, h * 0.2);
+      }
       break;
     }
   }

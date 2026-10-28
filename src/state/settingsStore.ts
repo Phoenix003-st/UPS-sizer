@@ -1,7 +1,13 @@
 /** Paramètres de calcul (écran Paramètres), sauvegardés dans le navigateur. */
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
-import { defaultSettings, settingsSchema, type Settings } from '../settings/schema';
+import {
+  defaultSettings,
+  mergeSettings,
+  settingsSchema,
+  type Settings,
+  type SettingsOverrides,
+} from '../settings/schema';
 import { browserStorage } from './storage';
 
 interface SettingsState {
@@ -30,10 +36,14 @@ export const useSettingsStore = create<SettingsState>()(
           st.settings.power.growthMargin = defaultSettings().power.growthMargin;
         return st as { settings: Settings };
       },
-      // Des paramètres enregistrés invalides (version antérieure…) sont remplacés par les défauts.
+      // Les paramètres enregistrés complètent les défauts (un secteur ajouté depuis reçoit ses
+      // valeurs par défaut) ; s'ils restent invalides, ils sont remplacés par les défauts.
       merge: (persisted, current) => {
+        const saved = (persisted as { settings?: unknown } | undefined)?.settings;
         const parsed = settingsSchema.safeParse(
-          (persisted as { settings?: unknown } | undefined)?.settings,
+          saved && typeof saved === 'object'
+            ? mergeSettings(defaultSettings(), saved as SettingsOverrides)
+            : saved,
         );
         return { ...current, settings: parsed.success ? parsed.data : current.settings };
       },

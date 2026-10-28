@@ -120,6 +120,26 @@
       "technologies": ["online_performance", "online_double_conversion"],
       "redundancy": "N"
     },
+    "medical": {
+      "autonomyMin": 30,
+      "technologies": ["online_double_conversion", "modular"],
+      "redundancy": "N+1"
+    },
+    "industrial": {
+      "autonomyMin": 15,
+      "technologies": ["online_double_conversion"],
+      "redundancy": "N"
+    },
+    "enterprise": {
+      "autonomyMin": 15,
+      "technologies": ["line_interactive", "online_double_conversion"],
+      "redundancy": "N"
+    },
+    "elevator": {
+      "autonomyMin": 10,
+      "technologies": ["online_double_conversion"],
+      "redundancy": "N"
+    },
     "custom": {
       "autonomyMin": 15,
       "technologies": ["*"],
