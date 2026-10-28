@@ -103,9 +103,9 @@ export const projectSchema = z.object({
   }),
   choice: z.object({
     tier: tierSchema,
+    /** Configuration choisie hors des trois options (identifiant « modèle|chimie »). */
+    key: z.string().optional(),
     overrides: z.record(z.string(), z.unknown()).default({}),
-    /** Configuration choisie hors des trois options (identifiant « modèle|chimie »), sinon null. */
-    key: z.string().nullable().default(null),
   }),
   layout: z.object({
     positions: z
@@ -213,7 +213,7 @@ export function createProject(
       ...preset,
     },
     installation: { generator: false, externalMaintenanceBypass: large, cableLengthsM: null },
-    choice: { tier: 'recommended', overrides: {}, key: null },
+    choice: { tier: 'recommended', overrides: {} },
     layout: { positions: {} },
     settingsOverrides: {},
   };

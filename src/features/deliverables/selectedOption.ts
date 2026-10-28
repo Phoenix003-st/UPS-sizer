@@ -12,7 +12,7 @@ export function selectedOption(
   if (!result) return null;
   const key = project.choice.key;
   return (
-    (key !== null
+    (key !== undefined
       ? (result.options.find((o) => o.key === key) ??
         result.alternatives.find((o) => o.key === key))
       : undefined) ??

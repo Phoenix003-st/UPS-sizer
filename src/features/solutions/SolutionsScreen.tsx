@@ -25,9 +25,9 @@ import { FlowNav } from '../../ui/FlowNav';
 import { formatNumber, formatPct } from '../../ui/format';
 import { UpsIllustration } from '../../ui/icons';
 import { selectedOption } from '../deliverables/selectedOption';
+import { FormFactorChoiceField, PhaseChoiceField } from './SelectionChoices';
 import { MiniRoom } from '../layout-plan/MiniRoom';
 import { Room3D } from '../room-3d/Room3D';
-import { FormFactorChoiceField, PhaseChoiceField } from './SelectionChoices';
 
 export function SolutionsScreen({ project }: { project: Project }) {
   const { t } = useTranslation();
@@ -45,7 +45,7 @@ export function SolutionsScreen({ project }: { project: Project }) {
         d.choice.key = o.key;
       } else {
         d.choice.tier = o.tier;
-        d.choice.key = null;
+        delete d.choice.key;
       }
     });
     navigate('deliverables');
@@ -87,6 +87,16 @@ export function SolutionsScreen({ project }: { project: Project }) {
           ))}
         </ul>
       )}
+      <Modal open={calcFor !== null} onClose={() => setCalcFor(null)} title={t('calcModal.title')}>
+        {calcFor && <TraceList traces={calcFor.traces} />}
+      </Modal>
+      <Modal
+        open={view3dFor !== null}
+        onClose={() => setView3dFor(null)}
+        title={`${t('room3d.title')}${view3dFor ? ` — ${view3dFor.ups.reference}` : ''}`}
+      >
+        {view3dFor && <Room3D option={view3dFor} project={project} height="62vh" />}
+      </Modal>
       {result.options.length > 0 && (
         <section className="mt-8" aria-labelledby="alternatives-title">
           <h2 id="alternatives-title" className="text-lg font-bold">
@@ -125,16 +135,6 @@ export function SolutionsScreen({ project }: { project: Project }) {
             onShow3d={() => setView3dFor(detailsFor)}
           />
         )}
-      </Modal>
-      <Modal open={calcFor !== null} onClose={() => setCalcFor(null)} title={t('calcModal.title')}>
-        {calcFor && <TraceList traces={calcFor.traces} />}
-      </Modal>
-      <Modal
-        open={view3dFor !== null}
-        onClose={() => setView3dFor(null)}
-        title={`${t('room3d.title')}${view3dFor ? ` — ${view3dFor.ups.reference}` : ''}`}
-      >
-        {view3dFor && <Room3D option={view3dFor} project={project} height="62vh" />}
       </Modal>
       <FlowNav
         back="room"
