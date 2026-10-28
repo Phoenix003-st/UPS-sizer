@@ -36,6 +36,10 @@ export type El =
       anchor?: 'start' | 'middle' | 'end';
       bold?: boolean;
       size?: number;
+      /** Largeur disponible (px) : au-delà, le texte passe à la ligne. */
+      maxWidth?: number;
+      /** Lignes empilées vers le haut (libellé posé sur un trait). */
+      growUp?: boolean;
     }
   | { type: 'arrow'; x: number; y: number }
   | { type: 'dot'; x: number; y: number };
@@ -180,10 +184,11 @@ export function buildSingleLine(
       const mods = option.ups.modulesPerFrame?.[i];
       els.push({
         type: 'box',
-        x: ux - 40,
-        y: 250,
-        w: 160,
-        h: 162,
+        // Bandeau de titre en haut du cadre (y 236 → 276), au-dessus du redresseur.
+        x: ux - 45,
+        y: 236,
+        w: 170,
+        h: 176,
         label: isModular ? `${shortRef(option.ups.reference)}` : shortRef(option.ups.reference),
         sub:
           isModular && mods !== undefined && model?.modular
@@ -195,12 +200,12 @@ export function buildSingleLine(
       els.push({ type: 'symbol', kind: 'inverter', x: ux, y: 357 });
       els.push({ type: 'line', x1: bx, y1: 250, x2: bx, y2: 342 });
       els.push({ type: 'symbol', kind: 'staticSwitch', x: bx, y: 352 });
-      els.push({ type: 'line', x1: bx, y1: 362, x2: bx, y2: 397 });
-      els.push({ type: 'line', x1: ux, y1: 375, x2: ux, y2: 397 });
-      els.push({ type: 'line', x1: ux, y1: 397, x2: bx, y2: 397 });
+      els.push({ type: 'line', x1: bx, y1: 362, x2: bx, y2: 388 });
+      els.push({ type: 'line', x1: ux, y1: 375, x2: ux, y2: 388 });
+      els.push({ type: 'line', x1: ux, y1: 388, x2: bx, y2: 388 });
       // Sortie
       const ox = (ux + bx) / 2;
-      els.push({ type: 'line', x1: ox, y1: 397, x2: ox, y2: 480 });
+      els.push({ type: 'line', x1: ox, y1: 388, x2: ox, y2: 480 });
       els.push({
         type: 'breaker',
         x: ox,
@@ -238,7 +243,14 @@ export function buildSingleLine(
     if (ellipsis) {
       const ex = firstX + drawn * UNIT_W + 10;
       els.push({ type: 'text', x: ex, y: 330, text: '…', anchor: 'middle', bold: true, size: 22 });
-      els.push({ type: 'text', x: ex, y: 355, text: labels.units(units), anchor: 'middle' });
+      els.push({
+        type: 'text',
+        x: ex,
+        y: 355,
+        text: labels.units(units),
+        anchor: 'middle',
+        maxWidth: 80,
+      });
     }
 
     // Bus de sortie et tableau ondulé
@@ -256,13 +268,19 @@ export function buildSingleLine(
     els.push({ type: 'line', x1: boardX, y1: 480, x2: boardX, y2: 560 });
     const boardEnd = Math.max(busEnd, boardX + (feeders - 1) * 75 + 40);
     els.push({ type: 'line', x1: boardX - 20, y1: 560, x2: boardEnd, y2: 560, bus: true });
+    // À droite de l'arrivée du tableau, pour ne pas croiser le trait vertical.
     els.push({
       type: 'text',
-      x: boardX - 20,
+      x: boardX + 8,
       y: 552,
       text: labels.board,
       anchor: 'start',
       bold: true,
+      maxWidth: Math.max(
+        (installation.externalMaintenanceBypass ? busEnd - 20 : boardEnd) - boardX - 16,
+        100,
+      ),
+      growUp: true,
     });
 
     if (installation.externalMaintenanceBypass) {
@@ -283,6 +301,7 @@ export function buildSingleLine(
         y: 300,
         text: labels.maintenanceBypass,
         anchor: 'start',
+        maxWidth: 100,
       });
       els.push({ type: 'dot', x: mx, y: 560 });
     }
