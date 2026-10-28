@@ -7,7 +7,7 @@
     "version": "Version of {{build}}",
     "skip": "Skip to content",
     "localOnly": "Your projects stay in this browser. Nothing is sent to a server.",
-    "edition": "InfoSec edition"
+    "edition": "Generic edition, no brand"
   },
   "nav": {
     "home": "Home",
@@ -642,7 +642,7 @@
     "date": "Date",
     "installation": "Installation",
     "summary": "Summary",
-    "sampleNotice": "UPS references come from the manufacturer's catalogue. Batteries are generic and some unpublished values (weight, efficiency, battery make-up) are estimated: confirm before ordering.",
+    "sampleNotice": "The proposed UPS are generic, with no brand or product reference: their characteristics are typical values, to be confirmed with the chosen manufacturer before ordering. Batteries are generic too.",
     "intro": "The report includes the summary, the selected solution, the layout, the single-line diagram, the bill of materials and the calculation note.",
     "download": "Download the PDF report",
     "generating": "Generating…",

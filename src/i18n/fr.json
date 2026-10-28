@@ -7,7 +7,7 @@
     "version": "Version du {{build}}",
     "skip": "Aller au contenu",
     "localOnly": "Vos projets restent dans ce navigateur. Rien n'est envoyé à un serveur.",
-    "edition": "Édition InfoSec"
+    "edition": "Édition générique, sans marque"
   },
   "nav": {
     "home": "Accueil",
@@ -642,7 +642,7 @@
     "date": "Date",
     "installation": "Installation",
     "summary": "Récapitulatif",
-    "sampleNotice": "Les références UPS proviennent du catalogue du constructeur. Les batteries sont génériques et certaines valeurs non publiées (masse, rendement, composition des batteries) sont estimées : à confirmer avant commande.",
+    "sampleNotice": "Les UPS proposés sont génériques, sans marque ni référence produit : leurs caractéristiques sont des valeurs types, à confirmer auprès du fabricant retenu avant commande. Les batteries sont également génériques.",
     "intro": "Le rapport reprend le récapitulatif, la solution retenue, le plan, le schéma unifilaire, la nomenclature et la note de calcul.",
     "download": "Télécharger le rapport PDF",
     "generating": "Génération en cours…",
