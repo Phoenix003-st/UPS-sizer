@@ -150,6 +150,22 @@ const ROOM_PRESETS: Record<ScenarioId, Partial<Project['room']>> = {
     door: { widthMm: 1400, heightMm: 2200, wall: 'bottom', offsetMm: 500 },
   },
   building: { lengthMm: 4000, widthMm: 3000, kind: 'dedicated', hvac: { present: false, kW: 0 } },
+  medical: {
+    lengthMm: 5000,
+    widthMm: 4000,
+    kind: 'dedicated',
+    hvac: { present: true, kW: 10 },
+    door: { widthMm: 1200, heightMm: 2100, wall: 'bottom', offsetMm: 400 },
+  },
+  industrial: {
+    lengthMm: 6000,
+    widthMm: 4000,
+    kind: 'dedicated',
+    hvac: { present: true, kW: 8 },
+    door: { widthMm: 1400, heightMm: 2200, wall: 'bottom', offsetMm: 400 },
+  },
+  enterprise: { lengthMm: 4000, widthMm: 3000, kind: 'dedicated', hvac: { present: true, kW: 5 } },
+  elevator: { lengthMm: 5000, widthMm: 3500, kind: 'dedicated', hvac: { present: false, kW: 0 } },
   custom: { lengthMm: 5000, widthMm: 4000, kind: 'dedicated', hvac: { present: true, kW: 10 } },
 };
 
@@ -161,6 +177,10 @@ const LOAD_PRESETS: Record<ScenarioId, number> = {
   datacenter: 200,
   airport: 120,
   building: 15,
+  medical: 20,
+  industrial: 15,
+  enterprise: 6,
+  elevator: 12,
   custom: 10,
 };
 

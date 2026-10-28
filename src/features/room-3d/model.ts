@@ -10,6 +10,7 @@
  */
 import type { BatteryBlock, Catalogs, UpsModel } from '../../catalog/schemas';
 import type { Project, RoomKind } from '../../engine/project';
+import type { ScenarioId } from '../../settings/schema';
 import {
   buildRackRow,
   furnishRoom,
@@ -100,8 +101,12 @@ export interface Room3D {
   furnishing: Furnishing;
 }
 
-/** Local tel que décrit dans le projet (seuls le type, le faux plancher et la clim servent). */
-export type RoomContext = RoomKind | Pick<Project['room'], 'kind' | 'raisedFloor' | 'hvac'>;
+/**
+ * Local tel que décrit dans le projet (seuls le type, le faux plancher et la clim servent), et
+ * secteur du projet pour l'aménagement propre au milieu.
+ */
+export type RoomContext =
+  RoomKind | (Pick<Project['room'], 'kind' | 'raisedFloor' | 'hvac'> & { sector?: ScenarioId });
 
 const MM = 0.001;
 
@@ -350,7 +355,11 @@ export function buildRoom3D(
   const furnishing = furnishRoom(
     frame,
     roomKind,
-    { raisedFloor: env.raisedFloor, hvacKW: env.hvac.present ? env.hvac.kW : 0 },
+    {
+      raisedFloor: env.raisedFloor,
+      hvacKW: env.hvac.present ? env.hvac.kW : 0,
+      sector: 'sector' in env ? env.sector : undefined,
+    },
     occupied,
     preferWall,
   );

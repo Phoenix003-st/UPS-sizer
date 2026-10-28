@@ -63,6 +63,37 @@ export const ScenarioIcon = ({ id, className }: P & { id: ScenarioId }) => {
           <path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3" />
         </svg>
       );
+    case 'medical':
+      return (
+        <svg {...base(className)}>
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="M12 7v10M7 12h10" />
+        </svg>
+      );
+    case 'industrial':
+      return (
+        <svg {...base(className)}>
+          <path d="M2 21V11l6 3V11l6 3V6h3l1 15z" />
+          <path d="M2 21h20M6 18h2M11 18h2" />
+        </svg>
+      );
+    case 'enterprise':
+      return (
+        <svg {...base(className)}>
+          <rect x="9" y="2" width="6" height="5" rx="1" />
+          <rect x="2" y="17" width="6" height="5" rx="1" />
+          <rect x="9" y="17" width="6" height="5" rx="1" />
+          <rect x="16" y="17" width="6" height="5" rx="1" />
+          <path d="M12 7v10M5 17v-4h14v4" />
+        </svg>
+      );
+    case 'elevator':
+      return (
+        <svg {...base(className)}>
+          <rect x="4" y="2" width="16" height="20" rx="1" />
+          <path d="M12 2v20M7 9l1.5-2L10 9M14 7l1.5 2L17 7" />
+        </svg>
+      );
     default:
       return (
         <svg {...base(className)}>

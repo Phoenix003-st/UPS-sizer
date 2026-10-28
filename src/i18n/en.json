@@ -48,11 +48,27 @@
     },
     "airport": {
       "title": "Airport",
-      "desc": "Indoor technical rooms, long runtime"
+      "desc": "Access control, security screening, displays, technical rooms"
     },
     "building": {
       "title": "Building",
       "desc": "Offices, hotels, schools, shops, clinics"
+    },
+    "medical": {
+      "title": "Medical",
+      "desc": "Hospitals, clinics, operating theatres, imaging"
+    },
+    "industrial": {
+      "title": "Industrial",
+      "desc": "PLCs, SCADA, process instrumentation"
+    },
+    "enterprise": {
+      "title": "Enterprise network",
+      "desc": "Wiring closet, switches, IP telephony, Wi-Fi"
+    },
+    "elevator": {
+      "title": "Elevator",
+      "desc": "Rescue operation, controller, emergency phone"
     },
     "custom": {
       "title": "Custom",
@@ -114,8 +130,13 @@
         "it": "IT",
         "office": "Office",
         "building": "Building",
+        "access": "Access control and security",
+        "medical": "Medical",
+        "industrial": "Industrial",
+        "elevator": "Elevator",
         "other": "Other"
-      }
+      },
+      "others": "Other equipment"
     },
     "phasesTriMono": "Three/single",
     "phasesHelp": {

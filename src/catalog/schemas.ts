@@ -260,6 +260,10 @@ export const equipmentCategorySchema = z.enum([
   'it',
   'office',
   'building',
+  'access',
+  'medical',
+  'industrial',
+  'elevator',
   'other',
 ]);
 export type EquipmentCategory = z.infer<typeof equipmentCategorySchema>;
