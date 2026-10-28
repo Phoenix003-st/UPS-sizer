@@ -16,6 +16,8 @@ interface ProjectState {
   update: (fn: (draft: Project) => void) => void;
   open: (id: string) => void;
   remove: (id: string) => void;
+  /** Supprime tous les projets du navigateur. */
+  removeAll: () => void;
   duplicate: (id: string, name: string) => void;
   importProject: (p: Project) => void;
 }
@@ -53,6 +55,7 @@ export const useProjectStore = create<ProjectState>()(
           delete projects[id];
           return { projects, currentId: s.currentId === id ? null : s.currentId };
         }),
+      removeAll: () => setState({ projects: {}, currentId: null }),
       duplicate: (id, name) =>
         setState((s) => {
           const src = s.projects[id];
