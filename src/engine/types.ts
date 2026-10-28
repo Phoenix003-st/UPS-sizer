@@ -1,7 +1,7 @@
 /** Types du résultat du moteur (non sauvegardé : toujours recalculé depuis le projet). */
 import type { Chemistry, Technology } from '../catalog/schemas';
 import type { Redundancy } from '../settings/schema';
-import type { Tier, Wall } from './project';
+import type { FormFactorChoice, Tier, Wall } from './project';
 import type { CalcTrace } from './trace';
 
 export type AlertLevel = 'ok' | 'warn' | 'block';
@@ -23,7 +23,12 @@ export interface NormalizedInputs {
   growthMargin: number;
   outputPf: number;
   targetLoadRate: number;
+  /** Phases de sortie (charge). */
   phases: 1 | 3;
+  /** Phases d'entrée (redresseur) : 3 en tri/mono, sinon égales aux phases de sortie. */
+  inputPhases: 1 | 3;
+  /** Format d'UPS demandé par l'utilisateur. */
+  formFactor: FormFactorChoice;
   /** Tension utilisée pour les courants : phase-neutre en mono, entre phases en tri. */
   voltageV: number;
   freqHz: 50 | 60;
@@ -253,8 +258,13 @@ export interface BomLine {
   unitPrice: null;
 }
 
+/** Niveau d'une option : l'une des trois mises en avant, ou une autre configuration possible. */
+export type OptionTier = Tier | 'alternative';
+
 export interface SolutionOption {
-  tier: Tier;
+  tier: OptionTier;
+  /** Identifiant stable de la configuration : « modèle|chimie ». */
+  key: string;
   ups: UpsConfig;
   battery: BatterySolution;
   electrical: ElectricalResult;
@@ -280,6 +290,8 @@ export interface SolutionOption {
 export interface SizingResult {
   inputs: NormalizedInputs;
   options: SolutionOption[];
+  /** Autres configurations possibles (une par gamme et format), de la plus adaptée à la moins. */
+  alternatives: SolutionOption[];
   globalAlerts: Alert[];
   traces: Record<string, CalcTrace>;
 }
