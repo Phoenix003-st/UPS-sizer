@@ -82,6 +82,34 @@ describe('les solutions suivent les choix de l’utilisateur', () => {
   });
 });
 
+describe('une unité seule plutôt que plusieurs en parallèle', () => {
+  it('9 kVA (FP 0,9) en monophasé rack : un seul 10 kVA, E3 Pro compris, avec un avertissement', () => {
+    const p = project('custom');
+    p.load.value = 9;
+    p.load.unit = 'kVA';
+    p.advanced.outputPf = 0.9;
+    p.autonomyMin = 30;
+    p.advanced.phases = 1;
+    p.advanced.formFactor = 'rack';
+    const r = runSizing(p, DEFAULT_CATALOGS, settings);
+    const opts = [...r.options, ...r.alternatives];
+    expect(opts.every((o) => o.ups.unitsPerSystem === 1)).toBe(true);
+    expect(opts.some((o) => modelOf(o.ups.modelId).reference === 'INFOSEC E3 Pro 10k RT')).toBe(
+      true,
+    );
+    for (const o of opts) {
+      expect(o.ups.loadRate).toBeLessThanOrEqual(1);
+      expect(o.alerts.map((a) => a.code)).toContain('load_rate_above_target');
+      expect(o.battery.autonomyMin).toBeGreaterThanOrEqual(30);
+    }
+  });
+  it('dans le taux cible quand une unité seule le permet', () => {
+    const r = size(1, 'auto');
+    for (const o of [...r.options, ...r.alternatives])
+      expect(o.ups.loadRate).toBeLessThanOrEqual(settings.power.targetLoadRate + 1e-9);
+  });
+});
+
 describe('format et taille', () => {
   const m = (formFactor: UpsModel['formFactor'], technology: UpsModel['technology']) =>
     ({ formFactor, technology }) as UpsModel;
@@ -99,6 +127,7 @@ describe('format et taille', () => {
       unitsN,
       installedVA,
       blocked: false,
+      overTarget: false,
     });
     const items = [
       it('A', 'a5', 1, 5000),
