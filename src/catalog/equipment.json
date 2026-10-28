@@ -183,7 +183,7 @@
   },
   {
     "id": "access-control",
-    "category": "building",
+    "category": "access",
     "label": {
       "fr": "Contrôleur d'accès",
       "en": "Access controller",
@@ -219,5 +219,525 @@
     "rangeW": [100, 5000],
     "pf": 0.9,
     "unit": "kW"
+  },
+  {
+    "id": "badge-reader",
+    "category": "access",
+    "label": {
+      "fr": "Lecteur de badge",
+      "en": "Badge reader",
+      "ar": "قارئ البطاقات"
+    },
+    "defaultW": 5,
+    "rangeW": [2, 10],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "door-lock",
+    "category": "access",
+    "label": {
+      "fr": "Ventouse / gâche électrique",
+      "en": "Electromagnetic lock / strike",
+      "ar": "قفل كهرومغناطيسي"
+    },
+    "defaultW": 10,
+    "rangeW": [4, 20],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "turnstile",
+    "category": "access",
+    "label": {
+      "fr": "Tourniquet / portillon",
+      "en": "Turnstile / speed gate",
+      "ar": "بوابة دوارة"
+    },
+    "defaultW": 150,
+    "rangeW": [60, 400],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "intercom",
+    "category": "access",
+    "label": {
+      "fr": "Interphone / visiophone",
+      "en": "Intercom / video door phone",
+      "ar": "جهاز اتصال داخلي"
+    },
+    "defaultW": 15,
+    "rangeW": [5, 40],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "metal-detector",
+    "category": "access",
+    "label": {
+      "fr": "Portique détecteur de métaux",
+      "en": "Walk-through metal detector",
+      "ar": "بوابة كشف المعادن"
+    },
+    "defaultW": 300,
+    "rangeW": [100, 600],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "xray-scanner",
+    "category": "access",
+    "label": {
+      "fr": "Scanner bagages à rayons X",
+      "en": "X-ray baggage scanner",
+      "ar": "جهاز فحص الأمتعة بالأشعة السينية"
+    },
+    "defaultW": 1500,
+    "rangeW": [800, 3000],
+    "pf": 0.9,
+    "unit": "kW"
+  },
+  {
+    "id": "fids-display",
+    "category": "access",
+    "label": {
+      "fr": "Écran d'affichage des vols",
+      "en": "Flight information display",
+      "ar": "شاشة معلومات الرحلات"
+    },
+    "defaultW": 150,
+    "rangeW": [80, 300],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "check-in-kiosk",
+    "category": "access",
+    "label": {
+      "fr": "Borne d'enregistrement",
+      "en": "Self check-in kiosk",
+      "ar": "كشك تسجيل ذاتي"
+    },
+    "defaultW": 250,
+    "rangeW": [150, 500],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "parking-barrier",
+    "category": "access",
+    "label": {
+      "fr": "Barrière levante",
+      "en": "Parking barrier",
+      "ar": "حاجز مواقف السيارات"
+    },
+    "defaultW": 200,
+    "rangeW": [80, 400],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "patient-monitor",
+    "category": "medical",
+    "label": {
+      "fr": "Moniteur patient",
+      "en": "Patient monitor",
+      "ar": "جهاز مراقبة المريض"
+    },
+    "defaultW": 60,
+    "rangeW": [30, 150],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "infusion-pump",
+    "category": "medical",
+    "label": {
+      "fr": "Pousse-seringue / pompe",
+      "en": "Syringe / infusion pump",
+      "ar": "مضخة تسريب"
+    },
+    "defaultW": 20,
+    "rangeW": [10, 40],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "ventilator",
+    "category": "medical",
+    "label": {
+      "fr": "Respirateur",
+      "en": "Ventilator",
+      "ar": "جهاز التنفس الاصطناعي"
+    },
+    "defaultW": 250,
+    "rangeW": [100, 500],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "surgical-light",
+    "category": "medical",
+    "label": {
+      "fr": "Éclairage opératoire",
+      "en": "Surgical light",
+      "ar": "إضاءة الجراحة"
+    },
+    "defaultW": 150,
+    "rangeW": [80, 400],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "operating-table",
+    "category": "medical",
+    "label": {
+      "fr": "Table d'opération",
+      "en": "Operating table",
+      "ar": "طاولة العمليات"
+    },
+    "defaultW": 400,
+    "rangeW": [200, 800],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "electrosurgical",
+    "category": "medical",
+    "label": {
+      "fr": "Bistouri électrique",
+      "en": "Electrosurgical unit",
+      "ar": "مشرط كهربائي"
+    },
+    "defaultW": 500,
+    "rangeW": [300, 900],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "ultrasound",
+    "category": "medical",
+    "label": {
+      "fr": "Échographe",
+      "en": "Ultrasound scanner",
+      "ar": "جهاز الموجات فوق الصوتية"
+    },
+    "defaultW": 500,
+    "rangeW": [200, 900],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "pacs-station",
+    "category": "medical",
+    "label": {
+      "fr": "Station d'imagerie (PACS)",
+      "en": "Imaging workstation (PACS)",
+      "ar": "محطة التصوير الطبي"
+    },
+    "defaultW": 400,
+    "rangeW": [200, 800],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "medical-fridge",
+    "category": "medical",
+    "label": {
+      "fr": "Réfrigérateur médical",
+      "en": "Medical refrigerator",
+      "ar": "ثلاجة طبية"
+    },
+    "defaultW": 200,
+    "rangeW": [100, 500],
+    "pf": 0.85,
+    "unit": "W"
+  },
+  {
+    "id": "nurse-call",
+    "category": "medical",
+    "label": {
+      "fr": "Appel malade",
+      "en": "Nurse call system",
+      "ar": "نظام نداء الممرضة"
+    },
+    "defaultW": 50,
+    "rangeW": [20, 150],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "plc",
+    "category": "industrial",
+    "label": {
+      "fr": "Automate (API)",
+      "en": "PLC controller",
+      "ar": "وحدة تحكم منطقية قابلة للبرمجة"
+    },
+    "defaultW": 100,
+    "rangeW": [30, 300],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "hmi-panel",
+    "category": "industrial",
+    "label": {
+      "fr": "Pupitre IHM",
+      "en": "HMI panel",
+      "ar": "لوحة واجهة المشغل"
+    },
+    "defaultW": 60,
+    "rangeW": [20, 150],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "scada-station",
+    "category": "industrial",
+    "label": {
+      "fr": "Poste de supervision SCADA",
+      "en": "SCADA workstation",
+      "ar": "محطة إشراف SCADA"
+    },
+    "defaultW": 300,
+    "rangeW": [150, 600],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "industrial-switch",
+    "category": "industrial",
+    "label": {
+      "fr": "Switch industriel",
+      "en": "Industrial switch",
+      "ar": "محول صناعي"
+    },
+    "defaultW": 30,
+    "rangeW": [10, 80],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "psu-24v",
+    "category": "industrial",
+    "label": {
+      "fr": "Alimentation 24 V DC",
+      "en": "24 V DC power supply",
+      "ar": "مزود طاقة 24 فولت"
+    },
+    "defaultW": 240,
+    "rangeW": [60, 960],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "instrumentation",
+    "category": "industrial",
+    "label": {
+      "fr": "Capteurs et instrumentation (lot)",
+      "en": "Sensors and instrumentation (set)",
+      "ar": "حساسات وأجهزة قياس"
+    },
+    "defaultW": 100,
+    "rangeW": [20, 500],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "solenoid-valves",
+    "category": "industrial",
+    "label": {
+      "fr": "Électrovannes (lot)",
+      "en": "Solenoid valves (set)",
+      "ar": "صمامات كهرومغناطيسية"
+    },
+    "defaultW": 100,
+    "rangeW": [20, 400],
+    "pf": 0.8,
+    "unit": "W"
+  },
+  {
+    "id": "process-analyzer",
+    "category": "industrial",
+    "label": {
+      "fr": "Analyseur de procédé",
+      "en": "Process analyzer",
+      "ar": "محلل العمليات"
+    },
+    "defaultW": 500,
+    "rangeW": [200, 1500],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "robot-controller",
+    "category": "industrial",
+    "label": {
+      "fr": "Contrôleur de robot",
+      "en": "Robot controller",
+      "ar": "وحدة تحكم الروبوت"
+    },
+    "defaultW": 1500,
+    "rangeW": [500, 3000],
+    "pf": 0.9,
+    "unit": "kW"
+  },
+  {
+    "id": "core-switch",
+    "category": "network",
+    "label": {
+      "fr": "Switch de cœur de réseau",
+      "en": "Core switch",
+      "ar": "محول الشبكة الأساسي"
+    },
+    "defaultW": 800,
+    "rangeW": [300, 1500],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "wifi-controller",
+    "category": "network",
+    "label": {
+      "fr": "Contrôleur Wi-Fi",
+      "en": "Wi-Fi controller",
+      "ar": "وحدة تحكم Wi-Fi"
+    },
+    "defaultW": 150,
+    "rangeW": [60, 300],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "ip-phone",
+    "category": "network",
+    "label": {
+      "fr": "Téléphone IP",
+      "en": "IP phone",
+      "ar": "هاتف IP"
+    },
+    "defaultW": 7,
+    "rangeW": [4, 15],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "ipbx",
+    "category": "network",
+    "label": {
+      "fr": "Autocommutateur IPBX",
+      "en": "IP PBX",
+      "ar": "مقسم هاتفي IP"
+    },
+    "defaultW": 200,
+    "rangeW": [60, 500],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "nas",
+    "category": "it",
+    "label": {
+      "fr": "Serveur NAS",
+      "en": "NAS server",
+      "ar": "خادم NAS"
+    },
+    "defaultW": 100,
+    "rangeW": [40, 300],
+    "pf": 0.95,
+    "unit": "W"
+  },
+  {
+    "id": "videoconf",
+    "category": "office",
+    "label": {
+      "fr": "Système de visioconférence",
+      "en": "Video conferencing system",
+      "ar": "نظام مؤتمرات الفيديو"
+    },
+    "defaultW": 250,
+    "rangeW": [100, 600],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "lift-drive",
+    "category": "elevator",
+    "label": {
+      "fr": "Moteur ascenseur (manœuvre de secours)",
+      "en": "Elevator drive (rescue operation)",
+      "ar": "محرك المصعد (تشغيل الإنقاذ)"
+    },
+    "defaultW": 5500,
+    "rangeW": [3000, 15000],
+    "pf": 0.85,
+    "unit": "kW"
+  },
+  {
+    "id": "lift-controller",
+    "category": "elevator",
+    "label": {
+      "fr": "Armoire de manœuvre",
+      "en": "Elevator controller",
+      "ar": "لوحة تحكم المصعد"
+    },
+    "defaultW": 500,
+    "rangeW": [200, 1000],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "lift-door",
+    "category": "elevator",
+    "label": {
+      "fr": "Opérateur de porte",
+      "en": "Door operator",
+      "ar": "مشغل الباب"
+    },
+    "defaultW": 250,
+    "rangeW": [100, 400],
+    "pf": 0.85,
+    "unit": "W"
+  },
+  {
+    "id": "lift-brake",
+    "category": "elevator",
+    "label": {
+      "fr": "Frein électromagnétique",
+      "en": "Electromagnetic brake",
+      "ar": "مكبح كهرومغناطيسي"
+    },
+    "defaultW": 200,
+    "rangeW": [80, 500],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "lift-cabin",
+    "category": "elevator",
+    "label": {
+      "fr": "Éclairage et ventilation cabine",
+      "en": "Car lighting and fan",
+      "ar": "إنارة وتهوية المقصورة"
+    },
+    "defaultW": 150,
+    "rangeW": [50, 300],
+    "pf": 0.9,
+    "unit": "W"
+  },
+  {
+    "id": "lift-alarm",
+    "category": "elevator",
+    "label": {
+      "fr": "Téléalarme cabine",
+      "en": "Car emergency phone",
+      "ar": "هاتف طوارئ المقصورة"
+    },
+    "defaultW": 15,
+    "rangeW": [5, 30],
+    "pf": 0.9,
+    "unit": "W"
   }
 ]

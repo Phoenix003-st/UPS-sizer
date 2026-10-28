@@ -48,11 +48,27 @@
     },
     "airport": {
       "title": "Aéroport",
-      "desc": "Locaux techniques intérieurs, autonomie longue"
+      "desc": "Contrôle d'accès, sûreté, affichage, locaux techniques"
     },
     "building": {
       "title": "Bâtiment",
       "desc": "Bureaux, hôtels, écoles, commerces, cliniques"
+    },
+    "medical": {
+      "title": "Médical",
+      "desc": "Hôpitaux, cliniques, blocs opératoires, imagerie"
+    },
+    "industrial": {
+      "title": "Milieu industriel",
+      "desc": "Automates, supervision, instrumentation de procédé"
+    },
+    "enterprise": {
+      "title": "Réseau d'entreprise tertiaire",
+      "desc": "Local de brassage, switchs, téléphonie IP, Wi-Fi"
+    },
+    "elevator": {
+      "title": "Ascenseur",
+      "desc": "Manœuvre de secours, armoire de commande, téléalarme"
     },
     "custom": {
       "title": "Personnalisé",
@@ -114,8 +130,13 @@
         "it": "Informatique",
         "office": "Bureautique",
         "building": "Bâtiment",
+        "access": "Contrôle d'accès et sûreté",
+        "medical": "Médical",
+        "industrial": "Industriel",
+        "elevator": "Ascenseur",
         "other": "Autres"
-      }
+      },
+      "others": "Autres équipements"
     },
     "phasesTriMono": "Tri/Mono",
     "phasesHelp": {
