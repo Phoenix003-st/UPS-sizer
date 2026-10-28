@@ -32,6 +32,15 @@ describe('projets', () => {
     expect(Object.keys(useProjectStore.getState().projects)).toHaveLength(2);
   });
 
+  it('tout supprimer vide la liste et le projet courant', () => {
+    const st = useProjectStore.getState();
+    st.create('office', DEFAULT_SETTINGS, 'v1');
+    st.create('cctv', DEFAULT_SETTINGS, 'v1');
+    useProjectStore.getState().removeAll();
+    expect(useProjectStore.getState().projects).toEqual({});
+    expect(useProjectStore.getState().currentId).toBeNull();
+  });
+
   it('modifier sans projet courant ne fait rien', () => {
     useProjectStore.getState().update((d) => void (d.name = 'x'));
     expect(useProjectStore.getState().projects).toEqual({});
