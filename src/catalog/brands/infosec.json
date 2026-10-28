@@ -3873,16 +3873,16 @@
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [8],
-          "default": 8
+          "allowed": [16],
+          "default": 16
         },
         "internal": {
-          "blockId": "EX-VRLA-12V18",
-          "blocks": 8,
+          "blockId": "EX-VRLA-12V9",
+          "blocks": 16,
           "strings": 1
         },
         "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["INF-EBM-GEN-96V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3897,7 +3897,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 1 × 8 blocs 12V18 (autonomie calculée 19.2 min pour 20 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 1 × 16 blocs 12V9 (autonomie calculée 21.8 min pour 20 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
       },
       "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
     },
@@ -3968,16 +3968,16 @@
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [8],
-          "default": 8
+          "allowed": [16],
+          "default": 16
         },
         "internal": {
-          "blockId": "EX-VRLA-12V17",
-          "blocks": 8,
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 16,
           "strings": 1
         },
         "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["INF-EBM-GEN-96V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3992,7 +3992,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 1 × 8 blocs 12V17 (autonomie calculée 14.3 min pour 14 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 1 × 16 blocs 12V7 (autonomie calculée 12.6 min pour 14 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
       },
       "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
     },
@@ -4063,16 +4063,16 @@
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [8],
-          "default": 8
+          "allowed": [16],
+          "default": 16
         },
         "internal": {
-          "blockId": "EX-VRLA-12V9",
-          "blocks": 8,
-          "strings": 3
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 16,
+          "strings": 1
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["INF-EBM-GEN-96V"],
+        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4087,7 +4087,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 3 × 8 blocs 12V9 (autonomie calculée 15.2 min pour 14 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 1 × 16 blocs 12V12 (autonomie calculée 12.2 min pour 14 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
       },
       "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
     },
@@ -5298,12 +5298,12 @@
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [8],
-          "default": 8
+          "allowed": [16],
+          "default": 16
         },
         "internal": {
-          "blockId": "EX-VRLA-12V12",
-          "blocks": 8,
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 16,
           "strings": 1
         },
         "maxChargeCurrentA": 4,
@@ -5322,7 +5322,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 25",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 8 blocs 12V12 (autonomie calculée 19.1 min pour 20 min au catalogue)."
+        "note": "Batteries internes estimées : 1 × 16 blocs 12V7 (autonomie calculée 24.8 min pour 20 min au catalogue)."
       },
       "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
     },
@@ -5393,12 +5393,12 @@
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [8],
-          "default": 8
+          "allowed": [16],
+          "default": 16
         },
         "internal": {
-          "blockId": "EX-VRLA-12V12",
-          "blocks": 8,
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 16,
           "strings": 1
         },
         "maxChargeCurrentA": 4,
@@ -5417,7 +5417,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 25",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 8 blocs 12V12 (autonomie calculée 14.4 min pour 15 min au catalogue)."
+        "note": "Batteries internes estimées : 1 × 16 blocs 12V7 (autonomie calculée 18.7 min pour 15 min au catalogue)."
       },
       "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
     },
@@ -5583,13 +5583,13 @@
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [8],
-          "default": 8
+          "allowed": [20],
+          "default": 20
         },
         "internal": {
-          "blockId": "EX-VRLA-12V9",
-          "blocks": 8,
-          "strings": 3
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 20,
+          "strings": 1
         },
         "maxChargeCurrentA": 6,
         "compatibleCabinetIds": [],
@@ -5607,7 +5607,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 25",
         "url": "https://www.infosec-ups.com/",
-        "note": "Le guide de sélection (page 9) indique 67321 pour le 10 kVA ; la page produit 67657. Batteries internes estimées : 3 × 8 blocs 12V9 (autonomie calculée 15.2 min pour 15 min au catalogue)."
+        "note": "Le guide de sélection (page 9) indique 67321 pour le 10 kVA ; la page produit 67657. Batteries internes estimées : 1 × 20 blocs 12V12 (autonomie calculée 16.5 min pour 15 min au catalogue)."
       },
       "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
     },
@@ -10002,11 +10002,11 @@
       "breakerA": 63
     },
     {
-      "id": "INF-EBM-GEN-96V",
+      "id": "INF-EBM-GEN-192V",
       "sample": true,
       "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "INFOSEC module batteries externe 96 V (référence à préciser)",
+      "reference": "INFOSEC module batteries externe 192 V (référence à préciser)",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
@@ -10023,47 +10023,15 @@
       },
       "capacity": [
         {
-          "blockId": "EX-VRLA-12V18",
-          "maxBlocks": 16
-        },
-        {
-          "blockId": "EX-VRLA-12V17",
-          "maxBlocks": 16
-        },
-        {
           "blockId": "EX-VRLA-12V9",
-          "maxBlocks": 16
-        }
-      ],
-      "breakerA": 63
-    },
-    {
-      "id": "INF-EBM-GEN-192V",
-      "sample": true,
-      "brand": "INFOSEC",
-      "partNumber": "",
-      "reference": "INFOSEC module batteries externe 192 V (référence à préciser)",
-      "kind": "ebm",
-      "dimensionsMm": {
-        "w": 438,
-        "d": 610,
-        "h": 88
-      },
-      "emptyWeightKg": 5,
-      "clearancesMm": {
-        "front": 500,
-        "rear": 100,
-        "left": 0,
-        "right": 0,
-        "top": 0
-      },
-      "capacity": [
+          "maxBlocks": 32
+        },
         {
           "blockId": "EX-VRLA-12V7",
           "maxBlocks": 32
         },
         {
-          "blockId": "EX-VRLA-12V9",
+          "blockId": "EX-VRLA-12V12",
           "maxBlocks": 32
         }
       ],

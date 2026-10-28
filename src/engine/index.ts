@@ -245,6 +245,16 @@ function evaluateOption(
   });
 
   const alerts: Alert[] = [...extraAlerts, ...layout.alerts, ...thermal.alerts];
+  if (config.loadRate > inputs.targetLoadRate + 1e-9) {
+    alerts.push({
+      level: 'warn',
+      code: 'load_rate_above_target',
+      params: {
+        rate: Math.round(config.loadRate * 100),
+        target: Math.round(inputs.targetLoadRate * 100),
+      },
+    });
+  }
   const kind = project.room.kind;
   if ((kind === 'office' || kind === 'shared') && model.noiseDb !== null) {
     alerts.push(
@@ -460,16 +470,24 @@ export function runSizing(
     };
   }
 
+  // Une unité seule au-dessus du taux cible n'est retenue que si aucune unité seule ne convient
+  // dans le taux cible (sinon il faudrait mettre plusieurs unités en parallèle).
+  const overTarget = (e: Evaluated) => e.option.ups.loadRate > inputs.targetLoadRate + 1e-9;
+  const compliantSingle = evaluated.some(
+    (e) => e.option.ups.unitsN === 1 && !overTarget(e) && !e.scored.blocked,
+  );
+  const usable = compliantSingle ? evaluated.filter((e) => !overTarget(e)) : evaluated;
   // Une configuration par gamme et format, à la bonne taille.
   const sized = rightSized(
-    evaluated.map((e) => ({
+    usable.map((e) => ({
       group: e.scored.group,
       modelId: e.option.ups.modelId,
       unitsN: e.option.ups.unitsN,
       installedVA: e.option.ups.installedVA,
       blocked: e.scored.blocked,
+      overTarget: overTarget(e),
     })),
-  ).map((i) => evaluated[i]!);
+  ).map((i) => usable[i]!);
   const scored = sized.map((e) => e.scored);
   const picks = pickTiers(scored, settings);
   const toOption = (i: number, tier: OptionTier, score: number): SolutionOption => ({

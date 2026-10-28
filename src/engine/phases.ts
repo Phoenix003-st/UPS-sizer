@@ -56,6 +56,8 @@ export function resolvePhases(
       code: 'mono_above_threshold',
       params: {
         kva: Number((ratingVA / 1000).toFixed(1)),
+        design: Number((designVA / 1000).toFixed(1)),
+        rate: Math.round(advanced.targetLoadRate * 100),
         threshold: settings.power.monoToTriThresholdKVA,
       },
     });

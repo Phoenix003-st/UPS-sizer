@@ -64,7 +64,7 @@ describe('schéma unifilaire', () => {
 
   it('plus de trois unités : les suivantes sont résumées', () => {
     const { d } = diagramFor('custom', (p) => {
-      p.load.value = 700;
+      p.load.value = 900;
       p.advanced.redundancy = 'N+1';
       p.settingsOverrides = {
         scenarios: { custom: { technologies: ['online_double_conversion'] } },
