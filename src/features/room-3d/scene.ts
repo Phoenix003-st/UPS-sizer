@@ -8,7 +8,8 @@
  */
 import * as THREE from 'three';
 import { buildDecor, buildRack, FLOOR_STYLE, furnishMaterials } from './furnishScene';
-import type { Item3D, Room3D } from './model';
+import type { Cable3D } from './cabling';
+import type { Item3D, Room3D, Vec3 } from './model';
 
 export type WallSide = 'top' | 'bottom' | 'left' | 'right';
 
@@ -29,6 +30,8 @@ export interface BuiltScene {
   zones: THREE.Group;
   dimensions: DimensionLine[];
   dimensionGroup: THREE.Group;
+  /** Câbles et chemins de câbles (affichage commutable). */
+  cables: THREE.Group;
   center: THREE.Vector3;
   setXray: (on: boolean) => void;
   setHighlight: (id: string | null) => void;
@@ -263,6 +266,63 @@ export function buildScene(room: Room3D): BuiltScene {
   }
   root.add(zones);
 
+  // ── Câblage : chemins de câbles et câbles (axes alignés), couleur selon la liaison ──
+  const cables = new THREE.Group();
+  cables.name = 'cabling';
+  const CABLE: Record<Cable3D['kind'], { color: number; r: number }> = {
+    mains: { color: 0x2b2f33, r: 0.04 },
+    input: { color: 0x7b4a2e, r: 0.035 },
+    battery: { color: 0xc62828, r: 0.03 },
+    output: { color: 0x1f6fb2, r: 0.035 },
+    feeder: { color: 0xef8c00, r: 0.024 },
+  };
+  const cableMats = Object.fromEntries(
+    Object.entries(CABLE).map(([k, v]) => [
+      k,
+      track(material(v.color, { roughness: 0.55, metalness: 0.05 })),
+    ]),
+  ) as Record<Cable3D['kind'], Mat>;
+  const trayMat = track(material(0xa7adb3, { metalness: 0.7, roughness: 0.4 }));
+  const segment = (p: Vec3, q: Vec3, r: number, m: THREE.Material) => {
+    const dx = Math.abs(q.x - p.x);
+    const dy = Math.abs(q.y - p.y);
+    const dz = Math.abs(q.z - p.z);
+    const g = new THREE.BoxGeometry(dx + r, dy + r, dz + r);
+    const mesh = new THREE.Mesh(g, m);
+    mesh.position.set((p.x + q.x) / 2, (p.y + q.y) / 2, (p.z + q.z) / 2);
+    mesh.castShadow = false;
+    return mesh;
+  };
+  for (const t of room.cabling.trays) {
+    // Échelle à câbles sous le tronçon : deux longerons et un fond.
+    const along = Math.abs(t.to.x - t.from.x) > Math.abs(t.to.z - t.from.z) ? 'x' : 'z';
+    for (const s of [-1, 1]) {
+      const off = along === 'x' ? { x: 0, z: s * 0.16 } : { x: s * 0.16, z: 0 };
+      cables.add(
+        segment(
+          { x: t.from.x + off.x, y: t.from.y + 0.01, z: t.from.z + off.z },
+          { x: t.to.x + off.x, y: t.to.y + 0.01, z: t.to.z + off.z },
+          0.04,
+          trayMat,
+        ),
+      );
+    }
+    const base = segment(
+      { ...t.from, y: t.from.y - 0.005 },
+      { ...t.to, y: t.to.y - 0.005 },
+      0.01,
+      trayMat,
+    );
+    base.scale.set(along === 'x' ? 1 : 32, 1, along === 'x' ? 32 : 1);
+    cables.add(base);
+  }
+  for (const c of room.cabling.cables) {
+    const { r } = CABLE[c.kind];
+    for (let i = 1; i < c.points.length; i++)
+      cables.add(segment(c.points[i - 1]!, c.points[i]!, r, cableMats[c.kind]));
+  }
+  root.add(cables);
+
   // ── Aménagement selon le type de local : baies existantes, mobilier, bâtiment ──
   const FM = furnishMaterials(track);
   for (const r of room.racks) root.add(buildRack(r, FM).group);
@@ -352,6 +412,7 @@ export function buildScene(room: Room3D): BuiltScene {
     zones,
     dimensions,
     dimensionGroup,
+    cables,
     center,
     setXray,
     setHighlight,

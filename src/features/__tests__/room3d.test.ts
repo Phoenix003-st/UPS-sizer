@@ -166,7 +166,7 @@ describe('aménagement selon le type de local', () => {
         room3d('server', (p) => void (p.room.kind = kind)).room.furnishing.decor.map((d) => d.kind),
       );
     expect(decor('dedicated').has('electrical-panel')).toBe(true);
-    expect(decor('dedicated').has('cable-tray')).toBe(true);
+    expect(room3d('server').room.cabling.trays.length).toBeGreaterThan(0);
     expect(decor('office').has('desk')).toBe(true);
     expect(decor('office').has('window')).toBe(true);
     expect(decor('shared').has('shelving')).toBe(true);
