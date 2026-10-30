@@ -712,7 +712,30 @@
       "battery-cabinet": "Battery cabinet",
       "ebm": "Battery pack"
     },
-    "snapshot": "3D room view"
+    "snapshot": "3D room view",
+    "wiring": "Wiring",
+    "cable": {
+      "mains": "Mains supply",
+      "input": "UPS input",
+      "battery": "Batteries (DC)",
+      "output": "UPS output",
+      "feeder": "Feeder"
+    },
+    "decor": {
+      "ups-board": "UPS distribution board",
+      "lift-controller": "Elevator controller",
+      "lift-machine": "Traction machine",
+      "medical-panel": "Medical IT panel",
+      "medical-cart": "Medical cart",
+      "plc-cabinet": "PLC cabinet",
+      "open-rack": "Patch rack",
+      "network-cabinet": "Network cabinet",
+      "access-panel": "Access control panel",
+      "badge-reader": "Badge reader",
+      "fids-screen": "Flight display",
+      "desk": "Workstation",
+      "rack": "IT rack"
+    }
   },
   "estimatedField": {
     "weight": "weight",

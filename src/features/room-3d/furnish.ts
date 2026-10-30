@@ -3,7 +3,8 @@
  * existantes et leur contenu, mobilier et équipements techniques du bâtiment, revêtement de sol.
  *
  * - Salle technique dédiée : tableau électrique, climatisation (split mural ou armoire de
- *   précision selon la puissance froid), chemin de câbles en hauteur, extincteur CO₂.
+ *   précision selon la puissance froid), extincteur CO₂ (le chemin de câbles
+ *   suit le câblage, voir cabling.ts).
  * - Local partagé : rayonnages de stockage, coffret réseau mural, tableau électrique.
  * - Bureau : postes de travail (bureau, écran, fauteuil), fenêtre, plante, split mural.
  * - Baie existante : rangée de baies 42U déjà équipées (brassage, commutateurs, serveurs,
@@ -55,7 +56,9 @@ export type DecorKind =
   | 'lift-machine'
   | 'lift-controller'
   | 'hoist-beam'
-  | 'sign';
+  | 'sign'
+  // Tableau ondulé (départs en sortie d'UPS).
+  | 'ups-board';
 
 /** Pictogramme d'une plaque murale. */
 export type SignKind = 'medical' | 'danger' | 'lift';
@@ -570,6 +573,17 @@ export function furnishRoom(
     sign('lift', taken);
   }
 
+  /** Tableau ondulé mural à côté du tableau électrique (départs en sortie d'UPS). */
+  const upsBoard = (panel: Decor3D | null) =>
+    placeHigh(
+      'ups-board',
+      { w: 0.5, d: 0.15, h: 0.6 },
+      1.2,
+      order,
+      taken,
+      panel ? { x: panel.x, z: panel.z } : undefined,
+    );
+
   if (technical) {
     // Climatisation : armoire de précision au-delà de ~15 kW froid, sinon split mural.
     // Le split est sur un autre mur que le chemin de câbles.
@@ -580,25 +594,13 @@ export function furnishRoom(
         trayWall,
       ]);
     // Tableau électrique de distribution (accès frontal 0,8 m).
-    place('electrical-panel', { w: 0.8, d: 0.25, h: 1.4 }, { clear: 0.8, y: 0 });
-    // Chemin de câbles en échelle le long du mur des équipements, sous plafond.
-    const len = wallLength(room, trayWall) - 0.2;
-    const tray = wallRect(room, trayWall, 0.1, len, 0.15, 0.3);
-    decor.push({
-      kind: 'cable-tray',
-      x: tray.x + tray.w / 2,
-      z: tray.z + tray.d / 2,
-      y: Math.max(2.1, H - 0.2),
-      rotY: WALL_ROT[trayWall],
-      w: len,
-      d: 0.3,
-      h: 0.06,
-      wall: trayWall,
-    });
+    const panel = place('electrical-panel', { w: 0.8, d: 0.25, h: 1.4 }, { clear: 0.8, y: 0 });
+    upsBoard(panel);
     place('extinguisher', { w: 0.2, d: 0.2, h: 0.7 }, { clear: 0, near: nearDoor });
   } else if (kind === 'shared') {
     for (let i = 0; i < 2; i++) place('shelving', { w: 1.0, d: 0.45, h: 1.9 }, { clear: 0.7 });
-    place('electrical-panel', { w: 0.6, d: 0.2, h: 1.0 }, { clear: 0.8 });
+    const panel = place('electrical-panel', { w: 0.6, d: 0.2, h: 1.0 }, { clear: 0.8 });
+    upsBoard(panel);
     // Coffret réseau mural 19" (12U) au-dessus d'un espace libre.
     placeHigh('network-cabinet', { w: 0.6, d: 0.45, h: 0.64 }, 1.25, order, taken);
     if (hvac > 0) placeHigh('split-ac', { w: 0.9, d: 0.22, h: 0.3 }, H - 0.45, order);

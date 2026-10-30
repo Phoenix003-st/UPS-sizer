@@ -43,6 +43,7 @@ interface Stage {
   scene: THREE.Scene;
   roomLabels: CSS2DObject[];
   itemLabels: CSS2DObject[];
+  cableLabels: CSS2DObject[];
   selection: THREE.Group;
   fly: {
     from: THREE.Vector3;
@@ -66,6 +67,15 @@ const LABEL_ROOM =
   'rounded bg-primary px-1.5 py-0.5 text-[11px] font-semibold text-on-primary shadow';
 const LABEL_ITEM =
   'rounded bg-white/90 px-1.5 py-0.5 text-[10px] font-semibold text-text shadow ring-1 ring-black/10 whitespace-nowrap';
+const LABEL_CABLE =
+  'rounded bg-white/90 px-1 py-px text-[9px] font-medium text-text shadow-sm ring-1 ring-black/10 whitespace-nowrap';
+const CABLE_DOT: Record<string, string> = {
+  mains: '#2b2f33',
+  input: '#7b4a2e',
+  battery: '#c62828',
+  output: '#1f6fb2',
+  feeder: '#ef8c00',
+};
 const LABEL_SEL = 'rounded bg-amber-400 px-1.5 py-0.5 text-[11px] font-bold text-black shadow';
 
 export default function Room3DViewer({ option, project, height = '60vh' }: Props) {
@@ -84,6 +94,7 @@ export default function Room3DViewer({ option, project, height = '60vh' }: Props
   const [xray, setXray] = useState(false);
   const [dims, setDims] = useState(true);
   const [zones, setZones] = useState(true);
+  const [wiring, setWiring] = useState(true);
   const [selected, setSelected] = useState<string | null>(null);
   const [fullscreen, setFullscreen] = useState(false);
   const m = (v: number) => `${formatNumber(v, lang, 2)} m`;
@@ -154,6 +165,26 @@ export default function Room3DViewer({ option, project, height = '60vh' }: Props
       built.dimensionGroup.add(o);
       itemLabels.push(o);
     }
+    // Libellés des liaisons (type, destination, section), pastille de la couleur du câble.
+    const twoSystems = room.items.some((i) => i.system === 'B');
+    const cableLabels = room.cabling.cables.map((c) => {
+      // Type de liaison donné par la couleur (légende) ; le libellé précise la section, ou la
+      // destination d'un départ sans section calculée.
+      const sys = twoSystems && (c.kind === 'input' || c.kind === 'output' || c.kind === 'battery');
+      const parts = [
+        c.kind === 'mains'
+          ? t('room3d.cable.mains')
+          : (c.section ?? (c.to ? `→ ${t(`room3d.decor.${c.to}`)}` : t(`room3d.cable.${c.kind}`))),
+      ];
+      if (sys) parts.unshift(c.system);
+      const o = label(parts.join(' · '), LABEL_CABLE);
+      const dot = document.createElement('span');
+      dot.style.cssText = `display:inline-block;width:7px;height:7px;border-radius:9999px;margin-inline-end:4px;background:${CABLE_DOT[c.kind]}`;
+      o.element.prepend(dot);
+      o.position.set(c.labelAt.x, c.labelAt.y, c.labelAt.z);
+      built.cables.add(o);
+      return o;
+    });
     const selection = new THREE.Group();
     scene.add(selection);
 
@@ -166,6 +197,7 @@ export default function Room3DViewer({ option, project, height = '60vh' }: Props
       scene,
       roomLabels,
       itemLabels,
+      cableLabels,
       selection,
       fly: null,
     };
@@ -251,6 +283,12 @@ export default function Room3DViewer({ option, project, height = '60vh' }: Props
     const s = stageRef.current;
     if (s) s.built.zones.visible = zones;
   }, [zones, room, lang]);
+  useEffect(() => {
+    const s = stageRef.current;
+    if (!s) return;
+    s.built.cables.visible = wiring;
+    for (const o of s.cableLabels) o.element.style.display = wiring ? '' : 'none';
+  }, [wiring, room, lang]);
 
   // Sélection : surbrillance et cotes de l'équipement (L, P, H).
   useEffect(() => {
@@ -365,6 +403,7 @@ export default function Room3DViewer({ option, project, height = '60vh' }: Props
         {toggle(xray, setXray, t('room3d.xray'))}
         {toggle(dims, setDims, t('room3d.dims'))}
         {toggle(zones, setZones, t('room3d.zones'))}
+        {toggle(wiring, setWiring, t('room3d.wiring'))}
         <span className="ms-auto" />
         <Button variant="ghost" onClick={capture}>
           {t('room3d.capture')}
@@ -388,6 +427,25 @@ export default function Room3DViewer({ option, project, height = '60vh' }: Props
         <p className="pointer-events-none absolute bottom-2 start-2 max-w-[70%] rounded bg-white/80 px-2 py-1 text-xs text-muted">
           {t('room3d.help')}
         </p>
+        {wiring && room.cabling.cables.length > 0 && (
+          <ul
+            aria-label={t('room3d.wiring')}
+            className="pointer-events-none absolute start-2 top-2 space-y-0.5 rounded bg-white/85 px-2 py-1 text-[11px] text-text shadow-sm"
+          >
+            {(['mains', 'input', 'battery', 'output', 'feeder'] as const)
+              .filter((k) => room.cabling.cables.some((c) => c.kind === k))
+              .map((k) => (
+                <li key={k} className="flex items-center gap-1.5">
+                  <span
+                    aria-hidden
+                    className="inline-block h-1.5 w-4 rounded-full"
+                    style={{ background: CABLE_DOT[k] }}
+                  />
+                  {t(`room3d.cable.${k}`)}
+                </li>
+              ))}
+          </ul>
+        )}
       </div>
       {sel && (
         <aside
