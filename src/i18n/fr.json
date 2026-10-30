@@ -712,7 +712,30 @@
       "battery-cabinet": "Armoire batteries",
       "ebm": "Module batteries"
     },
-    "snapshot": "Vue 3D du local"
+    "snapshot": "Vue 3D du local",
+    "wiring": "Câblage",
+    "cable": {
+      "mains": "Arrivée réseau",
+      "input": "Entrée UPS",
+      "battery": "Batteries (DC)",
+      "output": "Sortie UPS",
+      "feeder": "Départ"
+    },
+    "decor": {
+      "ups-board": "Tableau ondulé",
+      "lift-controller": "Armoire de manœuvre",
+      "lift-machine": "Machine de traction",
+      "medical-panel": "Tableau IT médical",
+      "medical-cart": "Chariot de soins",
+      "plc-cabinet": "Armoire d'automates",
+      "open-rack": "Baie de brassage",
+      "network-cabinet": "Coffret réseau",
+      "access-panel": "Centrale d'accès",
+      "badge-reader": "Lecteur de badge",
+      "fids-screen": "Écran des vols",
+      "desk": "Poste de travail",
+      "rack": "Baie IT"
+    }
   },
   "estimatedField": {
     "weight": "masse",

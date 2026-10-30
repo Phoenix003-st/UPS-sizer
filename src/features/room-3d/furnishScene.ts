@@ -421,6 +421,14 @@ export function buildDecor(
       add(box(0.012, 0.012, 0.004, M.ledGreen, 0, h * 0.15, front), true);
       break;
     }
+    case 'ups-board': {
+      // Tableau ondulé : coffret, bandeau bleu, rangée de disjoncteurs.
+      add(box(w, h, d, M.panel), true);
+      add(box(w - 0.03, 0.05, 0.004, M.blue, 0, h - 0.09, front + 0.002), true);
+      for (let i = 0; i < 6; i++)
+        add(box(0.035, 0.08, 0.02, M.white, -w / 2 + 0.08 + i * 0.065, h * 0.45, front), true);
+      break;
+    }
     case 'access-panel': {
       // Centrale de contrôle d'accès : coffret métallique, clavier, voyants.
       add(box(w, h, d, M.panel), true);

@@ -724,7 +724,30 @@
       "battery-cabinet": "خزانة بطاريات",
       "ebm": "وحدة بطاريات"
     },
-    "snapshot": "عرض ثلاثي الأبعاد للغرفة"
+    "snapshot": "عرض ثلاثي الأبعاد للغرفة",
+    "wiring": "الكابلات",
+    "cable": {
+      "mains": "تغذية الشبكة",
+      "input": "دخل UPS",
+      "battery": "البطاريات (تيار مستمر)",
+      "output": "خرج UPS",
+      "feeder": "مخرج"
+    },
+    "decor": {
+      "ups-board": "لوحة التوزيع المحمية",
+      "lift-controller": "لوحة تحكم المصعد",
+      "lift-machine": "آلة الجر",
+      "medical-panel": "لوحة IT الطبية",
+      "medical-cart": "عربة الرعاية",
+      "plc-cabinet": "خزانة وحدات التحكم",
+      "open-rack": "خزانة التوصيل",
+      "network-cabinet": "خزانة الشبكة",
+      "access-panel": "لوحة التحكم في الدخول",
+      "badge-reader": "قارئ البطاقات",
+      "fids-screen": "شاشة الرحلات",
+      "desk": "محطة عمل",
+      "rack": "خزانة IT"
+    }
   },
   "estimatedField": {
     "weight": "الكتلة",

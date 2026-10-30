@@ -10,6 +10,7 @@
  */
 import type { BatteryBlock, Catalogs, UpsModel } from '../../catalog/schemas';
 import type { Project, RoomKind } from '../../engine/project';
+import { buildCabling, type Cabling } from './cabling';
 import type { ScenarioId } from '../../settings/schema';
 import {
   buildRackRow,
@@ -99,6 +100,8 @@ export interface Room3D {
   /** Rangée de baies existantes (type « Baie existante »). */
   racks: Rack3D[];
   furnishing: Furnishing;
+  /** Câbles et chemins de câbles (arrivée, entrée, batteries, sortie, départs). */
+  cabling: Cabling;
 }
 
 /**
@@ -364,11 +367,20 @@ export function buildRoom3D(
     preferWall,
   );
 
+  const cabling = buildCabling(frame, {
+    items,
+    racks,
+    decor: furnishing.decor,
+    circuits: option.electrical.circuits,
+    office: roomKind === 'office',
+  });
+
   return {
     ...frame,
     items,
     zones,
     kind: roomKind,
+    cabling,
     rack: racks.find((r) => r.host) ?? null,
     racks,
     furnishing,
