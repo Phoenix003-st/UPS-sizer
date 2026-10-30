@@ -2781,7 +2781,7 @@
         "out": 1
       },
       "voltages": {
-        "out": [220, 230, 240],
+        "out": [208, 220, 230, 240],
         "freqHz": [50, 60]
       },
       "efficiency": {
@@ -2803,15 +2803,15 @@
             "eta": 0.9
           }
         ],
-        "eco": 0.95,
-        "battery": 0.86
+        "eco": 0.97,
+        "battery": 0.89
       },
       "dimensionsMm": {
         "w": 438,
-        "d": 410,
+        "d": 425,
         "h": 88
       },
-      "weightKg": 10.4,
+      "weightKg": 12.9,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -2824,16 +2824,16 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 45,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [1],
-          "default": 1
+          "allowed": [2],
+          "default": 2
         },
         "internal": {
-          "blockId": "EX-VRLA-12V17",
-          "blocks": 1,
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 2,
           "strings": 1
         },
         "maxChargeCurrentA": 1.5,
@@ -2850,11 +2850,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 1 blocs 12V17 (autonomie calculée 11.9 min pour 12 min au catalogue)."
+        "note": "Tension batterie 24 V d’après la tension de charge de la fiche produit. Rendement en mode batterie et ECO de la fiche produit (230 V). Batteries internes estimées : 1 × 2 blocs 12V7 (autonomie calculée 11 min pour 12 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["efficiency", "internalBattery"]
     },
     {
       "id": "INF-67024",
@@ -2876,7 +2876,7 @@
         "out": 1
       },
       "voltages": {
-        "out": [220, 230, 240],
+        "out": [208, 220, 230, 240],
         "freqHz": [50, 60]
       },
       "efficiency": {
@@ -2898,15 +2898,15 @@
             "eta": 0.9
           }
         ],
-        "eco": 0.95,
-        "battery": 0.86
+        "eco": 0.97,
+        "battery": 0.89
       },
       "dimensionsMm": {
         "w": 438,
-        "d": 410,
+        "d": 425,
         "h": 88
       },
-      "weightKg": 12.8,
+      "weightKg": 13.4,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -2919,19 +2919,19 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 45,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [3],
-          "default": 3
+          "allowed": [2],
+          "default": 2
         },
         "internal": {
-          "blockId": "EX-VRLA-12V7",
-          "blocks": 3,
+          "blockId": "EX-VRLA-12V12",
+          "blocks": 2,
           "strings": 1
         },
-        "maxChargeCurrentA": 2,
+        "maxChargeCurrentA": 1.5,
         "compatibleCabinetIds": ["INF-EBM-67402"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -2945,11 +2945,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 3 blocs 12V7 (autonomie calculée 11.9 min pour 12 min au catalogue)."
+        "note": "Tension batterie 24 V d’après la tension de charge de la fiche produit. Rendement en mode batterie et ECO de la fiche produit (230 V). Batteries internes estimées : 1 × 2 blocs 12V12 (autonomie calculée 14 min pour 12 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["efficiency", "internalBattery"]
     },
     {
       "id": "INF-67025",
@@ -2971,7 +2971,7 @@
         "out": 1
       },
       "voltages": {
-        "out": [220, 230, 240],
+        "out": [208, 220, 230, 240],
         "freqHz": [50, 60]
       },
       "efficiency": {
@@ -2993,15 +2993,15 @@
             "eta": 0.9
           }
         ],
-        "eco": 0.95,
-        "battery": 0.86
+        "eco": 0.97,
+        "battery": 0.91
       },
       "dimensionsMm": {
         "w": 438,
         "d": 525,
         "h": 88
       },
-      "weightKg": 16,
+      "weightKg": 19.5,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3014,19 +3014,19 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 45,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [2],
-          "default": 2
+          "allowed": [4],
+          "default": 4
         },
         "internal": {
-          "blockId": "EX-VRLA-12V17",
-          "blocks": 2,
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 4,
           "strings": 1
         },
-        "maxChargeCurrentA": 2,
+        "maxChargeCurrentA": 1.5,
         "compatibleCabinetIds": ["INF-EBM-67405"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -3040,11 +3040,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 2 blocs 12V17 (autonomie calculée 13 min pour 13 min au catalogue)."
+        "note": "Tension batterie 48 V d’après la tension de charge de la fiche produit. Rendement en mode batterie et ECO de la fiche produit (230 V). Batteries internes estimées : 1 × 4 blocs 12V7 (autonomie calculée 12.4 min pour 13 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["efficiency", "internalBattery"]
     },
     {
       "id": "INF-67026",
@@ -3066,7 +3066,7 @@
         "out": 1
       },
       "voltages": {
-        "out": [220, 230, 240],
+        "out": [208, 220, 230, 240],
         "freqHz": [50, 60]
       },
       "efficiency": {
@@ -3088,15 +3088,15 @@
             "eta": 0.9
           }
         ],
-        "eco": 0.95,
-        "battery": 0.86
+        "eco": 0.97,
+        "battery": 0.91
       },
       "dimensionsMm": {
         "w": 438,
         "d": 525,
         "h": 88
       },
-      "weightKg": 20,
+      "weightKg": 21.5,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3109,7 +3109,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 45,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -3121,7 +3121,7 @@
           "blocks": 4,
           "strings": 1
         },
-        "maxChargeCurrentA": 2,
+        "maxChargeCurrentA": 1.5,
         "compatibleCabinetIds": ["INF-EBM-67406"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -3135,11 +3135,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 4 blocs 12V9 (autonomie calculée 10.8 min pour 12 min au catalogue)."
+        "note": "Tension batterie 48 V d’après la tension de charge de la fiche produit. Rendement en mode batterie et ECO de la fiche produit (230 V). Batteries internes estimées : 1 × 4 blocs 12V9 (autonomie calculée 11.6 min pour 12 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["efficiency", "internalBattery"]
     },
     {
       "id": "INF-67027",
@@ -3161,7 +3161,7 @@
         "out": 1
       },
       "voltages": {
-        "out": [220, 230, 240],
+        "out": [208, 220, 230, 240],
         "freqHz": [50, 60]
       },
       "efficiency": {
@@ -3183,15 +3183,15 @@
             "eta": 0.9
           }
         ],
-        "eco": 0.95,
-        "battery": 0.86
+        "eco": 0.97,
+        "battery": 0.92
       },
       "dimensionsMm": {
         "w": 438,
         "d": 645,
         "h": 88
       },
-      "weightKg": 24,
+      "weightKg": 26,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3204,19 +3204,19 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 45,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [3],
-          "default": 3
+          "allowed": [6],
+          "default": 6
         },
         "internal": {
-          "blockId": "EX-VRLA-12V18",
-          "blocks": 3,
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
           "strings": 1
         },
-        "maxChargeCurrentA": 2,
+        "maxChargeCurrentA": 1.5,
         "compatibleCabinetIds": ["INF-EBM-67408"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -3230,11 +3230,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 3 blocs 12V18 (autonomie calculée 12 min pour 12 min au catalogue)."
+        "note": "Tension batterie 72 V d’après la tension de charge de la fiche produit. Rendement en mode batterie et ECO de la fiche produit (230 V). Batteries internes estimées : 1 × 6 blocs 12V7 (autonomie calculée 10.9 min pour 12 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["efficiency", "internalBattery"]
     },
     {
       "id": "INF-67028",
@@ -3256,7 +3256,7 @@
         "out": 1
       },
       "voltages": {
-        "out": [220, 230, 240],
+        "out": [208, 220, 230, 240],
         "freqHz": [50, 60]
       },
       "efficiency": {
@@ -3278,15 +3278,15 @@
             "eta": 0.9
           }
         ],
-        "eco": 0.95,
-        "battery": 0.86
+        "eco": 0.97,
+        "battery": 0.92
       },
       "dimensionsMm": {
         "w": 438,
         "d": 645,
         "h": 88
       },
-      "weightKg": 28,
+      "weightKg": 29.3,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3299,7 +3299,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 45,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -3311,7 +3311,7 @@
           "blocks": 6,
           "strings": 1
         },
-        "maxChargeCurrentA": 2,
+        "maxChargeCurrentA": 1.5,
         "compatibleCabinetIds": ["INF-EBM-67409"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -3325,11 +3325,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 10.8 min pour 10 min au catalogue)."
+        "note": "Tension batterie 72 V d’après la tension de charge de la fiche produit. Rendement en mode batterie et ECO de la fiche produit (230 V). Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 11.8 min pour 10 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["efficiency", "internalBattery"]
     },
     {
       "id": "INF-67035",
@@ -3351,7 +3351,7 @@
         "out": 1
       },
       "voltages": {
-        "out": [220, 230, 240],
+        "out": [208, 220, 230, 240],
         "freqHz": [50, 60]
       },
       "efficiency": {
@@ -3373,15 +3373,15 @@
             "eta": 0.9
           }
         ],
-        "eco": 0.95,
-        "battery": 0.86
+        "eco": 0.97,
+        "battery": 0.92
       },
       "dimensionsMm": {
         "w": 438,
         "d": 645,
         "h": 88
       },
-      "weightKg": 44,
+      "weightKg": 39.8,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3394,19 +3394,19 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 45,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [8],
-          "default": 8
+          "allowed": [6],
+          "default": 6
         },
         "internal": {
-          "blockId": "EX-VRLA-12V12",
-          "blocks": 8,
-          "strings": 1
+          "blockId": "EX-VRLA-12V7",
+          "blocks": 6,
+          "strings": 2
         },
-        "maxChargeCurrentA": 4,
+        "maxChargeCurrentA": 1.5,
         "compatibleCabinetIds": ["INF-EBM-67409"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -3420,11 +3420,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes estimées : 1 × 8 blocs 12V12 (autonomie calculée 11.2 min pour 10 min au catalogue)."
+        "note": "Tension batterie 72 V d’après la tension de charge de la fiche produit. Rendement en mode batterie et ECO de la fiche produit (230 V). Batteries internes estimées : 2 × 6 blocs 12V7 (autonomie calculée 10.9 min pour 10 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["efficiency", "internalBattery"]
     },
     {
       "id": "INF-67314",
@@ -3453,30 +3453,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.86
+            "eta": 0.82
           },
           {
             "load": 0.5,
-            "eta": 0.89
+            "eta": 0.85
           },
           {
             "load": 0.75,
-            "eta": 0.9
+            "eta": 0.86
           },
           {
             "load": 1,
-            "eta": 0.9
+            "eta": 0.86
           }
         ],
-        "eco": 0.97,
-        "battery": 0.88
+        "eco": 0.92,
+        "battery": 0.83
       },
       "dimensionsMm": {
         "w": 438,
         "d": 477,
         "h": 44
       },
-      "weightKg": 12,
+      "weightKg": 12.7,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3489,7 +3489,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 50,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -3501,7 +3501,7 @@
           "blocks": 2,
           "strings": 1
         },
-        "maxChargeCurrentA": 1.5,
+        "maxChargeCurrentA": 1,
         "compatibleCabinetIds": ["INF-EBM-GEN-24V"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -3515,11 +3515,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Référence 67314 également imprimée pour le M6Ti TX 80K (page 31) : à vérifier. Batteries internes estimées : 1 × 2 blocs 12V7 (autonomie calculée 9.3 min pour 8 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Batteries internes estimées : 1 × 2 blocs 12V7 (autonomie calculée 8.4 min pour 8 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage", "internalBattery"]
     },
     {
       "id": "INF-67308",
@@ -3548,30 +3548,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.86
+            "eta": 0.84
           },
           {
             "load": 0.5,
-            "eta": 0.89
+            "eta": 0.87
           },
           {
             "load": 0.75,
-            "eta": 0.9
+            "eta": 0.88
           },
           {
             "load": 1,
-            "eta": 0.9
+            "eta": 0.88
           }
         ],
-        "eco": 0.97,
-        "battery": 0.88
+        "eco": 0.9,
+        "battery": 0.83
       },
       "dimensionsMm": {
         "w": 438,
         "d": 310,
         "h": 88
       },
-      "weightKg": 12,
+      "weightKg": 12.7,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3584,7 +3584,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 50,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -3596,8 +3596,8 @@
           "blocks": 2,
           "strings": 1
         },
-        "maxChargeCurrentA": 1.5,
-        "compatibleCabinetIds": ["INF-EBM-GEN-24V"],
+        "maxChargeCurrentA": 3.5,
+        "compatibleCabinetIds": ["INF-EBM-67402"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3610,11 +3610,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Tension batterie 24 V déduite du chargeur Smart Charger associé. Batteries internes estimées : 1 × 2 blocs 12V9 (autonomie calculée 11.1 min pour 10 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Tension batterie 24 V déduite du chargeur Smart Charger associé. Module batteries 67403 (31,1 kg) également proposé. Batteries internes estimées : 1 × 2 blocs 12V9 (autonomie calculée 10.3 min pour 10 min au catalogue)."
       },
-      "estimated": ["efficiency", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["internalBattery"]
     },
     {
       "id": "INF-67309",
@@ -3643,30 +3643,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.86
+            "eta": 0.85
           },
           {
             "load": 0.5,
-            "eta": 0.89
+            "eta": 0.88
           },
           {
             "load": 0.75,
-            "eta": 0.9
+            "eta": 0.89
           },
           {
             "load": 1,
-            "eta": 0.9
+            "eta": 0.89
           }
         ],
-        "eco": 0.97,
-        "battery": 0.88
+        "eco": 0.92,
+        "battery": 0.87
       },
       "dimensionsMm": {
         "w": 438,
         "d": 410,
         "h": 88
       },
-      "weightKg": 20,
+      "weightKg": 19,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3679,7 +3679,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 50,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -3691,8 +3691,8 @@
           "blocks": 4,
           "strings": 1
         },
-        "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["INF-EBM-GEN-48V"],
+        "maxChargeCurrentA": 3.5,
+        "compatibleCabinetIds": ["INF-EBM-67406"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3705,11 +3705,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Tension batterie 48 V déduite du chargeur Smart Charger associé. Batteries internes estimées : 1 × 4 blocs 12V9 (autonomie calculée 11.1 min pour 10 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Tension batterie 48 V déduite du chargeur Smart Charger associé. Batteries internes estimées : 1 × 4 blocs 12V9 (autonomie calculée 10.9 min pour 10 min au catalogue)."
       },
-      "estimated": ["efficiency", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["internalBattery"]
     },
     {
       "id": "INF-67310",
@@ -3753,15 +3753,15 @@
             "eta": 0.9
           }
         ],
-        "eco": 0.97,
+        "eco": 0.93,
         "battery": 0.88
       },
       "dimensionsMm": {
         "w": 438,
-        "d": 630,
+        "d": 638,
         "h": 88
       },
-      "weightKg": 28,
+      "weightKg": 29.3,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3774,7 +3774,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 50,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -3786,8 +3786,8 @@
           "blocks": 6,
           "strings": 1
         },
-        "maxChargeCurrentA": 2,
-        "compatibleCabinetIds": ["INF-EBM-GEN-72V"],
+        "maxChargeCurrentA": 3.5,
+        "compatibleCabinetIds": ["INF-EBM-67409"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3800,11 +3800,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Tension batterie 72 V déduite du chargeur Smart Charger associé. Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 11.1 min pour 10 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Tension batterie 72 V déduite du chargeur Smart Charger associé. Batteries internes estimées : 1 × 6 blocs 12V9 (autonomie calculée 11.1 min pour 10 min au catalogue)."
       },
-      "estimated": ["efficiency", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["internalBattery"]
     },
     {
       "id": "INF-67319",
@@ -3833,30 +3833,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.9
+            "eta": 0.88
           },
           {
             "load": 0.5,
-            "eta": 0.93
+            "eta": 0.91
           },
           {
             "load": 0.75,
-            "eta": 0.94
+            "eta": 0.92
           },
           {
             "load": 1,
-            "eta": 0.94
+            "eta": 0.92
           }
         ],
-        "eco": 0.98,
-        "battery": 0.92
+        "eco": null,
+        "battery": 0.9
       },
       "dimensionsMm": {
         "w": 438,
         "d": 530,
         "h": 88
       },
-      "weightKg": 45,
+      "weightKg": 62,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3869,7 +3869,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 55,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -3881,8 +3881,8 @@
           "blocks": 16,
           "strings": 1
         },
-        "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["INF-EBM-67187"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3895,11 +3895,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 1 × 16 blocs 12V9 (autonomie calculée 21.8 min pour 20 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Batteries dans un pack séparé (67187, 740 × 438 × 88 mm, non dessiné) ; masse = onduleur 15 kg + pack 47 kg. Batteries internes estimées : 1 × 16 blocs 12V9 (autonomie calculée 21.2 min pour 20 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage", "internalBattery"]
     },
     {
       "id": "INF-67320",
@@ -3928,30 +3928,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.9
+            "eta": 0.88
           },
           {
             "load": 0.5,
-            "eta": 0.93
+            "eta": 0.91
           },
           {
             "load": 0.75,
-            "eta": 0.94
+            "eta": 0.92
           },
           {
             "load": 1,
-            "eta": 0.94
+            "eta": 0.92
           }
         ],
-        "eco": 0.98,
-        "battery": 0.92
+        "eco": null,
+        "battery": 0.9
       },
       "dimensionsMm": {
         "w": 438,
         "d": 530,
         "h": 88
       },
-      "weightKg": 51,
+      "weightKg": 62,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -3964,7 +3964,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 55,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -3976,8 +3976,8 @@
           "blocks": 16,
           "strings": 1
         },
-        "maxChargeCurrentA": 4,
-        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
+        "maxChargeCurrentA": 6,
+        "compatibleCabinetIds": ["INF-EBM-67187"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -3990,11 +3990,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 1 × 16 blocs 12V7 (autonomie calculée 12.6 min pour 14 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Batteries dans un pack séparé (67187, 740 × 438 × 88 mm, non dessiné) ; masse = onduleur 15 kg + pack 47 kg. Batteries internes estimées : 1 × 16 blocs 12V7 (autonomie calculée 12.3 min pour 14 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage", "internalBattery"]
     },
     {
       "id": "INF-67321",
@@ -4023,30 +4023,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.9
+            "eta": 0.89
           },
           {
             "load": 0.5,
-            "eta": 0.93
+            "eta": 0.92
           },
           {
             "load": 0.75,
-            "eta": 0.94
+            "eta": 0.93
           },
           {
             "load": 1,
-            "eta": 0.94
+            "eta": 0.93
           }
         ],
-        "eco": 0.98,
-        "battery": 0.92
+        "eco": null,
+        "battery": 0.91
       },
       "dimensionsMm": {
         "w": 438,
         "d": 605,
         "h": 133
       },
-      "weightKg": 75,
+      "weightKg": 81,
       "clearancesMm": {
         "front": 500,
         "rear": 150,
@@ -4059,20 +4059,20 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 58,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [16],
-          "default": 16
+          "allowed": [20],
+          "default": 20
         },
         "internal": {
           "blockId": "EX-VRLA-12V12",
-          "blocks": 16,
+          "blocks": 20,
           "strings": 1
         },
         "maxChargeCurrentA": 6,
-        "compatibleCabinetIds": ["INF-EBM-GEN-192V"],
+        "compatibleCabinetIds": ["INF-EBM-67189"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
       },
@@ -4085,11 +4085,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 23",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries dans un module séparé à partir de 5 kVA (non dessiné). Batteries internes estimées : 1 × 16 blocs 12V12 (autonomie calculée 12.2 min pour 14 min au catalogue). Extension d’autonomie possible : module batteries générique (référence à préciser)."
+        "note": "Batteries dans un pack séparé (67189, 630 × 438 × 133 mm, non dessiné) ; masse = onduleur 18 kg + pack 63 kg. Batteries internes estimées : 1 × 20 blocs 12V12 (autonomie calculée 16.3 min pour 14 min au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage", "internalBattery"]
     },
     {
       "id": "INF-67333",
@@ -5607,7 +5607,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 25",
         "url": "https://www.infosec-ups.com/",
-        "note": "Le guide de sélection (page 9) indique 67321 pour le 10 kVA ; la page produit 67657. Batteries internes estimées : 1 × 20 blocs 12V12 (autonomie calculée 16.5 min pour 15 min au catalogue)."
+        "note": "Le guide de sélection (page 9) indique 67321, qui est l’E3 Pro 10k RT d’après sa fiche produit. Batteries internes estimées : 1 × 20 blocs 12V12 (autonomie calculée 16.5 min pour 15 min au catalogue)."
       },
       "estimated": ["efficiency", "batteryVoltage", "internalBattery", "chargeCurrent", "weight"]
     },
@@ -6660,7 +6660,7 @@
       "id": "INF-67658",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67658",
+      "partNumber": "67658 (avec batteries internes) / 67670 (WOB, sans batteries)",
       "reference": "INFOSEC M5T 10K",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
@@ -6683,30 +6683,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.93
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.94
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.95
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.94
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.97,
+        "battery": 0.935
       },
       "dimensionsMm": {
         "w": 250,
         "d": 627,
         "h": 826
       },
-      "weightKg": 62,
+      "weightKg": 41,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -6719,7 +6719,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 55,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -6727,7 +6727,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 6,
+        "maxChargeCurrentA": 12,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -6741,17 +6741,17 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes (10 à 30 min) non modélisées : armoires batteries externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modèle standard à batteries internes (autonomie selon la charge, non publiée) : version WOB sans batteries retenue, avec armoires batteries externes. Configurable en tri/mono (3/1). Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67659",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67659",
+      "partNumber": "67659 (avec batteries internes) / 67668 (WOB, sans batteries)",
       "reference": "INFOSEC M5T 15K",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
@@ -6774,30 +6774,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.93
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.94
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.95
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.94
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.97,
+        "battery": 0.935
       },
       "dimensionsMm": {
         "w": 250,
         "d": 627,
         "h": 826
       },
-      "weightKg": 73,
+      "weightKg": 45,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -6810,7 +6810,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 60,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -6818,7 +6818,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 6,
+        "maxChargeCurrentA": 12,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -6832,17 +6832,17 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes (10 à 30 min) non modélisées : armoires batteries externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modèle standard à batteries internes (autonomie selon la charge, non publiée) : version WOB sans batteries retenue, avec armoires batteries externes. Configurable en tri/mono (3/1). Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67660",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67660",
+      "partNumber": "67660 (avec batteries internes) / 67669 (WOB, sans batteries)",
       "reference": "INFOSEC M5T 20K",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
@@ -6865,30 +6865,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.93
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.94
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.95
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.94
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.97,
+        "battery": 0.935
       },
       "dimensionsMm": {
         "w": 250,
         "d": 627,
         "h": 826
       },
-      "weightKg": 84,
+      "weightKg": 45,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -6901,7 +6901,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 60,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -6909,7 +6909,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 6,
+        "maxChargeCurrentA": 12,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -6923,17 +6923,17 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes (10 à 30 min) non modélisées : armoires batteries externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modèle standard à batteries internes (autonomie selon la charge, non publiée) : version WOB sans batteries retenue, avec armoires batteries externes. Configurable en tri/mono (3/1). Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67661",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67661",
+      "partNumber": "67661 (avec batteries internes) / 67671 (WOB, sans batteries)",
       "reference": "INFOSEC M5T 30K",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
@@ -6956,30 +6956,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.93
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.94
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.95
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.94
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.97,
+        "battery": 0.935
       },
       "dimensionsMm": {
         "w": 300,
         "d": 815,
         "h": 1000
       },
-      "weightKg": 106,
+      "weightKg": 78,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -6992,7 +6992,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 70,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -7000,7 +7000,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 8,
+        "maxChargeCurrentA": 12,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -7014,17 +7014,17 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes (10 à 30 min) non modélisées : armoires batteries externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modèle standard à batteries internes (autonomie selon la charge, non publiée) : version WOB sans batteries retenue, avec armoires batteries externes. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67662",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67662",
+      "partNumber": "67662 (avec batteries internes) / 67672 (WOB, sans batteries)",
       "reference": "INFOSEC M5T 40K",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
@@ -7047,30 +7047,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.93
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.94
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.95
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.94
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.97,
+        "battery": 0.935
       },
       "dimensionsMm": {
         "w": 300,
         "d": 815,
         "h": 1000
       },
-      "weightKg": 128,
+      "weightKg": 80,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7083,7 +7083,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 65,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -7091,7 +7091,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 10,
+        "maxChargeCurrentA": 12,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 4
@@ -7105,18 +7105,18 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes (10 à 30 min) non modélisées : armoires batteries externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modèle standard à batteries internes (autonomie selon la charge, non publiée) : version WOB sans batteries retenue, avec armoires batteries externes. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67663",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67663",
-      "reference": "INFOSEC M5T 60K",
+      "partNumber": "67663 (S)",
+      "reference": "INFOSEC M5T 60K S",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7142,7 +7142,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -7150,7 +7150,7 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
@@ -7161,7 +7161,7 @@
         "d": 815,
         "h": 1000
       },
-      "weightKg": 172,
+      "weightKg": 87,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7174,7 +7174,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 70,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -7182,7 +7182,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 15,
+        "maxChargeCurrentA": 18,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -7190,24 +7190,24 @@
       "heatDissipationW": null,
       "parallel": {
         "capable": true,
-        "maxUnits": 4
+        "maxUnits": 6
       },
       "modular": null,
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Batteries internes (10 à 30 min) non modélisées : armoires batteries externes retenues. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67687",
       "sample": false,
       "brand": "INFOSEC",
       "partNumber": "67687",
-      "reference": "INFOSEC M5T 80K",
+      "reference": "INFOSEC M5T 80K S",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7289,7 +7289,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Puissance absente de la fiche produit M5T : valeurs du catalogue général. Armoires batteries génériques (non fournies au catalogue)."
       },
       "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
     },
@@ -7297,8 +7297,8 @@
       "id": "INF-67664",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67664",
-      "reference": "INFOSEC M5T 100K",
+      "partNumber": "67664 (S)",
+      "reference": "INFOSEC M5T 100K S",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7324,7 +7324,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -7332,7 +7332,7 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
@@ -7343,7 +7343,7 @@
         "d": 979,
         "h": 1600
       },
-      "weightKg": 260,
+      "weightKg": 250,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7356,7 +7356,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 70,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -7364,7 +7364,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 25,
+        "maxChargeCurrentA": 36,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -7378,18 +7378,18 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
         "note": "Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67665",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67665",
-      "reference": "INFOSEC M5T 120K",
+      "partNumber": "67665 (S)",
+      "reference": "INFOSEC M5T 120K S",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7415,7 +7415,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -7423,7 +7423,7 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
@@ -7434,7 +7434,7 @@
         "d": 979,
         "h": 1600
       },
-      "weightKg": 304,
+      "weightKg": 250,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7447,7 +7447,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 70,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -7455,7 +7455,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 30,
+        "maxChargeCurrentA": 36,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -7469,18 +7469,18 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Le guide de sélection (page 9) indique 67765 pour le 120 kVA ; la page produit 67665. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67688",
       "sample": false,
       "brand": "INFOSEC",
       "partNumber": "67688",
-      "reference": "INFOSEC M5T 150K",
+      "reference": "INFOSEC M5T 150K S",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7562,7 +7562,7 @@
         "brand": "INFOSEC",
         "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Puissance absente de la fiche produit M5T : valeurs du catalogue général. Armoires batteries génériques (non fournies au catalogue)."
       },
       "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
     },
@@ -7570,8 +7570,8 @@
       "id": "INF-67666",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67666",
-      "reference": "INFOSEC M5T 180K",
+      "partNumber": "67666 (S)",
+      "reference": "INFOSEC M5T 180K S",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7597,7 +7597,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -7605,7 +7605,7 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
@@ -7616,7 +7616,7 @@
         "d": 979,
         "h": 1600
       },
-      "weightKg": 436,
+      "weightKg": 309,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7629,7 +7629,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 70,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -7637,7 +7637,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 45,
+        "maxChargeCurrentA": 54,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -7651,18 +7651,18 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
         "note": "Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-67667",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67667",
-      "reference": "INFOSEC M5T 200K",
+      "partNumber": "67667 (S)",
+      "reference": "INFOSEC M5T 200K S",
       "range": "INFOSEC M5T (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7688,7 +7688,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -7696,7 +7696,7 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
@@ -7707,7 +7707,7 @@
         "d": 979,
         "h": 1600
       },
-      "weightKg": 480,
+      "weightKg": 311,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7720,7 +7720,7 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 70,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
@@ -7728,7 +7728,7 @@
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 50,
+        "maxChargeCurrentA": 54,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -7742,18 +7742,1019 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 28",
+        "model": "Fiche produit M5T 10k à 200 kVA (07/2021)",
         "url": "https://www.infosec-ups.com/",
         "note": "Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": ["batteryVoltage"]
     },
     {
       "id": "INF-69309",
       "sample": false,
       "brand": "INFOSEC",
       "partNumber": "69309",
-      "reference": "INFOSEC M6Ti 60K",
+      "reference": "INFOSEC M6Ti S 60K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 60,
+        "kW": 60,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.94
+      },
+      "dimensionsMm": {
+        "w": 320,
+        "d": 1000,
+        "h": 800
+      },
+      "weightKg": 94,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 18,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 1 × 60 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69311",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69311",
+      "reference": "INFOSEC M6Ti S 80K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 80,
+        "kW": 80,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.955
+      },
+      "dimensionsMm": {
+        "w": 430,
+        "d": 1000,
+        "h": 1200
+      },
+      "weightKg": 133,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 18,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 1 × 80 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69301",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69301",
+      "reference": "INFOSEC M6Ti S 100K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 100,
+        "kW": 100,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.94
+      },
+      "dimensionsMm": {
+        "w": 430,
+        "d": 1000,
+        "h": 1200
+      },
+      "weightKg": 169,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 24,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 2 × 50 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69302",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69302",
+      "reference": "INFOSEC M6Ti S 120K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 120,
+        "kW": 120,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.94
+      },
+      "dimensionsMm": {
+        "w": 430,
+        "d": 1000,
+        "h": 1200
+      },
+      "weightKg": 169,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 36,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 2 × 60 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69315",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69315",
+      "reference": "INFOSEC M6Ti S 160K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 160,
+        "kW": 160,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.955
+      },
+      "dimensionsMm": {
+        "w": 430,
+        "d": 1000,
+        "h": 1200
+      },
+      "weightKg": 195,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 36,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 2 × 80 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69303",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69303",
+      "reference": "INFOSEC M6Ti S 180K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 180,
+        "kW": 180,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.94
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1000,
+        "h": 1200
+      },
+      "weightKg": 249,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 54,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 3 × 60 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69304",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69304",
+      "reference": "INFOSEC M6Ti S 200K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 200,
+        "kW": 200,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.94
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1000,
+        "h": 1200
+      },
+      "weightKg": 249,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 54,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 3 × 67 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69312",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69312",
+      "reference": "INFOSEC M6Ti S 240K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 240,
+        "kW": 240,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.955
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1000,
+        "h": 1475
+      },
+      "weightKg": 368,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 54,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 3 × 80 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69313",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69313",
+      "reference": "INFOSEC M6Ti S 300K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 300,
+        "kW": 300,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.94
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.96
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.98,
+        "battery": 0.94
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1000,
+        "h": 1475
+      },
+      "weightKg": 396,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 90,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 5 × 60 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69316",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69316",
+      "reference": "INFOSEC M6Ti S 320K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 320,
+        "kW": 320,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.955
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1000,
+        "h": 1475
+      },
+      "weightKg": 412,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 72,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 4 × 80 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69317",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69317",
+      "reference": "INFOSEC M6Ti S 400K",
+      "range": "INFOSEC M6Ti S (tri/tri)",
+      "technology": "online_double_conversion",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 400,
+        "kW": 400,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.955
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1100,
+        "h": 2000
+      },
+      "weightKg": 532,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [32, 40],
+          "default": 32
+        },
+        "internal": null,
+        "maxChargeCurrentA": 90,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": false,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 4
+      },
+      "modular": null,
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 10",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Modules de puissance : 5 × 80 kVA. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-69322",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "69322 (SB, sans batteries) / 69325 (avec batteries internes)",
+      "reference": "INFOSEC M6Ti 60K SB",
       "range": "INFOSEC M6Ti (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7775,30 +8776,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.94
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.95
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.96
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.95
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.98,
+        "battery": 0.94
       },
       "dimensionsMm": {
-        "w": 320,
+        "w": 600,
         "d": 1000,
-        "h": 800
+        "h": 1475
       },
-      "weightKg": 172,
+      "weightKg": 255,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7811,15 +8812,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 15,
+        "maxChargeCurrentA": 18,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -7833,18 +8834,18 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 30",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 8",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 1 × 60 kVA. Version à batteries internes : autonomie non publiée, non modélisée. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
-      "id": "INF-69311",
+      "id": "INF-69318",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "69311",
-      "reference": "INFOSEC M6Ti 80K",
+      "partNumber": "69318 (SB, sans batteries) / 69320 (avec batteries internes)",
+      "reference": "INFOSEC M6Ti 80K SB",
       "range": "INFOSEC M6Ti (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7870,7 +8871,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -7878,18 +8879,18 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
-        "battery": 0.96
+        "battery": 0.955
       },
       "dimensionsMm": {
-        "w": 430,
+        "w": 600,
         "d": 1000,
-        "h": 1200
+        "h": 1475
       },
-      "weightKg": 216,
+      "weightKg": 297,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7902,15 +8903,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 20,
+        "maxChargeCurrentA": 18,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -7924,18 +8925,18 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 30",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 8",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 1 × 80 kVA. Version à batteries internes : autonomie non publiée, non modélisée. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
-      "id": "INF-69301",
+      "id": "INF-69323",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "69301",
-      "reference": "INFOSEC M6Ti 100K",
+      "partNumber": "69323 (SB, sans batteries) / 69326 (avec batteries internes)",
+      "reference": "INFOSEC M6Ti 100K SB",
       "range": "INFOSEC M6Ti (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -7957,30 +8958,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.94
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.96
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.985,
+        "battery": 0.945
       },
       "dimensionsMm": {
-        "w": 430,
+        "w": 600,
         "d": 1000,
-        "h": 1200
+        "h": 2000
       },
-      "weightKg": 260,
+      "weightKg": 383,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -7993,15 +8994,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 25,
+        "maxChargeCurrentA": 24,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -8015,18 +9016,18 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 30",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 8",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 2 × 60 kVA. Version à batteries internes : autonomie non publiée, non modélisée. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
-      "id": "INF-69302",
+      "id": "INF-69324",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "69302",
-      "reference": "INFOSEC M6Ti 120K",
+      "partNumber": "69324 (SB, sans batteries) / 69327 (avec batteries internes)",
+      "reference": "INFOSEC M6Ti 120K SB",
       "range": "INFOSEC M6Ti (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
@@ -8048,30 +9049,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.94
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.96
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.985,
+        "battery": 0.945
       },
       "dimensionsMm": {
-        "w": 430,
+        "w": 600,
         "d": 1000,
-        "h": 1200
+        "h": 2000
       },
-      "weightKg": 304,
+      "weightKg": 425,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -8084,15 +9085,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 30,
+        "maxChargeCurrentA": 36,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -8106,25 +9107,25 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 30",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 8",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 2 × 60 kVA. Version à batteries internes : autonomie non publiée, non modélisée. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
-      "id": "INF-69303",
+      "id": "INF-69319",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "69303",
-      "reference": "INFOSEC M6Ti 180K",
+      "partNumber": "69319 (SB, sans batteries) / 69321 (avec batteries internes)",
+      "reference": "INFOSEC M6Ti 160K SB",
       "range": "INFOSEC M6Ti (tri/tri)",
       "technology": "online_double_conversion",
       "formFactor": "cabinet",
       "rackUnits": null,
       "power": {
-        "kVA": 180,
-        "kW": 180,
+        "kVA": 160,
+        "kW": 160,
         "pf": 1
       },
       "phases": {
@@ -8143,7 +9144,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -8151,18 +9152,18 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
-        "battery": 0.96
+        "battery": 0.955
       },
       "dimensionsMm": {
         "w": 600,
         "d": 1000,
-        "h": 1200
+        "h": 2000
       },
-      "weightKg": 436,
+      "weightKg": 432,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -8175,15 +9176,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 45,
+        "maxChargeCurrentA": 36,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -8197,284 +9198,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 30",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 8",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 2 × 80 kVA. Version à batteries internes : autonomie non publiée, non modélisée. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
-    },
-    {
-      "id": "INF-69304",
-      "sample": false,
-      "brand": "INFOSEC",
-      "partNumber": "69304",
-      "reference": "INFOSEC M6Ti 200K",
-      "range": "INFOSEC M6Ti (tri/tri)",
-      "technology": "online_double_conversion",
-      "formFactor": "cabinet",
-      "rackUnits": null,
-      "power": {
-        "kVA": 200,
-        "kW": 200,
-        "pf": 1
-      },
-      "phases": {
-        "in": 3,
-        "out": 3
-      },
-      "voltages": {
-        "out": [380, 400, 415],
-        "freqHz": [50, 60]
-      },
-      "efficiency": {
-        "online": [
-          {
-            "load": 0.25,
-            "eta": 0.95
-          },
-          {
-            "load": 0.5,
-            "eta": 0.965
-          },
-          {
-            "load": 0.75,
-            "eta": 0.97
-          },
-          {
-            "load": 1,
-            "eta": 0.965
-          }
-        ],
-        "eco": 0.99,
-        "battery": 0.96
-      },
-      "dimensionsMm": {
-        "w": 600,
-        "d": 1000,
-        "h": 1200
-      },
-      "weightKg": 480,
-      "clearancesMm": {
-        "front": 1000,
-        "rear": 0,
-        "left": 0,
-        "right": 0,
-        "top": 500
-      },
-      "ip": "IP20",
-      "ambientC": {
-        "min": 0,
-        "max": 40
-      },
-      "noiseDb": null,
-      "battery": {
-        "blockVoltage": 12,
-        "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
-          "default": 32
-        },
-        "internal": null,
-        "maxChargeCurrentA": 50,
-        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
-        "sharedBattery": false,
-        "maxExternalCabinets": 6
-      },
-      "heatDissipationW": null,
-      "parallel": {
-        "capable": true,
-        "maxUnits": 4
-      },
-      "modular": null,
-      "datasheetUrl": "https://www.infosec-ups.com/",
-      "source": {
-        "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 30",
-        "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
-      },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
-    },
-    {
-      "id": "INF-69312",
-      "sample": false,
-      "brand": "INFOSEC",
-      "partNumber": "69312",
-      "reference": "INFOSEC M6Ti 240K",
-      "range": "INFOSEC M6Ti (tri/tri)",
-      "technology": "online_double_conversion",
-      "formFactor": "cabinet",
-      "rackUnits": null,
-      "power": {
-        "kVA": 240,
-        "kW": 240,
-        "pf": 1
-      },
-      "phases": {
-        "in": 3,
-        "out": 3
-      },
-      "voltages": {
-        "out": [380, 400, 415],
-        "freqHz": [50, 60]
-      },
-      "efficiency": {
-        "online": [
-          {
-            "load": 0.25,
-            "eta": 0.95
-          },
-          {
-            "load": 0.5,
-            "eta": 0.965
-          },
-          {
-            "load": 0.75,
-            "eta": 0.97
-          },
-          {
-            "load": 1,
-            "eta": 0.965
-          }
-        ],
-        "eco": 0.99,
-        "battery": 0.96
-      },
-      "dimensionsMm": {
-        "w": 600,
-        "d": 1000,
-        "h": 1475
-      },
-      "weightKg": 568,
-      "clearancesMm": {
-        "front": 1000,
-        "rear": 0,
-        "left": 0,
-        "right": 0,
-        "top": 500
-      },
-      "ip": "IP20",
-      "ambientC": {
-        "min": 0,
-        "max": 40
-      },
-      "noiseDb": null,
-      "battery": {
-        "blockVoltage": 12,
-        "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
-          "default": 32
-        },
-        "internal": null,
-        "maxChargeCurrentA": 60,
-        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
-        "sharedBattery": false,
-        "maxExternalCabinets": 8
-      },
-      "heatDissipationW": null,
-      "parallel": {
-        "capable": true,
-        "maxUnits": 4
-      },
-      "modular": null,
-      "datasheetUrl": "https://www.infosec-ups.com/",
-      "source": {
-        "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 30",
-        "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
-      },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
-    },
-    {
-      "id": "INF-69313",
-      "sample": false,
-      "brand": "INFOSEC",
-      "partNumber": "69313",
-      "reference": "INFOSEC M6Ti 300K",
-      "range": "INFOSEC M6Ti (tri/tri)",
-      "technology": "online_double_conversion",
-      "formFactor": "cabinet",
-      "rackUnits": null,
-      "power": {
-        "kVA": 300,
-        "kW": 300,
-        "pf": 1
-      },
-      "phases": {
-        "in": 3,
-        "out": 3
-      },
-      "voltages": {
-        "out": [380, 400, 415],
-        "freqHz": [50, 60]
-      },
-      "efficiency": {
-        "online": [
-          {
-            "load": 0.25,
-            "eta": 0.95
-          },
-          {
-            "load": 0.5,
-            "eta": 0.965
-          },
-          {
-            "load": 0.75,
-            "eta": 0.97
-          },
-          {
-            "load": 1,
-            "eta": 0.965
-          }
-        ],
-        "eco": 0.99,
-        "battery": 0.96
-      },
-      "dimensionsMm": {
-        "w": 600,
-        "d": 1000,
-        "h": 1475
-      },
-      "weightKg": 700,
-      "clearancesMm": {
-        "front": 1000,
-        "rear": 0,
-        "left": 0,
-        "right": 0,
-        "top": 500
-      },
-      "ip": "IP20",
-      "ambientC": {
-        "min": 0,
-        "max": 40
-      },
-      "noiseDb": null,
-      "battery": {
-        "blockVoltage": 12,
-        "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
-          "default": 32
-        },
-        "internal": null,
-        "maxChargeCurrentA": 75,
-        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
-        "sharedBattery": false,
-        "maxExternalCabinets": 8
-      },
-      "heatDissipationW": null,
-      "parallel": {
-        "capable": true,
-        "maxUnits": 4
-      },
-      "modular": null,
-      "datasheetUrl": "https://www.infosec-ups.com/",
-      "source": {
-        "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 30",
-        "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
-      },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
       "id": "INF-69310",
@@ -8503,30 +9231,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.91
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.92
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.93
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.92
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.958,
+        "battery": 0.913
       },
       "dimensionsMm": {
         "w": 600,
         "d": 1000,
         "h": 1200
       },
-      "weightKg": 172,
+      "weightKg": 334,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -8539,15 +9267,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 15,
+        "maxChargeCurrentA": 18,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -8561,17 +9289,17 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 31",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 12",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 1 × 60 kVA. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
-      "id": "INF-67314-M6TI-TX-80K",
+      "id": "INF-69314",
       "sample": false,
       "brand": "INFOSEC",
-      "partNumber": "67314",
+      "partNumber": "69314",
       "reference": "INFOSEC M6Ti TX 80K",
       "range": "INFOSEC M6Ti TX (transformateur d’isolement)",
       "technology": "online_double_conversion",
@@ -8594,30 +9322,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.91
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.92
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.93
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.92
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.958,
+        "battery": 0.913
       },
       "dimensionsMm": {
-        "w": 430,
+        "w": 480,
         "d": 1000,
-        "h": 1200
+        "h": 1600
       },
-      "weightKg": 216,
+      "weightKg": 515,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -8630,15 +9358,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 20,
+        "maxChargeCurrentA": 24,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -8652,11 +9380,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 31",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 12",
         "url": "https://www.infosec-ups.com/",
-        "note": "Référence 67314 identique à celle de l’E3 Pro 1000 RM (page 23) : coquille probable. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 2 × 50 kVA. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
       "id": "INF-69305",
@@ -8685,30 +9413,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.91
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.92
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.93
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.92
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.958,
+        "battery": 0.913
       },
       "dimensionsMm": {
         "w": 480,
         "d": 1000,
         "h": 1600
       },
-      "weightKg": 260,
+      "weightKg": 517,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -8721,15 +9449,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 25,
+        "maxChargeCurrentA": 24,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -8743,11 +9471,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 31",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 12",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 2 × 50 kVA. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
       "id": "INF-69306",
@@ -8776,30 +9504,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.91
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.92
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.93
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.92
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.958,
+        "battery": 0.913
       },
       "dimensionsMm": {
         "w": 480,
         "d": 1000,
         "h": 1600
       },
-      "weightKg": 304,
+      "weightKg": 557,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -8812,15 +9540,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 30,
+        "maxChargeCurrentA": 36,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -8834,11 +9562,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 31",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 12",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 2 × 60 kVA. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
       "id": "INF-69307",
@@ -8867,30 +9595,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.91
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.92
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.93
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.92
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.958,
+        "battery": 0.913
       },
       "dimensionsMm": {
         "w": 600,
         "d": 1000,
         "h": 2000
       },
-      "weightKg": 436,
+      "weightKg": 826,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -8903,15 +9631,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 45,
+        "maxChargeCurrentA": 54,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -8925,11 +9653,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 31",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 12",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 3 × 60 kVA. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
       "id": "INF-69308",
@@ -8958,30 +9686,30 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.91
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.92
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.93
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.92
           }
         ],
-        "eco": 0.99,
-        "battery": 0.96
+        "eco": 0.958,
+        "battery": 0.913
       },
       "dimensionsMm": {
         "w": 600,
         "d": 1000,
         "h": 2000
       },
-      "weightKg": 480,
+      "weightKg": 866,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -8994,15 +9722,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
+          "allowed": [32, 40],
           "default": 32
         },
         "internal": null,
-        "maxChargeCurrentA": 50,
+        "maxChargeCurrentA": 54,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": false,
         "maxExternalCabinets": 6
@@ -9016,11 +9744,11 @@
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 31",
+        "model": "Fiche produit M6Ti / M6Ti S / M6Ti TX (2026), p. 12",
         "url": "https://www.infosec-ups.com/",
-        "note": "Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Modules de puissance : 3 × 67 kVA. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
       "id": "INF-67725",
@@ -9403,11 +10131,110 @@
       "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
     },
     {
-      "id": "INF-MOD5T-E-S-29U-JUSQU-90-KVA",
+      "id": "INF-MOD5T-E-60-20-S-15U",
       "sample": false,
       "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "INFOSEC Mod5T E S 29U (jusqu’à 90 kVA)",
+      "reference": "INFOSEC Mod5T E 60/20 S (15U)",
+      "range": "INFOSEC Mod5T E",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 60,
+        "kW": 60,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 515,
+        "d": 1100,
+        "h": 761
+      },
+      "weightKg": 74,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 70,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 18,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": {
+        "moduleKVA": 20,
+        "moduleKW": 20,
+        "maxModules": 3,
+        "frameMaxKVA": 60,
+        "moduleWeightKg": 34,
+        "emptyFrameWeightKg": 74,
+        "frameParallelMax": 2
+      },
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Profondeur de l’armoire 15U imprimée « 111 mm » dans la fiche : 1100 mm retenus. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-MOD5T-E-90-30-S-15U",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "",
+      "reference": "INFOSEC Mod5T E 90/30 S (15U)",
       "range": "INFOSEC Mod5T E",
       "technology": "modular",
       "formFactor": "cabinet",
@@ -9429,19 +10256,19 @@
         "online": [
           {
             "load": 0.25,
-            "eta": 0.95
+            "eta": 0.93
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.95
           },
           {
             "load": 0.75,
-            "eta": 0.97
+            "eta": 0.95
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.95
           }
         ],
         "eco": 0.99,
@@ -9450,9 +10277,9 @@
       "dimensionsMm": {
         "w": 515,
         "d": 1100,
-        "h": 1522
+        "h": 761
       },
-      "weightKg": 172,
+      "weightKg": 77,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -9465,15 +10292,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 70,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
-          "default": 32
+          "allowed": [40],
+          "default": 40
         },
         "internal": null,
-        "maxChargeCurrentA": 23,
+        "maxChargeCurrentA": 24,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": true,
         "maxExternalCabinets": 6
@@ -9488,25 +10315,223 @@
         "moduleKW": 30,
         "maxModules": 3,
         "frameMaxKVA": 90,
-        "moduleWeightKg": 23,
-        "emptyFrameWeightKg": 172,
+        "moduleWeightKg": 34.5,
+        "emptyFrameWeightKg": 77,
         "frameParallelMax": 2
       },
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 33",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Références des châssis Mod5T non lisibles sans ambiguïté (guide de sélection page 9) : à compléter. Taille et nombre de modules choisis parmi 20 / 30 / 50 / 60 kVA pour atteindre la puissance maximale publiée. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Profondeur de l’armoire 15U imprimée « 111 mm » dans la fiche : 1100 mm retenus. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
-      "id": "INF-MOD5T-S-30U-JUSQU-180-KVA",
+      "id": "INF-MOD5T-120-20-S-30U",
       "sample": false,
       "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "INFOSEC Mod5T S 30U (jusqu’à 180 kVA)",
+      "reference": "INFOSEC Mod5T 120/20 S (30U)",
+      "range": "INFOSEC Mod5T",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 120,
+        "kW": 120,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1100,
+        "h": 1475
+      },
+      "weightKg": 186,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 36,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": {
+        "moduleKVA": 20,
+        "moduleKW": 20,
+        "maxModules": 6,
+        "frameMaxKVA": 120,
+        "moduleWeightKg": 34,
+        "emptyFrameWeightKg": 186,
+        "frameParallelMax": 2
+      },
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-MOD5T-180-30-S-30U",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "",
+      "reference": "INFOSEC Mod5T 180/30 S (30U)",
+      "range": "INFOSEC Mod5T",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 180,
+        "kW": 180,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1100,
+        "h": 1475
+      },
+      "weightKg": 230.5,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 48,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 6
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": {
+        "moduleKVA": 30,
+        "moduleKW": 30,
+        "maxModules": 6,
+        "frameMaxKVA": 180,
+        "moduleWeightKg": 34.5,
+        "emptyFrameWeightKg": 230.5,
+        "frameParallelMax": 2
+      },
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-MOD5T-180-60-S-30U",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "",
+      "reference": "INFOSEC Mod5T 180/60 S (30U)",
       "range": "INFOSEC Mod5T",
       "technology": "modular",
       "formFactor": "cabinet",
@@ -9532,7 +10557,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -9540,7 +10565,7 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
@@ -9551,7 +10576,7 @@
         "d": 1100,
         "h": 1475
       },
-      "weightKg": 244,
+      "weightKg": 300,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -9564,15 +10589,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
-          "default": 32
+          "allowed": [40],
+          "default": 40
         },
         "internal": null,
-        "maxChargeCurrentA": 45,
+        "maxChargeCurrentA": 60,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": true,
         "maxExternalCabinets": 6
@@ -9583,29 +10608,326 @@
         "maxUnits": 2
       },
       "modular": {
-        "moduleKVA": 30,
-        "moduleKW": 30,
-        "maxModules": 6,
+        "moduleKVA": 60,
+        "moduleKW": 60,
+        "maxModules": 3,
         "frameMaxKVA": 180,
-        "moduleWeightKg": 23,
-        "emptyFrameWeightKg": 244,
+        "moduleWeightKg": 44,
+        "emptyFrameWeightKg": 300,
         "frameParallelMax": 2
       },
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 33",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Références des châssis Mod5T non lisibles sans ambiguïté (guide de sélection page 9) : à compléter. Taille et nombre de modules choisis parmi 20 / 30 / 50 / 60 kVA pour atteindre la puissance maximale publiée. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     },
     {
-      "id": "INF-MOD5T-S-42U-JUSQU-600-KVA",
+      "id": "INF-MOD5T-300-30-S-42U",
       "sample": false,
       "brand": "INFOSEC",
       "partNumber": "",
-      "reference": "INFOSEC Mod5T S 42U (jusqu’à 600 kVA)",
+      "reference": "INFOSEC Mod5T 300/30 S (42U)",
+      "range": "INFOSEC Mod5T",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 300,
+        "kW": 300,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1100,
+        "h": 2010
+      },
+      "weightKg": 275,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 80,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": {
+        "moduleKVA": 30,
+        "moduleKW": 30,
+        "maxModules": 10,
+        "frameMaxKVA": 300,
+        "moduleWeightKg": 34.5,
+        "emptyFrameWeightKg": 275,
+        "frameParallelMax": 2
+      },
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-MOD5T-500-50-42U",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "",
+      "reference": "INFOSEC Mod5T 500/50 (42U)",
+      "range": "INFOSEC Mod5T",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 500,
+        "kW": 500,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.93
+          },
+          {
+            "load": 0.5,
+            "eta": 0.95
+          },
+          {
+            "load": 0.75,
+            "eta": 0.95
+          },
+          {
+            "load": 1,
+            "eta": 0.95
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 1000,
+        "d": 1065,
+        "h": 2000
+      },
+      "weightKg": 810,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 120,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": {
+        "moduleKVA": 50,
+        "moduleKW": 50,
+        "maxModules": 10,
+        "frameMaxKVA": 500,
+        "moduleWeightKg": 39,
+        "emptyFrameWeightKg": 810,
+        "frameParallelMax": 2
+      },
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-MOD5T-300-60-S-42U",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "",
+      "reference": "INFOSEC Mod5T 300/60 S (42U)",
+      "range": "INFOSEC Mod5T",
+      "technology": "modular",
+      "formFactor": "cabinet",
+      "rackUnits": null,
+      "power": {
+        "kVA": 300,
+        "kW": 300,
+        "pf": 1
+      },
+      "phases": {
+        "in": 3,
+        "out": 3
+      },
+      "voltages": {
+        "out": [380, 400, 415],
+        "freqHz": [50, 60]
+      },
+      "efficiency": {
+        "online": [
+          {
+            "load": 0.25,
+            "eta": 0.95
+          },
+          {
+            "load": 0.5,
+            "eta": 0.96
+          },
+          {
+            "load": 0.75,
+            "eta": 0.97
+          },
+          {
+            "load": 1,
+            "eta": 0.96
+          }
+        ],
+        "eco": 0.99,
+        "battery": 0.96
+      },
+      "dimensionsMm": {
+        "w": 600,
+        "d": 1100,
+        "h": 2010
+      },
+      "weightKg": 510,
+      "clearancesMm": {
+        "front": 1000,
+        "rear": 0,
+        "left": 0,
+        "right": 0,
+        "top": 500
+      },
+      "ip": "IP20",
+      "ambientC": {
+        "min": 0,
+        "max": 40
+      },
+      "noiseDb": 75,
+      "battery": {
+        "blockVoltage": 12,
+        "blocksPerString": {
+          "allowed": [40],
+          "default": 40
+        },
+        "internal": null,
+        "maxChargeCurrentA": 100,
+        "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
+        "sharedBattery": true,
+        "maxExternalCabinets": 8
+      },
+      "heatDissipationW": null,
+      "parallel": {
+        "capable": true,
+        "maxUnits": 2
+      },
+      "modular": {
+        "moduleKVA": 60,
+        "moduleKW": 60,
+        "maxModules": 5,
+        "frameMaxKVA": 300,
+        "moduleWeightKg": 44,
+        "emptyFrameWeightKg": 510,
+        "frameParallelMax": 2
+      },
+      "datasheetUrl": "https://www.infosec-ups.com/",
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Armoires batteries génériques (non fournies au catalogue)."
+      },
+      "estimated": []
+    },
+    {
+      "id": "INF-MOD5T-600-60-S-42U",
+      "sample": false,
+      "brand": "INFOSEC",
+      "partNumber": "",
+      "reference": "INFOSEC Mod5T 600/60 S (42U)",
       "range": "INFOSEC Mod5T",
       "technology": "modular",
       "formFactor": "cabinet",
@@ -9631,7 +10953,7 @@
           },
           {
             "load": 0.5,
-            "eta": 0.965
+            "eta": 0.96
           },
           {
             "load": 0.75,
@@ -9639,7 +10961,7 @@
           },
           {
             "load": 1,
-            "eta": 0.965
+            "eta": 0.96
           }
         ],
         "eco": 0.99,
@@ -9650,7 +10972,7 @@
         "d": 1100,
         "h": 2010
       },
-      "weightKg": 580,
+      "weightKg": 1020,
       "clearancesMm": {
         "front": 1000,
         "rear": 0,
@@ -9663,15 +10985,15 @@
         "min": 0,
         "max": 40
       },
-      "noiseDb": null,
+      "noiseDb": 75,
       "battery": {
         "blockVoltage": 12,
         "blocksPerString": {
-          "allowed": [30, 32, 34, 36, 38, 40],
-          "default": 32
+          "allowed": [40],
+          "default": 40
         },
         "internal": null,
-        "maxChargeCurrentA": 150,
+        "maxChargeCurrentA": 200,
         "compatibleCabinetIds": ["EX-CAB-S", "EX-CAB-M", "EX-CAB-L"],
         "sharedBattery": true,
         "maxExternalCabinets": 8
@@ -9686,18 +11008,18 @@
         "moduleKW": 60,
         "maxModules": 10,
         "frameMaxKVA": 600,
-        "moduleWeightKg": 38,
-        "emptyFrameWeightKg": 580,
+        "moduleWeightKg": 44,
+        "emptyFrameWeightKg": 1020,
         "frameParallelMax": 2
       },
       "datasheetUrl": "https://www.infosec-ups.com/",
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 33",
+        "model": "Fiche produit Mod5T & Mod5T E (2026)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Références des châssis Mod5T non lisibles sans ambiguïté (guide de sélection page 9) : à compléter. Taille et nombre de modules choisis parmi 20 / 30 / 50 / 60 kVA pour atteindre la puissance maximale publiée. Armoires batteries génériques (non fournies au catalogue)."
+        "note": "Pas de référence produit pour l’armoire dans la fiche. Batteries 240 V (40 blocs de 12 V) en armoires externes ; armoires INFOSEC 67712 à 67721 non modélisées. Armoires batteries génériques (non fournies au catalogue)."
       },
-      "estimated": ["efficiency", "batteryVoltage", "chargeCurrent", "weight"]
+      "estimated": []
     }
   ],
   "cabinets": [
@@ -9710,44 +11032,10 @@
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
-        "d": 410,
+        "d": 515,
         "h": 88
       },
-      "emptyWeightKg": 5,
-      "clearancesMm": {
-        "front": 500,
-        "rear": 100,
-        "left": 0,
-        "right": 0,
-        "top": 0
-      },
-      "capacity": [
-        {
-          "blockId": "EX-VRLA-12V17",
-          "maxBlocks": 2
-        }
-      ],
-      "breakerA": 63,
-      "source": {
-        "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
-        "url": "https://www.infosec-ups.com/",
-        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
-      }
-    },
-    {
-      "id": "INF-EBM-67402",
-      "sample": true,
-      "brand": "INFOSEC",
-      "partNumber": "67402",
-      "reference": "INFOSEC Battery Module E3 Performance 1100 RT",
-      "kind": "ebm",
-      "dimensionsMm": {
-        "w": 438,
-        "d": 410,
-        "h": 88
-      },
-      "emptyWeightKg": 5,
+      "emptyWeightKg": 5.7,
       "clearancesMm": {
         "front": 500,
         "rear": 100,
@@ -9758,15 +11046,53 @@
       "capacity": [
         {
           "blockId": "EX-VRLA-12V7",
-          "maxBlocks": 6
+          "maxBlocks": 4
         }
       ],
       "breakerA": 63,
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
         "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+      }
+    },
+    {
+      "id": "INF-EBM-67402",
+      "sample": true,
+      "brand": "INFOSEC",
+      "partNumber": "67402",
+      "reference": "INFOSEC Battery Module E3 Pro 1000 RT",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 438,
+        "d": 515,
+        "h": 88
+      },
+      "emptyWeightKg": 9,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V12",
+          "maxBlocks": 4
+        },
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 4
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Référence, dimensions et masse à vide de la fiche produit ; contenu en batteries estimé."
       }
     },
     {
@@ -9778,10 +11104,10 @@
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
-        "d": 525,
+        "d": 515,
         "h": 88
       },
-      "emptyWeightKg": 5,
+      "emptyWeightKg": 6.2,
       "clearancesMm": {
         "front": 500,
         "rear": 100,
@@ -9791,14 +11117,14 @@
       },
       "capacity": [
         {
-          "blockId": "EX-VRLA-12V17",
-          "maxBlocks": 4
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 8
         }
       ],
       "breakerA": 63,
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
         "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
       }
@@ -9808,14 +11134,14 @@
       "sample": true,
       "brand": "INFOSEC",
       "partNumber": "67406",
-      "reference": "INFOSEC Battery Module E3 Performance 2000 RT",
+      "reference": "INFOSEC Battery Module E3 Pro 2000 RT",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
-        "d": 525,
+        "d": 515,
         "h": 88
       },
-      "emptyWeightKg": 5,
+      "emptyWeightKg": 9,
       "clearancesMm": {
         "front": 500,
         "rear": 100,
@@ -9832,9 +11158,9 @@
       "breakerA": 63,
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+        "note": "Référence, dimensions et masse à vide de la fiche produit ; contenu en batteries estimé."
       }
     },
     {
@@ -9846,10 +11172,10 @@
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
-        "d": 645,
+        "d": 635,
         "h": 88
       },
-      "emptyWeightKg": 5,
+      "emptyWeightKg": 11.6,
       "clearancesMm": {
         "front": 500,
         "rear": 100,
@@ -9859,14 +11185,14 @@
       },
       "capacity": [
         {
-          "blockId": "EX-VRLA-12V18",
-          "maxBlocks": 6
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 12
         }
       ],
       "breakerA": 63,
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Performance RT 800 à 5000 VA (2019)",
         "url": "https://www.infosec-ups.com/",
         "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
       }
@@ -9876,14 +11202,14 @@
       "sample": true,
       "brand": "INFOSEC",
       "partNumber": "67409",
-      "reference": "INFOSEC Battery Module E3 Performance 3000/5000 RT",
+      "reference": "INFOSEC Battery Module E3 Pro 3000 RT",
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
-        "d": 645,
+        "d": 635,
         "h": 88
       },
-      "emptyWeightKg": 5,
+      "emptyWeightKg": 11,
       "clearancesMm": {
         "front": 500,
         "rear": 100,
@@ -9897,16 +11223,16 @@
           "maxBlocks": 12
         },
         {
-          "blockId": "EX-VRLA-12V12",
-          "maxBlocks": 16
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 12
         }
       ],
       "breakerA": 63,
       "source": {
         "brand": "INFOSEC",
-        "model": "INFOSEC Electrical Protection Catalog 2025, p. 22",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
         "url": "https://www.infosec-ups.com/",
-        "note": "Référence du catalogue ; contenu en batteries et masse à vide estimés."
+        "note": "Référence, dimensions et masse à vide de la fiche produit ; contenu en batteries estimé."
       }
     },
     {
@@ -9942,6 +11268,78 @@
       "breakerA": 63
     },
     {
+      "id": "INF-EBM-67187",
+      "sample": true,
+      "brand": "INFOSEC",
+      "partNumber": "67187",
+      "reference": "INFOSEC Battery Module E3 Pro 6000 RT",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 438,
+        "d": 740,
+        "h": 88
+      },
+      "emptyWeightKg": 13.4,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V9",
+          "maxBlocks": 32
+        },
+        {
+          "blockId": "EX-VRLA-12V7",
+          "maxBlocks": 32
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Référence, dimensions et masse à vide de la fiche produit ; contenu en batteries estimé."
+      }
+    },
+    {
+      "id": "INF-EBM-67189",
+      "sample": true,
+      "brand": "INFOSEC",
+      "partNumber": "67189",
+      "reference": "INFOSEC Battery Module E3 Pro 10k RT",
+      "kind": "ebm",
+      "dimensionsMm": {
+        "w": 438,
+        "d": 630,
+        "h": 133
+      },
+      "emptyWeightKg": 13,
+      "clearancesMm": {
+        "front": 500,
+        "rear": 100,
+        "left": 0,
+        "right": 0,
+        "top": 0
+      },
+      "capacity": [
+        {
+          "blockId": "EX-VRLA-12V12",
+          "maxBlocks": 40
+        }
+      ],
+      "breakerA": 63,
+      "source": {
+        "brand": "INFOSEC",
+        "model": "Fiche produit E3 Pro 1000 à 10k VA (2019)",
+        "url": "https://www.infosec-ups.com/",
+        "note": "Référence, dimensions et masse à vide de la fiche produit ; contenu en batteries estimé."
+      }
+    },
+    {
       "id": "INF-EBM-GEN-48V",
       "sample": true,
       "brand": "INFOSEC",
@@ -9963,11 +11361,11 @@
       },
       "capacity": [
         {
-          "blockId": "EX-VRLA-12V9",
+          "blockId": "EX-VRLA-12V7",
           "maxBlocks": 8
         },
         {
-          "blockId": "EX-VRLA-12V7",
+          "blockId": "EX-VRLA-12V9",
           "maxBlocks": 8
         }
       ],
@@ -10010,7 +11408,7 @@
       "kind": "ebm",
       "dimensionsMm": {
         "w": 438,
-        "d": 530,
+        "d": 610,
         "h": 88
       },
       "emptyWeightKg": 5,
@@ -10023,15 +11421,11 @@
       },
       "capacity": [
         {
-          "blockId": "EX-VRLA-12V9",
-          "maxBlocks": 32
-        },
-        {
           "blockId": "EX-VRLA-12V7",
           "maxBlocks": 32
         },
         {
-          "blockId": "EX-VRLA-12V12",
+          "blockId": "EX-VRLA-12V9",
           "maxBlocks": 32
         }
       ],

@@ -20,6 +20,8 @@ export interface EbmSpec {
   /** Largeur × profondeur × hauteur (mm) ; à défaut, celles de l'UPS. */
   dims?: [number, number, number];
   kg?: number;
+  /** Masse à vide publiée (sans batteries). */
+  emptyKg?: number;
 }
 
 export interface Entry {
@@ -41,6 +43,11 @@ export interface Entry {
   noise?: number;
   /** Rendement à pleine charge en double conversion, s'il est publié. */
   effFull?: number;
+  /** Rendement en mode batterie et en mode ECO publiés (null : pas de mode ECO). */
+  effBatt?: number;
+  effEco?: number | null;
+  /** Courant de charge maximal publié (A). */
+  chargeA?: number;
   heatW?: number;
   ambientMax?: number;
   voltages?: number[];
@@ -60,6 +67,8 @@ export interface Entry {
   modular?: { moduleKVA: number; moduleKW: number; maxModules: number; moduleKg?: number };
   /** Page du catalogue. */
   page: number;
+  /** Fiche produit d'où viennent les valeurs, si ce n'est pas le catalogue général. */
+  doc?: string;
   /** Remarques sur la fiche (incohérences du catalogue, hypothèses). */
   notes?: string[];
 }
