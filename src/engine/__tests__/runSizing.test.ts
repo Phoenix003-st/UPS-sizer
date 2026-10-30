@@ -250,8 +250,16 @@ describe('catalogues et paramètres', () => {
     // Les références imprimées au catalogue sont reprises (quelques châssis n'en ont pas).
     expect(models.filter((m) => m.partNumber).length).toBeGreaterThan(90);
     expect(models.find((m) => m.partNumber === '67310')?.reference).toBe('INFOSEC E3 Pro 3000 RT');
-    // Tout ce qui n'est pas publié est signalé comme estimé.
-    expect(models.every((m) => m.estimated.length > 0)).toBe(true);
+    // Tout ce qui n'est pas publié est signalé comme estimé : seules les fiches entièrement
+    // renseignées par une fiche produit n'ont aucune valeur estimée.
+    expect(
+      models
+        .filter((m) => m.estimated.length === 0)
+        .every((m) => m.source?.model.startsWith('Fiche produit')),
+    ).toBe(true);
+    // Fiches produit : 67314 est bien l'E3 Pro 1000 RM, le M6Ti TX 80K est le 69314.
+    expect(models.find((m) => m.partNumber === '67314')?.reference).toBe('INFOSEC E3 Pro 1000 RM');
+    expect(models.find((m) => m.partNumber === '69314')?.reference).toBe('INFOSEC M6Ti TX 80K');
     const cabs = new Set(c.batteries.cabinets.map((x) => x.id));
     expect(models.every((m) => m.battery.compatibleCabinetIds.every((id) => cabs.has(id)))).toBe(
       true,
