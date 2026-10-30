@@ -89,6 +89,8 @@ function efficiencyFor(e: Entry) {
     const shift = e.effFull - curve[3]!.eta;
     curve = curve.map((p) => ({ load: p.load, eta: r2(Math.min(0.99, p.eta + shift)) }));
   }
+  if (e.effBatt !== undefined) battery = e.effBatt;
+  if (e.effEco !== undefined) eco = e.effEco;
   return { online: curve, eco, battery };
 }
 
@@ -144,6 +146,7 @@ function weightEstimate(e: Entry): number {
 }
 
 function chargeEstimate(e: Entry): number {
+  if (e.chargeA !== undefined) return e.chargeA;
   if (isThreePhaseCabinet(e)) return Math.max(6, Math.round(e.kva * 0.25));
   return e.kva <= 1 ? 1.5 : e.kva <= 3 ? 2 : e.kva <= 6 ? 4 : 6;
 }
@@ -221,15 +224,17 @@ function buildBrand(data: BrandData) {
             reference: `${data.brand} ${e.ebm.name}`,
             kind: 'ebm',
             dimensionsMm: { w: dims[0], d: dims[1], h: dims[2] },
-            emptyWeightKg: e.ebm.kg ? r1(Math.max(1, e.ebm.kg * 0.3)) : 5,
+            emptyWeightKg: e.ebm.emptyKg ?? (e.ebm.kg ? r1(Math.max(1, e.ebm.kg * 0.3)) : 5),
             clearancesMm: { front: 500, rear: 100, left: 0, right: 0, top: 0 },
             capacity: [...cap].map(([blockId, maxBlocks]) => ({ blockId, maxBlocks })),
             breakerA: 63,
             source: {
               brand: data.brand,
-              model: `${data.catalog.title}, p. ${e.page}`,
+              model: e.doc ?? `${data.catalog.title}, p. ${e.page}`,
               url: data.catalog.url,
-              note: 'Référence du catalogue ; contenu en batteries et masse à vide estimés.',
+              note: e.ebm.emptyKg
+                ? 'Référence, dimensions et masse à vide de la fiche produit ; contenu en batteries estimé.'
+                : 'Référence du catalogue ; contenu en batteries et masse à vide estimés.',
             },
           }),
         );
@@ -269,7 +274,7 @@ function buildBrand(data: BrandData) {
         maxExternalCabinets: 4,
       };
     }
-    estimated.push('chargeCurrent');
+    if (e.chargeA === undefined) estimated.push('chargeCurrent');
 
     if (e.kg === undefined) estimated.push('weight');
     const kg = e.kg ?? weightEstimate(e);
@@ -318,7 +323,7 @@ function buildBrand(data: BrandData) {
       datasheetUrl: data.catalog.url,
       source: {
         brand: data.brand,
-        model: `${data.catalog.title}, p. ${e.page}`,
+        model: e.doc ?? `${data.catalog.title}, p. ${e.page}`,
         url: data.catalog.url,
         ...(notes.length > 0 ? { note: notes.join(' ') } : {}),
       },
